@@ -10,7 +10,7 @@ and refreshed on the 1st of each month by a GitHub Action.
 
 - **Publications: OpenAlex** (free). OpenAlex coverage differs from Scopus and SciVal,
   so counts will not match Scopus numbers exactly. Author matching relies on OpenAlex author IDs.
-- **Keywords:** OpenAlex's per-paper `keywords`, shown as the word cloud in the Publications section.
+- **Keywords:** OpenAlex's per-paper `keywords`, shown in the Research keywords section.
 - **SJR quartiles:** SCImago journal-rank CSV, cached in `data/raw/`.
 - **CiteScore tiers (T1, Q1–Q4):** these need a file you download yourself. Get the
   Scopus "CiteScore source title list" `.xlsx` from scopus.com/sources and save it as

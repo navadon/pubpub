@@ -57,6 +57,11 @@
   --w3: #2f8559;
   --w4: #b05a3a;
   --w5: #8a6a1c;
+  --wb1: #dccbf3;
+  --wb2: #c4daf3;
+  --wb3: #bfe6d3;
+  --wb4: #f8d0bd;
+  --wb5: #f5e2a8;
   --kpi-ico: rgba(255, 255, 255, .6);
   --kpi-glow: rgba(255, 255, 255, .3);
   --kpi-ring-track: rgba(42, 44, 61, .1);
@@ -113,6 +118,11 @@
   --w3: #93d3ae;
   --w4: #f0b29d;
   --w5: #e6cc85;
+  --wb1: #5a4b8a;
+  --wb2: #3a5a80;
+  --wb3: #336353;
+  --wb4: #70493b;
+  --wb5: #685b2e;
     --kpi-ico: rgba(255, 255, 255, .12);
     --kpi-glow: rgba(255, 255, 255, .06);
     --kpi-ring-track: rgba(255, 255, 255, .18);
@@ -169,6 +179,11 @@
   --w3: #93d3ae;
   --w4: #f0b29d;
   --w5: #e6cc85;
+  --wb1: #5a4b8a;
+  --wb2: #3a5a80;
+  --wb3: #336353;
+  --wb4: #70493b;
+  --wb5: #685b2e;
   --kpi-ico: rgba(255, 255, 255, .12);
   --kpi-glow: rgba(255, 255, 255, .06);
   --kpi-ring-track: rgba(255, 255, 255, .18);
@@ -387,7 +402,17 @@ table.staff tr.sel .name-btn { font-weight: 700; color: var(--link); }
 .name-btn { appearance: none; background: none; border: 0; padding: 0; font: inherit; color: inherit; cursor: pointer; text-align: left; }
 .name-btn:hover { color: var(--link); text-decoration: underline; }
 .kw-clear { margin-left: 6px; font-size: 11px; padding: 1px 8px; }
-.p-cloud { margin-top: 12px; }
+.kwgrid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 12px; align-items: start; }
+.kw-papers { margin-top: 12px; }
+.kw-papers h2 { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.kw-bar .fill { background: var(--wb); }
+.bar-row.wide.kw-bar { grid-template-columns: minmax(0, 1fr) 62px; grid-template-areas: "n n" "t v"; gap: 2px 8px; margin: 6px 0; padding: 2px 4px; }
+.bar-row.wide.kw-bar .name { grid-area: n; }
+.bar-row.wide.kw-bar .track { grid-area: t; height: 10px; }
+.bar-row.wide.kw-bar .v { grid-area: v; }
+.kw-bar button.name-btn { font-weight: 600; overflow-wrap: anywhere; }
+.kw-bar.on { background: var(--cmu-purple-soft); border-radius: 6px; }
+@media (max-width: 900px) { .kwgrid { grid-template-columns: minmax(0, 1fr); } }
 .cloud {
   display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 14px;
   padding: 10px 4px 6px; font-size: clamp(10px, 1.6vw, 15px); line-height: 1.15;
@@ -398,8 +423,7 @@ table.staff tr.sel .name-btn { font-weight: 700; color: var(--link); }
 }
 .cloud button:hover { background: var(--surface-2); }
 .cloud button[aria-pressed="true"] { background: var(--cmu-purple-soft); outline: 2px solid var(--accent); }
-.cloud-note:empty { display: none; }
-.cloud-note { margin: 6px 0 0; text-align: center; }
+
 .btn {
   appearance: none; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--text);
   background: var(--chip-bg); border: 1px solid var(--border); border-radius: 8px; padding: 6px 14px;
@@ -509,7 +533,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       <p class="note">Data: <a href="https://openalex.org" rel="noopener">OpenAlex</a> career publications of current staff; tiers by journal (latest SCImago SJR; Scopus CiteScore when supplied). Refreshed monthly.</p>
     </div>
     <nav class="sec-nav" aria-label="Sections">
-      <a href="#summary">Summary</a><a href="#publications">Publications</a><a href="#collaboration">Collaboration</a>
+      <a href="#summary">Summary</a><a href="#publications">Publications</a><a href="#keywords">Keywords</a><a href="#collaboration">Collaboration</a>
     </nav>
   </div>
 </header>
@@ -618,18 +642,45 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       <div class="more" id="pub-more"></div>
     </section>
   </div>
-  <section class="panel p-cloud" aria-labelledby="h-cloud">
-    <h2 id="h-cloud">Research keywords</h2>
-    <p class="hint" id="cloud-hint"></p>
-    <div class="cloud" id="cloud" role="group" aria-labelledby="h-cloud"></div>
-    <p class="hint cloud-note" id="cloud-note" aria-live="polite"></p>
+
   </section>
 
+  <section class="page-sec" id="keywords" aria-labelledby="sec-kw">
+  <div class="sec-head">
+    <h2 id="sec-kw"><span class="sec-no" aria-hidden="true">3</span>Research keywords <span class="sec-range" id="kw-year"></span></h2>
+    <p class="hint">Topics staff publish on, from the keywords OpenAlex assigns to each paper.</p>
+    <div class="range" role="group" aria-label="Year range for keywords">
+      <button type="button" class="btn" id="kw-range-all" aria-pressed="false">All time</button>
+      <label for="kw-range-from">From</label><select id="kw-range-from"></select>
+      <label for="kw-range-to">To</label><select id="kw-range-to"></select>
+    </div>
+    <div class="range" role="group" aria-label="Staff member for keywords">
+      <label for="kw-staff">Staff</label><select id="kw-staff" class="staff-sel"></select>
+      <button type="button" class="btn" id="kw-staff-clear" hidden aria-label="Show all staff">Clear</button>
+    </div>
+  </div>
+  <div class="kwgrid">
+    <section class="panel p-cloud" aria-labelledby="h-cloud">
+      <h2 id="h-cloud">Word cloud</h2>
+      <p class="hint" id="cloud-hint"></p>
+      <div class="cloud" id="cloud" role="group" aria-labelledby="h-cloud"></div>
+    </section>
+    <section class="panel" aria-labelledby="h-kwtop">
+      <h2 id="h-kwtop">Top keywords</h2>
+      <p class="hint" id="kwtop-hint"></p>
+      <div id="kw-top"></div>
+    </section>
+  </div>
+  <section class="panel kw-papers" id="kw-papers-panel" aria-labelledby="h-kwpapers" hidden>
+    <h2 id="h-kwpapers"></h2>
+    <ol class="pubs" id="kw-papers"></ol>
+    <div class="more" id="kw-more"></div>
+  </section>
   </section>
 
   <section class="page-sec" id="collaboration" aria-labelledby="sec-collab">
   <div class="sec-head">
-    <h2 id="sec-collab"><span class="sec-no" aria-hidden="true">3</span>Collaboration <span class="sec-range" id="coauth-year"></span></h2>
+    <h2 id="sec-collab"><span class="sec-no" aria-hidden="true">4</span>Collaboration <span class="sec-range" id="coauth-year"></span></h2>
     <p class="hint">How CPE staff write together, and the partners they work with outside CMU.</p>
     <div class="range" role="group" aria-label="Year range for collaboration">
       <button type="button" class="btn" id="co-range-all" aria-pressed="false">All time</button>
@@ -713,6 +764,11 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     q: "",
     pstaff: null,     // Publications section staff filter
     kw: null,         // keyword chosen in the word cloud
+    kfrom: null,      // Keywords section range and staff
+    kto: null,
+    kRangeSet: false,
+    kstaff: null,
+    klimit: PAGE,
     pubTier: "",
     pubType: "",
     limit: PAGE,
@@ -778,19 +834,6 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     var v = arr[Math.min(m, 12) - 1];
     return v == null ? null : v;
   }
-  // Top-tier movement in the last month with data. Uses an optional pipeline field
-  // `since_last_month` ({sjr: n, citescore: n}, from history.json) for the current year
-  // if present; otherwise counts top-tier works dated in that month.
-  function monthMovement(y) {
-    var m = lastMonthOf(y);
-    var fromHistory = y === D.current_year ? get(D, ["since_last_month", state.tier]) : null;
-    if (typeof fromHistory === "number") return { n: fromHistory, m: m, src: "history" };
-    var prefix = y + "-" + (m < 10 ? "0" : "") + m;
-    var n = D.publications.filter(function (p) {
-      return p.year === y && String(p.date || "").slice(0, 7) === prefix && isTop(p);
-    }).length;
-    return { n: n, m: m, src: "dates" };
-  }
 
   // ---------- rendering ----------
   var ICONS = {
@@ -826,19 +869,22 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       var ch = Math.round((tot - prevSame) / prevSame * 100);
       delta = ' · <span>' + (ch >= 0 ? "+" : "") + ch + '% vs ' + (y === D.current_year ? "same period " : "") + (y - 1) + '</span>';
     }
-    var col = get(D, ["collaboration", String(y)], {}), colTot = sum(col), intl = col.International || 0;
+    var col = get(D, ["collaboration", String(y)], {}), colTot = sum(col), intl = col.International || 0, nat = col.National || 0, ext = intl + nat;
     var staff = D.staff_count || (D.per_staff || []).length || 1;
-    var mv = monthMovement(y);
-    var mvMeta = mv.src === "history"
-      ? "new " + TIER_NAME[state.tier] + " " + TOP_LABEL[state.tier] + " works vs previous monthly snapshot"
-      : TIER_NAME[state.tier] + " " + TOP_LABEL[state.tier] + " works dated " + MONTHS[mv.m - 1] + " " + y;
+    var mv = monthAll(y), tl = TIER_NAME[state.tier] + " " + TOP_LABEL[state.tier];
     $("kpis").innerHTML =
-      kpi("doc", y === D.current_year ? "Publications YTD" : "Publications", fmt(tot), periodLabel(y) + delta) +
-      kpi("bars", TIER_NAME[state.tier] + " " + TOP_LABEL[state.tier] + " journals", fmt(top),
-        pct(top, tot) + "% of " + fmt(tot) + " works", ring(pct(top, tot))) +
-      kpi("user", TOP_LABEL[state.tier] + " per professor", (top / staff).toFixed(2), fmt(top) + " " + TIER_NAME[state.tier] + " " + TOP_LABEL[state.tier] + " ÷ " + fmt(staff) + " staff") +
-      kpi("globe", "International", fmt(intl) + ' <small>' + pct(intl, colTot) + '%</small>', "of works have a co-author abroad") +
-      kpi("trend", y === D.current_year ? "Since last month" : "In " + MONTHS[mv.m - 1], "+" + fmt(mv.n) + ' <small>' + TOP_LABEL[state.tier] + '</small>', mvMeta);
+      kpi("doc", y === D.current_year ? "Publications YTD" : "Publications", fmt(tot), "All ranks · " + periodLabel(y) + delta) +
+      kpi("user", "Publications per professor", (tot / staff).toFixed(2), "All ranks · " + fmt(tot) + " works ÷ " + fmt(staff) + " staff") +
+      kpi("bars", TOP_LABEL[state.tier] + " per professor", (top / staff).toFixed(2), fmt(top) + " " + tl + " works ÷ " + fmt(staff) + " staff") +
+      kpi("globe", "External collaboration", fmt(ext) + ' <small>' + pct(ext, colTot) + '%</small>',
+        fmt(intl) + " international · " + fmt(nat) + " national (outside CMU)", ring(pct(ext, colTot))) +
+      kpi("trend", y === D.current_year ? "Since last month" : "In " + MONTHS[mv.m - 1], "+" + fmt(mv.n),
+        "All ranks · works dated " + MONTHS[mv.m - 1] + " " + y);
+  }
+  // all works dated in the last month with data
+  function monthAll(y) {
+    var m = lastMonthOf(y), prefix = y + "-" + (m < 10 ? "0" : "") + m;
+    return { m: m, n: D.publications.filter(function (p) { return p.year === y && String(p.date || "").slice(0, 7) === prefix; }).length };
   }
 
   function isDark() {
@@ -1080,7 +1126,11 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 
   // ---------- staff table ----------
   // two independent year ranges: "pubs" (Publications section) and "co" (Collaboration section)
-  function rangeOf(sc) { return sc === "co" ? { from: state.cfrom, to: state.cto } : { from: state.from, to: state.to }; }
+  function rangeOf(sc) {
+    if (sc === "co") return { from: state.cfrom, to: state.cto };
+    if (sc === "kw") return { from: state.kfrom, to: state.kto };
+    return { from: state.from, to: state.to };
+  }
   function inRange(y, sc) { var r = rangeOf(sc); return y >= r.from && y <= r.to; }
   function rangeLabel(sc) {
     var r = rangeOf(sc);
@@ -1173,28 +1223,48 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   }
   function setPubStaff(name) {
     state.pstaff = name || null; state.limit = PAGE;
-    syncUrl(); renderPubStaffSel(); renderStaff(); renderPubs(); renderCloud();
+    syncUrl(); renderPubStaffSel(); renderStaff(); renderPubs();
   }
 
-  // word cloud of OpenAlex keywords for the range (and staff member)
+  // ---------- research keywords ----------
+  function kwLabel() { return rangeLabel("kw") + (state.kstaff ? " · " + state.kstaff : ""); }
+  function kwPapers() {
+    return D.publications.filter(function (p) { return inRange(p.year, "kw") && (!state.kstaff || (p.staff || []).indexOf(state.kstaff) >= 0); });
+  }
+  function renderKwStaffSel() {
+    var n = {};
+    D.publications.forEach(function (p) { if (inRange(p.year, "kw")) (p.staff || []).forEach(function (s) { n[s] = (n[s] || 0) + 1; }); });
+    var names = (D.per_staff || []).map(function (r) { return r.name; }).sort(function (a, b) { return a.localeCompare(b); });
+    $("kw-staff").innerHTML = '<option value="">All staff</option>' + names.map(function (nm) {
+      return '<option value="' + esc(nm) + '">' + esc(nm) + ' (' + (n[nm] || 0) + ')</option>';
+    }).join("");
+    $("kw-staff").value = state.kstaff || "";
+    $("kw-staff-clear").hidden = !state.kstaff;
+    $("kw-year").textContent = kwLabel();
+  }
+  function setKwStaff(name) {
+    state.kstaff = name || null; state.klimit = PAGE;
+    syncUrl(); renderKwStaffSel(); renderCloud();
+  }
   var CLOUD_MAX = 60;
   function hashStr(t) { var h = 0; for (var i = 0; i < t.length; i++) h = (h * 31 + t.charCodeAt(i)) | 0; return Math.abs(h); }
+  function wcol(w) { return hashStr(w) % 5 + 1; }
   function renderCloud() {
-    var cnt = {}, papers = 0;
-    D.publications.forEach(function (p) {
-      if (!inRange(p.year) || (state.pstaff && (p.staff || []).indexOf(state.pstaff) < 0)) return;
+    var cnt = {}, papers = 0, ps = kwPapers();
+    ps.forEach(function (p) {
       if ((p.kw || []).length) papers++;
       (p.kw || []).forEach(function (k) { cnt[k] = (cnt[k] || 0) + 1; });
     });
     var words = Object.keys(cnt).sort(function (a, b) { return cnt[b] - cnt[a] || a.localeCompare(b); }).slice(0, CLOUD_MAX);
     if (state.kw && words.indexOf(state.kw) < 0 && cnt[state.kw]) words.push(state.kw);
     $("cloud-hint").textContent = words.length
-      ? "The " + words.length + " most frequent OpenAlex keywords on " + fmt(papers) + " papers, " + pubLabel() +
+      ? "The " + words.length + " most frequent keywords on " + fmt(papers) + " papers, " + kwLabel() +
         ". Larger words appear on more papers. Select a word to list its papers."
       : "";
     if (!words.length) {
-      $("cloud").innerHTML = '<p class="chart-fallback">No keywords for ' + esc(pubLabel()) + '. Try a wider year range.</p>';
-      $("cloud-note").textContent = "";
+      $("cloud").innerHTML = '<p class="chart-fallback">No keywords for ' + esc(kwLabel()) + '. Try a wider year range.</p>';
+      $("kw-top").innerHTML = ""; $("kwtop-hint").textContent = "";
+      renderKwPapers(ps);
       return;
     }
     var mx = cnt[words[0]], mn = cnt[words[words.length - 1]];
@@ -1205,24 +1275,51 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     $("cloud").innerHTML = order.map(function (w) {
       var em = size(cnt[w]);
       return '<button type="button" data-kw="' + esc(w) + '" aria-pressed="' + (w === state.kw) + '" title="' + cnt[w] + ' paper' + (cnt[w] === 1 ? "" : "s") +
-        '" style="font-size:' + em.toFixed(2) + 'em;font-weight:' + (em > 1.9 ? 700 : em > 1.3 ? 600 : 500) + ';--w:var(--w' + (hashStr(w) % 5 + 1) + ')">' +
+        '" style="font-size:' + em.toFixed(2) + 'em;font-weight:' + (em > 1.9 ? 700 : em > 1.3 ? 600 : 500) + ';--w:var(--w' + wcol(w) + ')">' +
         esc(w) + '<span class="sr-only">, ' + cnt[w] + ' papers</span></button>';
     }).join("");
-    $("cloud-note").innerHTML = state.kw
-      ? fmt(cnt[state.kw] || 0) + ' paper' + (cnt[state.kw] === 1 ? "" : "s") + ' with “' + esc(state.kw) + '” are listed in <a href="#h-pubs">Publications</a> above. Select the word again to clear.'
-      : "";
+    var top = words.slice(0, 12), tmax = cnt[top[0]];
+    $("kwtop-hint").textContent = "Papers per keyword, " + kwLabel() + "; % of the " + fmt(papers) + " papers with keywords.";
+    $("kw-top").innerHTML = top.map(function (w) {
+      return '<div class="bar-row wide kw-bar' + (w === state.kw ? " on" : "") + '" style="--wb:var(--wb' + wcol(w) + ')"><div class="name"><button type="button" class="name-btn" data-kw="' + esc(w) +
+        '" aria-pressed="' + (w === state.kw) + '" title="' + esc(w) + '">' + esc(w) + '</button></div><div class="track"><div class="fill" style="width:' +
+        (cnt[w] / tmax * 100).toFixed(1) + '%"></div></div><div class="v num">' + fmt(cnt[w]) + ' <small>' + pct(cnt[w], papers) + '%</small></div></div>';
+    }).join("");
+    renderKwPapers(ps);
+  }
+  function renderKwPapers(ps) {
+    var panel = $("kw-papers-panel");
+    if (!state.kw) { panel.hidden = true; return; }
+    var list = ps.filter(function (p) { return (p.kw || []).indexOf(state.kw) >= 0; })
+      .sort(function (a, b) { return String(b.date || "").localeCompare(String(a.date || "")); });
+    panel.hidden = false;
+    $("h-kwpapers").innerHTML = 'Papers on “' + esc(state.kw) + '” <span class="sec-range">' + fmt(list.length) + ' in ' + esc(kwLabel()) +
+      '</span><button type="button" class="chip" id="kw-clear" aria-label="Clear keyword ' + esc(state.kw) + '">Clear ✕</button>';
+    $("kw-papers").innerHTML = list.slice(0, state.klimit).map(pubItem).join("") || '<li class="pub-staff">No papers with this keyword in the range.</li>';
+    $("kw-more").innerHTML = list.length > state.klimit
+      ? '<button type="button" class="btn" id="kw-more-btn">Show ' + fmt(Math.min(PAGE, list.length - state.klimit)) + ' more</button>' : "";
   }
   function setKw(k) {
-    state.kw = state.kw === k ? null : (k || null); state.limit = PAGE;
-    renderPubs(); renderCloud();
+    state.kw = state.kw === k ? null : (k || null); state.klimit = PAGE;
+    renderCloud();
   }
 
+  function pubItem(p) {
+      var tv = p[state.tier] || "No Ranking", href = pubLink(p);
+      var title = esc(p.title || "(untitled)");
+      return '<li><div class="pub-title">' + (href ? '<a href="' + esc(href) + '" target="_blank" rel="noopener">' + title + '</a>' : title) + '</div>' +
+        '<div class="pub-meta"><span class="badge" style="background:var(' + tierVar(tv) + ')">' + esc(TIER_NAME[state.tier] + " " + (tv === "No Ranking" ? "NR" : tv)) + '</span>' +
+        (p.venue ? '<span class="venue">' + esc(p.venue) + '</span>' : "") +
+        '<span>' + esc(p.date || p.year) + '</span>' +
+        (p.type ? '<span class="tag">' + esc(TYPE_NAME[p.type] || p.type) + '</span>' : "") +
+        (p.collab ? '<span class="tag">' + esc(p.collab) + '</span>' : "") + '</div>' +
+        ((p.staff || []).length ? '<div class="pub-staff">' + p.staff.map(esc).join(", ") + '</div>' : "") + '</li>';
+  }
   function renderPubs() {
     var q = state.q.trim().toLowerCase();
     var terms = q ? q.split(/\s+/) : [];
     var all = D.publications.filter(function (p) { return inRange(p.year) && (!state.pstaff || (p.staff || []).indexOf(state.pstaff) >= 0); });
     var list = all.filter(function (p) {
-      if (state.kw && (p.kw || []).indexOf(state.kw) < 0) return false;
       var tv = p[state.tier] || "No Ranking";
       if (state.pubTier === "__top" && !isTop(p)) return false;
       if (state.pubTier && state.pubTier !== "__top" && tv !== state.pubTier) return false;
@@ -1233,18 +1330,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     }).sort(function (a, b) { return String(b.date || "").localeCompare(String(a.date || "")); });
     $("pub-count").textContent = "Showing " + fmt(Math.min(list.length, state.limit)) + " of " + fmt(list.length) +
       (list.length !== all.length ? " matching (" + fmt(all.length) + " in " + pubLabel() + ")" : " in " + pubLabel());
-    if (state.kw) $("pub-count").insertAdjacentHTML("beforeend", '<button type="button" class="chip kw-clear" id="kw-clear" aria-label="Remove keyword filter ' + esc(state.kw) + '">keyword: ' + esc(state.kw) + ' ✕</button>');
-    $("pub-list").innerHTML = list.slice(0, state.limit).map(function (p) {
-      var tv = p[state.tier] || "No Ranking", href = pubLink(p);
-      var title = esc(p.title || "(untitled)");
-      return '<li><div class="pub-title">' + (href ? '<a href="' + esc(href) + '" target="_blank" rel="noopener">' + title + '</a>' : title) + '</div>' +
-        '<div class="pub-meta"><span class="badge" style="background:var(' + tierVar(tv) + ')">' + esc(TIER_NAME[state.tier] + " " + (tv === "No Ranking" ? "NR" : tv)) + '</span>' +
-        (p.venue ? '<span class="venue">' + esc(p.venue) + '</span>' : "") +
-        '<span>' + esc(p.date || p.year) + '</span>' +
-        (p.type ? '<span class="tag">' + esc(TYPE_NAME[p.type] || p.type) + '</span>' : "") +
-        (p.collab ? '<span class="tag">' + esc(p.collab) + '</span>' : "") + '</div>' +
-        ((p.staff || []).length ? '<div class="pub-staff">' + p.staff.map(esc).join(", ") + '</div>' : "") + '</li>';
-    }).join("") || '<li class="pub-staff">No publications match.</li>';
+    $("pub-list").innerHTML = list.slice(0, state.limit).map(pubItem).join("") || '<li class="pub-staff">No publications match.</li>';
     $("pub-more").innerHTML = list.length > state.limit
       ? '<button type="button" class="btn" id="pub-more-btn">Show ' + fmt(Math.min(PAGE, list.length - state.limit)) + ' more</button>' : "";
   }
@@ -1759,8 +1845,10 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     });
     if (!state.rangeSet) { state.from = state.to = state.year; }
     if (!state.cRangeSet) { state.cfrom = state.cto = state.year; }
+    if (!state.kRangeSet) { state.kfrom = state.kto = state.year; }
     renderRange();
     renderRange("co");
+    renderRange("kw");
     renderKpis();
     renderChips();
     renderTrend();
@@ -1772,12 +1860,13 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     renderPubTierOptions();
     renderPubStaffSel();
     renderPubs();
+    renderKwStaffSel();
     renderCloud();
     renderCoauth();
   }
 
   function renderRange(sc) {
-    var r = rangeOf(sc), pre = sc === "co" ? "co-" : "";
+    var r = rangeOf(sc), pre = sc ? sc + "-" : "";
     var opts = function (sel) {
       return D.years.slice().reverse().map(function (y) {
         return '<option value="' + y + '"' + (y === sel ? " selected" : "") + '>' + y + '</option>';
@@ -1787,10 +1876,17 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     $(pre + "range-to").innerHTML = opts(r.to);
     var all = r.from === D.years[0] && r.to === D.years[D.years.length - 1];
     $(pre + "range-all").setAttribute("aria-pressed", String(all));
-    $(sc === "co" ? "coauth-year" : "lower-year").textContent = sc === "co" ? coLabel() : pubLabel();
+    if (sc === "co") $("coauth-year").textContent = coLabel();
+    else if (sc === "kw") $("kw-year").textContent = kwLabel();
+    else $("lower-year").textContent = pubLabel();
   }
   function setRange(from, to, sc) {
     if (from > to) { var t = from; from = to; to = t; }
+    if (sc === "kw") {
+      state.kfrom = from; state.kto = to; state.kRangeSet = true;
+      syncUrl(); renderRange("kw"); renderKwStaffSel(); renderCloud();
+      return;
+    }
     if (sc === "co") {
       state.cfrom = from; state.cto = to; state.cRangeSet = true;
       syncUrl(); renderRange("co"); renderCoauth();
@@ -1798,7 +1894,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     }
     state.from = from; state.to = to; state.rangeSet = true; state.limit = PAGE;
     syncUrl();
-    renderRange(); renderPubStaffSel(); renderStaff(); renderPubs(); renderCloud();
+    renderRange(); renderPubStaffSel(); renderStaff(); renderPubs();
   }
 
   function defaultShown() {
@@ -1838,6 +1934,12 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     if (qs && (D.per_staff || []).some(function (r) { return r.name === qs; })) co.focus = qs;
     var qp = params.get("pstaff");
     if (qp && (D.per_staff || []).some(function (r) { return r.name === qp; })) state.pstaff = qp;
+    var kf = Number(params.get("kfrom")), kt = Number(params.get("kto"));
+    if (D.years.indexOf(kf) >= 0 && D.years.indexOf(kt) >= 0) {
+      state.kfrom = Math.min(kf, kt); state.kto = Math.max(kf, kt); state.kRangeSet = true;
+    }
+    var qk = params.get("kstaff");
+    if (qk && (D.per_staff || []).some(function (r) { return r.name === qk; })) state.kstaff = qk;
 
     $("year-sel").innerHTML = D.years.slice().reverse().map(function (y) {
       return '<option value="' + y + '">' + y + (y === D.current_year ? " (YTD)" : "") + '</option>';
@@ -1868,6 +1970,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       if (state.cRangeSet) { p.set("cfrom", state.cfrom); p.set("cto", state.cto); } else { p.delete("cfrom"); p.delete("cto"); }
       if (co.focus) p.set("staff", co.focus); else p.delete("staff");
       if (state.pstaff) p.set("pstaff", state.pstaff); else p.delete("pstaff");
+      if (state.kRangeSet) { p.set("kfrom", state.kfrom); p.set("kto", state.kto); } else { p.delete("kfrom"); p.delete("kto"); }
+      if (state.kstaff) p.set("kstaff", state.kstaff); else p.delete("kstaff");
       var s = p.toString();
       history.replaceState(null, "", location.pathname + (s ? "?" + s : "") + location.hash);
     } catch (e) { /* ignore */ }
@@ -1918,13 +2022,22 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       setPubStaff(state.pstaff === nm ? null : nm);
       var again = $("staff-body").querySelector('button[data-staff="' + CSS.escape(nm) + '"]'); if (again) again.focus();
     });
-    $("cloud").addEventListener("click", function (e) {
-      var b = e.target.closest("button[data-kw]"); if (!b) return;
-      var k = b.getAttribute("data-kw");
-      setKw(k);
-      var again = $("cloud").querySelector('button[data-kw="' + CSS.escape(k) + '"]'); if (again) again.focus();
+    ["cloud", "kw-top"].forEach(function (id) {
+      $(id).addEventListener("click", function (e) {
+        var b = e.target.closest("button[data-kw]"); if (!b) return;
+        var k = b.getAttribute("data-kw");
+        setKw(k);
+        var again = $(id).querySelector('button[data-kw="' + CSS.escape(k) + '"]'); if (again) again.focus();
+      });
     });
-    $("pub-count").addEventListener("click", function (e) { if (e.target.closest("#kw-clear")) { setKw(null); $("pub-q").focus(); } });
+    $("h-kwpapers").addEventListener("click", function (e) { if (e.target.closest("#kw-clear")) { setKw(null); $("cloud").querySelector("button") && $("cloud").querySelector("button").focus(); } });
+    $("kw-more").addEventListener("click", function (e) { if (e.target.id === "kw-more-btn") { state.klimit += PAGE; renderCloud(); } });
+    $("kw-range-all").addEventListener("click", function () { setRange(D.years[0], D.years[D.years.length - 1], "kw"); });
+    $("kw-range-from").addEventListener("change", function () { setRange(Number(this.value), state.kto, "kw"); });
+    $("kw-range-to").addEventListener("change", function () { setRange(state.kfrom, Number(this.value), "kw"); });
+    $("kw-staff").addEventListener("change", function () { setKwStaff(this.value); });
+    $("kw-staff-clear").addEventListener("click", function () { setKwStaff(null); $("kw-staff").focus(); });
+
     $("co-staff-clear").addEventListener("click", function () { setFocus(null); $("co-staff").focus(); });
     $("staff-head").addEventListener("click", function (e) {
       var b = e.target.closest("button[data-sort]"); if (!b) return;
