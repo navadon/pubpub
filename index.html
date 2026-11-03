@@ -563,8 +563,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       <p class="hint" id="ext-hint"></p>
       <div class="sk-tools">
         <div class="seg" role="group" aria-label="Partner institutions shown" id="ext-mode">
-          <button type="button" data-ext="intl" aria-pressed="true">International</button>
-          <button type="button" data-ext="all" aria-pressed="false">All external</button>
+          <button type="button" data-ext="all" aria-pressed="true">All external</button>
+          <button type="button" data-ext="intl" aria-pressed="false">International</button>
         </div>
       </div>
       <div class="sk-box" id="sk-box"></div>
@@ -1092,7 +1092,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 
   // ---------- co-authorship ----------
   // Internal network (force layout, computed once per range and width) and external partner flow (Sankey).
-  var co = { key: null, rangeKey: null, layout: null, pinned: null, extMode: "intl", data: null };
+  var co = { key: null, rangeKey: null, layout: null, pinned: null, extMode: "all", data: null };
   var SHORT_INST = {
     "Massachusetts Institute of Technology": "MIT",
     "MIT Media Lab": "MIT Media Lab",
