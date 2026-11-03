@@ -42,7 +42,7 @@ SJR_MAX_AGE_DAYS = 30
 INCLUDED_TYPES = {"article", "review", "book-chapter"}
 WORK_SELECT = ",".join([
     "id", "doi", "title", "publication_date", "publication_year", "type",
-    "type_crossref", "is_retracted", "primary_location", "authorships",
+    "type_crossref", "is_retracted", "primary_location", "authorships", "keywords",
 ])
 ID_CHUNK = 40  # author IDs per OR filter
 
@@ -378,6 +378,17 @@ def fetch_works(author_ids: List[str], start: str, end: str) -> List[Dict[str, A
                 break
         log("fetched %d works so far (author chunk %d)" % (len(works), i // ID_CHUNK + 1))
     return list(works.values())
+
+
+def work_keywords(w: Dict[str, Any]) -> List[str]:
+    """OpenAlex keywords for a work (lower-case display names, best first)."""
+    kws = sorted(w.get("keywords") or [], key=lambda k: -(k.get("score") or 0))
+    out = []
+    for k in kws:
+        name = (k.get("display_name") or "").strip().lower()
+        if name and name not in out:
+            out.append(name)
+    return out
 
 
 def norm_doi(d: Optional[str]) -> str:
@@ -769,6 +780,7 @@ def main() -> int:
             "citescore": cs.tier(issn, year) if cs.available else None,
             "collab": collab_class(w, cmu_id),
             "ext": external_institutions(w, cmu_id, set(id_to_name), institutions),
+            "kw": work_keywords(w),
         }
         pubs.append(p)
         if doi:

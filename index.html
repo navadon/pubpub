@@ -52,6 +52,11 @@
   --k4: linear-gradient(135deg, #fde6da, #f8d0bd);
   --k5: linear-gradient(135deg, #fcf1cf, #f5e2a8);
   --kpi-text: #2a2c3d;
+  --w1: #6b4fa8;
+  --w2: #3a78b0;
+  --w3: #2f8559;
+  --w4: #b05a3a;
+  --w5: #8a6a1c;
   --kpi-ico: rgba(255, 255, 255, .6);
   --kpi-glow: rgba(255, 255, 255, .3);
   --kpi-ring-track: rgba(42, 44, 61, .1);
@@ -103,6 +108,11 @@
     --k4: linear-gradient(135deg, #55392f, #6a4739);
     --k5: linear-gradient(135deg, #4e4523, #64582d);
     --kpi-text: #f1effa;
+  --w1: #cdbaf5;
+  --w2: #9cc3ec;
+  --w3: #93d3ae;
+  --w4: #f0b29d;
+  --w5: #e6cc85;
     --kpi-ico: rgba(255, 255, 255, .12);
     --kpi-glow: rgba(255, 255, 255, .06);
     --kpi-ring-track: rgba(255, 255, 255, .18);
@@ -154,6 +164,11 @@
   --k4: linear-gradient(135deg, #55392f, #6a4739);
   --k5: linear-gradient(135deg, #4e4523, #64582d);
   --kpi-text: #f1effa;
+  --w1: #cdbaf5;
+  --w2: #9cc3ec;
+  --w3: #93d3ae;
+  --w4: #f0b29d;
+  --w5: #e6cc85;
   --kpi-ico: rgba(255, 255, 255, .12);
   --kpi-glow: rgba(255, 255, 255, .06);
   --kpi-ring-track: rgba(255, 255, 255, .18);
@@ -367,6 +382,24 @@ ol.pubs li:last-child { border-bottom: 0; }
 .badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: 999px; color: var(--t-text); white-space: nowrap; }
 .tag { display: inline-block; font-size: 11px; padding: 0 7px; border-radius: 999px; border: 1px solid var(--border); color: var(--text-2); white-space: nowrap; }
 .more { margin-top: 10px; }
+table.staff tbody tr.sel { background: var(--cmu-purple-soft); }
+table.staff tr.sel .name-btn { font-weight: 700; color: var(--link); }
+.name-btn { appearance: none; background: none; border: 0; padding: 0; font: inherit; color: inherit; cursor: pointer; text-align: left; }
+.name-btn:hover { color: var(--link); text-decoration: underline; }
+.kw-clear { margin-left: 6px; font-size: 11px; padding: 1px 8px; }
+.p-cloud { margin-top: 12px; }
+.cloud {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 14px;
+  padding: 10px 4px 6px; font-size: clamp(10px, 1.6vw, 15px); line-height: 1.15;
+}
+.cloud button {
+  appearance: none; background: none; border: 0; border-radius: 6px; padding: 1px 4px; cursor: pointer;
+  font-family: inherit; color: var(--w, var(--text)); overflow-wrap: anywhere; max-width: 100%;
+}
+.cloud button:hover { background: var(--surface-2); }
+.cloud button[aria-pressed="true"] { background: var(--cmu-purple-soft); outline: 2px solid var(--accent); }
+.cloud-note:empty { display: none; }
+.cloud-note { margin: 6px 0 0; text-align: center; }
 .btn {
   appearance: none; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--text);
   background: var(--chip-bg); border: 1px solid var(--border); border-radius: 8px; padding: 6px 14px;
@@ -546,6 +579,10 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       <label for="range-from">From</label><select id="range-from"></select>
       <label for="range-to">To</label><select id="range-to"></select>
     </div>
+    <div class="range" role="group" aria-label="Staff member for publications">
+      <label for="pub-staff">Staff</label><select id="pub-staff" class="staff-sel"></select>
+      <button type="button" class="btn" id="pub-staff-clear" hidden aria-label="Show all staff">Clear</button>
+    </div>
   </div>
   <div class="lower">
     <section class="panel" aria-labelledby="h-staff">
@@ -581,6 +618,12 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       <div class="more" id="pub-more"></div>
     </section>
   </div>
+  <section class="panel p-cloud" aria-labelledby="h-cloud">
+    <h2 id="h-cloud">Research keywords</h2>
+    <p class="hint" id="cloud-hint"></p>
+    <div class="cloud" id="cloud" role="group" aria-labelledby="h-cloud"></div>
+    <p class="hint cloud-note" id="cloud-note" aria-live="polite"></p>
+  </section>
 
   </section>
 
@@ -668,6 +711,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     cto: null,
     cRangeSet: false,
     q: "",
+    pstaff: null,     // Publications section staff filter
+    kw: null,         // keyword chosen in the word cloud
     pubTier: "",
     pubType: "",
     limit: PAGE,
@@ -1083,14 +1128,15 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       return r * dir;
     });
     $("staff-body").innerHTML = rows.map(function (r, i) {
-      return '<tr><td><span class="rank">' + (i + 1) + '</span>' + esc(r.name) + '</td>' + cols.slice(1).map(function (c) {
+      return '<tr' + (r.name === state.pstaff ? ' class="sel"' : "") + '><td><span class="rank">' + (i + 1) + '</span><button type="button" class="name-btn" data-staff="' + esc(r.name) +
+        '" aria-pressed="' + (r.name === state.pstaff) + '">' + esc(r.name) + '</button></td>' + cols.slice(1).map(function (c) {
         return '<td class="num' + (r[c.key] ? "" : " zero") + '">' + r[c.key] + '</td>';
       }).join("") + '</tr>';
     }).join("");
     var active = rows.filter(function (r) { return r.year > 0; }).length;
     $("staff-hint").textContent = fmt(rows.length) + " staff, " + active + " with works in " + rangeLabel() +
       ". " + rankKeys().join(", ") + " = " + TIER_NAME[state.tier] + " journal ranking, counted in the range; unranked venues are not shown. Career = since " +
-      D.years[0] + ". Select a column to sort.";
+      D.years[0] + ". Select a column to sort, or a name to show only their papers.";
   }
 
   // ---------- publications ----------
@@ -1113,11 +1159,70 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     if (state.pubTier && (state.pubTier === "__top" || TIER_KEYS[state.tier].indexOf(state.pubTier) >= 0)) $("pub-tier").value = state.pubTier;
     else { state.pubTier = ""; $("pub-tier").value = ""; }
   }
+  function pubLabel() { return rangeLabel() + (state.pstaff ? " · " + state.pstaff : ""); }
+  function renderPubStaffSel() {
+    var n = {};
+    D.publications.forEach(function (p) { if (inRange(p.year)) (p.staff || []).forEach(function (s) { n[s] = (n[s] || 0) + 1; }); });
+    var names = (D.per_staff || []).map(function (r) { return r.name; }).sort(function (a, b) { return a.localeCompare(b); });
+    $("pub-staff").innerHTML = '<option value="">All staff</option>' + names.map(function (nm) {
+      return '<option value="' + esc(nm) + '">' + esc(nm) + ' (' + (n[nm] || 0) + ')</option>';
+    }).join("");
+    $("pub-staff").value = state.pstaff || "";
+    $("pub-staff-clear").hidden = !state.pstaff;
+    $("lower-year").textContent = pubLabel();
+  }
+  function setPubStaff(name) {
+    state.pstaff = name || null; state.limit = PAGE;
+    syncUrl(); renderPubStaffSel(); renderStaff(); renderPubs(); renderCloud();
+  }
+
+  // word cloud of OpenAlex keywords for the range (and staff member)
+  var CLOUD_MAX = 60;
+  function hashStr(t) { var h = 0; for (var i = 0; i < t.length; i++) h = (h * 31 + t.charCodeAt(i)) | 0; return Math.abs(h); }
+  function renderCloud() {
+    var cnt = {}, papers = 0;
+    D.publications.forEach(function (p) {
+      if (!inRange(p.year) || (state.pstaff && (p.staff || []).indexOf(state.pstaff) < 0)) return;
+      if ((p.kw || []).length) papers++;
+      (p.kw || []).forEach(function (k) { cnt[k] = (cnt[k] || 0) + 1; });
+    });
+    var words = Object.keys(cnt).sort(function (a, b) { return cnt[b] - cnt[a] || a.localeCompare(b); }).slice(0, CLOUD_MAX);
+    if (state.kw && words.indexOf(state.kw) < 0 && cnt[state.kw]) words.push(state.kw);
+    $("cloud-hint").textContent = words.length
+      ? "The " + words.length + " most frequent OpenAlex keywords on " + fmt(papers) + " papers, " + pubLabel() +
+        ". Larger words appear on more papers. Select a word to list its papers."
+      : "";
+    if (!words.length) {
+      $("cloud").innerHTML = '<p class="chart-fallback">No keywords for ' + esc(pubLabel()) + '. Try a wider year range.</p>';
+      $("cloud-note").textContent = "";
+      return;
+    }
+    var mx = cnt[words[0]], mn = cnt[words[words.length - 1]];
+    var size = function (n) { return mx === mn ? 1.4 : 0.85 + 1.75 * Math.sqrt((n - mn) / (mx - mn)); };
+    // biggest words in the middle, smaller ones alternating outwards
+    var order = [];
+    words.forEach(function (w, i) { if (i % 2) order.push(w); else order.unshift(w); });
+    $("cloud").innerHTML = order.map(function (w) {
+      var em = size(cnt[w]);
+      return '<button type="button" data-kw="' + esc(w) + '" aria-pressed="' + (w === state.kw) + '" title="' + cnt[w] + ' paper' + (cnt[w] === 1 ? "" : "s") +
+        '" style="font-size:' + em.toFixed(2) + 'em;font-weight:' + (em > 1.9 ? 700 : em > 1.3 ? 600 : 500) + ';--w:var(--w' + (hashStr(w) % 5 + 1) + ')">' +
+        esc(w) + '<span class="sr-only">, ' + cnt[w] + ' papers</span></button>';
+    }).join("");
+    $("cloud-note").innerHTML = state.kw
+      ? fmt(cnt[state.kw] || 0) + ' paper' + (cnt[state.kw] === 1 ? "" : "s") + ' with “' + esc(state.kw) + '” are listed in <a href="#h-pubs">Publications</a> above. Select the word again to clear.'
+      : "";
+  }
+  function setKw(k) {
+    state.kw = state.kw === k ? null : (k || null); state.limit = PAGE;
+    renderPubs(); renderCloud();
+  }
+
   function renderPubs() {
     var q = state.q.trim().toLowerCase();
     var terms = q ? q.split(/\s+/) : [];
-    var all = D.publications.filter(function (p) { return inRange(p.year); });
+    var all = D.publications.filter(function (p) { return inRange(p.year) && (!state.pstaff || (p.staff || []).indexOf(state.pstaff) >= 0); });
     var list = all.filter(function (p) {
+      if (state.kw && (p.kw || []).indexOf(state.kw) < 0) return false;
       var tv = p[state.tier] || "No Ranking";
       if (state.pubTier === "__top" && !isTop(p)) return false;
       if (state.pubTier && state.pubTier !== "__top" && tv !== state.pubTier) return false;
@@ -1127,7 +1232,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       return terms.every(function (t) { return hay.indexOf(t) >= 0; });
     }).sort(function (a, b) { return String(b.date || "").localeCompare(String(a.date || "")); });
     $("pub-count").textContent = "Showing " + fmt(Math.min(list.length, state.limit)) + " of " + fmt(list.length) +
-      (list.length !== all.length ? " matching (" + fmt(all.length) + " in " + rangeLabel() + ")" : " in " + rangeLabel());
+      (list.length !== all.length ? " matching (" + fmt(all.length) + " in " + pubLabel() + ")" : " in " + pubLabel());
+    if (state.kw) $("pub-count").insertAdjacentHTML("beforeend", '<button type="button" class="chip kw-clear" id="kw-clear" aria-label="Remove keyword filter ' + esc(state.kw) + '">keyword: ' + esc(state.kw) + ' ✕</button>');
     $("pub-list").innerHTML = list.slice(0, state.limit).map(function (p) {
       var tv = p[state.tier] || "No Ranking", href = pubLink(p);
       var title = esc(p.title || "(untitled)");
@@ -1664,7 +1770,9 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     renderInsight();
     renderStaff();
     renderPubTierOptions();
+    renderPubStaffSel();
     renderPubs();
+    renderCloud();
     renderCoauth();
   }
 
@@ -1679,7 +1787,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     $(pre + "range-to").innerHTML = opts(r.to);
     var all = r.from === D.years[0] && r.to === D.years[D.years.length - 1];
     $(pre + "range-all").setAttribute("aria-pressed", String(all));
-    $(sc === "co" ? "coauth-year" : "lower-year").textContent = sc === "co" ? coLabel() : rangeLabel(sc);
+    $(sc === "co" ? "coauth-year" : "lower-year").textContent = sc === "co" ? coLabel() : pubLabel();
   }
   function setRange(from, to, sc) {
     if (from > to) { var t = from; from = to; to = t; }
@@ -1690,7 +1798,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     }
     state.from = from; state.to = to; state.rangeSet = true; state.limit = PAGE;
     syncUrl();
-    renderRange(); renderStaff(); renderPubs();
+    renderRange(); renderPubStaffSel(); renderStaff(); renderPubs(); renderCloud();
   }
 
   function defaultShown() {
@@ -1728,6 +1836,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     }
     var qs = params.get("staff");
     if (qs && (D.per_staff || []).some(function (r) { return r.name === qs; })) co.focus = qs;
+    var qp = params.get("pstaff");
+    if (qp && (D.per_staff || []).some(function (r) { return r.name === qp; })) state.pstaff = qp;
 
     $("year-sel").innerHTML = D.years.slice().reverse().map(function (y) {
       return '<option value="' + y + '">' + y + (y === D.current_year ? " (YTD)" : "") + '</option>';
@@ -1757,6 +1867,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       if (state.rangeSet) { p.set("from", state.from); p.set("to", state.to); } else { p.delete("from"); p.delete("to"); }
       if (state.cRangeSet) { p.set("cfrom", state.cfrom); p.set("cto", state.cto); } else { p.delete("cfrom"); p.delete("cto"); }
       if (co.focus) p.set("staff", co.focus); else p.delete("staff");
+      if (state.pstaff) p.set("pstaff", state.pstaff); else p.delete("pstaff");
       var s = p.toString();
       history.replaceState(null, "", location.pathname + (s ? "?" + s : "") + location.hash);
     } catch (e) { /* ignore */ }
@@ -1799,6 +1910,21 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     $("co-range-from").addEventListener("change", function () { setRange(Number(this.value), state.cto, "co"); });
     $("co-range-to").addEventListener("change", function () { setRange(state.cfrom, Number(this.value), "co"); });
     $("co-staff").addEventListener("change", function () { setFocus(this.value); });
+    $("pub-staff").addEventListener("change", function () { setPubStaff(this.value); });
+    $("pub-staff-clear").addEventListener("click", function () { setPubStaff(null); $("pub-staff").focus(); });
+    $("staff-body").addEventListener("click", function (e) {
+      var b = e.target.closest("button[data-staff]"); if (!b) return;
+      var nm = b.getAttribute("data-staff");
+      setPubStaff(state.pstaff === nm ? null : nm);
+      var again = $("staff-body").querySelector('button[data-staff="' + CSS.escape(nm) + '"]'); if (again) again.focus();
+    });
+    $("cloud").addEventListener("click", function (e) {
+      var b = e.target.closest("button[data-kw]"); if (!b) return;
+      var k = b.getAttribute("data-kw");
+      setKw(k);
+      var again = $("cloud").querySelector('button[data-kw="' + CSS.escape(k) + '"]'); if (again) again.focus();
+    });
+    $("pub-count").addEventListener("click", function (e) { if (e.target.closest("#kw-clear")) { setKw(null); $("pub-q").focus(); } });
     $("co-staff-clear").addEventListener("click", function () { setFocus(null); $("co-staff").focus(); });
     $("staff-head").addEventListener("click", function (e) {
       var b = e.target.closest("button[data-sort]"); if (!b) return;
