@@ -1275,7 +1275,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   function kwPapers() {
     return D.publications.filter(function (p) { return inRange(p.year) && hasStaff(p, state.pstaff); });
   }
-  var CLOUD_MAX = 60;
+  var CLOUD_MAX = 50;
   function hashStr(t) { var h = 0; for (var i = 0; i < t.length; i++) h = (h * 31 + t.charCodeAt(i)) | 0; return Math.abs(h); }
   function wcol(w) { return hashStr(w) % 5 + 1; }
   function renderCloud() {
@@ -1297,14 +1297,15 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       return;
     }
     var mx = cnt[words[0]], mn = cnt[words[words.length - 1]];
-    var size = function (n) { return mx === mn ? 1.4 : 0.85 + 1.75 * Math.sqrt((n - mn) / (mx - mn)); };
+    var lo = Math.max(2, mn);  // keywords on a single paper get a fixed tiny size
+    var size = function (n) { return mx === lo ? 1.2 : 0.9 + 1.1 * Math.sqrt(Math.max(0, n - lo) / (mx - lo)); };
     // biggest words in the middle, smaller ones alternating outwards
     var order = [];
     words.forEach(function (w, i) { if (i % 2) order.push(w); else order.unshift(w); });
     $("cloud").innerHTML = order.map(function (w) {
-      var em = size(cnt[w]);
+      var em = cnt[w] < 2 ? 0 : size(cnt[w]);
       return '<button type="button" data-kw="' + esc(w) + '" aria-pressed="' + (w === state.kw) + '" title="' + cnt[w] + ' paper' + (cnt[w] === 1 ? "" : "s") +
-        '" style="font-size:' + em.toFixed(2) + 'em;font-weight:' + (em > 1.9 ? 700 : em > 1.3 ? 600 : 500) + ';--w:var(--w' + wcol(w) + ')">' +
+        '" style="font-size:' + (em ? em.toFixed(2) + "em" : "8pt") + ';font-weight:' + (em > 1.6 ? 700 : em > 1.2 ? 600 : 500) + ';--w:var(--w' + wcol(w) + ')">' +
         esc(w) + '<span class="sr-only">, ' + cnt[w] + ' papers</span></button>';
     }).join("");
     var top = words.slice(0, 12), tmax = cnt[top[0]];
