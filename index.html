@@ -152,7 +152,7 @@ header.top .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 12p
 .brand .note { margin: 2px 0 0; color: var(--header-muted); font-size: 12px; }
 .brand .note a { color: #e9d38e; }
 .controls { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
-.controls { margin-bottom: 12px; }
+.controls { margin-bottom: 0; }
 .ctl-label { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-right: 6px; font-weight: 600; }
 .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; padding: 2px; background: var(--surface); }
 .seg button {
@@ -263,9 +263,19 @@ main { padding: 16px 0 8px; }
 .insight b { color: var(--text); }
 
 /* Below the fold */
-.section-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin: 26px 0 10px; }
-.section-head h2 { margin: 0; font-size: 18px; }
-.section-head .hint { color: var(--muted); font-size: 13px; margin: 0; flex-basis: 100%; }
+.page-sec { scroll-margin-top: 12px; }
+.page-sec + .page-sec { margin-top: 34px; padding-top: 22px; border-top: 2px solid var(--border); }
+.sec-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin: 6px 0 14px; }
+.sec-head h2 { margin: 0; font-size: 22px; font-weight: 750; display: flex; align-items: center; gap: 10px; }
+.sec-head .hint { color: var(--muted); font-size: 13px; margin: 0; flex-basis: 100%; order: 3; }
+.sec-head .controls { margin: 0; }
+.sec-no { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent); color: #fff; font-size: 14px; font-weight: 700; }
+.sec-range { font-size: 15px; font-weight: 600; color: var(--muted); }
+.sec-nav { display: flex; gap: 6px; flex-wrap: wrap; }
+.sec-nav a { color: var(--header-text); text-decoration: none; font-size: 13px; font-weight: 600;
+  padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.25); }
+.sec-nav a:hover, .sec-nav a:focus-visible { background: rgba(255,255,255,.12); }
 .range { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: 13px; color: var(--text-2); }
 .range select {
   font: inherit; font-size: 13px; color: var(--text); background: var(--surface-2);
@@ -279,7 +289,7 @@ table.staff th, table.staff td { padding: 6px 6px; border-bottom: 1px solid var(
 table.staff th:first-child, table.staff td:first-child { text-align: left; }
 table.staff th:not(:first-child), table.staff td:not(:first-child) { padding-left: 4px; padding-right: 4px; }
 table.staff td.num, table.staff th:not(:first-child) { width: 1%; white-space: nowrap; }
-table.staff td:first-child { overflow-wrap: anywhere; }
+table.staff td:first-child { overflow-wrap: normal; min-width: 9.5em; }
 table.staff th { font-size: 12px; color: var(--muted); font-weight: 600; vertical-align: bottom; }
 table.staff th button {
   appearance: none; background: none; border: 0; padding: 2px 0; font: inherit; color: inherit; cursor: pointer;
@@ -413,11 +423,18 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       <p class="sub">Department of Computer Engineering, Faculty of Engineering, Chiang Mai University</p>
       <p class="note">Data: <a href="https://openalex.org" rel="noopener">OpenAlex</a> career publications of current staff; tiers by journal (latest SCImago SJR; Scopus CiteScore when supplied). Refreshed monthly.</p>
     </div>
+    <nav class="sec-nav" aria-label="Sections">
+      <a href="#summary">Summary</a><a href="#publications">Publications</a><a href="#collaboration">Collaboration</a>
+    </nav>
   </div>
 </header>
 <div class="banner" id="banner" hidden><div class="wrap" id="banner-text"></div></div>
 
 <main class="wrap" id="app" aria-live="polite">
+  <section class="page-sec" id="summary" aria-labelledby="sec-summary">
+  <div class="sec-head">
+    <h2 id="sec-summary"><span class="sec-no" aria-hidden="true">1</span>Summary</h2>
+    <p class="hint">Key figures for one year. The ranking choice applies to the whole page.</p>
   <div class="controls">
     <div class="ctl">
       <span class="ctl-label" id="tier-lbl">Ranking</span>
@@ -430,6 +447,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       <label class="ctl-label" for="year-sel">Year</label>
       <select id="year-sel" class="year-sel"></select>
     </div>
+  </div>
   </div>
   <section class="kpis" aria-label="Key figures" id="kpis"></section>
 
@@ -457,7 +475,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     </section>
 
     <section class="panel p-collab" aria-labelledby="h-collab">
-      <h2 id="h-collab">Collaboration</h2>
+      <h2 id="h-collab">Collaboration type</h2>
       <p class="hint" id="collab-hint"></p>
       <div id="collab"></div>
       <p class="hint" style="margin-top:10px">International: any co-author institution outside Thailand. National: all in Thailand, some outside CMU.</p>
@@ -465,15 +483,17 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   </div>
 
   <p class="insight" id="insight"></p>
+  </section>
 
-  <div class="section-head">
-    <h2 id="h-lower">Staff and publications, <span id="lower-year"></span></h2>
-    <div class="range" role="group" aria-label="Year range for staff and publications">
+  <section class="page-sec" id="publications" aria-labelledby="sec-pubs">
+  <div class="sec-head">
+    <h2 id="sec-pubs"><span class="sec-no" aria-hidden="true">2</span>Publications <span class="sec-range" id="lower-year"></span></h2>
+    <p class="hint">Papers per staff member and the paper list for a year range. A paper with several staff co-authors appears under each of them.</p>
+    <div class="range" role="group" aria-label="Year range for publications">
       <button type="button" class="btn" id="range-all" aria-pressed="false">All time</button>
       <label for="range-from">From</label><select id="range-from"></select>
       <label for="range-to">To</label><select id="range-to"></select>
     </div>
-    <p class="hint">A paper with several staff co-authors appears under each of them, but counts once in the totals above.</p>
   </div>
   <div class="lower">
     <section class="panel" aria-labelledby="h-staff">
@@ -510,9 +530,17 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     </section>
   </div>
 
-  <div class="section-head">
-    <h2 id="h-coauth">Co-authorship, <span id="coauth-year"></span></h2>
-    <p class="hint">How CPE staff write together, and the partners they work with outside CMU. Uses the year range above.</p>
+  </section>
+
+  <section class="page-sec" id="collaboration" aria-labelledby="sec-collab">
+  <div class="sec-head">
+    <h2 id="sec-collab"><span class="sec-no" aria-hidden="true">3</span>Collaboration <span class="sec-range" id="coauth-year"></span></h2>
+    <p class="hint">How CPE staff write together, and the partners they work with outside CMU.</p>
+    <div class="range" role="group" aria-label="Year range for collaboration">
+      <button type="button" class="btn" id="co-range-all" aria-pressed="false">All time</button>
+      <label for="co-range-from">From</label><select id="co-range-from"></select>
+      <label for="co-range-to">To</label><select id="co-range-to"></select>
+    </div>
   </div>
   <div class="coauth">
     <section class="panel" aria-labelledby="h-net">
@@ -539,6 +567,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       <div id="ext-countries" aria-labelledby="h-countries"></div>
     </section>
   </div>
+  </section>
   <div class="co-tip" id="co-tip" role="tooltip" hidden></div>
 </main>
 
@@ -579,6 +608,9 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     from: null,   // year range for the staff table and publication list
     to: null,
     rangeSet: false,  // false: range follows the header year
+    cfrom: null,      // Collaboration section range
+    cto: null,
+    cRangeSet: false,
     q: "",
     pubTier: "",
     pubType: "",
@@ -944,10 +976,13 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   }
 
   // ---------- staff table ----------
-  function inRange(y) { return y >= state.from && y <= state.to; }
-  function rangeLabel() {
-    var all = state.from === D.years[0] && state.to === D.years[D.years.length - 1];
-    var span = state.from === state.to ? String(state.from) : state.from + "–" + state.to;
+  // two independent year ranges: "pubs" (Publications section) and "co" (Collaboration section)
+  function rangeOf(sc) { return sc === "co" ? { from: state.cfrom, to: state.cto } : { from: state.from, to: state.to }; }
+  function inRange(y, sc) { var r = rangeOf(sc); return y >= r.from && y <= r.to; }
+  function rangeLabel(sc) {
+    var r = rangeOf(sc);
+    var all = r.from === D.years[0] && r.to === D.years[D.years.length - 1];
+    var span = r.from === r.to ? String(r.from) : r.from + "–" + r.to;
     return all ? "all time (" + span + ")" : span;
   }
   function rankKeys() { return TIER_KEYS[state.tier].filter(function (k) { return k !== "No Ranking"; }); }
@@ -1122,7 +1157,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     var known = {}; names.forEach(function (n) { known[n] = true; });
     var c = { names: names, papers: {}, withCol: {}, partners: {}, pairs: {}, total: 0, multi: 0, years: {} };
     D.publications.forEach(function (p) {
-      if (!inRange(p.year)) return;
+      if (!inRange(p.year, "co")) return;
       var st = [];
       (p.staff || []).forEach(function (n) { if (known[n] && st.indexOf(n) < 0) st.push(n); });
       c.total++;
@@ -1171,7 +1206,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   }
 
   function renderCoauth() {
-    $("coauth-year").textContent = rangeLabel();
+    $("coauth-year").textContent = rangeLabel("co");
     var c = co.data = coauthData();
     renderNetStats(c);
     renderNet(c);
@@ -1265,7 +1300,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 
   function netTip(c, name) {
     var ps = partnerList(c, name);
-    return '<b>' + esc(name) + '</b><br><span class="num">' + fmt(c.papers[name] || 0) + '</span> paper' + ((c.papers[name] || 0) === 1 ? "" : "s") + ' in ' + esc(rangeLabel()) +
+    return '<b>' + esc(name) + '</b><br><span class="num">' + fmt(c.papers[name] || 0) + '</span> paper' + ((c.papers[name] || 0) === 1 ? "" : "s") + ' in ' + esc(rangeLabel("co")) +
       (c.withCol[name] ? '<br><span class="num">' + fmt(c.withCol[name]) + '</span> with CPE colleagues' : "") +
       (ps.length ? '<ul>' + ps.slice(0, 10).map(function (p) { return '<li>' + esc(p.name) + ' <span class="m num">(' + p.n + ')</span></li>'; }).join("") +
         (ps.length > 10 ? '<li class="m">and ' + (ps.length - 10) + ' more</li>' : "") + '</ul>' : "");
@@ -1284,17 +1319,17 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     }
     if (!c.total) {
       co.key = null;
-      box.innerHTML = '<p class="chart-fallback">No publications in ' + esc(rangeLabel()) + ' yet. Try a wider year range.</p>';
+      box.innerHTML = '<p class="chart-fallback">No publications in ' + esc(rangeLabel("co")) + ' yet. Try a wider year range.</p>';
       return;
     }
     var W = Math.max(240, Math.floor(box.clientWidth || 300));
     var H = W < 520 ? Math.round(W * 1.08) : Math.min(500, Math.round(W * 0.74));
-    var rk = state.from + "|" + state.to, key = rk + "|" + W;
+    var rk = state.cfrom + "|" + state.cto, key = rk + "|" + W;
     if (co.rangeKey !== rk) { co.pinned = null; co.rangeKey = rk; }
     if (co.key !== key || !co.layout) { co.layout = layoutNet(c, W, H); co.key = key; }
     var L = co.layout;
     var top = c.pairList.slice(0, 3).map(function (p) { return firstName(p.a) + " and " + firstName(p.b) + " (" + p.n + ")"; });
-    var summary = "Network of " + c.names.length + " CPE staff for " + rangeLabel() + ": " + c.pairList.length + " pairs of colleagues wrote " +
+    var summary = "Network of " + c.names.length + " CPE staff for " + rangeLabel("co") + ": " + c.pairList.length + " pairs of colleagues wrote " +
       fmt(c.multi) + " joint papers; " + c.linked.length + " staff have a CPE co-author." + (top.length ? " Strongest pairs: " + top.join(", ") + "." : "");
 
     box.innerHTML = "";
@@ -1360,7 +1395,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     var intl = co.extMode === "intl";
     var inst = {}, link = {}, country = {}, total = 0, papers = 0;
     D.publications.forEach(function (p) {
-      if (!inRange(p.year)) return;
+      if (!inRange(p.year, "co")) return;
       var ext = (p.ext || []).filter(function (id, i, a) { return a.indexOf(id) === i && (!intl || instCountry(id) !== "TH"); });
       if (!ext.length) return;
       papers++;
@@ -1387,7 +1422,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     var pd = partnerData(), intl = co.extMode === "intl";
     document.querySelectorAll("#ext-mode button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-ext") === co.extMode)); });
     $("ext-hint").textContent = (intl ? "Institutions outside Thailand" : "Institutions outside CMU, in Thailand and abroad") +
-      ", " + rangeLabel() + ": " + fmt(pd.papers) + " paper" + (pd.papers === 1 ? "" : "s") + " with " + fmt(pd.instCount) + " partner institution" + (pd.instCount === 1 ? "" : "s") +
+      ", " + rangeLabel("co") + ": " + fmt(pd.papers) + " paper" + (pd.papers === 1 ? "" : "s") + " with " + fmt(pd.instCount) + " partner institution" + (pd.instCount === 1 ? "" : "s") +
       (pd.instCount > 15 ? "; the 15 most frequent are shown" : "") + ". Line width = joint papers per staff member and institution.";
     // top countries
     var cs = Object.keys(pd.country).sort(function (a, b) { return pd.country[b] - pd.country[a] || a.localeCompare(b); }).slice(0, 8);
@@ -1402,7 +1437,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 
     var box = $("sk-box");
     if (!pd.links.length) {
-      box.innerHTML = '<p class="chart-fallback">No ' + (intl ? "international " : "external ") + "partner papers in " + esc(rangeLabel()) + " yet. " +
+      box.innerHTML = '<p class="chart-fallback">No ' + (intl ? "international " : "external ") + "partner papers in " + esc(rangeLabel("co")) + " yet. " +
         (intl ? "Try All external, or a wider year range." : "Try a wider year range.") + '</p>';
       return;
     }
@@ -1446,7 +1481,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     }
     var topI = pd.topInst.slice(0, 3).map(function (id) { return instShort(id) + " (" + pd.inst[id] + ")"; });
     var summary = "Flow from " + staffNames.length + " CPE staff to the top " + pd.topInst.length + (intl ? " international" : " external") +
-      " partner institutions, " + rangeLabel() + ". Most frequent partners: " + topI.join(", ") + ".";
+      " partner institutions, " + rangeLabel("co") + ". Most frequent partners: " + topI.join(", ") + ".";
 
     box.innerHTML = "";
     var svg = d3.select(box).append("svg").attr("width", W).attr("height", H).attr("viewBox", "0 0 " + W + " " + H)
@@ -1489,7 +1524,9 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       b.setAttribute("aria-pressed", String(b.getAttribute("data-tier") === state.tier));
     });
     if (!state.rangeSet) { state.from = state.to = state.year; }
+    if (!state.cRangeSet) { state.cfrom = state.cto = state.year; }
     renderRange();
+    renderRange("co");
     renderKpis();
     renderChips();
     renderTrend();
@@ -1503,23 +1540,29 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     renderCoauth();
   }
 
-  function renderRange() {
+  function renderRange(sc) {
+    var r = rangeOf(sc), pre = sc === "co" ? "co-" : "";
     var opts = function (sel) {
       return D.years.slice().reverse().map(function (y) {
         return '<option value="' + y + '"' + (y === sel ? " selected" : "") + '>' + y + '</option>';
       }).join("");
     };
-    $("range-from").innerHTML = opts(state.from);
-    $("range-to").innerHTML = opts(state.to);
-    var all = state.from === D.years[0] && state.to === D.years[D.years.length - 1];
-    $("range-all").setAttribute("aria-pressed", String(all));
-    $("lower-year").textContent = rangeLabel();
+    $(pre + "range-from").innerHTML = opts(r.from);
+    $(pre + "range-to").innerHTML = opts(r.to);
+    var all = r.from === D.years[0] && r.to === D.years[D.years.length - 1];
+    $(pre + "range-all").setAttribute("aria-pressed", String(all));
+    $(sc === "co" ? "coauth-year" : "lower-year").textContent = rangeLabel(sc);
   }
-  function setRange(from, to) {
+  function setRange(from, to, sc) {
     if (from > to) { var t = from; from = to; to = t; }
+    if (sc === "co") {
+      state.cfrom = from; state.cto = to; state.cRangeSet = true;
+      syncUrl(); renderRange("co"); renderCoauth();
+      return;
+    }
     state.from = from; state.to = to; state.rangeSet = true; state.limit = PAGE;
     syncUrl();
-    renderRange(); renderStaff(); renderPubs(); renderCoauth();
+    renderRange(); renderStaff(); renderPubs();
   }
 
   function defaultShown() {
@@ -1551,6 +1594,10 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     if (D.years.indexOf(qf) >= 0 && D.years.indexOf(qto) >= 0) {
       state.from = Math.min(qf, qto); state.to = Math.max(qf, qto); state.rangeSet = true;
     }
+    var cf = Number(params.get("cfrom")), ct = Number(params.get("cto"));
+    if (D.years.indexOf(cf) >= 0 && D.years.indexOf(ct) >= 0) {
+      state.cfrom = Math.min(cf, ct); state.cto = Math.max(cf, ct); state.cRangeSet = true;
+    }
 
     $("year-sel").innerHTML = D.years.slice().reverse().map(function (y) {
       return '<option value="' + y + '">' + y + (y === D.current_year ? " (YTD)" : "") + '</option>';
@@ -1578,6 +1625,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       if (state.year !== D.current_year) p.set("year", state.year); else p.delete("year");
       if (state.tier !== "sjr") p.set("tier", state.tier); else p.delete("tier");
       if (state.rangeSet) { p.set("from", state.from); p.set("to", state.to); } else { p.delete("from"); p.delete("to"); }
+      if (state.cRangeSet) { p.set("cfrom", state.cfrom); p.set("cto", state.cto); } else { p.delete("cfrom"); p.delete("cto"); }
       var s = p.toString();
       history.replaceState(null, "", location.pathname + (s ? "?" + s : "") + location.hash);
     } catch (e) { /* ignore */ }
@@ -1616,6 +1664,9 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     $("range-all").addEventListener("click", function () { setRange(D.years[0], D.years[D.years.length - 1]); });
     $("range-from").addEventListener("change", function () { setRange(Number(this.value), state.to); });
     $("range-to").addEventListener("change", function () { setRange(state.from, Number(this.value)); });
+    $("co-range-all").addEventListener("click", function () { setRange(D.years[0], D.years[D.years.length - 1], "co"); });
+    $("co-range-from").addEventListener("change", function () { setRange(Number(this.value), state.cto, "co"); });
+    $("co-range-to").addEventListener("change", function () { setRange(state.cfrom, Number(this.value), "co"); });
     $("staff-head").addEventListener("click", function (e) {
       var b = e.target.closest("button[data-sort]"); if (!b) return;
       var k = b.getAttribute("data-sort");
