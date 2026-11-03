@@ -1097,7 +1097,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   }
 
   function renderInsight() {
-    var y = state.year, tot = yearTotal(y), top = topCount(y), lm = lastMonthOf(y);
+    var y = state.year, tot = yearTotal(y), lm = lastMonthOf(y);
     var parts = [];
     var cur = y === D.current_year;
     var s = "<b>" + y + (cur ? " so far" : "") + ":</b> " + fmt(tot) + " publications" + (cur ? " through " + MONTHS[lm - 1] : "");
@@ -1107,17 +1107,16 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       s += ", " + (ch >= 0 ? "up " : "down ") + Math.abs(ch) + "% on " + (cur ? "the same period of " : "") + (y - 1);
     }
     parts.push(s + ".");
-    parts.push(fmt(top) + " (" + pct(top, tot) + "%) are in " + TIER_NAME[state.tier] + " " + TOP_LABEL[state.tier] + " journals.");
-    var c = get(D, ["collaboration", String(y)], {});
-    if (sum(c)) parts.push(pct(c.International || 0, sum(c)) + "% have international co-authors.");
-    // year with the highest Q1 share among complete years
-    var best = null;
-    D.years.forEach(function (yy) {
-      var tt = sum(tiersFor(yy)); if (!tt) return;
-      var sh = topCount(yy) / tt;
-      if (!best || sh > best.sh) best = { y: yy, sh: sh };
-    });
-    if (best && best.y !== y) parts.push("Highest " + TIER_NAME[state.tier] + " " + TOP_LABEL[state.tier] + " share since " + D.years[0] + ": " + best.y + " (" + Math.round(best.sh * 100) + "%).");
+    var tr = tiersFor(y), ranked = sum(tr) - (tr["No Ranking"] || 0);
+    if (tot) parts.push(fmt(ranked) + " (" + pct(ranked, tot) + "%) appeared in " + TIER_NAME[state.tier] + "-ranked journals.");
+    var c = get(D, ["collaboration", String(y)], {}), ext = (c.International || 0) + (c.National || 0);
+    if (sum(c)) parts.push(pct(ext, sum(c)) + "% have co-authors outside CMU, " + pct(c.International || 0, sum(c)) + "% abroad.");
+    var active = (D.per_staff || []).filter(function (r) { return get(r, ["by_year", String(y)], 0) > 0; }).length;
+    if (active) parts.push(active + " of " + ((D.per_staff || []).length) + " staff published.");
+    var kc = {};
+    D.publications.forEach(function (p) { if (p.year === y) (p.kw || []).forEach(function (k) { kc[k] = (kc[k] || 0) + 1; }); });
+    var kTop = Object.keys(kc).sort(function (a, b) { return kc[b] - kc[a] || a.localeCompare(b); })[0];
+    if (kTop && kc[kTop] > 1) parts.push("Most frequent keyword: " + esc(kTop) + " (" + kc[kTop] + " papers).");
     var lead = (D.per_staff || []).map(function (r) { return { name: r.name, n: get(r, ["by_year", String(y)], 0) }; })
       .sort(function (a, b) { return b.n - a.n; })[0];
     if (lead && lead.n) parts.push("Most works by one staff member: " + esc(lead.name) + " (" + lead.n + ").");
