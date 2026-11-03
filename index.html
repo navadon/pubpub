@@ -381,7 +381,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     </section>
 
     <section class="panel p-mix" aria-labelledby="h-mix">
-      <h2 id="h-mix">Quality tier mix</h2>
+      <h2 id="h-mix">Journal quartile mix</h2>
       <p class="hint" id="mix-hint"></p>
       <div id="mix"></div>
       <div class="legend" id="mix-legend"></div>
@@ -771,7 +771,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   function renderMix() {
     var keys = TIER_KEYS[state.tier];
     var years = [state.year - 2, state.year - 1, state.year].filter(function (y) { return D.years.indexOf(y) >= 0; });
-    $("mix-hint").textContent = TIER_NAME[state.tier] + " tier share, " + years[0] + "–" + years[years.length - 1] +
+    $("mix-hint").textContent = TIER_NAME[state.tier] + " journal-rank share, " + years[0] + "–" + years[years.length - 1] +
       (years.indexOf(D.current_year) >= 0 ? " (" + D.current_year + " to " + lastMonthName() + ")" : "");
     $("mix").innerHTML = years.map(function (y) {
       var t = tiersFor(y), tot = sum(t) || 0;
