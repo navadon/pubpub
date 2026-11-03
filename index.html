@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CPE CMU Publications</title>
-<meta name="description" content="Publications by the Department of Computer Engineering, Chiang Mai University, from OpenAlex, with SJR and CiteScore tiers.">
+<title>PubPub</title>
+<meta name="description" content="PubPub: publication dashboard with public access for the Department of Computer Engineering, Faculty of Engineering, Chiang Mai University.">
 <meta name="color-scheme" content="light dark">
 <style>
 :root {
@@ -146,6 +146,8 @@ header.top .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 12p
 .brand { flex: 1 1 420px; min-width: 0; }
 .brand h1 { margin: 0; font-size: 22px; line-height: 1.2; letter-spacing: .2px; font-weight: 750; }
 .brand h1 .cmu { color: var(--cmu-gold); }
+.brand h1 .expand { font-size: 15px; font-weight: 500; color: var(--header-muted); margin-left: 6px; white-space: nowrap; }
+.brand h1 .expand b { color: var(--header-text); font-weight: 700; }
 .brand .sub { margin: 3px 0 0; color: var(--header-muted); font-size: 13px; }
 .brand .note { margin: 2px 0 0; color: var(--header-muted); font-size: 12px; }
 .brand .note a { color: #e9d38e; }
@@ -387,6 +389,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   .kpi:nth-child(5) { grid-column: 1 / -1; }
   .grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "trend" "mix" "tier" "collab"; }
   .brand h1 { font-size: 19px; }
+  .brand h1 .expand { display: block; margin: 2px 0 0; }
   .chart-box { height: 280px; }
 }
 @media (max-width: 440px) {
@@ -406,8 +409,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 <header class="top">
   <div class="wrap">
     <div class="brand">
-      <h1><span class="cmu">CPE CMU</span> Publication Dashboard</h1>
-      <p class="sub">Department of Computer Engineering, Chiang Mai University</p>
+      <h1><span class="cmu">PubPub</span> <span class="expand"><b>Pub</b>lication Dashboard, <b>Pub</b>lic Access</span></h1>
+      <p class="sub">Department of Computer Engineering, Faculty of Engineering, Chiang Mai University</p>
       <p class="note">Data: <a href="https://openalex.org" rel="noopener">OpenAlex</a> career publications of current staff; tiers by journal (latest SCImago SJR; Scopus CiteScore when supplied). Refreshed monthly.</p>
     </div>
   </div>
