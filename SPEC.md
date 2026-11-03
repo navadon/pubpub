@@ -67,7 +67,8 @@ scripts/build_data.py      # OpenAlex + tiers -> dashboard.json
   "publications": [ { "id": "W...", "title": "...", "year": 2026, "date": "2026-03-14",
                       "venue": "...", "issn": ["..."], "doi": "https://doi.org/10....", "type": "article",
                       "staff": ["..."], "sjr": "Q1", "citescore": "T1", "collab": "International",
-                      "ext": ["I63966007", ...] } ],     // external co-author institutions (OpenAlex mode only)
+                      "ext": ["I63966007", ...],         // external co-author institutions (OpenAlex mode only)
+                      "kw": ["wireless sensor networks", ...] } ],  // OpenAlex keywords, best first (OpenAlex mode only)
   "institutions": { "I63966007": ["Massachusetts Institute of Technology", "US"], ... }
 }
 ```
