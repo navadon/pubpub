@@ -364,11 +364,16 @@ ol.pubs li:last-child { border-bottom: 0; }
 .sk-link { fill: none; stroke-opacity: .34; cursor: pointer; }
 .sk-link.intl { stroke: var(--c-int); }
 .sk-link.nat { stroke: var(--c-nat); }
+.sk-link.oth { stroke: var(--muted); stroke-opacity: .16; }
+.sk-link.oth:hover, .sk-link.oth.hot { stroke-opacity: .5; }
 .sk-link:hover, .sk-link.hot { stroke-opacity: .72; }
 .sk-node { cursor: pointer; outline: none; }
 .sk-node rect { fill: var(--text-2); }
 .sk-node.inst.intl rect { fill: var(--c-int); }
 .sk-node.inst.nat rect { fill: var(--c-nat); }
+.sk-node.inst.oth rect { fill: var(--muted); }
+.sk-node.inst.oth .sk-lbl { fill: var(--muted); }
+.sk-node.none .sk-lbl { fill: var(--muted); }
 .sk-node:focus-visible rect { stroke: var(--focus); stroke-width: 3; }
 .sk-node.inst .sk-lbl { font-weight: 600; fill: var(--text); }
 .bar-row.wide { grid-template-columns: 128px minmax(0, 1fr) 64px; }
@@ -1408,14 +1413,19 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     });
     var topInst = Object.keys(inst).sort(function (a, b) { return inst[b] - inst[a] || instName(a).localeCompare(instName(b)); }).slice(0, 15);
     var shown = {}; topInst.forEach(function (id) { shown[id] = true; });
-    var links = [], staff = {};
+    var links = [], staff = {}, mine = {}, other = {};
     Object.keys(link).forEach(function (k) {
       var sp = k.split("\u0001");
-      if (!shown[sp[1]]) return;
-      links.push({ s: sp[0], i: sp[1], n: link[k] });
+      (mine[sp[0]] = mine[sp[0]] || {})[sp[1]] = link[k];  // every partner, for the tooltip
+      if (shown[sp[1]]) links.push({ s: sp[0], i: sp[1], n: link[k] });
+      else other[sp[0]] = (other[sp[0]] || 0) + link[k];
       staff[sp[0]] = (staff[sp[0]] || 0) + link[k];
     });
-    return { inst: inst, topInst: topInst, links: links, staff: staff, country: country, papers: papers, instCount: Object.keys(inst).length };
+    // institutions outside the top 15 share one "Other institutions" node, so every staff member with partners has a line
+    Object.keys(other).forEach(function (n) { links.push({ s: n, i: "__other", n: other[n] }); });
+    var otherInst = Object.keys(inst).filter(function (id) { return !shown[id]; });
+    return { inst: inst, topInst: topInst, links: links, staff: staff, mine: mine, otherInst: otherInst,
+      country: country, papers: papers, instCount: Object.keys(inst).length };
   }
 
   function renderPartners() {
@@ -1423,7 +1433,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     document.querySelectorAll("#ext-mode button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-ext") === co.extMode)); });
     $("ext-hint").textContent = (intl ? "Institutions outside Thailand" : "Institutions outside CMU, in Thailand and abroad") +
       ", " + rangeLabel("co") + ": " + fmt(pd.papers) + " paper" + (pd.papers === 1 ? "" : "s") + " with " + fmt(pd.instCount) + " partner institution" + (pd.instCount === 1 ? "" : "s") +
-      (pd.instCount > 15 ? "; the 15 most frequent are shown" : "") + ". Line width = joint papers per staff member and institution.";
+      (pd.instCount > 15 ? "; the 15 most frequent are shown, the rest are grouped as Other" : "") +
+      ". All CPE staff are listed. Line width = joint papers per staff member and institution.";
     // top countries
     var cs = Object.keys(pd.country).sort(function (a, b) { return pd.country[b] - pd.country[a] || a.localeCompare(b); }).slice(0, 8);
     var cmax = cs.length ? pd.country[cs[0]] : 1;
@@ -1446,19 +1457,34 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       return;
     }
     var W = Math.max(240, Math.floor(box.clientWidth || 300)), narrow = W < 560;
-    var staffNames = Object.keys(pd.staff);
-    var maxCol = Math.max(staffNames.length, pd.topInst.length);
-    var pad = 14, H = Math.max(240, maxCol * (pad + 8) + 20);
-    var nodes = staffNames.map(function (s) { return { id: "s:" + s, kind: "staff", name: s }; })
-      .concat(pd.topInst.map(function (id) { return { id: "i:" + id, kind: "inst", iid: id, cc: instCountry(id) }; }));
+    var staffNames = (D.per_staff || []).map(function (r) { return r.name; })
+      .sort(function (a, b) { return (pd.staff[b] || 0) - (pd.staff[a] || 0) || a.localeCompare(b); });
+    var instIds = pd.topInst.concat(pd.otherInst.length ? ["__other"] : []);
+    var maxCol = Math.max(staffNames.length, instIds.length);
+    var noneN = staffNames.filter(function (n) { return !pd.staff[n]; }).length;
+    var pad = 14, row = pad + 2;  // vertical room per label
+    var flowH = Math.max(220, (maxCol - noneN) * (pad + 8) + 16), H = flowH + noneN * row + 8;
+    var nodes = staffNames.map(function (s) { return { id: "s:" + s, kind: "staff", name: s, none: !pd.staff[s] }; })
+      .concat(instIds.map(function (id) {
+        return id === "__other" ? { id: "i:" + id, kind: "inst", iid: id, other: true, cc: "" } : { id: "i:" + id, kind: "inst", iid: id, cc: instCountry(id) };
+      }));
     var links = pd.links.map(function (l) { return { source: "s:" + l.s, target: "i:" + l.i, value: l.n, s: l.s, i: l.i }; });
-    var graph = d3.sankey().nodeId(function (d) { return d.id; }).nodeWidth(10).nodePadding(pad)
-      .extent([[1, 4], [W - 1, H - 4]])({ nodes: nodes, links: links });
+    // keep the order above (staff by partner links, institutions by frequency, Other last)
+    var graph = d3.sankey().nodeId(function (d) { return d.id; }).nodeWidth(10).nodePadding(pad).nodeSort(null).iterations(0)
+      .extent([[1, 4], [W - 1, flowH - 4]])({ nodes: nodes, links: links });
+    // staff without partners in range have no links: stack them in order under the linked ones
+    var sx0 = graph.nodes[0].x0, sx1 = graph.nodes[0].x1, yy = 4;
+    graph.nodes.forEach(function (d) {
+      if (d.kind !== "staff") return;
+      if (d.none) { d.x0 = sx0; d.x1 = sx1; d.y0 = yy; d.y1 = yy + 1; yy += row; }
+      else yy = Math.max(yy, d.y1 + pad);
+    });
 
     // labels sit inside the flow: staff to the right of the left column, institutions to the left of the right column
     var lblMax = (W - 2 * 10) / 2 - 12;
     graph.nodes.forEach(function (d) {
       if (d.kind === "staff") d.label = clip(narrow ? firstName(d.name) : d.name, 10.5, lblMax, 400);
+      else if (d.other) d.label = "Other · " + pd.otherInst.length + " institutions";
       else {
         var cc = d.cc ? " · " + d.cc : "";
         d.label = clip(instShort(d.iid), 10.5, lblMax - textW(cc, 10.5, 600), 600) + cc;
@@ -1468,20 +1494,30 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     function nodeTip(d) {
       var ls = (d.kind === "staff" ? d.sourceLinks : d.targetLinks).slice().sort(function (a, b) { return b.value - a.value; });
       if (d.kind === "staff") {
-        return '<b>' + esc(d.name) + '</b><br><span class="num">' + fmt(d.value) + '</span> joint paper links with the institutions shown<ul>' +
-          ls.slice(0, 8).map(function (l) { return '<li>' + esc(instShort(l.i)) + ' <span class="m num">(' + l.value + ')</span></li>'; }).join("") +
-          (ls.length > 8 ? '<li class="m">and ' + (ls.length - 8) + ' more</li>' : "") + '</ul>';
+        var all = pd.mine[d.name] || {}, ids = Object.keys(all).sort(function (a, b) { return all[b] - all[a] || instName(a).localeCompare(instName(b)); });
+        if (!ids.length) return '<b>' + esc(d.name) + '</b><br><span class="m">No ' + (intl ? "international " : "external ") + 'co-authored papers in ' + esc(rangeLabel("co")) + '.</span>';
+        return '<b>' + esc(d.name) + '</b><br><span class="num">' + fmt(ids.length) + '</span> partner institution' + (ids.length === 1 ? "" : "s") + ' in ' + esc(rangeLabel("co")) + '<ul>' +
+          ids.slice(0, 10).map(function (id) { return '<li>' + esc(instShort(id)) + (instCountry(id) ? ' <span class="m">· ' + esc(instCountry(id)) + '</span>' : "") + ' <span class="m num">(' + all[id] + ')</span></li>'; }).join("") +
+          (ids.length > 10 ? '<li class="m">and ' + (ids.length - 10) + ' more</li>' : "") + '</ul>';
+      }
+      if (d.other) {
+        var oi = pd.otherInst.slice().sort(function (a, b) { return pd.inst[b] - pd.inst[a] || instName(a).localeCompare(instName(b)); });
+        return '<b>Other institutions</b><br><span class="num">' + fmt(oi.length) + '</span> partners outside the top 15, e.g.<ul>' +
+          oi.slice(0, 8).map(function (id) { return '<li>' + esc(instShort(id)) + (instCountry(id) ? ' <span class="m">· ' + esc(instCountry(id)) + '</span>' : "") + ' <span class="m num">(' + pd.inst[id] + ')</span></li>'; }).join("") +
+          (oi.length > 8 ? '<li class="m">and ' + (oi.length - 8) + ' more</li>' : "") + '</ul>';
       }
       return '<b>' + instLine(d.iid) + '</b><br><span class="num">' + fmt(pd.inst[d.iid]) + '</span> paper' + (pd.inst[d.iid] === 1 ? "" : "s") + ' with CPE staff in range<ul>' +
         ls.slice(0, 8).map(function (l) { return '<li>' + esc(l.s) + ' <span class="m num">(' + l.value + ')</span></li>'; }).join("") +
         (ls.length > 8 ? '<li class="m">and ' + (ls.length - 8) + ' more</li>' : "") + '</ul>';
     }
     function linkTip(l) {
+      if (l.i === "__other") return '<b>' + esc(l.s) + '</b><br>with other institutions (outside the top 15)<br><span class="num">' + l.value + '</span> joint paper link' + (l.value === 1 ? "" : "s");
       return '<b>' + esc(l.s) + '</b><br>with ' + instLine(l.i) + '<br><span class="num">' + l.value + '</span> joint paper' + (l.value === 1 ? "" : "s");
     }
     var topI = pd.topInst.slice(0, 3).map(function (id) { return instShort(id) + " (" + pd.inst[id] + ")"; });
-    var summary = "Flow from " + staffNames.length + " CPE staff to the top " + pd.topInst.length + (intl ? " international" : " external") +
-      " partner institutions, " + rangeLabel("co") + ". Most frequent partners: " + topI.join(", ") + ".";
+    var summary = "Flow from all " + staffNames.length + " CPE staff to the top " + pd.topInst.length + (intl ? " international" : " external") +
+      " partner institutions" + (pd.otherInst.length ? " and " + pd.otherInst.length + " others grouped" : "") + ", " + rangeLabel("co") +
+      ". Most frequent partners: " + topI.join(", ") + ".";
 
     box.innerHTML = "";
     var svg = d3.select(box).append("svg").attr("width", W).attr("height", H).attr("viewBox", "0 0 " + W + " " + H)
@@ -1489,18 +1525,19 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     svg.append("rect").attr("class", "sk-bg").attr("width", W).attr("height", H).on("click", function () { tipHide(); paths.classed("hot", false); });
     var gL = svg.append("g").attr("role", "img").attr("aria-label", summary);
     var paths = gL.selectAll("path").data(graph.links).join("path")
-      .attr("class", function (l) { return "sk-link " + (instCountry(l.i) === "TH" ? "nat" : "intl"); })
+      .attr("class", function (l) { return "sk-link " + (l.i === "__other" ? "oth" : instCountry(l.i) === "TH" ? "nat" : "intl"); })
       .attr("d", d3.sankeyLinkHorizontal())
       .attr("stroke-width", function (l) { return Math.max(1, l.width); })
       .on("pointermove", function (ev, l) { tipShow(linkTip(l), ev.clientX, ev.clientY); })
       .on("pointerleave", function (ev) { if (ev.pointerType === "mouse") tipHide(); })
       .on("click", function (ev, l) { ev.stopPropagation(); tipShow(linkTip(l), ev.clientX, ev.clientY); });
     var gN = svg.append("g").selectAll("g").data(graph.nodes).join("g")
-      .attr("class", function (d) { return "sk-node " + d.kind + (d.kind === "inst" ? (d.cc === "TH" ? " nat" : " intl") : ""); })
+      .attr("class", function (d) { return "sk-node " + d.kind + (d.other ? " oth" : d.kind === "inst" ? (d.cc === "TH" ? " nat" : " intl") : d.none ? " none" : ""); })
       .attr("tabindex", 0).attr("role", "button")
       .attr("aria-label", function (d) {
-        return d.kind === "staff" ? d.name + ": " + d.value + " joint paper links with " + d.sourceLinks.length + " of the institutions shown"
-          : instName(d.iid) + ", " + countryName(d.cc) + ": " + pd.inst[d.iid] + " papers with " + d.targetLinks.length + " CPE staff";
+        if (d.kind === "staff") return d.none ? d.name + ": no partner papers in this range" : d.name + ": " + Object.keys(pd.mine[d.name] || {}).length + " partner institutions";
+        if (d.other) return "Other institutions: " + pd.otherInst.length + " partners outside the top 15, linked to " + d.targetLinks.length + " CPE staff";
+        return instName(d.iid) + ", " + countryName(d.cc) + ": " + pd.inst[d.iid] + " papers with " + d.targetLinks.length + " CPE staff";
       });
     gN.append("rect").attr("x", function (d) { return d.x0; }).attr("y", function (d) { return d.y0; })
       .attr("width", function (d) { return d.x1 - d.x0; }).attr("height", function (d) { return Math.max(1, d.y1 - d.y0); }).attr("rx", 2);
