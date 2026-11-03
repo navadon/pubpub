@@ -263,7 +263,13 @@ main { padding: 16px 0 8px; }
 /* Below the fold */
 .section-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin: 26px 0 10px; }
 .section-head h2 { margin: 0; font-size: 18px; }
-.section-head .hint { color: var(--muted); font-size: 13px; margin: 0; }
+.section-head .hint { color: var(--muted); font-size: 13px; margin: 0; flex-basis: 100%; }
+.range { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: 13px; color: var(--text-2); }
+.range select {
+  font: inherit; font-size: 13px; color: var(--text); background: var(--surface-2);
+  border: 1px solid var(--border); border-radius: 8px; padding: 5px 8px;
+}
+.range .btn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
 .lower { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 12px; align-items: start; }
 
 table.staff { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
@@ -343,7 +349,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     <div class="brand">
       <h1><span class="cmu">CPE CMU</span> Publication Dashboard</h1>
       <p class="sub">Department of Computer Engineering, Chiang Mai University</p>
-      <p class="note">Data: <a href="https://openalex.org" rel="noopener">OpenAlex</a> career publications of current staff; tiers by journal (latest SCImago SJR) (SCImago SJR, Scopus CiteScore). Refreshed monthly.</p>
+      <p class="note">Data: <a href="https://openalex.org" rel="noopener">OpenAlex</a> career publications of current staff; tiers by journal (latest SCImago SJR; Scopus CiteScore when supplied). Refreshed monthly.</p>
     </div>
     <div class="controls">
       <div class="ctl">
@@ -400,7 +406,12 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 
   <div class="section-head">
     <h2 id="h-lower">Staff and publications, <span id="lower-year"></span></h2>
-    <p class="hint">Change the year in the header. A paper with several staff co-authors appears under each of them, but counts once in the totals above.</p>
+    <div class="range" role="group" aria-label="Year range for staff and publications">
+      <button type="button" class="btn" id="range-all" aria-pressed="false">All time</button>
+      <label for="range-from">From</label><select id="range-from"></select>
+      <label for="range-to">To</label><select id="range-to"></select>
+    </div>
+    <p class="hint">A paper with several staff co-authors appears under each of them, but counts once in the totals above.</p>
   </div>
   <div class="lower">
     <section class="panel" aria-labelledby="h-staff">
@@ -470,6 +481,9 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     year: null,
     shown: [],
     sort: { key: "year", dir: -1 },
+    from: null,   // year range for the staff table and publication list
+    to: null,
+    rangeSet: false,  // false: range follows the header year
     q: "",
     pubTier: "",
     pubType: "",
@@ -834,24 +848,31 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   }
 
   // ---------- staff table ----------
+  function inRange(y) { return y >= state.from && y <= state.to; }
+  function rangeLabel() {
+    var all = state.from === D.years[0] && state.to === D.years[D.years.length - 1];
+    var span = state.from === state.to ? String(state.from) : state.from + "–" + state.to;
+    return all ? "all time (" + span + ")" : span;
+  }
   function staffRows() {
-    var y = String(state.year);
     return (D.per_staff || []).map(function (r) {
-      var total = 0; for (var k in (r.by_year || {})) total += r.by_year[k] || 0;
-      return {
-        name: r.name,
-        year: get(r, ["by_year", y], 0),
-        top: get(r, ["top_tier_by_year", state.tier, y], 0),
-        total: total
-      };
+      var total = 0, n = 0, top = 0;
+      for (var k in (r.by_year || {})) {
+        total += r.by_year[k] || 0;
+        if (inRange(Number(k))) {
+          n += r.by_year[k] || 0;
+          top += get(r, ["top_tier_by_year", state.tier, k], 0);
+        }
+      }
+      return { name: r.name, year: n, top: top, total: total };
     });
   }
   function renderStaff() {
     var cols = [
       { key: "name", label: "Name" },
-      { key: "year", label: String(state.year) },
+      { key: "year", label: state.from === state.to ? String(state.from) : state.from + "–" + String(state.to).slice(2) },
       { key: "top", label: "Top tier" },
-      { key: "total", label: "Since " + D.years[0] }
+      { key: "total", label: "Career" }
     ];
     $("staff-head").innerHTML = cols.map(function (c) {
       var on = state.sort.key === c.key;
@@ -870,8 +891,9 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
         '</td><td class="num' + (r.top ? "" : " zero") + '">' + r.top + '</td><td class="num">' + r.total + '</td></tr>';
     }).join("");
     var active = rows.filter(function (r) { return r.year > 0; }).length;
-    $("staff-hint").textContent = fmt(rows.length) + " staff, " + active + " with works in " + state.year +
-      ". Top tier = " + TIER_NAME[state.tier] + " " + TOP_LABEL[state.tier] + ". Select a column to sort.";
+    $("staff-hint").textContent = fmt(rows.length) + " staff, " + active + " with works in " + rangeLabel() +
+      ". Top tier = " + TIER_NAME[state.tier] + " " + TOP_LABEL[state.tier] + ", counted in the range. Career = since " +
+      D.years[0] + ". Select a column to sort.";
   }
 
   // ---------- publications ----------
@@ -895,9 +917,9 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     else { state.pubTier = ""; $("pub-tier").value = ""; }
   }
   function renderPubs() {
-    var y = state.year, q = state.q.trim().toLowerCase();
+    var q = state.q.trim().toLowerCase();
     var terms = q ? q.split(/\s+/) : [];
-    var all = D.publications.filter(function (p) { return p.year === y; });
+    var all = D.publications.filter(function (p) { return inRange(p.year); });
     var list = all.filter(function (p) {
       var tv = p[state.tier] || "No Ranking";
       if (state.pubTier === "__top" && !isTop(p)) return false;
@@ -908,7 +930,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       return terms.every(function (t) { return hay.indexOf(t) >= 0; });
     }).sort(function (a, b) { return String(b.date || "").localeCompare(String(a.date || "")); });
     $("pub-count").textContent = "Showing " + fmt(Math.min(list.length, state.limit)) + " of " + fmt(list.length) +
-      (list.length !== all.length ? " matching (" + fmt(all.length) + " in " + y + ")" : " in " + y);
+      (list.length !== all.length ? " matching (" + fmt(all.length) + " in " + rangeLabel() + ")" : " in " + rangeLabel());
     $("pub-list").innerHTML = list.slice(0, state.limit).map(function (p) {
       var tv = p[state.tier] || "No Ranking", href = pubLink(p);
       var title = esc(p.title || "(untitled)");
@@ -929,7 +951,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     document.querySelectorAll(".seg button[data-tier]").forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.getAttribute("data-tier") === state.tier));
     });
-    $("lower-year").textContent = state.year;
+    if (!state.rangeSet) { state.from = state.to = state.year; }
+    renderRange();
     renderKpis();
     renderChips();
     renderTrend();
@@ -940,6 +963,25 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     renderStaff();
     renderPubTierOptions();
     renderPubs();
+  }
+
+  function renderRange() {
+    var opts = function (sel) {
+      return D.years.slice().reverse().map(function (y) {
+        return '<option value="' + y + '"' + (y === sel ? " selected" : "") + '>' + y + '</option>';
+      }).join("");
+    };
+    $("range-from").innerHTML = opts(state.from);
+    $("range-to").innerHTML = opts(state.to);
+    var all = state.from === D.years[0] && state.to === D.years[D.years.length - 1];
+    $("range-all").setAttribute("aria-pressed", String(all));
+    $("lower-year").textContent = rangeLabel();
+  }
+  function setRange(from, to) {
+    if (from > to) { var t = from; from = to; to = t; }
+    state.from = from; state.to = to; state.rangeSet = true; state.limit = PAGE;
+    syncUrl();
+    renderRange(); renderStaff(); renderPubs();
   }
 
   function defaultShown() {
@@ -967,6 +1009,10 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     if (qt === "citescore" && D.has_citescore) state.tier = "citescore";
     state.shown = defaultShown();
     if (state.shown.indexOf(state.year) < 0) state.shown.push(state.year);
+    var qf = Number(params.get("from")), qto = Number(params.get("to"));
+    if (D.years.indexOf(qf) >= 0 && D.years.indexOf(qto) >= 0) {
+      state.from = Math.min(qf, qto); state.to = Math.max(qf, qto); state.rangeSet = true;
+    }
 
     $("year-sel").innerHTML = D.years.slice().reverse().map(function (y) {
       return '<option value="' + y + '">' + y + (y === D.current_year ? " (YTD)" : "") + '</option>';
@@ -993,6 +1039,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       var p = new URLSearchParams(location.search);
       if (state.year !== D.current_year) p.set("year", state.year); else p.delete("year");
       if (state.tier !== "sjr") p.set("tier", state.tier); else p.delete("tier");
+      if (state.rangeSet) { p.set("from", state.from); p.set("to", state.to); } else { p.delete("from"); p.delete("to"); }
       var s = p.toString();
       history.replaceState(null, "", location.pathname + (s ? "?" + s : "") + location.hash);
     } catch (e) { /* ignore */ }
@@ -1028,6 +1075,9 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       var again = $("year-chips").querySelector(act ? '[data-act="' + act + '"]' : '[data-year="' + b.getAttribute("data-year") + '"]');
       if (again) again.focus();
     });
+    $("range-all").addEventListener("click", function () { setRange(D.years[0], D.years[D.years.length - 1]); });
+    $("range-from").addEventListener("change", function () { setRange(Number(this.value), state.to); });
+    $("range-to").addEventListener("change", function () { setRange(state.from, Number(this.value)); });
     $("staff-head").addEventListener("click", function (e) {
       var b = e.target.closest("button[data-sort]"); if (!b) return;
       var k = b.getAttribute("data-sort");
