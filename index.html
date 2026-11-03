@@ -559,7 +559,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     </section>
 
     <section class="panel" aria-labelledby="h-ext">
-      <h2 id="h-ext">External partners</h2>
+      <h2 id="h-ext">External co-authorship</h2>
       <p class="hint" id="ext-hint"></p>
       <div class="sk-tools">
         <div class="seg" role="group" aria-label="Partner institutions shown" id="ext-mode">
@@ -1434,7 +1434,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     $("ext-hint").textContent = (intl ? "Institutions outside Thailand" : "Institutions outside CMU, in Thailand and abroad") +
       ", " + rangeLabel("co") + ": " + fmt(pd.papers) + " paper" + (pd.papers === 1 ? "" : "s") + " with " + fmt(pd.instCount) + " partner institution" + (pd.instCount === 1 ? "" : "s") +
       (pd.instCount > 15 ? "; the 15 most frequent are shown, the rest are grouped as Other" : "") +
-      ". All CPE staff are listed. Line width = joint papers per staff member and institution.";
+      ". Staff with external co-authors in this range are listed. Line width = joint papers per staff member and institution.";
     // top countries
     var cs = Object.keys(pd.country).sort(function (a, b) { return pd.country[b] - pd.country[a] || a.localeCompare(b); }).slice(0, 8);
     var cmax = cs.length ? pd.country[cs[0]] : 1;
@@ -1458,6 +1458,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     }
     var W = Math.max(240, Math.floor(box.clientWidth || 300)), narrow = W < 560;
     var staffNames = (D.per_staff || []).map(function (r) { return r.name; })
+      .filter(function (n) { return pd.staff[n]; })  // only staff with external co-authors in range
       .sort(function (a, b) { return (pd.staff[b] || 0) - (pd.staff[a] || 0) || a.localeCompare(b); });
     var instIds = pd.topInst.concat(pd.otherInst.length ? ["__other"] : []);
     var maxCol = Math.max(staffNames.length, instIds.length);
@@ -1515,7 +1516,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       return '<b>' + esc(l.s) + '</b><br>with ' + instLine(l.i) + '<br><span class="num">' + l.value + '</span> joint paper' + (l.value === 1 ? "" : "s");
     }
     var topI = pd.topInst.slice(0, 3).map(function (id) { return instShort(id) + " (" + pd.inst[id] + ")"; });
-    var summary = "Flow from all " + staffNames.length + " CPE staff to the top " + pd.topInst.length + (intl ? " international" : " external") +
+    var summary = "Flow from " + staffNames.length + " CPE staff to the top " + pd.topInst.length + (intl ? " international" : " external") +
       " partner institutions" + (pd.otherInst.length ? " and " + pd.otherInst.length + " others grouped" : "") + ", " + rangeLabel("co") +
       ". Most frequent partners: " + topI.join(", ") + ".";
 
