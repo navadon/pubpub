@@ -150,20 +150,20 @@ header.top .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 12p
 .brand .note { margin: 2px 0 0; color: var(--header-muted); font-size: 12px; }
 .brand .note a { color: #e9d38e; }
 .controls { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
-.ctl-label { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--header-muted); margin-right: 6px; }
-.seg { display: inline-flex; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; padding: 2px; background: rgba(255,255,255,.06); }
+.controls { margin-bottom: 12px; }
+.ctl-label { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-right: 6px; font-weight: 600; }
+.seg { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; padding: 2px; background: var(--surface); }
 .seg button {
-  appearance: none; border: 0; background: transparent; color: var(--header-text);
+  appearance: none; border: 0; background: transparent; color: var(--text);
   font: inherit; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 999px; cursor: pointer;
 }
 .seg button[aria-pressed="true"] { background: var(--cmu-gold); color: #1d1600; }
-.seg button:disabled { color: rgba(242,244,251,.45); cursor: not-allowed; }
+.seg button:disabled { color: var(--muted); opacity: .6; cursor: not-allowed; }
 .ctl { display: inline-flex; align-items: center; }
 select.year-sel {
-  font: inherit; font-size: 13px; font-weight: 600; color: var(--header-text);
-  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.28); border-radius: 8px; padding: 5px 8px;
+  font: inherit; font-size: 13px; font-weight: 600; color: var(--text);
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 5px 8px;
 }
-select.year-sel option { color: #111; }
 
 .banner { background: var(--banner-bg); color: var(--banner-text); font-size: 13px; }
 .banner .wrap { padding-top: 6px; padding-bottom: 6px; }
@@ -351,24 +351,24 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       <p class="sub">Department of Computer Engineering, Chiang Mai University</p>
       <p class="note">Data: <a href="https://openalex.org" rel="noopener">OpenAlex</a> career publications of current staff; tiers by journal (latest SCImago SJR; Scopus CiteScore when supplied). Refreshed monthly.</p>
     </div>
-    <div class="controls">
-      <div class="ctl">
-        <span class="ctl-label" id="tier-lbl">Ranking</span>
-        <div class="seg" role="group" aria-labelledby="tier-lbl">
-          <button type="button" data-tier="sjr" aria-pressed="true">SJR</button>
-          <span id="cs-wrap"><button type="button" data-tier="citescore" aria-pressed="false">CiteScore</button></span>
-        </div>
-      </div>
-      <div class="ctl">
-        <label class="ctl-label" for="year-sel">Year</label>
-        <select id="year-sel" class="year-sel"></select>
-      </div>
-    </div>
   </div>
 </header>
 <div class="banner" id="banner" hidden><div class="wrap" id="banner-text"></div></div>
 
 <main class="wrap" id="app" aria-live="polite">
+  <div class="controls">
+    <div class="ctl">
+      <span class="ctl-label" id="tier-lbl">Ranking</span>
+      <div class="seg" role="group" aria-labelledby="tier-lbl">
+        <button type="button" data-tier="sjr" aria-pressed="true">SJR</button>
+        <span id="cs-wrap"><button type="button" data-tier="citescore" aria-pressed="false">CiteScore</button></span>
+      </div>
+    </div>
+    <div class="ctl">
+      <label class="ctl-label" for="year-sel">Year</label>
+      <select id="year-sel" class="year-sel"></select>
+    </div>
+  </div>
   <section class="kpis" aria-label="Key figures" id="kpis"></section>
 
   <div class="grid">
