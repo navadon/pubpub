@@ -288,7 +288,7 @@ table.staff th .arr { font-size: 10px; opacity: .8; }
 table.staff tbody tr:hover { background: var(--surface-2); }
 table.staff td .rank { color: var(--muted); font-size: 11px; display: inline-block; min-width: 20px; }
 table.staff td.zero { color: var(--muted); }
-.staff-scroll { max-height: 640px; overflow-y: auto; }
+.staff-scroll { overflow-x: auto; }
 
 .pub-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
 .pub-tools input[type=search], .pub-tools select {
@@ -325,7 +325,6 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 }
 @media (max-width: 900px) {
   .lower { grid-template-columns: minmax(0, 1fr); }
-  .staff-scroll { max-height: none; }
 }
 @media (max-width: 720px) {
   .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -473,7 +472,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   var COLLAB_VAR = { "International": "--c-int", "National": "--c-nat", "CMU only": "--c-cmu" };
   var TYPE_NAME = { "article": "Article", "review": "Review", "proceedings-article": "Conference paper", "book-chapter": "Book chapter" };
   var DEFAULT_YEARS_SHOWN = 4;
-  var PAGE = 60;
+  var PAGE = 10;  // publications shown at first, most recent first
 
   var D = null;
   var state = {
