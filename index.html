@@ -235,7 +235,8 @@ main { padding: 16px 0 8px; }
 .stack-row .yr { font-weight: 700; font-size: 13px; }
 .stack-row .tot { font-size: 12px; color: var(--text-2); text-align: right; white-space: nowrap; }
 .stack-row .tot b { color: var(--text); font-size: 14px; }
-.stack { display: flex; height: 30px; border-radius: 8px; overflow: hidden; background: var(--track); }
+.stack-wrap { min-width: 0; }
+.stack { display: flex; height: 30px; border-radius: 8px; overflow: hidden; }
 .seg-b { display: flex; align-items: center; justify-content: center; color: var(--t-text); font-size: 11px; font-weight: 700; white-space: nowrap; overflow: hidden; min-width: 0; }
 .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 10px; font-size: 12px; color: var(--text-2); }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
@@ -904,19 +905,21 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   function renderMix() {
     var keys = TIER_KEYS[state.tier];
     var years = [state.year - 2, state.year - 1, state.year].filter(function (y) { return D.years.indexOf(y) >= 0; });
-    $("mix-hint").textContent = TIER_NAME[state.tier] + " journal-rank share, " + years[0] + "–" + years[years.length - 1] +
+    $("mix-hint").textContent = TIER_NAME[state.tier] + " journal quartiles, papers per year (bar length = total), " + years[0] + "–" + years[years.length - 1] +
       (years.indexOf(D.current_year) >= 0 ? " (" + D.current_year + " to " + lastMonthName() + ")" : "");
+    // bar length is proportional to the year's total, so years compare at a glance
+    var maxTot = Math.max.apply(null, years.map(function (y) { return sum(tiersFor(y)) || 0; }).concat([1]));
     $("mix").innerHTML = years.map(function (y) {
-      var t = tiersFor(y), tot = sum(t) || 0;
+      var t = tiersFor(y), tot = sum(t) || 0, scale = tot / maxTot;
       var segs = keys.map(function (k) {
         var n = t[k] || 0; if (!n) return "";
-        var w = tot ? n / tot * 100 : 0;
-        var label = w >= 13 ? (k === "No Ranking" ? "NR" : k) + " " + n : (w >= 6 ? String(n) : "");
+        var w = tot ? n / tot * 100 : 0, vis = w * scale;  // share of the full row, for label room
+        var label = vis >= 13 ? (k === "No Ranking" ? "NR" : k) + " " + n : (vis >= 6 ? String(n) : "");
         return '<div class="seg-b" style="width:' + w.toFixed(2) + '%;background:var(' + tierVar(k) + ')" title="' + esc(k) + ": " + n + " (" + Math.round(w) + '%)">' + label + '</div>';
       }).join("");
       var aria = keys.map(function (k) { return k + " " + (t[k] || 0); }).join(", ");
-      return '<div class="stack-row"><div class="yr">' + y + '</div><div class="stack" role="img" aria-label="' + y + ": " + esc(aria) + '">' + segs +
-        '</div><div class="tot"><b class="num">' + fmt(tot) + '</b> total</div></div>';
+      return '<div class="stack-row"><div class="yr">' + y + '</div><div class="stack-wrap"><div class="stack" style="width:' + (scale * 100).toFixed(2) +
+        '%" role="img" aria-label="' + y + ": " + esc(aria) + '">' + segs + '</div></div><div class="tot"><b class="num">' + fmt(tot) + '</b> total</div></div>';
     }).join("");
     $("mix-legend").innerHTML = keys.map(function (k) {
       return '<span><i style="background:var(' + tierVar(k) + ')"></i>' + esc(k) + '</span>';
