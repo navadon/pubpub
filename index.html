@@ -326,6 +326,7 @@ main { padding: 16px 0 8px; }
   font: inherit; font-size: 13px; color: var(--text); background: var(--surface-2);
   border: 1px solid var(--border); border-radius: 8px; padding: 5px 8px;
 }
+.range select.staff-sel { max-width: 100%; min-width: 12em; }
 .range .btn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--chip-on-text); }
 .lower { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 12px; align-items: start; }
 
@@ -402,6 +403,7 @@ ol.pubs li:last-child { border-bottom: 0; }
 .pairs { list-style: none; margin: 0; padding: 0; counter-reset: pr; }
 .pairs li { display: grid; grid-template-columns: 20px minmax(0, 1fr) auto; gap: 6px; align-items: baseline; padding: 4px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
 .pairs li:last-child { border-bottom: 0; }
+.pairs li.empty::before { content: none; }
 .pairs li::before { counter-increment: pr; content: counter(pr); color: var(--muted); font-size: 11px; }
 .pairs .v { font-weight: 700; white-space: nowrap; }
 .pairs .v small { color: var(--muted); font-weight: 400; }
@@ -590,6 +592,10 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       <button type="button" class="btn" id="co-range-all" aria-pressed="false">All time</button>
       <label for="co-range-from">From</label><select id="co-range-from"></select>
       <label for="co-range-to">To</label><select id="co-range-to"></select>
+    </div>
+    <div class="range" role="group" aria-label="Staff member for collaboration">
+      <label for="co-staff">Staff</label><select id="co-staff" class="staff-sel"></select>
+      <button type="button" class="btn" id="co-staff-clear" hidden aria-label="Show all staff">Clear</button>
     </div>
   </div>
   <div class="coauth">
@@ -1139,7 +1145,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 
   // ---------- co-authorship ----------
   // Internal network (force layout, computed once per range and width) and external partner flow (Sankey).
-  var co = { key: null, rangeKey: null, layout: null, pinned: null, extMode: "all", data: null };
+  var co = { key: null, rangeKey: null, layout: null, pinned: null, focus: null, extMode: "all", data: null };
   var SHORT_INST = {
     "Massachusetts Institute of Technology": "MIT",
     "MIT Media Lab": "MIT Media Lab",
@@ -1207,7 +1213,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   function coauthData() {
     var names = (D.per_staff || []).map(function (r) { return r.name; }).sort(function (a, b) { return a.localeCompare(b); });
     var known = {}; names.forEach(function (n) { known[n] = true; });
-    var c = { names: names, papers: {}, withCol: {}, partners: {}, pairs: {}, total: 0, multi: 0, years: {} };
+    var c = { names: names, papers: {}, withCol: {}, partners: {}, pairs: {}, total: 0, multi: 0, years: {}, pyears: {} };
     D.publications.forEach(function (p) {
       if (!inRange(p.year, "co")) return;
       var st = [];
@@ -1215,7 +1221,11 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       c.total++;
       var yr = c.years[p.year] = c.years[p.year] || { tot: 0, multi: 0 };
       yr.tot++;
-      st.forEach(function (n) { c.papers[n] = (c.papers[n] || 0) + 1; });
+      st.forEach(function (n) {
+        c.papers[n] = (c.papers[n] || 0) + 1;
+        var py = (c.pyears[n] = c.pyears[n] || {})[p.year] = c.pyears[n][p.year] || { tot: 0, multi: 0 };
+        py.tot++; if (st.length > 1) py.multi++;
+      });
       if (st.length < 2) return;
       c.multi++; yr.multi++;
       st.sort(function (a, b) { return a.localeCompare(b); });
@@ -1257,37 +1267,67 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     var r = el.getBoundingClientRect(); return [r.left + r.width / 2, r.top + r.height / 2];
   }
 
+  function coLabel() { return rangeLabel("co") + (co.focus ? " · " + co.focus : ""); }
+  function renderStaffSel(c) {
+    var sel = $("co-staff");
+    sel.innerHTML = '<option value="">All staff</option>' + c.names.map(function (n) {
+      return '<option value="' + esc(n) + '">' + esc(n) + ' (' + (c.papers[n] || 0) + ')</option>';
+    }).join("");
+    sel.value = co.focus || "";
+    $("co-staff-clear").hidden = !co.focus;
+  }
+  function setFocus(name) {
+    co.focus = name || null; co.pinned = null;
+    tipHide(); syncUrl(); renderCoauth();
+  }
   function renderCoauth() {
-    $("coauth-year").textContent = rangeLabel("co");
+    $("coauth-year").textContent = coLabel();
     var c = co.data = coauthData();
+    renderStaffSel(c);
     renderNetStats(c);
     renderNet(c);
     renderPartners();
   }
 
   function renderNetStats(c) {
-    var staff = c.names.length;
-    $("net-stats").innerHTML =
+    var staff = c.names.length, f = co.focus;
+    if (f) {
+      var ps = partnerList(c, f), np = c.papers[f] || 0, nw = c.withCol[f] || 0;
+      $("net-stats").innerHTML =
+        '<div class="mstat"><div class="n num">' + fmt(nw) + ' <small>' + pct(nw, np) + '%</small></div><div class="l">of ' + fmt(np) + ' papers have another CPE staff member</div></div>' +
+        '<div class="mstat"><div class="n num">' + fmt(ps.length) + ' <small>of ' + (staff - 1) + '</small></div><div class="l">CPE colleagues co-authored with</div></div>' +
+        '<div class="mstat"><div class="n">' + (ps.length ? esc(firstName(ps[0].name)) + ' <small class="num">' + ps[0].n + '</small>' : "–") + '</div><div class="l">most frequent CPE co-author</div></div>';
+    } else $("net-stats").innerHTML =
       '<div class="mstat"><div class="n num">' + fmt(c.multi) + ' <small>' + pct(c.multi, c.total) + '%</small></div><div class="l">of ' + fmt(c.total) + ' papers have 2+ CPE staff</div></div>' +
       '<div class="mstat"><div class="n num">' + fmt(c.pairList.length) + '</div><div class="l">colleague pairs wrote together</div></div>' +
       '<div class="mstat"><div class="n num">' + fmt(c.linked.length) + ' <small>of ' + staff + '</small></div><div class="l">staff with a CPE co-author</div></div>';
     // sparkline: share of papers with 2+ CPE staff, by year (only for ranges of 3+ years with data)
-    var ys = Object.keys(c.years).map(Number).sort(function (a, b) { return a - b; });
+    var yd = f ? (c.pyears[f] || {}) : c.years, who = f ? firstName(f) + "'s papers" : "papers";
+    var ys = Object.keys(yd).map(Number).sort(function (a, b) { return a - b; });
     if (ys.length >= 3) {
-      var vals = ys.map(function (y) { return c.years[y].tot ? c.years[y].multi / c.years[y].tot * 100 : 0; });
+      var vals = ys.map(function (y) { return yd[y].tot ? yd[y].multi / yd[y].tot * 100 : 0; });
       var mx = Math.max.apply(null, vals.concat([10])), n = ys.length;
       var pts = vals.map(function (v, i) { return (i / (n - 1) * 200).toFixed(1) + "," + (28 - v / mx * 26).toFixed(1); });
       var best = vals.indexOf(Math.max.apply(null, vals));
-      var aria = "Share of papers with 2 or more CPE staff by year: " + ys.map(function (y, i) { return y + " " + Math.round(vals[i]) + "%"; }).join(", ");
+      var aria = "Share of " + who + " with 2 or more CPE staff by year: " + ys.map(function (y, i) { return y + " " + Math.round(vals[i]) + "%"; }).join(", ");
       $("net-spark").innerHTML = '<div class="spark"><span>' + ys[0] + '</span><svg viewBox="0 0 200 30" preserveAspectRatio="none" role="img" aria-label="' + esc(aria) + '">' +
         '<line class="base" x1="0" y1="28" x2="200" y2="28"/><polygon class="ar" points="0,28 ' + pts.join(" ") + ' 200,28"/><polyline class="ln" points="' + pts.join(" ") + '"/></svg>' +
         '<span>' + ys[n - 1] + ': <b class="num">' + Math.round(vals[n - 1]) + '%</b></span></div>' +
-        '<p class="hint" style="margin:-4px 0 8px">Share of papers with 2+ CPE staff, by year. Peak: ' + ys[best] + ' (' + Math.round(vals[best]) + '%).</p>';
+        '<p class="hint" style="margin:-4px 0 8px">Share of ' + esc(who) + ' with 2+ CPE staff, by year. Peak: ' + ys[best] + ' (' + Math.round(vals[best]) + '%).</p>';
     } else $("net-spark").innerHTML = "";
+    if (f) {
+      var fl = partnerList(c, f);
+      $("h-pairs").textContent = firstName(f) + "'s CPE co-authors";
+      $("net-pairs").innerHTML = fl.length ? fl.map(function (p) {
+        return '<li><span>' + esc(p.name) + '</span><span class="v num">' + p.n + ' <small>paper' + (p.n === 1 ? "" : "s") + '</small></span></li>';
+      }).join("") : '<li class="pub-staff empty" style="display:block">No joint papers with CPE colleagues in ' + esc(rangeLabel("co")) + '.</li>';
+      return;
+    }
+    $("h-pairs").textContent = "Strongest pairs";
     var top = c.pairList.slice(0, 6);
     $("net-pairs").innerHTML = top.length ? top.map(function (p) {
       return '<li><span>' + esc(p.a) + ' &amp; ' + esc(p.b) + '</span><span class="v num">' + p.n + ' <small>paper' + (p.n === 1 ? "" : "s") + '</small></span></li>';
-    }).join("") : '<li class="pub-staff" style="display:block">Joint papers between CPE colleagues will appear here.</li>';
+    }).join("") : '<li class="pub-staff empty" style="display:block">Joint papers between CPE colleagues will appear here.</li>';
   }
 
   function layoutNet(c, W, H) {
@@ -1378,6 +1418,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     var H = W < 520 ? Math.round(W * 1.08) : Math.min(500, Math.round(W * 0.74));
     var rk = state.cfrom + "|" + state.cto, key = rk + "|" + W;
     if (co.rangeKey !== rk) { co.pinned = null; co.rangeKey = rk; }
+    function base() { return co.pinned || co.focus; }
     if (co.key !== key || !co.layout) { co.layout = layoutNet(c, W, H); co.key = key; }
     var L = co.layout;
     var top = c.pairList.slice(0, 3).map(function (p) { return firstName(p.a) + " and " + firstName(p.b) + " (" + p.n + ")"; });
@@ -1389,7 +1430,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       .attr("width", L.W).attr("height", L.H).attr("viewBox", "0 0 " + L.W + " " + L.H)
       .attr("role", "group").attr("aria-labelledby", "h-net");
     svg.append("rect").attr("class", "net-bg").attr("width", L.W).attr("height", L.H)
-      .on("click", function () { co.pinned = null; highlight(null); tipHide(); });
+      .on("click", function () { co.pinned = null; highlight(base()); tipHide(); });
     var gE = svg.append("g").attr("role", "img").attr("aria-label", summary);
     var edges = gE.selectAll("line").data(L.links).join("line")
       .attr("class", "net-edge").attr("stroke-width", function (l) { return l.w; })
@@ -1416,11 +1457,11 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
         });
         nodes.classed("near", function (d) { return !!near[d.id]; });
       }
-      nodes.classed("pin", function (d) { return d.id === co.pinned; }).attr("aria-pressed", function (d) { return String(d.id === co.pinned); });
+      nodes.classed("pin", function (d) { return d.id === base(); }).attr("aria-pressed", function (d) { return String(d.id === co.pinned); });
       edges.filter(".hot").raise();
     }
     function restore() {
-      highlight(co.pinned);
+      highlight(base());
       if (co.pinned) { var el = nodes.filter(function (d) { return d.id === co.pinned; }).node(); if (el) tipAt(el, netTip(c, co.pinned)); }
       else tipHide();
     }
@@ -1433,14 +1474,14 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       .on("click", function (ev, d) {
         ev.stopPropagation();
         co.pinned = co.pinned === d.id ? null : d.id;
-        highlight(co.pinned || d.id);
+        highlight(base() || d.id);
         var p = evXY(ev, this); tipShow(netTip(c, d.id), p[0], p[1]);
       })
       .on("keydown", function (ev, d) {
-        if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); co.pinned = co.pinned === d.id ? null : d.id; highlight(co.pinned || d.id); tipAt(this, netTip(c, d.id)); }
-        else if (ev.key === "Escape") { co.pinned = null; highlight(null); tipHide(); }
+        if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); co.pinned = co.pinned === d.id ? null : d.id; highlight(base() || d.id); tipAt(this, netTip(c, d.id)); }
+        else if (ev.key === "Escape") { co.pinned = null; highlight(base()); tipHide(); }
       });
-    highlight(co.pinned);
+    highlight(base());
   }
 
   function partnerData() {
@@ -1448,6 +1489,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     var inst = {}, link = {}, country = {}, total = 0, papers = 0;
     D.publications.forEach(function (p) {
       if (!inRange(p.year, "co")) return;
+      if (co.focus && (p.staff || []).indexOf(co.focus) < 0) return;
       var ext = (p.ext || []).filter(function (id, i, a) { return a.indexOf(id) === i && (!intl || instCountry(id) !== "TH"); });
       if (!ext.length) return;
       papers++;
@@ -1455,6 +1497,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       ext.forEach(function (id) { inst[id] = (inst[id] || 0) + 1; cs[instCountry(id) || "?"] = true; });
       Object.keys(cs).forEach(function (k) { country[k] = (country[k] || 0) + 1; });
       (p.staff || []).forEach(function (s) {
+        if (co.focus && s !== co.focus) return;
         ext.forEach(function (id) { var k = s + "\u0001" + id; link[k] = (link[k] || 0) + 1; total++; });
       });
     });
@@ -1481,7 +1524,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     $("ext-hint").textContent = (intl ? "Institutions outside Thailand" : "Institutions outside CMU, in Thailand and abroad") +
       ", " + rangeLabel("co") + ": " + fmt(pd.papers) + " paper" + (pd.papers === 1 ? "" : "s") + " with " + fmt(pd.instCount) + " partner institution" + (pd.instCount === 1 ? "" : "s") +
       (pd.instCount > 15 ? "; the 15 most frequent are shown, the rest are grouped as Other" : "") +
-      ". Staff with external co-authors in this range are listed. Line width = joint papers per staff member and institution.";
+      (co.focus ? ". Showing " + co.focus + "'s papers only" : ". Staff with external co-authors in this range are listed") + ". Line width = joint papers per staff member and institution.";
     // top countries
     var cs = Object.keys(pd.country).sort(function (a, b) { return pd.country[b] - pd.country[a] || a.localeCompare(b); }).slice(0, 8);
     var cmax = cs.length ? pd.country[cs[0]] : 1;
@@ -1495,7 +1538,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 
     var box = $("sk-box");
     if (!pd.links.length) {
-      box.innerHTML = '<p class="chart-fallback">No ' + (intl ? "international " : "external ") + "partner papers in " + esc(rangeLabel("co")) + " yet. " +
+      box.innerHTML = '<p class="chart-fallback">No ' + (intl ? "international " : "external ") + "partner papers" + (co.focus ? " for " + esc(co.focus) : "") + " in " + esc(rangeLabel("co")) + " yet. " +
         (intl ? "Try All external, or a wider year range." : "Try a wider year range.") + '</p>';
       return;
     }
@@ -1636,7 +1679,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     $(pre + "range-to").innerHTML = opts(r.to);
     var all = r.from === D.years[0] && r.to === D.years[D.years.length - 1];
     $(pre + "range-all").setAttribute("aria-pressed", String(all));
-    $(sc === "co" ? "coauth-year" : "lower-year").textContent = rangeLabel(sc);
+    $(sc === "co" ? "coauth-year" : "lower-year").textContent = sc === "co" ? coLabel() : rangeLabel(sc);
   }
   function setRange(from, to, sc) {
     if (from > to) { var t = from; from = to; to = t; }
@@ -1683,6 +1726,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     if (D.years.indexOf(cf) >= 0 && D.years.indexOf(ct) >= 0) {
       state.cfrom = Math.min(cf, ct); state.cto = Math.max(cf, ct); state.cRangeSet = true;
     }
+    var qs = params.get("staff");
+    if (qs && (D.per_staff || []).some(function (r) { return r.name === qs; })) co.focus = qs;
 
     $("year-sel").innerHTML = D.years.slice().reverse().map(function (y) {
       return '<option value="' + y + '">' + y + (y === D.current_year ? " (YTD)" : "") + '</option>';
@@ -1711,6 +1756,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       if (state.tier !== "sjr") p.set("tier", state.tier); else p.delete("tier");
       if (state.rangeSet) { p.set("from", state.from); p.set("to", state.to); } else { p.delete("from"); p.delete("to"); }
       if (state.cRangeSet) { p.set("cfrom", state.cfrom); p.set("cto", state.cto); } else { p.delete("cfrom"); p.delete("cto"); }
+      if (co.focus) p.set("staff", co.focus); else p.delete("staff");
       var s = p.toString();
       history.replaceState(null, "", location.pathname + (s ? "?" + s : "") + location.hash);
     } catch (e) { /* ignore */ }
@@ -1752,6 +1798,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     $("co-range-all").addEventListener("click", function () { setRange(D.years[0], D.years[D.years.length - 1], "co"); });
     $("co-range-from").addEventListener("change", function () { setRange(Number(this.value), state.cto, "co"); });
     $("co-range-to").addEventListener("change", function () { setRange(state.cfrom, Number(this.value), "co"); });
+    $("co-staff").addEventListener("change", function () { setFocus(this.value); });
+    $("co-staff-clear").addEventListener("click", function () { setFocus(null); $("co-staff").focus(); });
     $("staff-head").addEventListener("click", function (e) {
       var b = e.target.closest("button[data-sort]"); if (!b) return;
       var k = b.getAttribute("data-sort");
