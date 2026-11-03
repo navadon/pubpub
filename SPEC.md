@@ -1,4 +1,4 @@
-# PubPub (Publication Dashboard, Public Access): Spec
+# PubPub (Publication Dashboard, Public Square): Spec
 
 Static dashboard of publications by the Department of Computer Engineering,
 Faculty of Engineering, Chiang Mai University. Same idea as the CivilChula

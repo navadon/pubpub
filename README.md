@@ -1,4 +1,4 @@
-# PubPub: Publication Dashboard, Public Access
+# PubPub: Publication Dashboard, Public Square
 
 A static dashboard of publications by staff of the Department of Computer Engineering,
 Faculty of Engineering, Chiang Mai University. It shows yearly and cumulative counts,
