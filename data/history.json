@@ -1,0 +1,16 @@
+[
+ {
+  "month": "2026-11",
+  "generated_at": "2026-11-03",
+  "current_year": 2026,
+  "total": 931,
+  "current_year_total": 50,
+  "top_tier": {
+   "sjr": {
+    "all": 119,
+    "current_year": 11
+   },
+   "citescore": null
+  }
+ }
+]

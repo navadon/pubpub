@@ -1,0 +1,456 @@
+[
+  {
+    "name": "Navadon Khunlertgit",
+    "title": "Assistant Professor",
+    "position": "Head of Department",
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Navadon",
+    "openalex_ids": [
+      "A5029957597"
+    ],
+    "match_note": "confidence: medium; 1 record; CMU 2018-2024 + Texas A&M; topics are mostly bioinformatics/cancer gene expression/cardiac arrest, i.e. not clearly computer engineering; may be partly a merged record (medical share unknown, maybe a large part of 23 works) - NEEDS REVIEW. Excluded A5024717577 'Khunlertgit Navadon' (1 work, building energy, no affiliation, unverifiable)",
+    "name_th": "นวดนย์",
+    "code": "NK",
+    "scopus_ids": [
+      "55634945900"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=E_co6RcAAAAJ"
+  },
+  {
+    "name": "Karn Patanukhom",
+    "title": "Assistant Professor",
+    "position": "Associate head of Department",
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Karn",
+    "openalex_ids": [
+      "A5023919514",
+      "A5029468688"
+    ],
+    "match_note": "confidence: medium; 2 records; main record CMU/Tokyo Tech image processing; A5029468688 'Patanukhom' is a 1-work name fragment with the same image-denoising topics, no affiliation (likely split, unverified)",
+    "name_th": "กานต์",
+    "code": "KP",
+    "scopus_ids": [
+      "16319584300"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=Ltb_xqIAAAAJ"
+  },
+  {
+    "name": "Santi Phithakkitnukoon",
+    "title": "Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Santi",
+    "openalex_ids": [
+      "A5014802853"
+    ],
+    "match_note": "confidence: high; 1 record; single record with CMU 2013-2026, alternatives include the Phithakkitnukooon typo; human mobility/CS topics. Other transliteration splits not found in searches",
+    "name_th": "สันติ",
+    "code": "SP",
+    "scopus_ids": [
+      "23398014000"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=q6IbF8AAAAAJ"
+  },
+  {
+    "name": "Patiwet Wuttisarnwattana",
+    "title": "Associate Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Patiwet",
+    "openalex_ids": [
+      "A5053560180"
+    ],
+    "match_note": "confidence: high; 1 record; CMU + Case Western + Thammasat; medical image segmentation/neural nets; some stem-cell imaging topics are plausibly his own work",
+    "name_th": "ปฏิเวธ",
+    "code": "PW",
+    "scopus_ids": [
+      "58745980500"
+    ],
+    "scholar_url": "https://scholar.google.co.th/citations?user=XAewceIAAAAJ"
+  },
+  {
+    "name": "Trasapong Thaiupathump",
+    "title": "Associate Professor",
+    "position": "Program director of Graduate Studies",
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Trasapong",
+    "openalex_ids": [
+      "A5042007473"
+    ],
+    "match_note": "confidence: high; 1 record; CMU, wireless comms/adaptive filtering topics; excluded Choonhapong Thaiupathump (different person, IT/education)",
+    "name_th": "ตรัสพงศ์",
+    "code": "TT",
+    "scopus_ids": [
+      "6505855954"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=b5AzOPUAAAAJ"
+  },
+  {
+    "name": "Sasin Janpuangtong",
+    "title": "Assistant Professor",
+    "position": "Track director of Cybersecurity Engineering",
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=SasinJan",
+    "openalex_ids": [
+      "A5056248407"
+    ],
+    "match_note": "confidence: high; 1 record; CMU + Texas A&M; semantic web/data mining; only 9 works",
+    "name_th": "ศศิน",
+    "code": "SJ",
+    "scopus_ids": [
+      "57185732100"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=z6iNjskAAAAJ"
+  },
+  {
+    "name": "Anya Apavatjrut",
+    "title": "Associate Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Anya",
+    "openalex_ids": [
+      "A5000203641"
+    ],
+    "match_note": "confidence: high; 1 record; CMU + INRIA/Lyon; error-correcting codes/WSN; excluded Pimchai/Pimjai Apavatjrut (plant biology, different person)",
+    "name_th": "อัญญา",
+    "code": "AA",
+    "scopus_ids": [
+      "24490860800"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=GRnenz0AAAAJ"
+  },
+  {
+    "name": "Juggapong Natwichai",
+    "title": "Associate Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Juggapong",
+    "openalex_ids": [
+      "A5031792027",
+      "A5056441031"
+    ],
+    "match_note": "confidence: medium; 2 records; main record CMU privacy/data mining (112 works); A5056441031 'Natwichai' is a 1-work fragment with same topics, no affiliation",
+    "name_th": "จักรพงศ์",
+    "code": "JN",
+    "scopus_ids": [
+      "8983988000"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=q0ex--QAAAAJ"
+  },
+  {
+    "name": "Kenneth Cosh",
+    "title": "Associate Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Kenneth",
+    "openalex_ids": [
+      "A5048253575",
+      "A5064660627"
+    ],
+    "match_note": "confidence: high; 2 records; A5048253575 CMU software engineering/NLP; A5064660627 'Ken Cosh' (Lancaster/Payap/IEEE CS, software eng) is an earlier-career split sharing Payap and topics; ~24 other Cosh authors excluded",
+    "name_th": null,
+    "code": "KC",
+    "scopus_ids": [
+      "8338406000"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=MCHi-nwAAAAJ"
+  },
+  {
+    "name": "Narissara Eiamkanitchat",
+    "title": "Associate Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Narissara",
+    "openalex_ids": [
+      "A5040539984"
+    ],
+    "match_note": "confidence: high; 1 record; CMU + Mie University; data mining/fuzzy logic",
+    "name_th": "นริศรา",
+    "code": "NE",
+    "scopus_ids": [
+      "36103894400"
+    ],
+    "scholar_url": "https://scholar.google.co.th/citations?user=yGPTAKYAAAAJ"
+  },
+  {
+    "name": "Sakgasit Ramingwong",
+    "title": "Associate Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Sakgasit",
+    "openalex_ids": [
+      "A5077931857"
+    ],
+    "match_note": "confidence: medium; 1 record; CMU software engineering; a 'construction project management' topic suggests some stray topics. Excluded A5038254867 Sakgasem Ramingwong (46 works; industrial engineering/logistics, a different person) - NEEDS REVIEW to confirm",
+    "name_th": "ศักดิ์กษิต",
+    "code": "SR",
+    "scopus_ids": [
+      "18038191700"
+    ],
+    "scholar_url": "https://scholar.google.co.th/citations?user=XOf17QMAAAAJ"
+  },
+  {
+    "name": "Sanpawat Kantabutra",
+    "title": "Associate Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Sanpawat",
+    "openalex_ids": [
+      "A5014588132",
+      "A5145796231"
+    ],
+    "match_note": "confidence: medium; 2 records; main record CMU algorithms/graph theory; A5145796231 'Investigator Sanpawat Kantabutra' is a 1-work graph-theory split; other Kantabutras excluded",
+    "name_th": "สรรพวรรธน์",
+    "code": "SK",
+    "scopus_ids": [
+      "15219858400"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=jXlWzykAAAAJ"
+  },
+  {
+    "name": "Sansanee Auephanwiriyakul",
+    "title": "Associate Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Sansanee",
+    "openalex_ids": [
+      "A5084209719",
+      "A5055090563"
+    ],
+    "match_note": "confidence: medium; 2 records; main record CMU fuzzy/clustering (165 works); A5055090563 'Auephanwiriyakul' is a 2-work fragment with fuzzy/clustering topics, no affiliation",
+    "name_th": "ศันสนีย์",
+    "code": "SA",
+    "scopus_ids": [
+      "6602733151"
+    ],
+    "scholar_url": "https://scholar.google.co.th/citations?user=PhqPYiEAAAAJ"
+  },
+  {
+    "name": "Dome Potikanond",
+    "title": "Assistant Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Dome",
+    "openalex_ids": [
+      "A5035419150"
+    ],
+    "match_note": "confidence: medium; 1 record; CMU 2017/2023 + Leiden; topics are bioinformatics/gene regulatory/zebrafish rather than computer engineering, consistent with a Leiden bioinformatics PhD; 8 works. Excluded Saranyapin/Nirandorn Potikanond (other CMU people)",
+    "name_th": "โดม",
+    "code": "DP",
+    "scopus_ids": [
+      "36167397900"
+    ],
+    "scholar_url": null
+  },
+  {
+    "name": "Jenjira Jaimunk",
+    "title": "Assistant Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Jenjira",
+    "openalex_ids": [
+      "A5077520192"
+    ],
+    "match_note": "confidence: high; 1 record; CMU + King's College London; IoT/cloud security/blockchain",
+    "name_th": "เจนจิรา",
+    "code": "JJ",
+    "scopus_ids": [
+      "56940888600"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=Evff3gsAAAAJ"
+  },
+  {
+    "name": "Kampol Woradit",
+    "title": "Assistant Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Kampol",
+    "openalex_ids": [
+      "A5041128986"
+    ],
+    "match_note": "confidence: high; 1 record; CMU + Chula + MIT; wireless comms/coding. Excluded A5091272215 'Woradit Kampol' (1 work, bio-electromagnetics, no affiliation, unverifiable)",
+    "name_th": "กำพล",
+    "code": "KW",
+    "scopus_ids": [
+      "16320242500"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=GGUd9fwAAAAJ"
+  },
+  {
+    "name": "Kasemsit Teeyapan",
+    "title": "Assistant Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Kasemsit",
+    "openalex_ids": [
+      "A5042426680"
+    ],
+    "match_note": "confidence: high; 1 record; CMU + Georgia Tech; neural nets/robotics; minor dental radiography topic. Excluded S. Teeyapan (enzymes)",
+    "name_th": "เกษมสิทธิ์",
+    "code": "KT",
+    "scopus_ids": [
+      "35786692100"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=kBnrg38AAAAJ"
+  },
+  {
+    "name": "Lachana Ramingwong",
+    "title": "Assistant Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Lachana",
+    "openalex_ids": [
+      "A5019915990"
+    ],
+    "match_note": "confidence: medium; 1 record; CMU software engineering/usability; construction project management topic hints at some stray works; co-author of Sakgasit",
+    "name_th": "ลัชนา",
+    "code": "LR",
+    "scopus_ids": [
+      "42862350100"
+    ],
+    "scholar_url": "https://scholar.google.co.th/citations?user=aT9PNwQAAAAJ"
+  },
+  {
+    "name": "Natthanan Promsuk",
+    "title": "Assistant Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Natthanan",
+    "openalex_ids": [
+      "A5107908640"
+    ],
+    "match_note": "confidence: medium; 1 record; CMU + AIT; cognitive radio/IoT but also CO2 sequestration topic (probably misclassification or merged work; share unknown) - NEEDS REVIEW",
+    "name_th": "ณัฐนันท์",
+    "code": "NP",
+    "scopus_ids": [
+      "57202821797"
+    ],
+    "scholar_url": "https://scholar.google.co.th/citations?user=kf5f06AAAAAJ"
+  },
+  {
+    "name": "Paskorn Champrasert",
+    "title": "Assistant Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Paskorn",
+    "openalex_ids": [
+      "A5044746999"
+    ],
+    "match_note": "confidence: high; 1 record; CMU + UMass; software engineering/cloud/WSN",
+    "name_th": "ภาสกร",
+    "code": "PC",
+    "scopus_ids": [
+      "12645893100"
+    ],
+    "scholar_url": "https://scholar.google.co.th/citations?user=ayeFcAYAAAAJ"
+  },
+  {
+    "name": "Pruet Boonma",
+    "title": "Assistant Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Pruet",
+    "openalex_ids": [
+      "A5064548492"
+    ],
+    "match_note": "confidence: high; 1 record; CMU + UMass; WSN/metaheuristics; excluded other Boonmas",
+    "name_th": "พฤษภ์",
+    "code": "PB",
+    "scopus_ids": [
+      "23011716900"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=jcIsb9AAAAAJ"
+  },
+  {
+    "name": "Thanatip Chankong",
+    "title": "Assistant Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Thanatip",
+    "openalex_ids": [
+      "A5016432724"
+    ],
+    "match_note": "confidence: high; 1 record; CMU + Phayao; cell image analysis/cancer detection (biomedical CS); 11 works",
+    "name_th": "ธนาทิพย์",
+    "code": "TC",
+    "scopus_ids": [
+      "55991419200"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=ZYi1AFEAAAAJ"
+  },
+  {
+    "name": "Yuthapong Somchit",
+    "title": "Assistant Professor",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Yuthapong",
+    "openalex_ids": [
+      "A5069639744",
+      "A5014346279"
+    ],
+    "match_note": "confidence: medium; 2 records; A5069639744 CMU + Tokyo Tech, network traffic/P2P; A5014346279 'Somchit Yuthapong' (1 work, MANET/VANET, no affiliation) is likely a name-order split. ~24 other Somchit* excluded",
+    "name_th": "ยุทธพงษ์",
+    "code": "YS",
+    "scopus_ids": [
+      "8710532800"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=D0ux_c0AAAAJ"
+  },
+  {
+    "name": "Arnan Sipitakiat",
+    "title": "Lecturer",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Arnan",
+    "openalex_ids": [
+      "A5001277210"
+    ],
+    "match_note": "confidence: high; 1 record; CMU + MIT Media Lab; educational robotics/Arduino",
+    "name_th": "อานันท์",
+    "code": "AS",
+    "scopus_ids": [
+      "6507454994"
+    ],
+    "scholar_url": null
+  },
+  {
+    "name": "Chinawat Isradisaikul",
+    "title": "Lecturer",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Chinawat",
+    "openalex_ids": [
+      "A5020274673"
+    ],
+    "match_note": "confidence: high; 1 record; CMU + Cornell/Penn; programming languages/formal methods. Excluded A5044658785 'Chin Isradisaikul' (1 work, traffic control, unrelated topics)",
+    "name_th": "ชินวัตร",
+    "code": "CI",
+    "scopus_ids": [
+      "55791943300"
+    ],
+    "scholar_url": null
+  },
+  {
+    "name": "Nasi Tantitharanukul",
+    "title": "Lecturer",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Nasi",
+    "openalex_ids": [
+      "A5081410386"
+    ],
+    "match_note": "confidence: high; 1 record; CMU + Maejo; IoT/cloud",
+    "name_th": "นษิ",
+    "code": "NT2",
+    "scopus_ids": [
+      "36186115100"
+    ],
+    "scholar_url": null
+  },
+  {
+    "name": "Nopparuj Suetrong",
+    "title": "Lecturer",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Nopparuj",
+    "openalex_ids": [
+      "A5024930700"
+    ],
+    "match_note": "confidence: medium; 1 record; CMU 2022-2026; network security/cognitive radio, but energy forecasting, solar and CO2 sequestration topics suggest stray or shared-title works - NEEDS REVIEW. Other Suetrongs excluded",
+    "name_th": "นพรุจ",
+    "code": "NS",
+    "scopus_ids": [
+      "57942811000"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=mibo6b4AAAAJ"
+  },
+  {
+    "name": "Pontakorn Sonchan",
+    "title": "Lecturer",
+    "position": null,
+    "profile_url": "https://cpe.eng.cmu.ac.th/lecturer-viewenglish.php?view_id=Pontakorn",
+    "openalex_ids": [
+      "A5045654759"
+    ],
+    "match_note": "confidence: high; 1 record; CMU + FIU; sensor/tracking/gesture recognition; excluded other Sonchans",
+    "name_th": "พนธกร",
+    "code": "PS",
+    "scopus_ids": [
+      "56308078000"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?user=Ja1d0FMAAAAJ"
+  }
+]

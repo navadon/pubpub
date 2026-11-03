@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPE CMU Publications</title>
+<meta name="description" content="Publications by the Department of Computer Engineering, Chiang Mai University, from OpenAlex, with SJR and CiteScore tiers.">
+<meta name="color-scheme" content="light dark">
+<style>
+:root {
+  --bg: #f3f4f8;
+  --surface: #ffffff;
+  --surface-2: #f7f7fb;
+  --border: #e2e4ee;
+  --text: #1a1d2e;
+  --text-2: #4a5068;
+  --muted: #6a7088;
+  --header-bg: #0f1a3a;
+  --header-bg-2: #1b2856;
+  --header-text: #f2f4fb;
+  --header-muted: #b9c1dc;
+  --cmu-purple: #5b2c91;
+  --cmu-purple-soft: #ece4f6;
+  --cmu-gold: #e0b84a;
+  --accent: #5b2c91;
+  --link: #4a2390;
+  --focus: #e0b84a;
+  --chip-bg: #eef0f6;
+  --chip-on-bg: #5b2c91;
+  --chip-on-text: #ffffff;
+  --grid: rgba(26, 29, 46, .08);
+  --track: #eceef5;
+  /* tiers */
+  --t-T1: #3b1a6e;
+  --t-Q1: #1f7a4c;
+  --t-Q2: #2a6db0;
+  --t-Q3: #96600f;
+  --t-Q4: #c2512f;
+  --t-NR: #697089;
+  --t-text: #ffffff;
+  /* collaboration */
+  --c-int: #5b2c91;
+  --c-nat: #2a6db0;
+  --c-cmu: #697089;
+  /* KPI gradients */
+  --k1: linear-gradient(135deg, #2b3a7a, #4a5fc1);
+  --k2: linear-gradient(135deg, #4b2380, #7a45bf);
+  --k3: linear-gradient(135deg, #145a52, #1d7f6c);
+  --k4: linear-gradient(135deg, #82360f, #b0561a);
+  --k5: linear-gradient(135deg, #6b4f00, #8f6c0a);
+  --shadow: 0 1px 2px rgba(15, 26, 58, .06), 0 4px 14px rgba(15, 26, 58, .06);
+  --banner-bg: #fff4d6;
+  --banner-text: #5a4300;
+  --up: #1f7a4c;
+  --down: #b3402a;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c1020;
+    --surface: #151a2e;
+    --surface-2: #1b2138;
+    --border: #2a3150;
+    --text: #e8eaf4;
+    --text-2: #c0c5da;
+    --muted: #98a0bd;
+    --header-bg: #0a1130;
+    --header-bg-2: #17214a;
+    --cmu-purple-soft: #2a2148;
+    --accent: #b08ae6;
+    --link: #c6a8f2;
+    --chip-bg: #222a45;
+    --chip-on-bg: #8657c9;
+    --grid: rgba(232, 234, 244, .09);
+    --track: #232a44;
+    --t-T1: #6b46b0;
+    --t-Q1: #23875a;
+    --t-Q2: #3577bd;
+    --t-Q3: #93600f;
+    --t-Q4: #bd5132;
+    --t-NR: #626a88;
+    --c-int: #8657c9;
+    --c-nat: #3577bd;
+    --c-cmu: #626a88;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 14px rgba(0, 0, 0, .25);
+    --banner-bg: #3a3010;
+    --banner-text: #f3dc95;
+    --up: #5cc78f;
+    --down: #f08a72;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c1020;
+  --surface: #151a2e;
+  --surface-2: #1b2138;
+  --border: #2a3150;
+  --text: #e8eaf4;
+  --text-2: #c0c5da;
+  --muted: #98a0bd;
+  --header-bg: #0a1130;
+  --header-bg-2: #17214a;
+  --cmu-purple-soft: #2a2148;
+  --accent: #b08ae6;
+  --link: #c6a8f2;
+  --chip-bg: #222a45;
+  --chip-on-bg: #8657c9;
+  --grid: rgba(232, 234, 244, .09);
+  --track: #232a44;
+  --t-T1: #6b46b0;
+  --t-Q1: #23875a;
+  --t-Q2: #3577bd;
+  --t-Q3: #93600f;
+  --t-Q4: #bd5132;
+  --t-NR: #626a88;
+  --c-int: #8657c9;
+  --c-nat: #3577bd;
+  --c-cmu: #626a88;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 14px rgba(0, 0, 0, .25);
+  --banner-bg: #3a3010;
+  --banner-text: #f3dc95;
+  --up: #5cc78f;
+  --down: #f08a72;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Thai", "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+a { color: var(--link); }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 1440px; margin: 0 auto; padding: 0 16px; }
+.num { font-variant-numeric: tabular-nums; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* Header */
+header.top {
+  background: linear-gradient(100deg, var(--header-bg), var(--header-bg-2));
+  color: var(--header-text);
+  border-bottom: 3px solid var(--cmu-gold);
+}
+header.top .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding-top: 14px; padding-bottom: 14px; }
+.brand { flex: 1 1 420px; min-width: 0; }
+.brand h1 { margin: 0; font-size: 22px; line-height: 1.2; letter-spacing: .2px; font-weight: 750; }
+.brand h1 .cmu { color: var(--cmu-gold); }
+.brand .sub { margin: 3px 0 0; color: var(--header-muted); font-size: 13px; }
+.brand .note { margin: 2px 0 0; color: var(--header-muted); font-size: 12px; }
+.brand .note a { color: #e9d38e; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
+.ctl-label { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--header-muted); margin-right: 6px; }
+.seg { display: inline-flex; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; padding: 2px; background: rgba(255,255,255,.06); }
+.seg button {
+  appearance: none; border: 0; background: transparent; color: var(--header-text);
+  font: inherit; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 999px; cursor: pointer;
+}
+.seg button[aria-pressed="true"] { background: var(--cmu-gold); color: #1d1600; }
+.seg button:disabled { color: rgba(242,244,251,.45); cursor: not-allowed; }
+.ctl { display: inline-flex; align-items: center; }
+select.year-sel {
+  font: inherit; font-size: 13px; font-weight: 600; color: var(--header-text);
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.28); border-radius: 8px; padding: 5px 8px;
+}
+select.year-sel option { color: #111; }
+
+.banner { background: var(--banner-bg); color: var(--banner-text); font-size: 13px; }
+.banner .wrap { padding-top: 6px; padding-bottom: 6px; }
+
+main { padding: 16px 0 8px; }
+
+/* KPI */
+.kpis { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.kpi {
+  position: relative; color: #fff; border-radius: 14px; padding: 14px 14px 12px; min-height: 112px;
+  box-shadow: var(--shadow); overflow: hidden; display: flex; gap: 10px; align-items: flex-start;
+}
+.kpi::after { content: ""; position: absolute; right: -30px; bottom: -40px; width: 120px; height: 120px; border-radius: 50%; background: rgba(255,255,255,.08); pointer-events: none; }
+.kpi:nth-child(1) { background: var(--k1); }
+.kpi:nth-child(2) { background: var(--k2); }
+.kpi:nth-child(3) { background: var(--k3); }
+.kpi:nth-child(4) { background: var(--k4); }
+.kpi:nth-child(5) { background: var(--k5); }
+.kpi .ico { flex: 0 0 34px; width: 34px; height: 34px; border-radius: 10px; background: rgba(255,255,255,.18); display: grid; place-items: center; }
+.kpi .ico svg { width: 20px; height: 20px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.kpi .body { min-width: 0; flex: 1; }
+.kpi .lbl { font-size: 12px; font-weight: 600; opacity: .92; text-transform: uppercase; letter-spacing: .05em; }
+.kpi .val { font-size: 30px; font-weight: 800; line-height: 1.1; margin-top: 2px; }
+.kpi .val small { font-size: 15px; font-weight: 600; opacity: .9; }
+.kpi .meta { font-size: 12px; opacity: .92; margin-top: 3px; }
+.kpi .ring { flex: 0 0 auto; margin-left: auto; position: relative; z-index: 1; }
+.kpi .ring text { fill: #fff; font-size: 12px; font-weight: 700; }
+
+/* Panels grid */
+.grid {
+  display: grid; gap: 12px; margin-top: 12px;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: "trend mix mix" "trend tier collab";
+}
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px; box-shadow: var(--shadow); min-width: 0; }
+.panel h2 { margin: 0 0 2px; font-size: 15px; font-weight: 700; }
+.panel .hint { margin: 0 0 10px; font-size: 12px; color: var(--muted); }
+.p-trend { grid-area: trend; display: flex; flex-direction: column; }
+.p-mix { grid-area: mix; }
+.p-tier { grid-area: tier; }
+.p-collab { grid-area: collab; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 10px; }
+.chip {
+  appearance: none; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer;
+  border: 1px solid var(--border); background: var(--chip-bg); color: var(--text-2);
+  border-radius: 999px; padding: 3px 10px; display: inline-flex; align-items: center; gap: 6px;
+}
+.chip .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--sw, var(--muted)); opacity: .35; }
+.chip[aria-pressed="true"] { border-color: var(--sw); color: var(--text); background: var(--surface); }
+.chip[aria-pressed="true"] .dot { opacity: 1; }
+.chip.ghost { background: transparent; border-style: dashed; color: var(--muted); }
+.chart-box { position: relative; height: 330px; flex: 1 1 auto; min-height: 260px; }
+.chart-fallback { color: var(--muted); font-size: 13px; padding: 20px; }
+
+.ycards { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 8px; margin-top: 12px; }
+.ycard { border: 1px solid var(--border); border-left: 4px solid var(--sw, var(--accent)); background: var(--surface-2); border-radius: 10px; padding: 7px 9px; }
+.ycard .y { font-size: 12px; color: var(--muted); font-weight: 600; }
+.ycard .n { font-size: 20px; font-weight: 800; line-height: 1.15; }
+.ycard .d { font-size: 11px; color: var(--muted); }
+.ycard.cur { background: var(--cmu-purple-soft); }
+.up { color: var(--up); }
+.down { color: var(--down); }
+
+/* stacked bars */
+.stack-row { display: grid; grid-template-columns: 44px minmax(0, 1fr) 74px; gap: 10px; align-items: center; margin: 8px 0; }
+.stack-row .yr { font-weight: 700; font-size: 13px; }
+.stack-row .tot { font-size: 12px; color: var(--text-2); text-align: right; white-space: nowrap; }
+.stack-row .tot b { color: var(--text); font-size: 14px; }
+.stack { display: flex; height: 30px; border-radius: 8px; overflow: hidden; background: var(--track); }
+.seg-b { display: flex; align-items: center; justify-content: center; color: var(--t-text); font-size: 11px; font-weight: 700; white-space: nowrap; overflow: hidden; min-width: 0; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 10px; font-size: 12px; color: var(--text-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+/* bar list */
+.bar-row { display: grid; grid-template-columns: 84px minmax(0, 1fr) 64px; gap: 8px; align-items: center; margin: 7px 0; font-size: 13px; }
+.bar-row .name { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar-row .track { height: 14px; background: var(--track); border-radius: 7px; overflow: hidden; }
+.bar-row .fill { height: 100%; border-radius: 7px; }
+.bar-row .v { text-align: right; white-space: nowrap; }
+.bar-row .v small { color: var(--muted); }
+.summary {
+  margin-top: 12px; border-radius: 10px; padding: 10px 12px; background: var(--cmu-purple-soft);
+  border: 1px solid var(--border); display: flex; align-items: center; gap: 12px;
+}
+.summary .big { font-size: 26px; font-weight: 800; color: var(--accent); line-height: 1; }
+.summary .txt { font-size: 12px; color: var(--text-2); }
+.summary .txt b { color: var(--text); }
+
+.insight {
+  margin-top: 12px; padding: 12px 14px; border-radius: 12px; background: var(--surface);
+  border: 1px solid var(--border); border-left: 4px solid var(--cmu-gold); font-size: 13.5px; color: var(--text-2);
+}
+.insight b { color: var(--text); }
+
+/* Below the fold */
+.section-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin: 26px 0 10px; }
+.section-head h2 { margin: 0; font-size: 18px; }
+.section-head .hint { color: var(--muted); font-size: 13px; margin: 0; }
+.lower { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 12px; align-items: start; }
+
+table.staff { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
+table.staff th, table.staff td { padding: 6px 6px; border-bottom: 1px solid var(--border); text-align: right; }
+table.staff th:first-child, table.staff td:first-child { text-align: left; }
+table.staff col.c-name { width: auto; }
+table.staff col.c-n { width: 17%; }
+table.staff td:first-child { overflow-wrap: anywhere; }
+table.staff th { font-size: 12px; color: var(--muted); font-weight: 600; vertical-align: bottom; }
+table.staff th button {
+  appearance: none; background: none; border: 0; padding: 2px 0; font: inherit; color: inherit; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 3px; text-align: inherit;
+}
+table.staff th[aria-sort] button { color: var(--text); }
+table.staff th .arr { font-size: 10px; opacity: .8; }
+table.staff tbody tr:hover { background: var(--surface-2); }
+table.staff td .rank { color: var(--muted); font-size: 11px; display: inline-block; min-width: 20px; }
+table.staff td.zero { color: var(--muted); }
+.staff-scroll { max-height: 640px; overflow-y: auto; }
+
+.pub-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.pub-tools input[type=search], .pub-tools select {
+  font: inherit; font-size: 14px; color: var(--text); background: var(--surface-2);
+  border: 1px solid var(--border); border-radius: 8px; padding: 7px 10px;
+}
+.pub-tools input[type=search] { flex: 1 1 220px; min-width: 0; }
+.pub-count { font-size: 12px; color: var(--muted); margin: 0 0 6px; }
+ol.pubs { list-style: none; margin: 0; padding: 0; }
+ol.pubs li { padding: 10px 0; border-bottom: 1px solid var(--border); }
+ol.pubs li:last-child { border-bottom: 0; }
+.pub-title { font-weight: 600; font-size: 14px; overflow-wrap: anywhere; }
+.pub-title a { text-decoration: none; }
+.pub-title a:hover { text-decoration: underline; }
+.pub-meta { font-size: 12.5px; color: var(--text-2); margin-top: 3px; display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; }
+.pub-meta .venue { font-style: italic; overflow-wrap: anywhere; }
+.pub-staff { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+.badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: 999px; color: var(--t-text); white-space: nowrap; }
+.tag { display: inline-block; font-size: 11px; padding: 0 7px; border-radius: 999px; border: 1px solid var(--border); color: var(--text-2); white-space: nowrap; }
+.more { margin-top: 10px; }
+.btn {
+  appearance: none; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--text);
+  background: var(--chip-bg); border: 1px solid var(--border); border-radius: 8px; padding: 6px 14px;
+}
+
+footer { color: var(--muted); font-size: 12px; padding: 22px 0 28px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: space-between; }
+
+.err { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; margin-top: 16px; }
+
+@media (max-width: 1200px) {
+  .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "trend trend" "mix mix" "tier collab"; }
+}
+@media (max-width: 900px) {
+  .lower { grid-template-columns: minmax(0, 1fr); }
+  .staff-scroll { max-height: none; }
+}
+@media (max-width: 720px) {
+  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kpi:nth-child(5) { grid-column: 1 / -1; }
+  .grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "trend" "mix" "tier" "collab"; }
+  .brand h1 { font-size: 19px; }
+  .chart-box { height: 280px; }
+}
+@media (max-width: 440px) {
+  .kpis { grid-template-columns: minmax(0, 1fr); }
+  .kpi { min-height: 0; }
+  .kpi .val { font-size: 26px; }
+  .stack-row { grid-template-columns: 38px minmax(0, 1fr) 58px; gap: 6px; }
+  .bar-row { grid-template-columns: 92px minmax(0, 1fr) 58px; font-size: 12.5px; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <h1><span class="cmu">CPE CMU</span> Publication Dashboard</h1>
+      <p class="sub">Department of Computer Engineering, Chiang Mai University</p>
+      <p class="note">Data: <a href="https://openalex.org" rel="noopener">OpenAlex</a> career publications of current staff; tiers by journal (latest SCImago SJR) (SCImago SJR, Scopus CiteScore). Refreshed monthly.</p>
+    </div>
+    <div class="controls">
+      <div class="ctl">
+        <span class="ctl-label" id="tier-lbl">Tier</span>
+        <div class="seg" role="group" aria-labelledby="tier-lbl">
+          <button type="button" data-tier="sjr" aria-pressed="true">SJR</button>
+          <span id="cs-wrap"><button type="button" data-tier="citescore" aria-pressed="false">CiteScore</button></span>
+        </div>
+      </div>
+      <div class="ctl">
+        <label class="ctl-label" for="year-sel">Year</label>
+        <select id="year-sel" class="year-sel"></select>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="banner" id="banner" hidden><div class="wrap" id="banner-text"></div></div>
+
+<main class="wrap" id="app" aria-live="polite">
+  <section class="kpis" aria-label="Key figures" id="kpis"></section>
+
+  <div class="grid">
+    <section class="panel p-trend" aria-labelledby="h-trend">
+      <h2 id="h-trend">Monthly cumulative publications</h2>
+      <p class="hint" id="trend-hint">Cumulative count by publication date, one line per year.</p>
+      <div class="chips" id="year-chips" role="group" aria-label="Years shown in the chart"></div>
+      <div class="chart-box"><canvas id="trend" role="img" aria-label="Line chart of cumulative publications by month"></canvas></div>
+      <div class="ycards" id="ycards" aria-label="Year totals"></div>
+    </section>
+
+    <section class="panel p-mix" aria-labelledby="h-mix">
+      <h2 id="h-mix">Quality tier mix</h2>
+      <p class="hint" id="mix-hint"></p>
+      <div id="mix"></div>
+      <div class="legend" id="mix-legend"></div>
+    </section>
+
+    <section class="panel p-tier" aria-labelledby="h-tier">
+      <h2 id="h-tier">Current tier</h2>
+      <p class="hint" id="tier-hint"></p>
+      <div id="tierlist"></div>
+      <div class="summary" id="tier-summary"></div>
+    </section>
+
+    <section class="panel p-collab" aria-labelledby="h-collab">
+      <h2 id="h-collab">Collaboration</h2>
+      <p class="hint" id="collab-hint"></p>
+      <div id="collab"></div>
+      <p class="hint" style="margin-top:10px">International: any co-author institution outside Thailand. National: all in Thailand, some outside CMU.</p>
+    </section>
+  </div>
+
+  <p class="insight" id="insight"></p>
+
+  <div class="section-head">
+    <h2 id="h-lower">Staff and publications, <span id="lower-year"></span></h2>
+    <p class="hint">Change the year in the header. A paper with several staff co-authors appears under each of them, but counts once in the totals above.</p>
+  </div>
+  <div class="lower">
+    <section class="panel" aria-labelledby="h-staff">
+      <h2 id="h-staff">Per staff</h2>
+      <p class="hint" id="staff-hint"></p>
+      <div class="staff-scroll">
+        <table class="staff">
+          <colgroup><col class="c-name"><col class="c-n"><col class="c-n"><col class="c-n"></colgroup>
+          <thead><tr id="staff-head"></tr></thead>
+          <tbody id="staff-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="h-pubs">
+      <h2 id="h-pubs">Publications</h2>
+      <div class="pub-tools">
+        <label class="sr-only" for="pub-q">Search publications</label>
+        <input type="search" id="pub-q" placeholder="Search title, venue or staff" autocomplete="off">
+        <label class="sr-only" for="pub-tier">Filter by tier</label>
+        <select id="pub-tier"></select>
+        <label class="sr-only" for="pub-type">Filter by type</label>
+        <select id="pub-type">
+          <option value="">All types</option>
+          <option value="article">Article</option>
+          <option value="review">Review</option>
+          <option value="proceedings-article">Conference paper</option>
+          <option value="book-chapter">Book chapter</option>
+        </select>
+      </div>
+      <p class="pub-count" id="pub-count" aria-live="polite"></p>
+      <ol class="pubs" id="pub-list"></ol>
+      <div class="more" id="pub-more"></div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span id="foot-src">Source: OpenAlex</span>
+    <span>Tiers: SCImago Journal Rank and Scopus CiteScore, matched by ISSN. Unmatched venues are "No Ranking".</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+(function () {
+  "use strict";
+
+  var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var TIER_KEYS = {
+    sjr: ["Q1", "Q2", "Q3", "Q4", "No Ranking"],
+    citescore: ["T1", "Q1", "Q2", "Q3", "Q4", "No Ranking"]
+  };
+  var TOP = { sjr: ["Q1"], citescore: ["T1", "Q1"] };
+  var TIER_NAME = { sjr: "SJR", citescore: "CiteScore" };
+  var TOP_LABEL = { sjr: "Q1", citescore: "T1 + Q1" };
+  var COLLAB_KEYS = ["International", "National", "CMU only"];
+  var COLLAB_VAR = { "International": "--c-int", "National": "--c-nat", "CMU only": "--c-cmu" };
+  var TYPE_NAME = { "article": "Article", "review": "Review", "proceedings-article": "Conference paper", "book-chapter": "Book chapter" };
+  var DEFAULT_YEARS_SHOWN = 4;
+  var PAGE = 60;
+
+  var D = null;
+  var state = {
+    tier: "sjr",
+    year: null,
+    shown: [],
+    sort: { key: "year", dir: -1 },
+    q: "",
+    pubTier: "",
+    pubType: "",
+    limit: PAGE,
+    usingMock: false
+  };
+  var chart = null;
+
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function fmt(n) { return (n == null || isNaN(n)) ? "–" : Number(n).toLocaleString("en-US"); }
+  function pct(a, b) { return b ? Math.round(a / b * 100) : 0; }
+  function cssVar(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  function tierVar(k) { return k === "No Ranking" ? "--t-NR" : "--t-" + k; }
+  function sum(obj) { var s = 0; for (var k in obj) { if (typeof obj[k] === "number") s += obj[k]; } return s; }
+  function get(o, path, dflt) {
+    for (var i = 0; i < path.length; i++) { if (o == null) return dflt; o = o[path[i]]; }
+    return o == null ? dflt : o;
+  }
+
+  // ---------- loading ----------
+  function fetchJson(url) {
+    return fetch(url, { cache: "no-cache" }).then(function (r) {
+      if (!r.ok) throw new Error(url + " returned HTTP " + r.status);
+      return r.json();
+    });
+  }
+  function load() {
+    var params = new URLSearchParams(location.search);
+    var wantMock = params.get("mock") === "1" || params.get("mock") === "true" || params.get("mock") === "";
+    var p = wantMock
+      ? fetchJson("./data/dashboard.mock.json").then(function (d) { state.usingMock = "requested"; return d; })
+      : fetchJson("./data/dashboard.json").catch(function (e) {
+          return fetchJson("./data/dashboard.mock.json").then(function (d) { state.usingMock = "fallback"; return d; });
+        });
+    p.then(init).catch(function (e) {
+      $("app").innerHTML = '<div class="err"><h2>Could not load the data</h2><p>' + esc(e.message) +
+        '</p><p>Open this page over HTTP (for example <code>python3 -m http.server</code> in the project folder); browsers block <code>fetch</code> from <code>file://</code>.</p></div>';
+    });
+  }
+
+  // ---------- derived numbers ----------
+  function yearTotal(y) {
+    var t = get(D, ["year_totals", String(y)]);
+    if (typeof t === "number") return t;
+    return D.publications.filter(function (p) { return p.year === y; }).length;
+  }
+  function tiersFor(y, tier) { return get(D, ["tiers", tier || state.tier, String(y)], {}); }
+  function topCount(y, tier) {
+    tier = tier || state.tier;
+    var t = tiersFor(y, tier);
+    return TOP[tier].reduce(function (s, k) { return s + (t[k] || 0); }, 0);
+  }
+  function lastMonthName() { return D.last_month ? MONTHS[D.last_month - 1] : "Jan (no complete month yet)"; }
+  function lastMonthOf(y) { return y === D.current_year ? D.last_month : 12; }
+  function isTop(p, tier) { return TOP[tier || state.tier].indexOf(p[tier || state.tier]) >= 0; }
+  function cumAt(y, m) { // m is 1-based
+    var arr = get(D, ["monthly_cumulative", String(y)]);
+    if (!arr || m < 1) return null;
+    var v = arr[Math.min(m, 12) - 1];
+    return v == null ? null : v;
+  }
+  // Top-tier movement in the last month with data. Uses an optional pipeline field
+  // `since_last_month` ({sjr: n, citescore: n}, from history.json) for the current year
+  // if present; otherwise counts top-tier works dated in that month.
+  function monthMovement(y) {
+    var m = lastMonthOf(y);
+    var fromHistory = y === D.current_year ? get(D, ["since_last_month", state.tier]) : null;
+    if (typeof fromHistory === "number") return { n: fromHistory, m: m, src: "history" };
+    var prefix = y + "-" + (m < 10 ? "0" : "") + m;
+    var n = D.publications.filter(function (p) {
+      return p.year === y && String(p.date || "").slice(0, 7) === prefix && isTop(p);
+    }).length;
+    return { n: n, m: m, src: "dates" };
+  }
+
+  // ---------- rendering ----------
+  var ICONS = {
+    doc: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>',
+    star: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>',
+    user: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>',
+    globe: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>',
+    trend: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>'
+  };
+  function ring(p) {
+    var r = 22, c = 2 * Math.PI * r, off = c * (1 - Math.max(0, Math.min(100, p)) / 100);
+    return '<svg class="ring" width="58" height="58" viewBox="0 0 58 58" aria-hidden="true">' +
+      '<circle cx="29" cy="29" r="' + r + '" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="7"/>' +
+      '<circle cx="29" cy="29" r="' + r + '" fill="none" stroke="#f1d27a" stroke-width="7" stroke-linecap="round" ' +
+      'stroke-dasharray="' + c.toFixed(2) + '" stroke-dashoffset="' + off.toFixed(2) + '" transform="rotate(-90 29 29)"/>' +
+      '<text x="29" y="33" text-anchor="middle">' + p + '%</text></svg>';
+  }
+  function kpi(icon, label, value, meta, extra) {
+    return '<article class="kpi"><div class="ico">' + ICONS[icon] + '</div><div class="body"><div class="lbl">' + label +
+      '</div><div class="val num">' + value + '</div><div class="meta">' + meta + '</div></div>' + (extra || "") + '</article>';
+  }
+  function periodLabel(y) {
+    var m = lastMonthOf(y);
+    return y === D.current_year ? "Jan–" + MONTHS[m - 1] + " " + y : "Full year " + y;
+  }
+
+  function renderKpis() {
+    var y = state.year, tot = yearTotal(y), top = topCount(y), lm = lastMonthOf(y);
+    // same period last year
+    var prevSame = cumAt(y - 1, lm), delta = "";
+    if (prevSame != null && prevSame > 0) {
+      var ch = Math.round((tot - prevSame) / prevSame * 100);
+      delta = ' · <span>' + (ch >= 0 ? "+" : "") + ch + '% vs ' + (y === D.current_year ? "same period " : "") + (y - 1) + '</span>';
+    }
+    var col = get(D, ["collaboration", String(y)], {}), colTot = sum(col), intl = col.International || 0;
+    var staff = D.staff_count || (D.per_staff || []).length || 1;
+    var mv = monthMovement(y);
+    var mvMeta = mv.src === "history"
+      ? TIER_NAME[state.tier] + " " + TOP_LABEL[state.tier] + " vs previous monthly snapshot"
+      : TIER_NAME[state.tier] + " " + TOP_LABEL[state.tier] + " works dated " + MONTHS[mv.m - 1] + " " + y;
+    $("kpis").innerHTML =
+      kpi("doc", y === D.current_year ? "Publications YTD" : "Publications", fmt(tot), periodLabel(y) + delta) +
+      kpi("star", "Top tier (" + TIER_NAME[state.tier] + " " + TOP_LABEL[state.tier] + ")", fmt(top),
+        pct(top, tot) + "% of " + fmt(tot) + " works", ring(pct(top, tot))) +
+      kpi("user", "Per professor", (top / staff).toFixed(2), fmt(top) + " top tier ÷ " + fmt(staff) + " staff") +
+      kpi("globe", "International", fmt(intl) + ' <small>' + pct(intl, colTot) + '%</small>', "of works have a co-author abroad") +
+      kpi("trend", y === D.current_year ? "Since last month" : "In " + MONTHS[mv.m - 1], "+" + fmt(mv.n) + ' <small>top tier</small>', mvMeta);
+  }
+
+  function isDark() {
+    var t = document.documentElement.getAttribute("data-theme");
+    return t === "dark" || (t !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  }
+  function yearColors() {
+    // 10-step categorical set, current/selected year gets CMU purple
+    var dark = isDark();
+    var pal = dark
+      ? ["#e8a33d", "#4fb3d9", "#5cc78f", "#f07f6a", "#d48fd8", "#c7b84a", "#7d96f0", "#4fc8b8", "#e88aa8", "#a7b0c8"]
+      : ["#c77800", "#1f8bb8", "#23875a", "#c4442b", "#9b4aa0", "#8a7a00", "#3f5fc9", "#12867a", "#b84c74", "#6a7088"];
+    var map = {}, i = 0;
+    D.years.slice().sort().forEach(function (y) {
+      if (y === state.year) { map[y] = cssVar("--accent"); return; }
+      map[y] = pal[i++ % pal.length];
+    });
+    return map;
+  }
+
+  function renderChips() {
+    var cols = yearColors();
+    var html = D.years.map(function (y) {
+      var on = state.shown.indexOf(y) >= 0;
+      return '<button type="button" class="chip" data-year="' + y + '" aria-pressed="' + on + '" style="--sw:' + cols[y] + '"><span class="dot"></span>' + y + '</button>';
+    }).join("");
+    html += '<button type="button" class="chip ghost" data-act="last4">Last ' + DEFAULT_YEARS_SHOWN + '</button>' +
+            '<button type="button" class="chip ghost" data-act="all">All</button>';
+    $("year-chips").innerHTML = html;
+  }
+
+  var endLabelPlugin = {
+    id: "endLabels",
+    afterDatasetsDraw: function (c) {
+      var ctx = c.ctx, items = [];
+      c.data.datasets.forEach(function (ds, i) {
+        var meta = c.getDatasetMeta(i);
+        if (meta.hidden) return;
+        var last = -1;
+        for (var k = ds.data.length - 1; k >= 0; k--) { if (ds.data[k] != null) { last = k; break; } }
+        if (last < 0) return;
+        var pt = meta.data[last];
+        if (!pt) return;
+        items.push({ ds: ds, pt: pt, last: last, y: pt.y });
+      });
+      // de-overlap labels that end in the same month: push apart vertically
+      var groups = {};
+      items.forEach(function (it) { (groups[it.last] = groups[it.last] || []).push(it); });
+      Object.keys(groups).forEach(function (g) {
+        var arr = groups[g].sort(function (a, b) { return a.y - b.y; });
+        for (var j = 1; j < arr.length; j++) {
+          var gap = (arr[j].ds._highlight || arr[j - 1].ds._highlight) ? 20 : 13;
+          if (arr[j].y - arr[j - 1].y < gap) arr[j].y = arr[j - 1].y + gap;
+        }
+      });
+      items.forEach(function (it) {
+        var ds = it.ds, pt = it.pt, last = it.last;
+        var txt = (ds._highlight ? ds.label + ": " : "") + ds.data[last];
+        ctx.save();
+        ctx.font = (ds._highlight ? "700 12px " : "600 11px ") + getComputedStyle(document.body).fontFamily;
+        var w = ctx.measureText(txt).width;
+        var x = pt.x + 8, yy = it.y;
+        if (x + w + 10 > c.chartArea.right + 70) x = pt.x - w - 16;
+        if (ds._highlight) {
+          ctx.fillStyle = ds.borderColor;
+          var h = 20;
+          ctx.beginPath();
+          if (ctx.roundRect) ctx.roundRect(x - 4, yy - h / 2, w + 12, h, 6); else ctx.rect(x - 4, yy - h / 2, w + 12, h);
+          ctx.fill();
+          ctx.fillStyle = isDark() ? "#16092b" : "#ffffff";
+          ctx.textBaseline = "middle";
+          ctx.fillText(txt, x + 2, yy + 1);
+        } else {
+          ctx.fillStyle = ds.borderColor;
+          ctx.textBaseline = "middle";
+          ctx.fillText(txt, x, yy);
+        }
+        ctx.restore();
+      });
+    }
+  };
+
+  function renderTrend() {
+    if (typeof window.Chart === "undefined") {
+      $("trend").parentNode.innerHTML = '<p class="chart-fallback">The chart library (Chart.js) did not load, so the trend chart is unavailable. Year totals are below.</p>';
+      renderYearCards();
+      return;
+    }
+    var cols = yearColors();
+    var years = state.shown.slice().sort();
+    var datasets = years.map(function (y) {
+      var hl = y === state.year;
+      return {
+        label: String(y),
+        data: (D.monthly_cumulative[String(y)] || []).slice(0, 12),
+        borderColor: cols[y],
+        backgroundColor: cols[y],
+        borderWidth: hl ? 3.5 : 1.8,
+        pointRadius: function (ctx) {
+          var d = ctx.dataset.data, i = ctx.dataIndex, last = -1;
+          for (var k = d.length - 1; k >= 0; k--) { if (d[k] != null) { last = k; break; } }
+          return i === last ? (hl ? 5 : 3) : 0;
+        },
+        pointHoverRadius: 5,
+        tension: 0.25,
+        spanGaps: false,
+        order: hl ? 0 : 1,
+        _highlight: hl
+      };
+    });
+    var text = cssVar("--text-2"), grid = cssVar("--grid");
+    if (chart) { chart.destroy(); chart = null; }
+    chart = new Chart($("trend"), {
+      type: "line",
+      data: { labels: MONTHS, datasets: datasets },
+      plugins: [endLabelPlugin],
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 350 },
+        layout: { padding: { right: 72, top: 8 } },
+        interaction: { mode: "index", intersect: false },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            itemSort: function (a, b) { return (b.raw || 0) - (a.raw || 0); },
+            callbacks: { label: function (c) { return " " + c.dataset.label + ": " + (c.raw == null ? "–" : c.raw); } }
+          }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: text } },
+          y: { beginAtZero: true, grid: { color: grid }, border: { display: false }, ticks: { color: text, precision: 0 } }
+        }
+      }
+    });
+    $("trend").setAttribute("aria-label", "Cumulative publications by month for " + years.join(", ") +
+      ". " + years.map(function (y) { return y + ": " + yearTotal(y); }).join(", ") + ".");
+    renderYearCards();
+  }
+
+  function renderYearCards() {
+    var cols = yearColors();
+    var years = state.shown.slice().sort();
+    $("ycards").innerHTML = years.map(function (y) {
+      var n = yearTotal(y), prev = D.years.indexOf(y - 1) >= 0 ? yearTotal(y - 1) : null, d = "";
+      if (y === D.current_year) {
+        d = "to " + lastMonthName();
+        var ps = cumAt(y - 1, D.last_month);
+        if (ps) { var c = Math.round((n - ps) / ps * 100); d += ' · <span class="' + (c >= 0 ? "up" : "down") + '">' + (c >= 0 ? "+" : "") + c + "%</span>"; }
+      } else if (prev) {
+        var c2 = Math.round((n - prev) / prev * 100);
+        d = '<span class="' + (c2 >= 0 ? "up" : "down") + '">' + (c2 >= 0 ? "+" : "") + c2 + "%</span> vs " + (y - 1);
+      } else d = "full year";
+      return '<div class="ycard' + (y === state.year ? " cur" : "") + '" style="--sw:' + cols[y] + '"><div class="y">' + y +
+        '</div><div class="n num">' + fmt(n) + '</div><div class="d">' + d + '</div></div>';
+    }).join("");
+  }
+
+  function renderMix() {
+    var keys = TIER_KEYS[state.tier];
+    var years = [state.year - 2, state.year - 1, state.year].filter(function (y) { return D.years.indexOf(y) >= 0; });
+    $("mix-hint").textContent = TIER_NAME[state.tier] + " tier share, " + years[0] + "–" + years[years.length - 1] +
+      (years.indexOf(D.current_year) >= 0 ? " (" + D.current_year + " to " + lastMonthName() + ")" : "");
+    $("mix").innerHTML = years.map(function (y) {
+      var t = tiersFor(y), tot = sum(t) || 0;
+      var segs = keys.map(function (k) {
+        var n = t[k] || 0; if (!n) return "";
+        var w = tot ? n / tot * 100 : 0;
+        var label = w >= 13 ? (k === "No Ranking" ? "NR" : k) + " " + n : (w >= 6 ? String(n) : "");
+        return '<div class="seg-b" style="width:' + w.toFixed(2) + '%;background:var(' + tierVar(k) + ')" title="' + esc(k) + ": " + n + " (" + Math.round(w) + '%)">' + label + '</div>';
+      }).join("");
+      var aria = keys.map(function (k) { return k + " " + (t[k] || 0); }).join(", ");
+      return '<div class="stack-row"><div class="yr">' + y + '</div><div class="stack" role="img" aria-label="' + y + ": " + esc(aria) + '">' + segs +
+        '</div><div class="tot"><b class="num">' + fmt(tot) + '</b> total</div></div>';
+    }).join("");
+    $("mix-legend").innerHTML = keys.map(function (k) {
+      return '<span><i style="background:var(' + tierVar(k) + ')"></i>' + esc(k) + '</span>';
+    }).join("");
+  }
+
+  function renderTierList() {
+    var keys = TIER_KEYS[state.tier], t = tiersFor(state.year), tot = sum(t);
+    var max = Math.max.apply(null, keys.map(function (k) { return t[k] || 0; }).concat([1]));
+    $("h-tier").textContent = state.year === D.current_year ? "Current tier (YTD)" : "Tier, " + state.year;
+    $("tier-hint").textContent = TIER_NAME[state.tier] + ", " + periodLabel(state.year) + ", " + fmt(tot) + " works";
+    $("tierlist").innerHTML = keys.map(function (k) {
+      var n = t[k] || 0;
+      return '<div class="bar-row"><div class="name">' + esc(k) + '</div><div class="track"><div class="fill" style="width:' +
+        (n / max * 100).toFixed(1) + '%;background:var(' + tierVar(k) + ')"></div></div><div class="v num">' + fmt(n) +
+        ' <small>' + pct(n, tot) + '%</small></div></div>';
+    }).join("");
+    var top = topCount(state.year);
+    var prevTop = D.years.indexOf(state.year - 1) >= 0 ? topCount(state.year - 1) : null;
+    $("tier-summary").innerHTML = '<div class="big num">' + fmt(top) + '</div><div class="txt"><b>Top tier (' + TOP_LABEL[state.tier] +
+      ')</b> · ' + pct(top, tot) + '% of ' + fmt(tot) + ' works' +
+      (prevTop != null ? '<br>' + (state.year - 1) + ' full year: ' + fmt(prevTop) + ' (' + pct(prevTop, sum(tiersFor(state.year - 1))) + '%)' : "") + '</div>';
+  }
+
+  function renderCollab() {
+    var c = get(D, ["collaboration", String(state.year)], {}), tot = sum(c);
+    $("collab-hint").textContent = periodLabel(state.year) + ", " + fmt(tot) + " works";
+    $("collab").innerHTML = COLLAB_KEYS.map(function (k) {
+      var n = c[k] || 0;
+      return '<div class="bar-row"><div class="name" title="' + k + '">' + k + '</div><div class="track"><div class="fill" style="width:' +
+        (tot ? n / tot * 100 : 0).toFixed(1) + '%;background:var(' + COLLAB_VAR[k] + ')"></div></div><div class="v num">' + fmt(n) +
+        ' <small>' + pct(n, tot) + '%</small></div></div>';
+    }).join("");
+  }
+
+  function renderInsight() {
+    var y = state.year, tot = yearTotal(y), top = topCount(y), lm = lastMonthOf(y);
+    var parts = [];
+    var cur = y === D.current_year;
+    var s = "<b>" + y + (cur ? " so far" : "") + ":</b> " + fmt(tot) + " publications" + (cur ? " through " + MONTHS[lm - 1] : "");
+    var prevSame = cumAt(y - 1, lm);
+    if (prevSame) {
+      var ch = Math.round((tot - prevSame) / prevSame * 100);
+      s += ", " + (ch >= 0 ? "up " : "down ") + Math.abs(ch) + "% on " + (cur ? "the same period of " : "") + (y - 1);
+    }
+    parts.push(s + ".");
+    parts.push(fmt(top) + " (" + pct(top, tot) + "%) are top tier under " + TIER_NAME[state.tier] + " (" + TOP_LABEL[state.tier] + ").");
+    var c = get(D, ["collaboration", String(y)], {});
+    if (sum(c)) parts.push(pct(c.International || 0, sum(c)) + "% have international co-authors.");
+    // best year for top-tier share among complete years
+    var best = null;
+    D.years.forEach(function (yy) {
+      var tt = sum(tiersFor(yy)); if (!tt) return;
+      var sh = topCount(yy) / tt;
+      if (!best || sh > best.sh) best = { y: yy, sh: sh };
+    });
+    if (best && best.y !== y) parts.push("Highest top-tier share since " + D.years[0] + ": " + best.y + " (" + Math.round(best.sh * 100) + "%).");
+    var lead = (D.per_staff || []).map(function (r) { return { name: r.name, n: get(r, ["by_year", String(y)], 0) }; })
+      .sort(function (a, b) { return b.n - a.n; })[0];
+    if (lead && lead.n) parts.push("Most works by one staff member: " + esc(lead.name) + " (" + lead.n + ").");
+    $("insight").innerHTML = parts.join(" ");
+  }
+
+  // ---------- staff table ----------
+  function staffRows() {
+    var y = String(state.year);
+    return (D.per_staff || []).map(function (r) {
+      var total = 0; for (var k in (r.by_year || {})) total += r.by_year[k] || 0;
+      return {
+        name: r.name,
+        year: get(r, ["by_year", y], 0),
+        top: get(r, ["top_tier_by_year", state.tier, y], 0),
+        total: total
+      };
+    });
+  }
+  function renderStaff() {
+    var cols = [
+      { key: "name", label: "Name" },
+      { key: "year", label: String(state.year) },
+      { key: "top", label: "Top tier" },
+      { key: "total", label: "Since " + D.years[0] }
+    ];
+    $("staff-head").innerHTML = cols.map(function (c) {
+      var on = state.sort.key === c.key;
+      var arr = on ? (state.sort.dir > 0 ? "▲" : "▼") : "";
+      return '<th scope="col"' + (on ? ' aria-sort="' + (state.sort.dir > 0 ? "ascending" : "descending") + '"' : "") +
+        '><button type="button" data-sort="' + c.key + '">' + esc(c.label) + '<span class="arr" aria-hidden="true">' + arr + '</span></button></th>';
+    }).join("");
+    var rows = staffRows(), k = state.sort.key, dir = state.sort.dir;
+    rows.sort(function (a, b) {
+      var r = k === "name" ? a.name.localeCompare(b.name) : (a[k] - b[k]);
+      if (r === 0) r = k === "name" ? 0 : (b.total - a.total) * -dir || a.name.localeCompare(b.name) * dir;
+      return r * dir;
+    });
+    $("staff-body").innerHTML = rows.map(function (r, i) {
+      return '<tr><td><span class="rank">' + (i + 1) + '</span>' + esc(r.name) + '</td><td class="num' + (r.year ? "" : " zero") + '">' + r.year +
+        '</td><td class="num' + (r.top ? "" : " zero") + '">' + r.top + '</td><td class="num">' + r.total + '</td></tr>';
+    }).join("");
+    var active = rows.filter(function (r) { return r.year > 0; }).length;
+    $("staff-hint").textContent = fmt(rows.length) + " staff, " + active + " with works in " + state.year +
+      ". Top tier = " + TIER_NAME[state.tier] + " " + TOP_LABEL[state.tier] + ". Select a column to sort.";
+  }
+
+  // ---------- publications ----------
+  function doiUrl(doi) {
+    if (!doi) return null;
+    doi = String(doi).trim();
+    if (/^https?:\/\//i.test(doi)) return doi;
+    return "https://doi.org/" + doi.replace(/^doi:/i, "");
+  }
+  function pubLink(p) {
+    var u = doiUrl(p.doi);
+    if (u) return u;
+    if (p.id) return "https://openalex.org/" + String(p.id).replace(/^https?:\/\/openalex\.org\//, "");
+    return null;
+  }
+  function renderPubTierOptions() {
+    var opts = '<option value="">All ' + TIER_NAME[state.tier] + ' tiers</option><option value="__top">Top tier (' + TOP_LABEL[state.tier] + ')</option>' +
+      TIER_KEYS[state.tier].map(function (k) { return '<option value="' + esc(k) + '">' + esc(k) + '</option>'; }).join("");
+    $("pub-tier").innerHTML = opts;
+    if (state.pubTier && (state.pubTier === "__top" || TIER_KEYS[state.tier].indexOf(state.pubTier) >= 0)) $("pub-tier").value = state.pubTier;
+    else { state.pubTier = ""; $("pub-tier").value = ""; }
+  }
+  function renderPubs() {
+    var y = state.year, q = state.q.trim().toLowerCase();
+    var terms = q ? q.split(/\s+/) : [];
+    var all = D.publications.filter(function (p) { return p.year === y; });
+    var list = all.filter(function (p) {
+      var tv = p[state.tier] || "No Ranking";
+      if (state.pubTier === "__top" && !isTop(p)) return false;
+      if (state.pubTier && state.pubTier !== "__top" && tv !== state.pubTier) return false;
+      if (state.pubType && p.type !== state.pubType) return false;
+      if (!terms.length) return true;
+      var hay = ((p.title || "") + " " + (p.venue || "") + " " + (p.staff || []).join(" ") + " " + (p.doi || "")).toLowerCase();
+      return terms.every(function (t) { return hay.indexOf(t) >= 0; });
+    }).sort(function (a, b) { return String(b.date || "").localeCompare(String(a.date || "")); });
+    $("pub-count").textContent = "Showing " + fmt(Math.min(list.length, state.limit)) + " of " + fmt(list.length) +
+      (list.length !== all.length ? " matching (" + fmt(all.length) + " in " + y + ")" : " in " + y);
+    $("pub-list").innerHTML = list.slice(0, state.limit).map(function (p) {
+      var tv = p[state.tier] || "No Ranking", href = pubLink(p);
+      var title = esc(p.title || "(untitled)");
+      return '<li><div class="pub-title">' + (href ? '<a href="' + esc(href) + '" target="_blank" rel="noopener">' + title + '</a>' : title) + '</div>' +
+        '<div class="pub-meta"><span class="badge" style="background:var(' + tierVar(tv) + ')">' + esc(TIER_NAME[state.tier] + " " + (tv === "No Ranking" ? "NR" : tv)) + '</span>' +
+        (p.venue ? '<span class="venue">' + esc(p.venue) + '</span>' : "") +
+        '<span>' + esc(p.date || p.year) + '</span>' +
+        (p.type ? '<span class="tag">' + esc(TYPE_NAME[p.type] || p.type) + '</span>' : "") +
+        (p.collab ? '<span class="tag">' + esc(p.collab) + '</span>' : "") + '</div>' +
+        ((p.staff || []).length ? '<div class="pub-staff">' + p.staff.map(esc).join(", ") + '</div>' : "") + '</li>';
+    }).join("") || '<li class="pub-staff">No publications match.</li>';
+    $("pub-more").innerHTML = list.length > state.limit
+      ? '<button type="button" class="btn" id="pub-more-btn">Show ' + fmt(Math.min(PAGE, list.length - state.limit)) + ' more</button>' : "";
+  }
+
+  // ---------- orchestration ----------
+  function renderAll() {
+    document.querySelectorAll(".seg button[data-tier]").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-tier") === state.tier));
+    });
+    $("lower-year").textContent = state.year;
+    renderKpis();
+    renderChips();
+    renderTrend();
+    renderMix();
+    renderTierList();
+    renderCollab();
+    renderInsight();
+    renderStaff();
+    renderPubTierOptions();
+    renderPubs();
+  }
+
+  function defaultShown() {
+    var ys = D.years.filter(function (y) { return y <= D.current_year; });
+    return ys.slice(-DEFAULT_YEARS_SHOWN);
+  }
+
+  function init(data) {
+    D = data;
+    D.years = (D.years || Object.keys(D.year_totals || {}).map(Number)).map(Number).sort(function (a, b) { return a - b; });
+    D.current_year = Number(D.current_year || D.years[D.years.length - 1]);
+    D.last_month = D.last_month == null ? 12 : Number(D.last_month);
+    D.publications = D.publications || [];
+    D.publications.forEach(function (p) { p.year = Number(p.year); });
+    if (!D.has_citescore) {
+      var b = document.querySelector('button[data-tier="citescore"]');
+      b.disabled = true;
+      $("cs-wrap").title = "CiteScore is not available: data/raw/citescore.xlsx was not supplied to the pipeline.";
+      b.setAttribute("aria-describedby", "cs-why");
+      $("cs-wrap").insertAdjacentHTML("beforeend", '<span id="cs-why" class="sr-only">CiteScore data not available</span>');
+    }
+    var params = new URLSearchParams(location.search);
+    var qy = Number(params.get("year")), qt = params.get("tier");
+    state.year = D.years.indexOf(qy) >= 0 ? qy : D.current_year;
+    if (qt === "citescore" && D.has_citescore) state.tier = "citescore";
+    state.shown = defaultShown();
+    if (state.shown.indexOf(state.year) < 0) state.shown.push(state.year);
+
+    $("year-sel").innerHTML = D.years.slice().reverse().map(function (y) {
+      return '<option value="' + y + '">' + y + (y === D.current_year ? " (YTD)" : "") + '</option>';
+    }).join("");
+    $("year-sel").value = String(state.year);
+
+    var gen = D.generated_at || "";
+    $("foot-src").textContent = "Source: " + (D.source || "OpenAlex") + " | Generated: " + gen +
+      (state.usingMock ? " | MOCK DATA" : "");
+    if (state.usingMock) {
+      $("banner").hidden = false;
+      $("banner-text").textContent = state.usingMock === "requested"
+        ? "Showing mock data (?mock=1). Numbers are synthetic."
+        : "data/dashboard.json was not found, so this page is showing synthetic mock data.";
+    }
+    $("trend-hint").textContent = "Cumulative count by publication date, one line per year. " +
+      D.current_year + " runs to " + lastMonthName() + ".";
+    bind();
+    renderAll();
+  }
+
+  function syncUrl() {
+    try {
+      var p = new URLSearchParams(location.search);
+      if (state.year !== D.current_year) p.set("year", state.year); else p.delete("year");
+      if (state.tier !== "sjr") p.set("tier", state.tier); else p.delete("tier");
+      var s = p.toString();
+      history.replaceState(null, "", location.pathname + (s ? "?" + s : "") + location.hash);
+    } catch (e) { /* ignore */ }
+  }
+
+  function bind() {
+    document.querySelectorAll(".seg button[data-tier]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        if (b.disabled) return;
+        state.tier = b.getAttribute("data-tier");
+        syncUrl();
+        renderAll();
+      });
+    });
+    $("year-sel").addEventListener("change", function () {
+      state.year = Number(this.value);
+      if (state.shown.indexOf(state.year) < 0) state.shown.push(state.year);
+      state.limit = PAGE;
+      syncUrl();
+      renderAll();
+    });
+    $("year-chips").addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      var act = b.getAttribute("data-act");
+      if (act === "all") state.shown = D.years.slice();
+      else if (act === "last4") state.shown = defaultShown();
+      else {
+        var y = Number(b.getAttribute("data-year")), i = state.shown.indexOf(y);
+        if (i >= 0) { if (state.shown.length > 1) state.shown.splice(i, 1); } else state.shown.push(y);
+      }
+      renderChips();
+      renderTrend();
+      var again = $("year-chips").querySelector(act ? '[data-act="' + act + '"]' : '[data-year="' + b.getAttribute("data-year") + '"]');
+      if (again) again.focus();
+    });
+    $("staff-head").addEventListener("click", function (e) {
+      var b = e.target.closest("button[data-sort]"); if (!b) return;
+      var k = b.getAttribute("data-sort");
+      if (state.sort.key === k) state.sort.dir *= -1;
+      else state.sort = { key: k, dir: k === "name" ? 1 : -1 };
+      renderStaff();
+      var again = $("staff-head").querySelector('[data-sort="' + k + '"]'); if (again) again.focus();
+    });
+    var t = null;
+    $("pub-q").addEventListener("input", function () {
+      var v = this.value; clearTimeout(t);
+      t = setTimeout(function () { state.q = v; state.limit = PAGE; renderPubs(); }, 120);
+    });
+    $("pub-tier").addEventListener("change", function () { state.pubTier = this.value; state.limit = PAGE; renderPubs(); });
+    $("pub-type").addEventListener("change", function () { state.pubType = this.value; state.limit = PAGE; renderPubs(); });
+    $("pub-more").addEventListener("click", function (e) {
+      if (e.target.id === "pub-more-btn") { state.limit += PAGE; renderPubs(); }
+    });
+    var mq = window.matchMedia("(prefers-color-scheme: dark)");
+    var onTheme = function () { if (D) { renderChips(); renderTrend(); } };
+    if (mq.addEventListener) mq.addEventListener("change", onTheme); else if (mq.addListener) mq.addListener(onTheme);
+  }
+
+  load();
+})();
+</script>
+</body>
+</html>

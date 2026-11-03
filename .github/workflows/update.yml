@@ -1,0 +1,86 @@
+name: Update and deploy dashboard
+
+on:
+  schedule:
+    - cron: '0 2 1 * *'   # 02:00 UTC on the 1st of each month
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+# Serialize runs so a monthly data commit and a push-triggered deploy cannot race.
+concurrency:
+  group: dashboard-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  update-data:
+    # Only refresh data on the monthly schedule or a manual run. Pushes to main just redeploy.
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Build data
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+        run: |
+          # Drop the variable entirely when the secret is not configured.
+          if [ -z "$OPENALEX_API_KEY" ]; then unset OPENALEX_API_KEY; fi
+          python scripts/build_data.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/dashboard.json data/history.json
+          shopt -s nullglob
+          csvs=(data/raw/*.csv)
+          if [ ${#csvs[@]} -gt 0 ]; then git add -- "${csvs[@]}"; fi
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "Update publication data ($(date -u +%Y-%m-%d))"
+            git push origin HEAD:main
+          fi
+
+  deploy:
+    needs: update-data
+    # Runs after update-data when it succeeded or was skipped (push events). Not after a failure.
+    if: ${{ always() && needs.update-data.result != 'failure' && needs.update-data.result != 'cancelled' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          # Read main after update-data has pushed, so the deployed data is current.
+          ref: main
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
