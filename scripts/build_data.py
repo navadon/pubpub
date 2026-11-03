@@ -405,6 +405,34 @@ def work_kind(w: Dict[str, Any]) -> Optional[str]:
     return None
 
 
+# sub-unit -> parent institution id (data/institution_aliases.json), loaded in main()
+INSTITUTION_ALIASES: Dict[str, str] = {}
+
+
+def external_institutions(w: Dict[str, Any], cmu_id: str, staff_ids: Set[str],
+                          seen: Dict[str, List[str]]) -> List[str]:
+    """Institutions of non-staff co-authors outside CMU (a staff member's own past
+    employers are not partners). Fills `seen` with id -> [name, country]."""
+    out: List[str] = []
+    for a in w.get("authorships") or []:
+        if short_id((a.get("author") or {}).get("id")) in staff_ids:
+            continue
+        for inst in a.get("institutions") or []:
+            iid = short_id(inst.get("id"))
+            lineage = [short_id(x) for x in inst.get("lineage") or []]
+            if not iid or iid == cmu_id or cmu_id in lineage:
+                continue
+            if iid in INSTITUTION_ALIASES:
+                iid = INSTITUTION_ALIASES[iid]  # parent's name comes from its own appearance
+                if iid not in seen:
+                    seen[iid] = [iid, inst.get("country_code") or ""]
+            else:
+                seen[iid] = [inst.get("display_name") or iid, inst.get("country_code") or ""]
+            if iid not in out:
+                out.append(iid)
+    return out
+
+
 def collab_class(w: Dict[str, Any], cmu_id: str) -> str:
     countries: Set[str] = set()
     non_cmu_inst = False
@@ -702,6 +730,11 @@ def main() -> int:
     # -- dedupe by work id (already unique), then by DOI
     pubs: List[Dict[str, Any]] = []
     by_doi: Dict[str, Dict[str, Any]] = {}
+    institutions: Dict[str, List[str]] = {}  # external co-author institutions: id -> [name, country]
+    alias_path = ROOT / "data" / "institution_aliases.json"
+    if alias_path.exists():
+        INSTITUTION_ALIASES.update({k: v for k, v in json.loads(alias_path.read_text()).items()
+                                    if not k.startswith("_")})
     monthly_is_approximate = False
     if use_scopus:
         pubs = scopus_pubs(scopus_path, staff, args.start, today, sjr, cs)
@@ -720,6 +753,8 @@ def main() -> int:
         if doi and doi in by_doi:
             prev = by_doi[doi]
             prev["staff"] = sorted(set(prev["staff"]) | set(names))
+            prev["ext"] = prev["ext"] + [i for i in external_institutions(w, cmu_id, set(id_to_name), institutions)
+                                         if i not in prev["ext"]]
             continue
         src = (w.get("primary_location") or {}).get("source") or {}
         issn = list(src.get("issn") or [])
@@ -733,6 +768,7 @@ def main() -> int:
             "sjr": sjr.tier(issn, year),
             "citescore": cs.tier(issn, year) if cs.available else None,
             "collab": collab_class(w, cmu_id),
+            "ext": external_institutions(w, cmu_id, set(id_to_name), institutions),
         }
         pubs.append(p)
         if doi:
@@ -841,6 +877,7 @@ def main() -> int:
         "collaboration": collab,
         "per_staff": sorted(per_staff.values(), key=lambda s: -sum(s["by_year"].values())),
         "publications": pubs,
+        "institutions": institutions,
     }
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)

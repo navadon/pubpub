@@ -66,7 +66,9 @@ scripts/build_data.py      # OpenAlex + tiers -> dashboard.json
   "per_staff": [ { "name": "...", "openalex_ids": ["A..."], "total": 12, "by_year": {"2026": 5, ...}, "top_tier_by_year": {"sjr": {...}, "citescore": {...}} } ],
   "publications": [ { "id": "W...", "title": "...", "year": 2026, "date": "2026-03-14",
                       "venue": "...", "issn": ["..."], "doi": "https://doi.org/10....", "type": "article",
-                      "staff": ["..."], "sjr": "Q1", "citescore": "T1", "collab": "International" } ]
+                      "staff": ["..."], "sjr": "Q1", "citescore": "T1", "collab": "International",
+                      "ext": ["I63966007", ...] } ],     // external co-author institutions (OpenAlex mode only)
+  "institutions": { "I63966007": ["Massachusetts Institute of Technology", "US"], ... }
 }
 ```
 
@@ -74,6 +76,7 @@ scripts/build_data.py      # OpenAlex + tiers -> dashboard.json
 - A work counts once for the department, even if several staff are co-authors (dedupe by OpenAlex work ID, then by DOI).
 - Types included: article, review, conference paper (`proceedings-article`), book-chapter. Paratext, errata, retractions and preprints from repositories are excluded.
 - Date = `publication_date`. The monthly trend is cumulative by that date.
+- External partners (`ext`): institutions of co-authors who are not CPE staff, excluding CMU and its sub-units. A staff member's own past employers are not counted as partners. Empty in Scopus CSV mode.
 - Collaboration: **International** if any author institution's country is not TH. **National** if every country is TH but some institution is not CMU. Otherwise **CMU only**.
 - Tier lookup is by ISSN/eISSN of the primary source. Where a journal has several subject categories, the best one is used. No match gives "No Ranking". Conference papers usually get "No Ranking" under SJR unless the proceedings series is indexed.
 - "Top tier" = Q1 under SJR, or T1+Q1 under CiteScore. The KPI "per professor" = top tier / staff_count.

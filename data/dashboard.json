@@ -1758,7 +1758,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7220868080",
@@ -1776,7 +1777,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I89226531"
+   ]
   },
   {
    "id": "W7213340833",
@@ -1795,7 +1799,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7205018120",
@@ -1813,7 +1818,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7172490931",
@@ -1831,7 +1837,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I145808223"
+   ]
   },
   {
    "id": "W7216533352",
@@ -1847,7 +1856,14 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I100445878",
+    "I1294671590",
+    "I185839726",
+    "I4210117005",
+    "I97188460"
+   ]
   },
   {
    "id": "W7202025761",
@@ -1866,7 +1882,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7212265210",
@@ -1884,7 +1901,11 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210160495",
+    "I1925986"
+   ]
   },
   {
    "id": "W7204440483",
@@ -1902,7 +1923,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I183935753",
+    "I162577319"
+   ]
   },
   {
    "id": "W7166729057",
@@ -1921,7 +1946,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7214061212",
@@ -1939,7 +1965,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7167937148",
@@ -1955,7 +1982,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7164514324",
@@ -1971,7 +1999,12 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210143826",
+    "I183935753",
+    "I162577319"
+   ]
   },
   {
    "id": "W7163176879",
@@ -1989,7 +2022,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7163210906",
@@ -2007,7 +2041,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7161008992",
@@ -2026,7 +2061,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7170089766",
@@ -2042,7 +2078,12 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I108108428",
+    "I34002243",
+    "I4405276982"
+   ]
   },
   {
    "id": "W7170035366",
@@ -2058,7 +2099,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I885392262"
+   ]
   },
   {
    "id": "W7170032719",
@@ -2074,7 +2118,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I34002243"
+   ]
   },
   {
    "id": "W7153824421",
@@ -2092,7 +2139,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I3129486149"
+   ]
   },
   {
    "id": "W7140136202",
@@ -2110,7 +2160,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7135025369",
@@ -2128,7 +2179,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I1315836254",
+    "I108108428"
+   ]
   },
   {
    "id": "W7134139459",
@@ -2144,7 +2199,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7134139030",
@@ -2160,7 +2216,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7134122957",
@@ -2176,7 +2233,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7134119409",
@@ -2192,7 +2250,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7134111682",
@@ -2208,7 +2267,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7134108152",
@@ -2224,7 +2284,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7134107363",
@@ -2240,7 +2301,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7172384363",
@@ -2256,7 +2318,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I168635309"
+   ]
   },
   {
    "id": "W7132840245",
@@ -2277,7 +2342,12 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I1315836254",
+    "I4405276982",
+    "I108108428"
+   ]
   },
   {
    "id": "W7131362752",
@@ -2295,7 +2365,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7147393102",
@@ -2311,7 +2382,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7128426042",
@@ -2330,7 +2402,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I3129486149"
+   ]
   },
   {
    "id": "W7129219485",
@@ -2348,7 +2423,10 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I158708052"
+   ]
   },
   {
    "id": "W7139097017",
@@ -2364,7 +2442,12 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I1315836254",
+    "I108108428",
+    "I4405276982"
+   ]
   },
   {
    "id": "W7124438966",
@@ -2383,7 +2466,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I190734841"
+   ]
   },
   {
    "id": "W7221475977",
@@ -2402,7 +2488,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7221462217",
@@ -2421,7 +2508,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7214118560",
@@ -2440,7 +2528,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I38538140"
+   ]
   },
   {
    "id": "W7212006064",
@@ -2459,7 +2550,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I38538140"
+   ]
   },
   {
    "id": "W7161842968",
@@ -2478,7 +2572,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7160699638",
@@ -2497,7 +2592,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7151960014",
@@ -2516,7 +2612,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7148585316",
@@ -2535,7 +2632,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7147573011",
@@ -2556,7 +2654,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7140130134",
@@ -2575,7 +2674,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7139922726",
@@ -2595,7 +2695,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7125177925",
@@ -2615,7 +2716,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7117960936",
@@ -2635,7 +2737,11 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I4405277981",
+    "I72091625"
+   ]
   },
   {
    "id": "W7124180744",
@@ -2653,7 +2759,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7117458346",
@@ -2672,7 +2779,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I168635309"
+   ]
   },
   {
    "id": "W7160110636",
@@ -2688,7 +2798,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7160049188",
@@ -2704,7 +2815,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7160025971",
@@ -2720,7 +2832,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7167588605",
@@ -2736,7 +2849,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I148099254"
+   ]
   },
   {
    "id": "W7108466695",
@@ -2754,7 +2870,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4416960834",
@@ -2773,7 +2890,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I96916377",
+    "I11701301"
+   ]
   },
   {
    "id": "W7106569534",
@@ -2792,7 +2913,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4416567191",
@@ -2811,7 +2933,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7123339759",
@@ -2827,7 +2950,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I39422238"
+   ]
   },
   {
    "id": "W7131647808",
@@ -2843,7 +2969,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4415129242",
@@ -2862,7 +2989,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I168635309"
+   ]
   },
   {
    "id": "W4414993127",
@@ -2881,7 +3011,12 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I82828225",
+    "I181647926",
+    "I3133086891"
+   ]
   },
   {
    "id": "W4414556798",
@@ -2900,7 +3035,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I76920116",
+    "I198105771"
+   ]
   },
   {
    "id": "W4414363114",
@@ -2919,7 +3058,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I9340882"
+   ]
   },
   {
    "id": "W4414289538",
@@ -2938,7 +3080,13 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I60837268",
+    "I91538806",
+    "I158708052",
+    "I4210119323"
+   ]
   },
   {
    "id": "W4413375649",
@@ -2956,7 +3104,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4413956093",
@@ -2974,7 +3123,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4413050675",
@@ -2993,7 +3143,11 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I1315836254",
+    "I108108428"
+   ]
   },
   {
    "id": "W4412589307",
@@ -3013,7 +3167,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4412545475",
@@ -3032,7 +3187,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4412466141",
@@ -3051,7 +3207,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I183935753"
+   ]
   },
   {
    "id": "W4413205294",
@@ -3067,7 +3226,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210160495",
+    "I75027704"
+   ]
   },
   {
    "id": "W4413917021",
@@ -3083,7 +3246,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I183935753"
+   ]
   },
   {
    "id": "W7214061580",
@@ -3101,7 +3267,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4411558294",
@@ -3117,7 +3284,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I78577930",
+    "I98461037"
+   ]
   },
   {
    "id": "W4413122587",
@@ -3133,7 +3304,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4413122473",
@@ -3149,7 +3321,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4413122394",
@@ -3165,7 +3338,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4413122384",
@@ -3181,7 +3355,12 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I82828225",
+    "I181647926",
+    "I3133086891"
+   ]
   },
   {
    "id": "W4410204994",
@@ -3197,7 +3376,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I7882870",
+    "I157358134"
+   ]
   },
   {
    "id": "W4409120577",
@@ -3217,7 +3400,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4408280692",
@@ -3237,7 +3421,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7214062464",
@@ -3255,7 +3440,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7214061596",
@@ -3274,7 +3460,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4410536730",
@@ -3290,7 +3477,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4410536302",
@@ -3306,7 +3494,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4407845202",
@@ -3324,7 +3513,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I1315836254"
+   ]
   },
   {
    "id": "W4407307216",
@@ -3342,7 +3534,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I19700959"
+   ]
   },
   {
    "id": "W4406628692",
@@ -3360,7 +3555,10 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I131868736"
+   ]
   },
   {
    "id": "W4406524438",
@@ -3379,7 +3577,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4415647292",
@@ -3398,7 +3597,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4413977850",
@@ -3417,7 +3617,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4410720647",
@@ -3436,7 +3637,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4410358795",
@@ -3454,7 +3656,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4410226748",
@@ -3474,7 +3677,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210099699"
+   ]
   },
   {
    "id": "W4407826334",
@@ -3493,7 +3699,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4406354437",
@@ -3512,7 +3719,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4405847560",
@@ -3531,7 +3739,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4405755492",
@@ -3549,7 +3758,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I9340882"
+   ]
   },
   {
    "id": "W4404541696",
@@ -3567,7 +3779,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4404420884",
@@ -3586,7 +3799,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4405935088",
@@ -3604,7 +3818,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4403848820",
@@ -3622,7 +3837,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4405271038",
@@ -3639,7 +3855,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4405522399",
@@ -3655,7 +3872,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4402597612",
@@ -3673,7 +3891,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4402415937",
@@ -3691,7 +3910,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4403105966",
@@ -3709,7 +3929,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4401824159",
@@ -3728,7 +3949,12 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I1315836254",
+    "I108108428",
+    "I76920116"
+   ]
   },
   {
    "id": "W4401821348",
@@ -3747,7 +3973,11 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I76920116",
+    "I108108428"
+   ]
   },
   {
    "id": "W4401821032",
@@ -3766,7 +3996,12 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I1315836254",
+    "I76920116",
+    "I108108428"
+   ]
   },
   {
    "id": "W4401415491",
@@ -3785,7 +4020,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210123993",
+    "I98251732"
+   ]
   },
   {
    "id": "W4402282746",
@@ -3803,7 +4042,11 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I76920116",
+    "I4405276722"
+   ]
   },
   {
    "id": "W4401247459",
@@ -3819,7 +4062,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210099699"
+   ]
   },
   {
    "id": "W4399488269",
@@ -3838,7 +4084,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I78577930",
+    "I121980950"
+   ]
   },
   {
    "id": "W4399801659",
@@ -3854,7 +4104,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I7882870",
+    "I157358134"
+   ]
   },
   {
    "id": "W4399070120",
@@ -3872,7 +4126,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4401114484",
@@ -3888,7 +4143,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4401111252",
@@ -3904,7 +4160,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4401110981",
@@ -3920,7 +4177,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4401110912",
@@ -3936,7 +4194,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4399042643",
@@ -3955,7 +4214,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4398781774",
@@ -3973,7 +4233,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4398256047",
@@ -3991,7 +4252,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4396726346",
@@ -4010,7 +4272,12 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I168635309",
+    "I74801974",
+    "I165932596"
+   ]
   },
   {
    "id": "W4394998970",
@@ -4028,7 +4295,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I19700959"
+   ]
   },
   {
    "id": "W4403864788",
@@ -4044,7 +4314,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I146429904"
+   ]
   },
   {
    "id": "W4392470772",
@@ -4062,7 +4335,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4394895534",
@@ -4078,7 +4352,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4392188359",
@@ -4098,7 +4373,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210123993"
+   ]
   },
   {
    "id": "W4392122205",
@@ -4116,7 +4394,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4392944387",
@@ -4132,7 +4411,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4392943921",
@@ -4148,7 +4428,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4404205866",
@@ -4167,7 +4448,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4402993154",
@@ -4186,7 +4468,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4402774272",
@@ -4204,7 +4487,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I96916377",
+    "I11701301"
+   ]
   },
   {
    "id": "W4401387029",
@@ -4223,7 +4510,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I175611932",
+    "I38538140"
+   ]
   },
   {
    "id": "W4401210369",
@@ -4241,7 +4532,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4399268074",
@@ -4260,7 +4552,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I19700959"
+   ]
   },
   {
    "id": "W4394828277",
@@ -4279,7 +4574,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I38538140"
+   ]
   },
   {
    "id": "W4391180437",
@@ -4297,7 +4595,19 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I172675005",
+    "I4210108017",
+    "I100532134",
+    "I165779595",
+    "I48430043",
+    "I160993911",
+    "I56590836",
+    "I1294671590",
+    "I188626449",
+    "I4210116847"
+   ]
   },
   {
    "id": "W4388932675",
@@ -4316,7 +4626,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I4210088080"
+   ]
   },
   {
    "id": "W4388915644",
@@ -4332,7 +4645,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4388181309",
@@ -4351,7 +4665,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4388821395",
@@ -4367,7 +4682,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4388821319",
@@ -4384,7 +4700,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I38538140"
+   ]
   },
   {
    "id": "W4388447886",
@@ -4402,7 +4721,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I73683852"
+   ]
   },
   {
    "id": "W4389314850",
@@ -4418,7 +4740,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I1315836254",
+    "I108108428"
+   ]
   },
   {
    "id": "W4389314830",
@@ -4434,7 +4760,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I1315836254",
+    "I108108428"
+   ]
   },
   {
    "id": "W4388950773",
@@ -4454,7 +4784,11 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I4405276722",
+    "I76920116"
+   ]
   },
   {
    "id": "W4383217435",
@@ -4472,7 +4806,12 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I1316902750",
+    "I58956616",
+    "I4210137621"
+   ]
   },
   {
    "id": "W4385831362",
@@ -4488,7 +4827,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4385831356",
@@ -4504,7 +4844,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4385831315",
@@ -4520,7 +4861,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4380990630",
@@ -4538,7 +4880,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4381196525",
@@ -4554,7 +4897,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4362699412",
@@ -4572,7 +4916,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I19700959"
+   ]
   },
   {
    "id": "W4377702037",
@@ -4589,7 +4936,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4389941612",
@@ -4605,7 +4953,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4320918503",
@@ -4625,7 +4974,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4319319121",
@@ -4644,7 +4994,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4318485368",
@@ -4662,7 +5013,12 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I58956616",
+    "I145311948",
+    "I4210164401"
+   ]
   },
   {
    "id": "W4389619759",
@@ -4680,7 +5036,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I78577930"
+   ]
   },
   {
    "id": "W4389402962",
@@ -4699,7 +5058,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4389288201",
@@ -4718,7 +5078,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I150744194"
+   ]
   },
   {
    "id": "W4386229371",
@@ -4738,7 +5101,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I2800213357"
+   ]
   },
   {
    "id": "W4386229276",
@@ -4757,7 +5123,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4386106805",
@@ -4776,7 +5143,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4386106706",
@@ -4796,7 +5164,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I2800213357"
+   ]
   },
   {
    "id": "W4386106664",
@@ -4815,7 +5186,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4385559085",
@@ -4834,7 +5206,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4383616445",
@@ -4853,7 +5226,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I19700959"
+   ]
   },
   {
    "id": "W4383503790",
@@ -4871,7 +5247,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I96916377",
+    "I11701301"
+   ]
   },
   {
    "id": "W4381804309",
@@ -4889,7 +5269,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I63966007"
+   ]
   },
   {
    "id": "W4377833669",
@@ -4908,7 +5291,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": []
   },
   {
    "id": "W4320040729",
@@ -4927,7 +5311,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4320037364",
@@ -4946,7 +5331,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4320037358",
@@ -4965,7 +5351,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4320037321",
@@ -4984,7 +5371,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4321843620",
@@ -5000,7 +5388,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": []
   },
   {
    "id": "W4310481543",
@@ -5016,7 +5405,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4310481527",
@@ -5032,7 +5422,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4310474487",
@@ -5048,7 +5439,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4310368834",
@@ -5064,7 +5456,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4310368478",
@@ -5080,7 +5473,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4310368473",
@@ -5096,7 +5490,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4310368416",
@@ -5112,7 +5507,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4310368411",
@@ -5128,7 +5524,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4310368325",
@@ -5144,7 +5541,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4310135823",
@@ -5166,7 +5564,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4309842539",
@@ -5185,7 +5584,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4307137619",
@@ -5208,7 +5608,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7217216853",
@@ -5227,7 +5628,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4303710061",
@@ -5248,7 +5650,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4296935203",
@@ -5267,7 +5670,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I19700959"
+   ]
   },
   {
    "id": "W4307701267",
@@ -5286,7 +5692,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76835614"
+   ]
   },
   {
    "id": "W4308536733",
@@ -5302,7 +5711,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I4210090662"
+   ]
   },
   {
    "id": "W4294891489",
@@ -5322,7 +5734,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I183935753",
+    "I162577319"
+   ]
   },
   {
    "id": "W4295767878",
@@ -5340,7 +5756,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76835614"
+   ]
   },
   {
    "id": "W4312498306",
@@ -5356,7 +5775,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I4210090662",
+    "I73683852"
+   ]
   },
   {
    "id": "W4313171777",
@@ -5373,7 +5796,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4313117480",
@@ -5389,7 +5813,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4312992665",
@@ -5405,7 +5830,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I9340882",
+    "I73683852"
+   ]
   },
   {
    "id": "W4312976205",
@@ -5421,7 +5850,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4312971251",
@@ -5437,7 +5867,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I73683852"
+   ]
   },
   {
    "id": "W4312945526",
@@ -5454,7 +5887,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4312925461",
@@ -5470,7 +5904,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4312911164",
@@ -5486,7 +5921,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I1315836254"
+   ]
   },
   {
    "id": "W4312900047",
@@ -5502,7 +5940,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4312794077",
@@ -5519,7 +5958,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4312686345",
@@ -5535,7 +5975,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4312576110",
@@ -5551,7 +5992,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4312354936",
@@ -5568,7 +6010,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4312272897",
@@ -5585,7 +6028,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I14316845"
+   ]
   },
   {
    "id": "W4288388950",
@@ -5601,7 +6047,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4281722142",
@@ -5620,7 +6067,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I9340882",
+    "I73683852"
+   ]
   },
   {
    "id": "W4280504937",
@@ -5638,7 +6089,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I10245363",
+    "I55913730"
+   ]
   },
   {
    "id": "W4224795191",
@@ -5656,7 +6111,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4221054786",
@@ -5675,7 +6131,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I155781252"
+   ]
   },
   {
    "id": "W4220717352",
@@ -5691,7 +6150,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I108108428"
+   ]
   },
   {
    "id": "W2097643793",
@@ -5711,7 +6173,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4320022217",
@@ -5730,7 +6193,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4300625453",
@@ -5749,7 +6213,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I2800213357"
+   ]
   },
   {
    "id": "W4292068907",
@@ -5768,7 +6235,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I2800213357"
+   ]
   },
   {
    "id": "W4285229350",
@@ -5786,7 +6256,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I96916377",
+    "I11701301"
+   ]
   },
   {
    "id": "W4285059810",
@@ -5805,7 +6279,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I19700959"
+   ]
   },
   {
    "id": "W4226322899",
@@ -5824,7 +6301,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I2800213357"
+   ]
   },
   {
    "id": "W4226115435",
@@ -5843,7 +6323,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I73683852"
+   ]
   },
   {
    "id": "W4214587404",
@@ -5861,7 +6344,12 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I168635309",
+    "I19370010",
+    "I63966007"
+   ]
   },
   {
    "id": "W4210846916",
@@ -5879,7 +6367,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I63966007"
+   ]
   },
   {
    "id": "W4205329504",
@@ -5895,7 +6386,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I108108428"
+   ]
   },
   {
    "id": "W3217792491",
@@ -5914,7 +6408,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4210401692",
@@ -5930,7 +6425,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3211735256",
@@ -5949,7 +6445,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I168635309"
+   ]
   },
   {
    "id": "W4200104812",
@@ -5969,7 +6468,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I19700959"
+   ]
   },
   {
    "id": "W4200138239",
@@ -5985,7 +6487,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3207448558",
@@ -6004,7 +6507,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4200487724",
@@ -6020,7 +6524,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4200379228",
@@ -6036,7 +6541,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4200111649",
@@ -6052,7 +6558,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I4210090662",
+    "I73683852"
+   ]
   },
   {
    "id": "W3210640335",
@@ -6070,7 +6580,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3217297449",
@@ -6087,7 +6598,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3187613908",
@@ -6106,7 +6618,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3198053631",
@@ -6125,7 +6638,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I1332092204"
+   ]
   },
   {
    "id": "W3189064701",
@@ -6144,7 +6660,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4205771108",
@@ -6161,7 +6678,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7217964455",
@@ -6180,7 +6698,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2402863285",
@@ -6199,7 +6718,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": []
   },
   {
    "id": "W3189572013",
@@ -6218,7 +6738,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3184556681",
@@ -6237,7 +6758,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I78715868"
+   ]
   },
   {
    "id": "W3179440506",
@@ -6256,7 +6780,17 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I2799343972",
+    "I4210119077",
+    "I58956616",
+    "I1314135232",
+    "I32971472",
+    "I4210129045",
+    "I145311948",
+    "I4210164401"
+   ]
   },
   {
    "id": "W3186572296",
@@ -6274,7 +6808,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3174346516",
@@ -6296,7 +6831,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3193427723",
@@ -6312,7 +6848,12 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I158708052",
+    "I192392021",
+    "I82828225"
+   ]
   },
   {
    "id": "W3169374325",
@@ -6330,7 +6871,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I96916377"
+   ]
   },
   {
    "id": "W3165075586",
@@ -6348,7 +6892,11 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I73683852",
+    "I108108428"
+   ]
   },
   {
    "id": "W3177430587",
@@ -6364,7 +6912,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3177007260",
@@ -6381,7 +6930,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3174919564",
@@ -6397,7 +6947,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3173633424",
@@ -6413,7 +6964,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3158405659",
@@ -6431,7 +6983,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3163645297",
@@ -6447,7 +7000,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3134888152",
@@ -6465,7 +7019,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W7220242736",
@@ -6483,7 +7038,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3167919284",
@@ -6501,7 +7057,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I76920116"
+   ]
   },
   {
    "id": "W3162846010",
@@ -6519,7 +7078,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3158910400",
@@ -6538,7 +7098,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3154488455",
@@ -6557,7 +7118,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3140809263",
@@ -6576,7 +7138,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3132341127",
@@ -6595,7 +7158,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3132002281",
@@ -6614,7 +7178,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3129559554",
@@ -6633,7 +7198,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3126782997",
@@ -6652,7 +7218,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I176205391"
+   ]
   },
   {
    "id": "W3134520850",
@@ -6668,7 +7237,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3136762597",
@@ -6684,7 +7254,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4254235190",
@@ -6700,7 +7271,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3091991400",
@@ -6719,7 +7291,12 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I168635309",
+    "I98358874",
+    "I76903346"
+   ]
   },
   {
    "id": "W3092304933",
@@ -6738,7 +7315,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3083013469",
@@ -6757,7 +7335,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I168635309",
+    "I63966007"
+   ]
   },
   {
    "id": "W2610940734",
@@ -6776,7 +7358,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I63966007"
+   ]
   },
   {
    "id": "W2609377023",
@@ -6795,7 +7380,13 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I131249849",
+    "I114531698",
+    "I31746571",
+    "I91538806"
+   ]
   },
   {
    "id": "W3120409294",
@@ -6811,7 +7402,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I108108428"
+   ]
   },
   {
    "id": "W3079990350",
@@ -6830,7 +7424,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3079460871",
@@ -6850,7 +7445,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3044160555",
@@ -6869,7 +7465,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": []
   },
   {
    "id": "W3081784303",
@@ -6885,7 +7482,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3046955888",
@@ -6904,7 +7502,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3047571881",
@@ -6920,7 +7519,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3047152252",
@@ -6936,7 +7536,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3031257506",
@@ -6952,7 +7553,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I183935753",
+    "I162577319"
+   ]
   },
   {
    "id": "W3028487860",
@@ -6971,7 +7576,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I146429904"
+   ]
   },
   {
    "id": "W3021300609",
@@ -6989,7 +7597,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I19370010",
+    "I63966007"
+   ]
   },
   {
    "id": "W3216073899",
@@ -7005,7 +7617,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3016924233",
@@ -7023,7 +7636,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I168635309",
+    "I63966007"
+   ]
   },
   {
    "id": "W3010504009",
@@ -7041,7 +7658,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I9340882"
+   ]
   },
   {
    "id": "W3008871499",
@@ -7060,7 +7680,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I78715868"
+   ]
   },
   {
    "id": "W3007297012",
@@ -7080,7 +7703,13 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I58956616",
+    "I4210137621",
+    "I145311948",
+    "I4210164401"
+   ]
   },
   {
    "id": "W3211382788",
@@ -7096,7 +7725,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3157340453",
@@ -7115,7 +7745,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3115149465",
@@ -7134,7 +7765,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3048883455",
@@ -7153,7 +7785,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3011398294",
@@ -7171,7 +7804,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3010155625",
@@ -7190,7 +7824,12 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I163753206",
+    "I96733725",
+    "I141445968"
+   ]
   },
   {
    "id": "W3008300744",
@@ -7206,7 +7845,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3007840430",
@@ -7222,7 +7862,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3007135453",
@@ -7238,7 +7879,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3010755230",
@@ -7254,7 +7896,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I76920116"
+   ]
   },
   {
    "id": "W3007665750",
@@ -7270,7 +7915,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": []
   },
   {
    "id": "W3016319290",
@@ -7286,7 +7932,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2981930672",
@@ -7305,7 +7952,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2980604994",
@@ -7324,7 +7972,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I923382979"
+   ]
   },
   {
    "id": "W2980876565",
@@ -7343,7 +7994,12 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I145847075",
+    "I11983389",
+    "I165932596"
+   ]
   },
   {
    "id": "W3010205649",
@@ -7359,7 +8015,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I108108428"
+   ]
   },
   {
    "id": "W2995404591",
@@ -7375,7 +8034,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2993930276",
@@ -7391,7 +8051,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2977476623",
@@ -7409,7 +8070,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2977129734",
@@ -7429,7 +8091,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I76920116",
+    "I4405278124"
+   ]
   },
   {
    "id": "W2972919631",
@@ -7445,7 +8111,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I108108428",
+    "I74801974"
+   ]
   },
   {
    "id": "W2972548355",
@@ -7461,7 +8131,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2972467871",
@@ -7477,7 +8148,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2990730349",
@@ -7493,7 +8165,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2968619783",
@@ -7512,7 +8185,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2967585943",
@@ -7531,7 +8205,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I4210105130",
+    "I4387156032"
+   ]
   },
   {
    "id": "W2966284300",
@@ -7550,7 +8228,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2974209414",
@@ -7566,7 +8245,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2998833781",
@@ -7582,7 +8262,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": []
   },
   {
    "id": "W2974446486",
@@ -7598,7 +8279,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2970175589",
@@ -7614,7 +8296,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I183935753",
+    "I162577319"
+   ]
   },
   {
    "id": "W2997798520",
@@ -7630,7 +8316,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I76920116",
+    "I10245363"
+   ]
   },
   {
    "id": "W2966202248",
@@ -7646,7 +8336,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": []
   },
   {
    "id": "W2971062584",
@@ -7662,7 +8353,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": []
   },
   {
    "id": "W2946357101",
@@ -7681,7 +8373,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I58956616",
+    "I145311948"
+   ]
   },
   {
    "id": "W2945742849",
@@ -7697,7 +8393,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I9340882"
+   ]
   },
   {
    "id": "W2948749808",
@@ -7713,7 +8412,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2944948677",
@@ -7729,7 +8429,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2917633551",
@@ -7748,7 +8449,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2922434999",
@@ -7768,7 +8470,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I78715868"
+   ]
   },
   {
    "id": "W2942752614",
@@ -7784,7 +8489,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I1332092204",
+    "I14316845"
+   ]
   },
   {
    "id": "W4288853286",
@@ -7803,7 +8512,13 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I99065089",
+    "I170897317",
+    "I182534213",
+    "I82880672"
+   ]
   },
   {
    "id": "W3192772705",
@@ -7822,7 +8537,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3037426441",
@@ -7838,7 +8554,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2984806402",
@@ -7856,7 +8573,12 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I168635309",
+    "I19370010",
+    "I63966007"
+   ]
   },
   {
    "id": "W2980118538",
@@ -7872,7 +8594,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2979882877",
@@ -7888,7 +8611,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2970921472",
@@ -7907,7 +8631,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76903346"
+   ]
   },
   {
    "id": "W2950305229",
@@ -7925,7 +8652,12 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I168635309",
+    "I76903346",
+    "I63966007"
+   ]
   },
   {
    "id": "W2926633446",
@@ -7944,7 +8676,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2908272686",
@@ -7962,7 +8695,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I168635309"
+   ]
   },
   {
    "id": "W2907585633",
@@ -7978,7 +8714,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I183935753",
+    "I162577319"
+   ]
   },
   {
    "id": "W7217282999",
@@ -7996,7 +8736,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": []
   },
   {
    "id": "W2946110254",
@@ -8012,7 +8753,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2937965341",
@@ -8029,7 +8771,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2937269755",
@@ -8045,7 +8788,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2936328587",
@@ -8062,7 +8806,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2907369356",
@@ -8078,7 +8823,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": []
   },
   {
    "id": "W2898818547",
@@ -8097,7 +8843,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2896085763",
@@ -8119,7 +8866,10 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I190734841"
+   ]
   },
   {
    "id": "W2897756234",
@@ -8139,7 +8889,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2897087948",
@@ -8158,7 +8909,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2896610010",
@@ -8177,7 +8929,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I168635309"
+   ]
   },
   {
    "id": "W2896291425",
@@ -8197,7 +8952,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2915783909",
@@ -8213,7 +8969,12 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I108108428",
+    "I161296585",
+    "I74801974"
+   ]
   },
   {
    "id": "W2899436488",
@@ -8229,7 +8990,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2899258270",
@@ -8246,7 +9008,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2899002368",
@@ -8262,7 +9025,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2898976381",
@@ -8278,7 +9042,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2898858652",
@@ -8294,7 +9059,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2898656861",
@@ -8311,7 +9077,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I19370010"
+   ]
   },
   {
    "id": "W2895338471",
@@ -8330,7 +9099,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2901553497",
@@ -8349,7 +9119,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2892238358",
@@ -8369,7 +9140,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2889183034",
@@ -8388,7 +9160,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I78715868"
+   ]
   },
   {
    "id": "W2886555033",
@@ -8410,7 +9185,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2887041850",
@@ -8429,7 +9205,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I38538140",
+    "I98381234"
+   ]
   },
   {
    "id": "W2887775556",
@@ -8448,7 +9228,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2887757857",
@@ -8467,7 +9248,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2886321183",
@@ -8487,7 +9269,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2883185523",
@@ -8506,7 +9289,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I28407311",
+    "I79817857"
+   ]
   },
   {
    "id": "W2884183026",
@@ -8525,7 +9312,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2891274976",
@@ -8541,7 +9329,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2889829997",
@@ -8557,7 +9346,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2811092522",
@@ -8579,7 +9369,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2810869544",
@@ -8598,7 +9389,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2809302221",
@@ -8616,7 +9408,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2808186323",
@@ -8635,7 +9428,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2940842834",
@@ -8654,7 +9448,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2805462026",
@@ -8670,7 +9465,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I9340882"
+   ]
   },
   {
    "id": "W2799410985",
@@ -8689,7 +9487,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2946628037",
@@ -8705,7 +9504,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76920116",
+    "I111966504"
+   ]
   },
   {
    "id": "W2807743755",
@@ -8721,7 +9524,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I190734841"
+   ]
   },
   {
    "id": "W4289649923",
@@ -8740,7 +9546,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4249753656",
@@ -8760,7 +9567,11 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I9300472",
+    "I198012923"
+   ]
   },
   {
    "id": "W3210913753",
@@ -8776,7 +9587,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2895236741",
@@ -8794,7 +9606,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I108108428"
+   ]
   },
   {
    "id": "W2892215274",
@@ -8812,7 +9627,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I9340882"
+   ]
   },
   {
    "id": "W2888634591",
@@ -8832,7 +9650,11 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I198012923",
+    "I9300472"
+   ]
   },
   {
    "id": "W2887953483",
@@ -8850,7 +9672,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2886108302",
@@ -8869,7 +9692,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2807906679",
@@ -8888,7 +9712,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I158708052"
+   ]
   },
   {
    "id": "W2804251564",
@@ -8907,7 +9734,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2777296380",
@@ -8925,7 +9753,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2793345245",
@@ -8941,7 +9770,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2791479170",
@@ -8957,7 +9787,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4238336893",
@@ -8974,7 +9805,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2766631205",
@@ -8993,7 +9825,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2765290820",
@@ -9013,7 +9846,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2889046702",
@@ -9031,7 +9865,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2888928135",
@@ -9047,7 +9882,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2888800772",
@@ -9063,7 +9899,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2888776358",
@@ -9079,7 +9916,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2787646690",
@@ -9095,7 +9933,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2787521590",
@@ -9111,7 +9950,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2786015038",
@@ -9127,7 +9967,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2782707803",
@@ -9143,7 +9984,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I38538140",
+    "I98381234"
+   ]
   },
   {
    "id": "W2917182316",
@@ -9159,7 +10004,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I108108428",
+    "I74801974"
+   ]
   },
   {
    "id": "W2753428446",
@@ -9175,7 +10024,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2753049781",
@@ -9191,7 +10041,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2752752079",
@@ -9207,7 +10058,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I168635309"
+   ]
   },
   {
    "id": "W2752272455",
@@ -9227,7 +10081,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2753656359",
@@ -9247,7 +10102,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2752785852",
@@ -9267,7 +10123,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2747553215",
@@ -9286,7 +10143,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2765451997",
@@ -9302,7 +10160,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2751097599",
@@ -9321,7 +10180,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2750450714",
@@ -9339,7 +10199,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2728331802",
@@ -9358,7 +10219,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2727816697",
@@ -9377,7 +10239,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2727517172",
@@ -9396,7 +10259,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2676222849",
@@ -9412,7 +10276,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I97018004"
+   ]
   },
   {
    "id": "W2626890125",
@@ -9431,7 +10298,11 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I168635309",
+    "I76903346"
+   ]
   },
   {
    "id": "W2767667134",
@@ -9447,7 +10318,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I9340882"
+   ]
   },
   {
    "id": "W2767046760",
@@ -9463,7 +10337,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I9340882",
+    "I73683852"
+   ]
   },
   {
    "id": "W2765123639",
@@ -9479,7 +10357,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2736874500",
@@ -9495,7 +10374,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2608609924",
@@ -9514,7 +10394,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2621522490",
@@ -9532,7 +10413,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2594034261",
@@ -9551,7 +10433,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2606859192",
@@ -9569,7 +10452,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3181510962",
@@ -9585,7 +10469,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2792568392",
@@ -9601,7 +10486,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2609742625",
@@ -9617,7 +10503,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I190734841"
+   ]
   },
   {
    "id": "W2609500295",
@@ -9633,7 +10522,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I190734841"
+   ]
   },
   {
    "id": "W2608597404",
@@ -9649,7 +10541,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I190734841"
+   ]
   },
   {
    "id": "W2600453124",
@@ -9665,7 +10560,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2591048055",
@@ -9684,7 +10580,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2600491962",
@@ -9700,7 +10597,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2600209369",
@@ -9716,7 +10614,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2591400365",
@@ -9732,7 +10631,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2591376729",
@@ -9748,7 +10648,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I190734841"
+   ]
   },
   {
    "id": "W2590920222",
@@ -9764,7 +10667,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I190734841"
+   ]
   },
   {
    "id": "W2590566228",
@@ -9780,7 +10686,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I76920116"
+   ]
   },
   {
    "id": "W2590464685",
@@ -9796,7 +10705,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I190734841"
+   ]
   },
   {
    "id": "W2589625742",
@@ -9812,7 +10724,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2559203595",
@@ -9831,7 +10744,13 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I204136569",
+    "I293362453",
+    "I98358874",
+    "I76903346"
+   ]
   },
   {
    "id": "W2558028446",
@@ -9851,7 +10770,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2564959268",
@@ -9867,7 +10787,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76903346",
+    "I182534213"
+   ]
   },
   {
    "id": "W2564575550",
@@ -9883,7 +10807,13 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I293362453",
+    "I76903346",
+    "I182534213",
+    "I4210120471"
+   ]
   },
   {
    "id": "W2527801679",
@@ -9901,7 +10831,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I91045830"
+   ]
   },
   {
    "id": "W2915727407",
@@ -9917,7 +10850,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I108108428",
+    "I74801974"
+   ]
   },
   {
    "id": "W2520326599",
@@ -9933,7 +10870,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I19370010"
+   ]
   },
   {
    "id": "W2519458027",
@@ -9949,7 +10889,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76903346"
+   ]
   },
   {
    "id": "W2519105144",
@@ -9965,7 +10908,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2564948970",
@@ -9983,7 +10927,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2556342648",
@@ -10001,7 +10946,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2462153111",
@@ -10020,7 +10966,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2465280664",
@@ -10038,7 +10985,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2522636718",
@@ -10054,7 +11002,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2522232406",
@@ -10070,7 +11019,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2521172443",
@@ -10086,7 +11036,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76903346"
+   ]
   },
   {
    "id": "W2506432879",
@@ -10105,7 +11058,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I91045830"
+   ]
   },
   {
    "id": "W2407203432",
@@ -10125,7 +11081,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2307951551",
@@ -10144,7 +11101,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I4210111088"
+   ]
   },
   {
    "id": "W2343167329",
@@ -10163,7 +11123,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76903346"
+   ]
   },
   {
    "id": "W2306582927",
@@ -10179,7 +11142,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2303420615",
@@ -10195,7 +11159,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3140459392",
@@ -10211,7 +11176,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2751440949",
@@ -10227,7 +11193,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2748695282",
@@ -10243,7 +11210,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2748212225",
@@ -10259,7 +11227,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2748178264",
@@ -10275,7 +11244,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2747094190",
@@ -10291,7 +11261,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2743622071",
@@ -10307,7 +11278,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2742981841",
@@ -10323,7 +11295,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2611694148",
@@ -10340,7 +11313,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2606935321",
@@ -10356,7 +11330,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2606428890",
@@ -10372,7 +11347,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2557650774",
@@ -10391,7 +11367,11 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I162714631",
+    "I189158971"
+   ]
   },
   {
    "id": "W2506069294",
@@ -10410,7 +11390,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2500405085",
@@ -10429,7 +11410,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2498809398",
@@ -10448,7 +11430,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2498058871",
@@ -10467,7 +11450,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2465767047",
@@ -10486,7 +11470,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2401272596",
@@ -10506,7 +11491,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2345368607",
@@ -10525,7 +11511,11 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I162714631",
+    "I189158971"
+   ]
   },
   {
    "id": "W2329412692",
@@ -10545,7 +11535,10 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I190734841"
+   ]
   },
   {
    "id": "W2419340534",
@@ -10564,7 +11557,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2340984121",
@@ -10583,7 +11577,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2249682310",
@@ -10599,7 +11594,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2249211086",
@@ -10615,7 +11611,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2242484202",
@@ -10631,7 +11628,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2242070441",
@@ -10647,7 +11645,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2200627926",
@@ -10666,7 +11665,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2205539221",
@@ -10685,7 +11685,14 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210137621",
+    "I4210155025",
+    "I145311948",
+    "I2799343972",
+    "I58956616"
+   ]
   },
   {
    "id": "W2415482817",
@@ -10701,7 +11708,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2409339314",
@@ -10718,7 +11726,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2290649047",
@@ -10734,7 +11743,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2289760211",
@@ -10750,7 +11760,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I148673510"
+   ]
   },
   {
    "id": "W2292660971",
@@ -10766,7 +11779,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2292523964",
@@ -10782,7 +11796,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2289641369",
@@ -10798,7 +11813,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2295603251",
@@ -10817,7 +11833,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2295505388",
@@ -10835,7 +11852,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1945611512",
@@ -10854,7 +11872,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2178024282",
@@ -10872,7 +11891,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2518998737",
@@ -10888,7 +11908,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2491159930",
@@ -10904,7 +11925,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1485785803",
@@ -10920,7 +11942,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2051772878",
@@ -10936,7 +11959,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I97018004",
+    "I1174212"
+   ]
   },
   {
    "id": "W4253502578",
@@ -10955,7 +11982,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I205783295"
+   ]
   },
   {
    "id": "W2089138219",
@@ -10973,7 +12003,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I205783295"
+   ]
   },
   {
    "id": "W2129854682",
@@ -10989,7 +12022,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1606748939",
@@ -11005,7 +12039,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1551728907",
@@ -11021,7 +12056,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1548502856",
@@ -11037,7 +12073,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1497999703",
@@ -11054,7 +12091,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2172326266",
@@ -11072,7 +12110,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1809255061",
@@ -11091,7 +12130,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I204136569",
+    "I76903346"
+   ]
   },
   {
    "id": "W2040411900",
@@ -11107,7 +12150,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1519344377",
@@ -11123,7 +12167,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1908231479",
@@ -11141,7 +12186,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1548888932",
@@ -11157,7 +12203,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1482310120",
@@ -11173,7 +12220,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2075952866",
@@ -11191,7 +12239,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1997345001",
@@ -11209,7 +12258,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2184730709",
@@ -11228,7 +12278,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I91045830"
+   ]
   },
   {
    "id": "W976601988",
@@ -11247,7 +12300,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W799542999",
@@ -11266,7 +12320,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W657315784",
@@ -11285,7 +12340,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W630293098",
@@ -11304,7 +12360,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2472737758",
@@ -11324,7 +12381,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2420386559",
@@ -11344,7 +12402,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2413298953",
@@ -11364,7 +12423,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2406496973",
@@ -11383,7 +12443,13 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I141596103",
+    "I4210167387",
+    "I4387152517",
+    "I4405270109"
+   ]
   },
   {
    "id": "W2340146630",
@@ -11402,7 +12468,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2337603530",
@@ -11422,7 +12489,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2335097192",
@@ -11441,7 +12509,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": []
   },
   {
    "id": "W2272058824",
@@ -11459,7 +12528,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2245211248",
@@ -11478,7 +12548,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2201348143",
@@ -11497,7 +12568,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2177402698",
@@ -11518,7 +12590,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2094378023",
@@ -11534,7 +12607,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2090973773",
@@ -11550,7 +12624,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I108108428",
+    "I74801974"
+   ]
   },
   {
    "id": "W2079904950",
@@ -11566,7 +12644,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2029427739",
@@ -11582,7 +12661,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2019754541",
@@ -11598,7 +12678,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2016332883",
@@ -11614,7 +12695,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76903346"
+   ]
   },
   {
    "id": "W1980468504",
@@ -11633,7 +12717,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1919935163",
@@ -11652,7 +12737,11 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I162714631",
+    "I189158971"
+   ]
   },
   {
    "id": "W134944627",
@@ -11671,7 +12760,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I74801974"
+   ]
   },
   {
    "id": "W1149163494",
@@ -11690,7 +12782,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I34956611"
+   ]
   },
   {
    "id": "W1122035682",
@@ -11709,7 +12804,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2063516615",
@@ -11728,7 +12824,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I41725924",
+    "I90023481"
+   ]
   },
   {
    "id": "W2064864401",
@@ -11747,7 +12847,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2170265914",
@@ -11766,7 +12867,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210144839",
+    "I91045830"
+   ]
   },
   {
    "id": "W1920637882",
@@ -11785,7 +12890,14 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I1314135232",
+    "I52357470",
+    "I58956616",
+    "I4210164401",
+    "I33213144"
+   ]
   },
   {
    "id": "W2071423632",
@@ -11801,7 +12913,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2030825962",
@@ -11817,7 +12930,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1978481188",
@@ -11833,7 +12947,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I204136569",
+    "I76903346"
+   ]
   },
   {
    "id": "W1964280904",
@@ -11849,7 +12967,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2225853121",
@@ -11870,7 +12989,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2046509139",
@@ -11888,7 +13008,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I178574317"
+   ]
   },
   {
    "id": "W1999161036",
@@ -11907,7 +13030,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1984146742",
@@ -11924,7 +13048,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1972027011",
@@ -11942,7 +13067,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2056897530",
@@ -11961,7 +13087,12 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I108108428",
+    "I74801974",
+    "I190734841"
+   ]
   },
   {
    "id": "W2029570562",
@@ -11977,7 +13108,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2324533470",
@@ -11993,7 +13127,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2318255624",
@@ -12009,7 +13144,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2061160488",
@@ -12027,7 +13163,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2029952302",
@@ -12045,7 +13182,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2018180551",
@@ -12063,7 +13201,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2008669740",
@@ -12079,7 +13218,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2003089833",
@@ -12095,7 +13235,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1986794925",
@@ -12111,7 +13252,12 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I108108428",
+    "I74801974",
+    "I190734841"
+   ]
   },
   {
    "id": "W2142935099",
@@ -12127,7 +13273,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2137996107",
@@ -12143,7 +13290,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I114531698"
+   ]
   },
   {
    "id": "W2110787421",
@@ -12159,7 +13309,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2097687318",
@@ -12175,7 +13326,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2090240113",
@@ -12192,7 +13344,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2072176430",
@@ -12208,7 +13361,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I1315836254"
+   ]
   },
   {
    "id": "W2068889488",
@@ -12225,7 +13381,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2013329111",
@@ -12241,7 +13398,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2009671818",
@@ -12257,7 +13415,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1998550695",
@@ -12273,7 +13432,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1990455919",
@@ -12289,7 +13449,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1965175088",
@@ -12305,7 +13466,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W1964517786",
@@ -12321,7 +13485,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I41725924",
+    "I90023481"
+   ]
   },
   {
    "id": "W2410607411",
@@ -12340,7 +13508,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I201933988"
+   ]
   },
   {
    "id": "W2018688055",
@@ -12359,7 +13530,14 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I16076960",
+    "I145311948",
+    "I2799343972",
+    "I4210137621",
+    "I58956616"
+   ]
   },
   {
    "id": "W385612834",
@@ -12375,7 +13553,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2095119035",
@@ -12391,7 +13570,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2060356635",
@@ -12407,7 +13587,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2033424818",
@@ -12423,7 +13604,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2011944466",
@@ -12439,7 +13621,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": []
   },
   {
    "id": "W2632460284",
@@ -12455,7 +13638,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2036130653",
@@ -12471,7 +13655,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1548202171",
@@ -12490,7 +13675,11 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210126794",
+    "I165143802"
+   ]
   },
   {
    "id": "W2076242843",
@@ -12510,7 +13699,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W77725231",
@@ -12529,7 +13719,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W5209156",
@@ -12548,7 +13739,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I198105771"
+   ]
   },
   {
    "id": "W3142423381",
@@ -12567,7 +13761,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W271831228",
@@ -12586,7 +13781,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2488915094",
@@ -12606,7 +13802,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2245009430",
@@ -12622,7 +13819,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I74801974",
+    "I190734841"
+   ]
   },
   {
    "id": "W2166479427",
@@ -12641,7 +13842,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2122504472",
@@ -12660,7 +13862,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2025925859",
@@ -12676,7 +13879,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2160169976",
@@ -12694,7 +13898,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I74801974",
+    "I114017466"
+   ]
   },
   {
    "id": "W2154977387",
@@ -12712,7 +13920,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2539881224",
@@ -12730,7 +13939,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I91045830"
+   ]
   },
   {
    "id": "W2321757988",
@@ -12746,7 +13958,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2090352312",
@@ -12762,7 +13975,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2069487186",
@@ -12778,7 +13992,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1966781063",
@@ -12794,7 +14009,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2239088197",
@@ -12815,7 +14031,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2049458577",
@@ -12833,7 +14050,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2004909857",
@@ -12851,7 +14069,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2050771428",
@@ -12869,7 +14088,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2047821354",
@@ -12885,7 +14105,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2098251432",
@@ -12901,7 +14122,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I32943570",
+    "I76903346"
+   ]
   },
   {
    "id": "W2080841481",
@@ -12917,7 +14142,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210145784",
+    "I241749"
+   ]
   },
   {
    "id": "W2000603369",
@@ -12933,7 +14162,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I204136569",
+    "I76903346"
+   ]
   },
   {
    "id": "W1990754394",
@@ -12949,7 +14182,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76903346"
+   ]
   },
   {
    "id": "W2058394565",
@@ -12965,7 +14201,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": []
   },
   {
    "id": "W2020741690",
@@ -12985,7 +14222,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2019083779",
@@ -13003,7 +14241,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1986624996",
@@ -13019,7 +14258,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1969836119",
@@ -13035,7 +14275,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2079791241",
@@ -13051,7 +14292,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2004729963",
@@ -13069,7 +14311,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1994332527",
@@ -13085,7 +14328,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2034490769",
@@ -13101,7 +14345,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I97018004"
+   ]
   },
   {
    "id": "W4245299262",
@@ -13120,7 +14367,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I205783295"
+   ]
   },
   {
    "id": "W2063553958",
@@ -13138,7 +14388,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I205783295"
+   ]
   },
   {
    "id": "W1985939653",
@@ -13154,7 +14407,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2053737423",
@@ -13170,7 +14424,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2024147015",
@@ -13186,7 +14441,12 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I158708052",
+    "I76920116",
+    "I14316845"
+   ]
   },
   {
    "id": "W2000186813",
@@ -13202,7 +14462,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1999747041",
@@ -13218,7 +14479,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1972818195",
@@ -13234,7 +14496,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1992524012",
@@ -13253,7 +14516,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I4210090662"
+   ]
   },
   {
    "id": "W2293775966",
@@ -13272,7 +14538,11 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210155236",
+    "I63966007"
+   ]
   },
   {
    "id": "W2039829307",
@@ -13291,7 +14561,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I189158971"
+   ]
   },
   {
    "id": "W2001220384",
@@ -13310,7 +14583,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I91045830"
+   ]
   },
   {
    "id": "W39588687",
@@ -13329,7 +14605,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2317601190",
@@ -13347,7 +14624,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2156832225",
@@ -13366,7 +14644,11 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I165143802",
+    "I198105771"
+   ]
   },
   {
    "id": "W2133561294",
@@ -13385,7 +14667,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2039835290",
@@ -13404,7 +14687,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1989631973",
@@ -13422,7 +14706,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W161231041",
@@ -13441,7 +14726,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1978268072",
@@ -13459,7 +14745,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I91045830"
+   ]
   },
   {
    "id": "W2257304806",
@@ -13475,7 +14764,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2132116293",
@@ -13491,7 +14781,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2005365724",
@@ -13507,7 +14798,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090",
+    "I172675005"
+   ]
   },
   {
    "id": "W2132118223",
@@ -13525,7 +14820,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I84884186",
+    "I19370010"
+   ]
   },
   {
    "id": "W2036079714",
@@ -13541,7 +14840,17 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I1326498283",
+    "I203339264",
+    "I48430043",
+    "I17866349",
+    "I205747304",
+    "I4210119061",
+    "I4387153255",
+    "I4405258862"
+   ]
   },
   {
    "id": "W2067533241",
@@ -13557,7 +14866,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76903346"
+   ]
   },
   {
    "id": "W2160843879",
@@ -13575,7 +14887,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I84884186"
+   ]
   },
   {
    "id": "W2097163846",
@@ -13591,7 +14906,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1994167600",
@@ -13609,7 +14925,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2338707549",
@@ -13625,7 +14942,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2079211545",
@@ -13641,7 +14959,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1982153489",
@@ -13657,7 +14976,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1973297897",
@@ -13673,7 +14993,14 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210119061",
+    "I4405258862",
+    "I1326498283",
+    "I203339264",
+    "I48430043"
+   ]
   },
   {
    "id": "W2032132565",
@@ -13692,7 +15019,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I63966007",
+    "I93860229"
+   ]
   },
   {
    "id": "W2108997351",
@@ -13711,7 +15042,11 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090",
+    "I172675005"
+   ]
   },
   {
    "id": "W2136979077",
@@ -13730,7 +15065,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I189158971"
+   ]
   },
   {
    "id": "W2993208429",
@@ -13748,7 +15086,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W234726666",
@@ -13767,7 +15106,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2077293314",
@@ -13783,7 +15125,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2061604583",
@@ -13799,7 +15142,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I1315836254"
+   ]
   },
   {
    "id": "W2061215409",
@@ -13819,7 +15165,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1934506085",
@@ -13838,7 +15185,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W1805715457",
@@ -13857,7 +15207,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2088987615",
@@ -13873,7 +15224,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2054329908",
@@ -13889,7 +15241,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2048682621",
@@ -13905,7 +15258,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2033389736",
@@ -13924,7 +15278,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I121797337"
+   ]
   },
   {
    "id": "W7217895908",
@@ -13942,7 +15299,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2340162283",
@@ -13960,7 +15318,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2105811756",
@@ -13976,7 +15335,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76903346"
+   ]
   },
   {
    "id": "W1990367405",
@@ -13995,7 +15357,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W4254722505",
@@ -14011,7 +15376,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2014472761",
@@ -14027,7 +15393,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I63966007",
+    "I19370010"
+   ]
   },
   {
    "id": "W1966125090",
@@ -14044,7 +15414,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2147818560",
@@ -14060,7 +15431,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76903346"
+   ]
   },
   {
    "id": "W2040797092",
@@ -14076,7 +15450,12 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I1326498283",
+    "I203339264",
+    "I48430043"
+   ]
   },
   {
    "id": "W1974016210",
@@ -14095,7 +15474,12 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392",
+    "I1332878012",
+    "I63966007"
+   ]
   },
   {
    "id": "W2337951930",
@@ -14111,7 +15495,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2146547664",
@@ -14130,7 +15515,12 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I1326498283",
+    "I203339264",
+    "I48430043"
+   ]
   },
   {
    "id": "W2152480321",
@@ -14146,7 +15536,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I97018004"
+   ]
   },
   {
    "id": "W2083190135",
@@ -14162,7 +15555,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2131378716",
@@ -14180,7 +15576,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2001463936",
@@ -14199,7 +15596,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2125296062",
@@ -14215,7 +15613,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1979684022",
@@ -14231,7 +15630,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1765309254",
@@ -14250,7 +15650,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2076538505",
@@ -14269,7 +15672,11 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090",
+    "I130416959"
+   ]
   },
   {
    "id": "W2127692932",
@@ -14288,7 +15695,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2112378111",
@@ -14304,7 +15712,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2084680768",
@@ -14323,7 +15732,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392"
+   ]
   },
   {
    "id": "W2102957754",
@@ -14339,7 +15751,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I2799343972",
+    "I58956616"
+   ]
   },
   {
    "id": "W2077177834",
@@ -14356,7 +15772,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1993352512",
@@ -14372,7 +15789,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2008561033",
@@ -14393,7 +15811,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2084116584",
@@ -14412,7 +15831,11 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I1332092204",
+    "I902798049"
+   ]
   },
   {
    "id": "W4250390161",
@@ -14428,7 +15851,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2972074073",
@@ -14447,7 +15871,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W277542835",
@@ -14466,7 +15891,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2130925423",
@@ -14485,7 +15911,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2104806769",
@@ -14504,7 +15931,11 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210126794",
+    "I165143802"
+   ]
   },
   {
    "id": "W2045607172",
@@ -14523,7 +15954,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2030511102",
@@ -14542,7 +15976,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2002015500",
@@ -14561,7 +15996,11 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I3005327000",
+    "I35928602"
+   ]
   },
   {
    "id": "W1491292631",
@@ -14577,7 +16016,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2121211518",
@@ -14597,7 +16039,12 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I1326498283",
+    "I203339264",
+    "I108468826"
+   ]
   },
   {
    "id": "W4254393323",
@@ -14616,7 +16063,10 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I121797337"
+   ]
   },
   {
    "id": "W2112941339",
@@ -14635,7 +16085,8 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2311371563",
@@ -14651,7 +16102,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2147543235",
@@ -14667,7 +16119,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1992682411",
@@ -14683,7 +16136,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": []
   },
   {
    "id": "W1968527334",
@@ -14701,7 +16155,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": []
   },
   {
    "id": "W2145310951",
@@ -14717,7 +16172,13 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I100532134",
+    "I1326498283",
+    "I203339264",
+    "I48430043"
+   ]
   },
   {
    "id": "W2096493130",
@@ -14736,7 +16197,10 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392"
+   ]
   },
   {
    "id": "W2038102900",
@@ -14752,7 +16216,13 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I100532134",
+    "I1326498283",
+    "I203339264",
+    "I48430043"
+   ]
   },
   {
    "id": "W2107059364",
@@ -14771,7 +16241,13 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I1326498283",
+    "I4210133778",
+    "I66862912",
+    "I95674353"
+   ]
   },
   {
    "id": "W1995724408",
@@ -14787,7 +16263,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2140007569",
@@ -14805,7 +16282,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W56610382",
@@ -14821,7 +16299,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2246741278",
@@ -14837,7 +16316,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I97018004"
+   ]
   },
   {
    "id": "W2157736034",
@@ -14853,7 +16335,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I3005327000"
+   ]
   },
   {
    "id": "W2121292907",
@@ -14869,7 +16354,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": []
   },
   {
    "id": "W2484600350",
@@ -14888,7 +16374,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2065500106",
@@ -14904,7 +16391,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2017899009",
@@ -14920,7 +16408,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1991774102",
@@ -14936,7 +16425,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1740364562",
@@ -14952,7 +16442,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1989023801",
@@ -14971,7 +16462,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I130701444"
+   ]
   },
   {
    "id": "W1988757773",
@@ -14990,7 +16484,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I3005327000"
+   ]
   },
   {
    "id": "W1998298534",
@@ -15009,7 +16506,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W1970516534",
@@ -15026,7 +16526,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1969269027",
@@ -15042,7 +16543,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2029068530",
@@ -15058,7 +16560,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I97018004"
+   ]
   },
   {
    "id": "W3151952763",
@@ -15074,7 +16579,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3149878070",
@@ -15090,7 +16596,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3139945161",
@@ -15106,7 +16613,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2479687757",
@@ -15122,7 +16630,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I226413961"
+   ]
   },
   {
    "id": "W2171625132",
@@ -15141,7 +16652,11 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I167576493",
+    "I33434090"
+   ]
   },
   {
    "id": "W2104841477",
@@ -15160,7 +16675,12 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I293362453",
+    "I76903346",
+    "I63966007"
+   ]
   },
   {
    "id": "W2037339240",
@@ -15176,7 +16696,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2018521855",
@@ -15192,7 +16713,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392"
+   ]
   },
   {
    "id": "W1972275836",
@@ -15210,7 +16734,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392"
+   ]
   },
   {
    "id": "W1972118003",
@@ -15226,7 +16753,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I90745801"
+   ]
   },
   {
    "id": "W1592095561",
@@ -15245,7 +16775,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1590013720",
@@ -15261,7 +16792,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1565296018",
@@ -15280,7 +16812,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1553747859",
@@ -15296,7 +16829,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1551786965",
@@ -15315,7 +16849,11 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392",
+    "I162577319"
+   ]
   },
   {
    "id": "W1513719591",
@@ -15334,7 +16872,11 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I63966007",
+    "I74801974"
+   ]
   },
   {
    "id": "W102839162",
@@ -15354,7 +16896,8 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2164400981",
@@ -15370,7 +16913,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I130701444"
+   ]
   },
   {
    "id": "W2020686625",
@@ -15386,7 +16932,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2154022671",
@@ -15405,7 +16952,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2105017843",
@@ -15424,7 +16974,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090",
+    "I130416959"
+   ]
   },
   {
    "id": "W2047080077",
@@ -15443,7 +16997,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392"
+   ]
   },
   {
    "id": "W2128328467",
@@ -15462,7 +17019,12 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I3005327000",
+    "I63966007",
+    "I158708052"
+   ]
   },
   {
    "id": "W2144560185",
@@ -15478,7 +17040,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1987103566",
@@ -15497,7 +17060,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2145892065",
@@ -15513,7 +17077,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2147263376",
@@ -15529,7 +17094,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2145258765",
@@ -15545,7 +17111,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I34956611"
+   ]
   },
   {
    "id": "W2110954253",
@@ -15561,7 +17130,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2171259948",
@@ -15580,7 +17150,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I90745801"
+   ]
   },
   {
    "id": "W2494992062",
@@ -15596,7 +17169,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2297086500",
@@ -15614,7 +17190,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2281240970",
@@ -15630,7 +17209,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2226944509",
@@ -15648,7 +17228,10 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I165143802"
+   ]
   },
   {
    "id": "W2165250477",
@@ -15666,7 +17249,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2124644330",
@@ -15685,7 +17271,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I90745801"
+   ]
   },
   {
    "id": "W2122182122",
@@ -15703,7 +17292,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392",
+    "I162577319"
+   ]
   },
   {
    "id": "W2116910500",
@@ -15724,7 +17317,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2024218580",
@@ -15743,7 +17337,12 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I38538140",
+    "I82828225",
+    "I158708052"
+   ]
   },
   {
    "id": "W1977884834",
@@ -15762,7 +17361,10 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I114531698"
+   ]
   },
   {
    "id": "W1625869876",
@@ -15781,7 +17383,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W159924887",
@@ -15797,7 +17402,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": []
   },
   {
    "id": "W1508486817",
@@ -15813,7 +17419,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W1982080338",
@@ -15832,7 +17441,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I197898795"
+   ]
   },
   {
    "id": "W2127042968",
@@ -15851,7 +17463,11 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210126794",
+    "I165143802"
+   ]
   },
   {
    "id": "W2115618887",
@@ -15867,7 +17483,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1562819885",
@@ -15886,7 +17503,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4252800478",
@@ -15905,7 +17523,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I226413961"
+   ]
   },
   {
    "id": "W2163500463",
@@ -15921,7 +17542,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2111917599",
@@ -15937,7 +17559,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1984687499",
@@ -15956,7 +17579,11 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I114531698",
+    "I4210092329"
+   ]
   },
   {
    "id": "W1969464210",
@@ -15975,7 +17602,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392"
+   ]
   },
   {
    "id": "W2120493990",
@@ -15991,7 +17621,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2114909198",
@@ -16007,7 +17640,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W1852808676",
@@ -16023,7 +17659,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I63966007"
+   ]
   },
   {
    "id": "W2154070888",
@@ -16039,7 +17678,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2142032298",
@@ -16055,7 +17697,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I90745801"
+   ]
   },
   {
    "id": "W2117771570",
@@ -16073,7 +17718,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I66200439"
+   ]
   },
   {
    "id": "W1979184604",
@@ -16092,7 +17740,11 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I114531698",
+    "I4210092329"
+   ]
   },
   {
    "id": "W2144125286",
@@ -16108,7 +17760,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2129559904",
@@ -16124,7 +17777,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I1332092204",
+    "I14316845"
+   ]
   },
   {
    "id": "W2125007695",
@@ -16140,7 +17797,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2120637532",
@@ -16156,7 +17814,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I162714631",
+    "I226413961"
+   ]
   },
   {
    "id": "W2105755807",
@@ -16172,7 +17834,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W103816508",
@@ -16188,7 +17851,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392"
+   ]
   },
   {
    "id": "W35948290",
@@ -16204,7 +17870,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2741704743",
@@ -16220,7 +17889,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2390240145",
@@ -16236,7 +17906,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392"
+   ]
   },
   {
    "id": "W2167431698",
@@ -16255,7 +17928,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2145246380",
@@ -16271,7 +17947,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2140375699",
@@ -16287,7 +17964,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2134614072",
@@ -16306,7 +17984,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2125730044",
@@ -16324,7 +18005,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392"
+   ]
   },
   {
    "id": "W2123618323",
@@ -16343,7 +18027,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392"
+   ]
   },
   {
    "id": "W2118733278",
@@ -16359,7 +18046,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392"
+   ]
   },
   {
    "id": "W2117892363",
@@ -16375,7 +18065,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I162714631",
+    "I226413961"
+   ]
   },
   {
    "id": "W2117388042",
@@ -16394,7 +18088,12 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I3005327000",
+    "I63966007",
+    "I158708052"
+   ]
   },
   {
    "id": "W2045458087",
@@ -16410,7 +18109,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392"
+   ]
   },
   {
    "id": "W2017467253",
@@ -16429,7 +18131,10 @@
    ],
    "sjr": "Q4",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I181635417"
+   ]
   },
   {
    "id": "W1716520751",
@@ -16448,7 +18153,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392"
+   ]
   },
   {
    "id": "W1596907869",
@@ -16467,7 +18175,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1595845849",
@@ -16486,7 +18195,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392"
+   ]
   },
   {
    "id": "W1537759103",
@@ -16502,7 +18214,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210126794",
+    "I165143802"
+   ]
   },
   {
    "id": "W1535029232",
@@ -16521,7 +18237,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392"
+   ]
   },
   {
    "id": "W1513354852",
@@ -16540,7 +18259,11 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I4210126794",
+    "I165143802"
+   ]
   },
   {
    "id": "W2163152257",
@@ -16556,7 +18279,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W93883812",
@@ -16572,7 +18298,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2137399959",
@@ -16590,7 +18319,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": []
   },
   {
    "id": "W2026318615",
@@ -16606,7 +18336,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I114531698"
+   ]
   },
   {
    "id": "W1592680956",
@@ -16622,7 +18355,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I165143802"
+   ]
   },
   {
    "id": "W2109308456",
@@ -16641,7 +18377,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2066741369",
@@ -16660,7 +18399,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I90745801"
+   ]
   },
   {
    "id": "W1996976730",
@@ -16680,7 +18422,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2070220624",
@@ -16699,7 +18442,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2145344547",
@@ -16717,7 +18463,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I1334627681"
+   ]
   },
   {
    "id": "W1602402286",
@@ -16733,7 +18482,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I131868736"
+   ]
   },
   {
    "id": "W2161113723",
@@ -16749,7 +18501,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W1970074638",
@@ -16765,7 +18520,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I158708052",
+    "I14316845"
+   ]
   },
   {
    "id": "W1684385868",
@@ -16781,7 +18540,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2115301838",
@@ -16797,7 +18557,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2099801546",
@@ -16815,7 +18578,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I158708052",
+    "I14316845"
+   ]
   },
   {
    "id": "W4240172984",
@@ -16831,7 +18598,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2663543121",
@@ -16847,7 +18617,12 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I88060688",
+    "I121748325",
+    "I5124864"
+   ]
   },
   {
    "id": "W2243026078",
@@ -16863,7 +18638,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I165143802"
+   ]
   },
   {
    "id": "W2187327870",
@@ -16879,7 +18657,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2159385609",
@@ -16895,7 +18674,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2144571692",
@@ -16911,7 +18691,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I167576493",
+    "I33434090"
+   ]
   },
   {
    "id": "W2071990151",
@@ -16930,7 +18714,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1566253826",
@@ -16949,7 +18734,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I165143802"
+   ]
   },
   {
    "id": "W113005430",
@@ -16968,7 +18756,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I123534392"
+   ]
   },
   {
    "id": "W2541540376",
@@ -16984,7 +18775,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I14316845",
+    "I158708052"
+   ]
   },
   {
    "id": "W2149820855",
@@ -17002,7 +18797,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2162431229",
@@ -17018,7 +18816,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I158708052",
+    "I43439940"
+   ]
   },
   {
    "id": "W2059223330",
@@ -17034,7 +18836,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1981687618",
@@ -17050,7 +18853,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I158708052",
+    "I14316845"
+   ]
   },
   {
    "id": "W2149735672",
@@ -17067,7 +18874,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2120742084",
@@ -17083,7 +18893,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2157976127",
@@ -17099,7 +18912,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2260786079",
@@ -17115,7 +18931,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1993848308",
@@ -17134,7 +18951,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W374448050",
@@ -17150,7 +18968,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W4239589759",
@@ -17169,7 +18988,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I79576946"
+   ]
   },
   {
    "id": "W19629941",
@@ -17185,7 +19007,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I67415387"
+   ]
   },
   {
    "id": "W87399467",
@@ -17201,7 +19026,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2267502758",
@@ -17217,7 +19043,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2151366045",
@@ -17235,7 +19062,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2146335861",
@@ -17253,7 +19083,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2113834441",
@@ -17269,7 +19102,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2111979614",
@@ -17287,7 +19123,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1529582935",
@@ -17303,7 +19140,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I165143802"
+   ]
   },
   {
    "id": "W2141142750",
@@ -17323,7 +19163,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I67415387"
+   ]
   },
   {
    "id": "W2089446548",
@@ -17339,7 +19182,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I158708052",
+    "I14316845"
+   ]
   },
   {
    "id": "W2019885600",
@@ -17355,7 +19202,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I114531698"
+   ]
   },
   {
    "id": "W1972637053",
@@ -17374,7 +19224,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W2160508918",
@@ -17392,7 +19245,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2155530903",
@@ -17411,7 +19265,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I79576946"
+   ]
   },
   {
    "id": "W2087107256",
@@ -17430,7 +19287,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3207923703",
@@ -17446,7 +19304,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I165143802"
+   ]
   },
   {
    "id": "W1933229307",
@@ -17465,7 +19326,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I165143802"
+   ]
   },
   {
    "id": "W1528498509",
@@ -17484,7 +19348,8 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1519976796",
@@ -17500,7 +19365,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I33434090"
+   ]
   },
   {
    "id": "W104313301",
@@ -17519,7 +19387,8 @@
    ],
    "sjr": "Q3",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2073072589",
@@ -17537,7 +19406,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "National"
+   "collab": "National",
+   "ext": [
+    "I181635417",
+    "I165232561"
+   ]
   },
   {
    "id": "W604179443",
@@ -17553,7 +19426,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W1575477160",
@@ -17572,7 +19446,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I79576946"
+   ]
   },
   {
    "id": "W1811494163",
@@ -17588,7 +19465,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I63966007"
+   ]
   },
   {
    "id": "W374136489",
@@ -17604,7 +19484,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2141820562",
@@ -17622,7 +19503,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2157207668",
@@ -17638,7 +19520,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2146032906",
@@ -17657,7 +19540,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I165143802"
+   ]
   },
   {
    "id": "W2137551350",
@@ -17673,7 +19559,12 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I63966007",
+    "I17974374",
+    "I121934306"
+   ]
   },
   {
    "id": "W2116574667",
@@ -17689,7 +19580,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I111979921",
+    "I63966007"
+   ]
   },
   {
    "id": "W2103512107",
@@ -17705,7 +19600,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2113482872",
@@ -17723,7 +19619,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I184565670",
+    "I76835614"
+   ]
   },
   {
    "id": "W1570056828",
@@ -17742,7 +19642,10 @@
    ],
    "sjr": "Q2",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I114531698"
+   ]
   },
   {
    "id": "W1498006959",
@@ -17758,7 +19661,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2170009577",
@@ -17776,7 +19680,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76835614"
+   ]
   },
   {
    "id": "W2103588207",
@@ -17792,7 +19699,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76835614",
+    "I167576493"
+   ]
   },
   {
    "id": "W1876404234",
@@ -17811,7 +19722,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76835614"
+   ]
   },
   {
    "id": "W2125982303",
@@ -17829,7 +19743,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76835614"
+   ]
   },
   {
    "id": "W2155467595",
@@ -17847,7 +19764,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I79576946"
+   ]
   },
   {
    "id": "W2108557172",
@@ -17865,7 +19785,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76835614",
+    "I184565670"
+   ]
   },
   {
    "id": "W1952219847",
@@ -17881,7 +19805,11 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76835614",
+    "I184565670"
+   ]
   },
   {
    "id": "W2108555476",
@@ -17900,7 +19828,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76835614"
+   ]
   },
   {
    "id": "W2046933642",
@@ -17919,7 +19850,10 @@
    ],
    "sjr": "Q1",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76835614"
+   ]
   },
   {
    "id": "W109640058",
@@ -17935,7 +19869,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2015068954",
@@ -17954,7 +19889,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76835614"
+   ]
   },
   {
    "id": "W2561313823",
@@ -17972,7 +19910,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2499709674",
@@ -17988,7 +19927,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2491908944",
@@ -18006,7 +19946,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76835614"
+   ]
   },
   {
    "id": "W2076052533",
@@ -18025,7 +19968,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I76835614"
+   ]
   },
   {
    "id": "W2730890568",
@@ -18043,7 +19989,10 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "International"
+   "collab": "International",
+   "ext": [
+    "I178574317"
+   ]
   },
   {
    "id": "W965607043",
@@ -18059,7 +20008,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W3019983434",
@@ -18075,7 +20025,8 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   },
   {
    "id": "W2489875192",
@@ -18091,7 +20042,754 @@
    ],
    "sjr": "No Ranking",
    "citescore": null,
-   "collab": "CMU only"
+   "collab": "CMU only",
+   "ext": []
   }
- ]
+ ],
+ "institutions": {
+  "I123534392": [
+   "University of North Texas",
+   "US"
+  ],
+  "I34956611": [
+   "North Chiang Mai University",
+   "TH"
+  ],
+  "I74801974": [
+   "The University of Tokyo",
+   "JP"
+  ],
+  "I33434090": [
+   "University of Massachusetts Boston",
+   "US"
+  ],
+  "I4210126794": [
+   "IBM Research (China)",
+   "CN"
+  ],
+  "I165143802": [
+   "The University of Queensland",
+   "AU"
+  ],
+  "I63966007": [
+   "Massachusetts Institute of Technology",
+   "US"
+  ],
+  "I162577319": [
+   "The University of Texas at Dallas",
+   "US"
+  ],
+  "I114531698": [
+   "Tokyo Institute of Technology",
+   "JP"
+  ],
+  "I79576946": [
+   "University of Pennsylvania",
+   "US"
+  ],
+  "I131868736": [
+   "Prince of Songkla University",
+   "TH"
+  ],
+  "I204136569": [
+   "The Open University",
+   "GB"
+  ],
+  "I76903346": [
+   "University of Coimbra",
+   "PT"
+  ],
+  "I76835614": [
+   "University of Missouri",
+   "US"
+  ],
+  "I162714631": [
+   "George Mason University",
+   "US"
+  ],
+  "I189158971": [
+   "United States Naval Academy",
+   "US"
+  ],
+  "I1314135232": [
+   "Nationwide Children's Hospital",
+   "US"
+  ],
+  "I52357470": [
+   "The Ohio State University",
+   "US"
+  ],
+  "I58956616": [
+   "Case Western Reserve University",
+   "US"
+  ],
+  "I4210164401": [
+   "Sidney Kimmel Comprehensive Cancer Center",
+   "US"
+  ],
+  "I33213144": [
+   "University of Florida",
+   "US"
+  ],
+  "I184565670": [
+   "Georgetown University",
+   "US"
+  ],
+  "I67415387": [
+   "Lancaster University",
+   "GB"
+  ],
+  "I41725924": [
+   "Muroran Institute of Technology",
+   "JP"
+  ],
+  "I90023481": [
+   "National Institute of Information and Communications Technology",
+   "JP"
+  ],
+  "I158708052": [
+   "Chulalongkorn University",
+   "TH"
+  ],
+  "I14316845": [
+   "National Electronics and Computer Technology Center",
+   "TH"
+  ],
+  "I90745801": [
+   "University of New England",
+   "AU"
+  ],
+  "I4210119061": [
+   "Institut de Recherche en Informatique de Toulouse",
+   "FR"
+  ],
+  "I4405258862": [
+   "Université de Toulouse",
+   "FR"
+  ],
+  "I1326498283": [
+   "Institut national de recherche en sciences et technologies du numérique",
+   "FR"
+  ],
+  "I203339264": [
+   "Université de Lyon",
+   "FR"
+  ],
+  "I48430043": [
+   "Institut National des Sciences Appliquées de Lyon",
+   "FR"
+  ],
+  "I1332878012": [
+   "BT Group (United Kingdom)",
+   "GB"
+  ],
+  "I91045830": [
+   "Texas A&M University",
+   "US"
+  ],
+  "I4210092329": [
+   "Institute of Electronics, Information and Communication Engineers",
+   "JP"
+  ],
+  "I197898795": [
+   "Payap University",
+   "TH"
+  ],
+  "I108108428": [
+   "Thammasat University",
+   "TH"
+  ],
+  "I190734841": [
+   "Maejo University",
+   "TH"
+  ],
+  "I3005327000": [
+   "Institute for Infocomm Research",
+   "SG"
+  ],
+  "I130701444": [
+   "Georgia Institute of Technology",
+   "US"
+  ],
+  "I4210090662": [
+   "University of Phayao",
+   "TH"
+  ],
+  "I35928602": [
+   "Kyung Hee University",
+   "KR"
+  ],
+  "I172675005": [
+   "Nanyang Technological University",
+   "SG"
+  ],
+  "I19370010": [
+   "Orange (France)",
+   "FR"
+  ],
+  "I181635417": [
+   "Shinawatra University",
+   "TH"
+  ],
+  "I16076960": [
+   "COMSATS University Islamabad",
+   "PK"
+  ],
+  "I145311948": [
+   "Johns Hopkins University",
+   "US"
+  ],
+  "I2799343972": [
+   "University Hospitals of Cleveland",
+   "US"
+  ],
+  "I4210137621": [
+   "BioInVision (United States)",
+   "US"
+  ],
+  "I76920116": [
+   "Srinakharinwirot University",
+   "TH"
+  ],
+  "I38538140": [
+   "Asian Institute of Technology",
+   "TH"
+  ],
+  "I82828225": [
+   "King Mongkut's University of Technology North Bangkok",
+   "TH"
+  ],
+  "I97018004": [
+   "Stanford University",
+   "US"
+  ],
+  "I93860229": [
+   "Politecnico di Milano",
+   "IT"
+  ],
+  "I121797337": [
+   "Leiden University",
+   "NL"
+  ],
+  "I17866349": [
+   "Université Fédérale de Toulouse Midi-Pyrénées",
+   "FR"
+  ],
+  "I205747304": [
+   "Institut National Polytechnique de Toulouse",
+   "FR"
+  ],
+  "I4387153255": [
+   "École Nationale Supérieure d'Électrotechnique, d'Électronique, d'Informatique, d'Hydraulique et des Télécommunications",
+   "FR"
+  ],
+  "I100532134": [
+   "Lyon 1 Université",
+   "FR"
+  ],
+  "I178574317": [
+   "Mie University",
+   "JP"
+  ],
+  "I1174212": [
+   "University of Southern California",
+   "US"
+  ],
+  "I1315836254": [
+   "Ministry of Public Health",
+   "TH"
+  ],
+  "I205783295": [
+   "Cornell University",
+   "US"
+  ],
+  "I165232561": [
+   "Asian University",
+   "TH"
+  ],
+  "I130416959": [
+   "Central Research Institute of Electric Power Industry",
+   "JP"
+  ],
+  "I4210145784": [
+   "IBM Research - Ireland",
+   "IE"
+  ],
+  "I241749": [
+   "University of Cambridge",
+   "GB"
+  ],
+  "I1332092204": [
+   "National Science and Technology Development Agency",
+   "TH"
+  ],
+  "I902798049": [
+   "National Center for Genetic Engineering and Biotechnology",
+   "TH"
+  ],
+  "I32943570": [
+   "Helsinki Institute for Information Technology",
+   "FI"
+  ],
+  "I167576493": [
+   "Colorado School of Mines",
+   "US"
+  ],
+  "I293362453": [
+   "Universidade Politécnica de Coimbra",
+   "PT"
+  ],
+  "I4210133778": [
+   "Centre Inria de l'Université de Rennes",
+   "FR"
+  ],
+  "I66862912": [
+   "Chalmers University of Technology",
+   "SE"
+  ],
+  "I95674353": [
+   "UCLouvain",
+   "BE"
+  ],
+  "I111979921": [
+   "Northwestern University",
+   "US"
+  ],
+  "I66200439": [
+   "Naresuan University",
+   "TH"
+  ],
+  "I226413961": [
+   "Armstrong Atlantic State University",
+   "US"
+  ],
+  "I108468826": [
+   "Stevens Institute of Technology",
+   "US"
+  ],
+  "I84884186": [
+   "Newcastle University",
+   "GB"
+  ],
+  "I17974374": [
+   "Universidade de São Paulo",
+   "BR"
+  ],
+  "I121934306": [
+   "Tufts University",
+   "US"
+  ],
+  "I1334627681": [
+   "Jet Propulsion Laboratory",
+   "US"
+  ],
+  "I198105771": [
+   "Kasetsart University",
+   "TH"
+  ],
+  "I114017466": [
+   "University of Technology Sydney",
+   "AU"
+  ],
+  "I43439940": [
+   "University of Southampton",
+   "GB"
+  ],
+  "I4210144839": [
+   "Hamad bin Khalifa University",
+   "QA"
+  ],
+  "I4210155025": [
+   "Cleveland Cord Blood Center",
+   "US"
+  ],
+  "I148673510": [
+   "Mandalay Technological University",
+   "MM"
+  ],
+  "I4210155236": [
+   "National Research Council",
+   "IT"
+  ],
+  "I4210111088": [
+   "Maharaj Nakorn Chiang Mai Hospital",
+   "TH"
+  ],
+  "I141596103": [
+   "University of Lisbon",
+   "PT"
+  ],
+  "I4210167387": [
+   "Institute for Biotechnology and Bioengineering",
+   "PT"
+  ],
+  "I4387152517": [
+   "Instituto Superior Técnico",
+   "PT"
+  ],
+  "I4405270109": [
+   "Institute for Bioengineering and Biosciences",
+   "PT"
+  ],
+  "I201933988": [
+   "Kagawa University",
+   "JP"
+  ],
+  "I98358874": [
+   "Delft University of Technology",
+   "NL"
+  ],
+  "I182534213": [
+   "Universidade do Porto",
+   "PT"
+  ],
+  "I4210120471": [
+   "Instituto de Telecomunicações",
+   "PT"
+  ],
+  "I131249849": [
+   "Oregon State University",
+   "US"
+  ],
+  "I31746571": [
+   "UNSW Sydney",
+   "AU"
+  ],
+  "I91538806": [
+   "King Mongkut's Institute of Technology Ladkrabang",
+   "TH"
+  ],
+  "I168635309": [
+   "University of Calgary",
+   "CA"
+  ],
+  "I88060688": [
+   "Universidad Politécnica de Madrid",
+   "ES"
+  ],
+  "I121748325": [
+   "Universidad Complutense de Madrid",
+   "ES"
+  ],
+  "I5124864": [
+   "École Polytechnique Fédérale de Lausanne",
+   "CH"
+  ],
+  "I9340882": [
+   "Chiang Mai Rajabhat University",
+   "TH"
+  ],
+  "I73683852": [
+   "Rajamangala University of Technology Lanna",
+   "TH"
+  ],
+  "I98381234": [
+   "University of Oulu",
+   "FI"
+  ],
+  "I28407311": [
+   "University of Manchester",
+   "GB"
+  ],
+  "I79817857": [
+   "University of Guelph",
+   "CA"
+  ],
+  "I198012923": [
+   "University of Staffordshire",
+   "GB"
+  ],
+  "I9300472": [
+   "Bournemouth University",
+   "GB"
+  ],
+  "I78715868": [
+   "University of Arkansas at Fayetteville",
+   "US"
+  ],
+  "I183935753": [
+   "King's College London",
+   "GB"
+  ],
+  "I161296585": [
+   "Tokyo University of Science",
+   "JP"
+  ],
+  "I111966504": [
+   "University of Fukui",
+   "JP"
+  ],
+  "I4210105130": [
+   "Asia Centre",
+   "TH"
+  ],
+  "I4387156032": [
+   "Royal Thai Army",
+   "TH"
+  ],
+  "I4405278124": [
+   "HRH Princess Maha Chakri Sirindhorn Medical Center",
+   "TH"
+  ],
+  "I923382979": [
+   "ExxonMobil (United States)",
+   "US"
+  ],
+  "I145847075": [
+   "TU Wien",
+   "AT"
+  ],
+  "I11983389": [
+   "Manchester Metropolitan University",
+   "GB"
+  ],
+  "I165932596": [
+   "National University of Singapore",
+   "SG"
+  ],
+  "I10245363": [
+   "Rajamangala University of Technology",
+   "TH"
+  ],
+  "I163753206": [
+   "Chungbuk National University",
+   "KR"
+  ],
+  "I96733725": [
+   "Shanghai Maritime University",
+   "CN"
+  ],
+  "I141445968": [
+   "Ton Duc Thang University",
+   "VN"
+  ],
+  "I146429904": [
+   "Incheon National University",
+   "KR"
+  ],
+  "I176205391": [
+   "Uttaradit Rajabhat University",
+   "TH"
+  ],
+  "I96916377": [
+   "Walailak University",
+   "TH"
+  ],
+  "I4210119077": [
+   "University Hospitals Seidman Cancer Center",
+   "US"
+  ],
+  "I32971472": [
+   "Yale University",
+   "US"
+  ],
+  "I4210129045": [
+   "Athersys (United States)",
+   "US"
+  ],
+  "I192392021": [
+   "University of Central Punjab",
+   "PK"
+  ],
+  "I19700959": [
+   "Florida International University",
+   "US"
+  ],
+  "I155781252": [
+   "University of South Carolina",
+   "US"
+  ],
+  "I2800213357": [
+   "Royal Project Foundation",
+   "TH"
+  ],
+  "I55913730": [
+   "Bangkok University",
+   "TH"
+  ],
+  "I11701301": [
+   "Griffith University",
+   "AU"
+  ],
+  "I99065089": [
+   "Tsinghua University",
+   "CN"
+  ],
+  "I170897317": [
+   "Duke University",
+   "US"
+  ],
+  "I82880672": [
+   "Beihang University",
+   "CN"
+  ],
+  "I1316902750": [
+   "Cleveland Clinic",
+   "US"
+  ],
+  "I4210088080": [
+   "Rajamangala University of Technology Rattanakosin",
+   "TH"
+  ],
+  "I4405276722": [
+   "Chulachomklao Royal Military Academy",
+   "TH"
+  ],
+  "I150744194": [
+   "Waseda University",
+   "JP"
+  ],
+  "I78577930": [
+   "Columbia University",
+   "US"
+  ],
+  "I4210108017": [
+   "Earth Observatory of Singapore",
+   "SG"
+  ],
+  "I165779595": [
+   "The University of Melbourne",
+   "AU"
+  ],
+  "I160993911": [
+   "Queensland University of Technology",
+   "AU"
+  ],
+  "I56590836": [
+   "Monash University",
+   "AU"
+  ],
+  "I1294671590": [
+   "Centre National de la Recherche Scientifique",
+   "FR"
+  ],
+  "I188626449": [
+   "Université Lumière Lyon 2",
+   "FR"
+  ],
+  "I4210116847": [
+   "Environnement, ville, société",
+   "FR"
+  ],
+  "I4210123993": [
+   "Van Lang University",
+   "VN"
+  ],
+  "I121980950": [
+   "Utah State University",
+   "US"
+  ],
+  "I7882870": [
+   "University of Glasgow",
+   "GB"
+  ],
+  "I157358134": [
+   "RMIT Vietnam",
+   "VN"
+  ],
+  "I4210099699": [
+   "University of Jeddah",
+   "SA"
+  ],
+  "I175611932": [
+   "Electricity Generating Authority of Thailand",
+   "TH"
+  ],
+  "I98251732": [
+   "McMaster University",
+   "CA"
+  ],
+  "I98461037": [
+   "Tecnológico de Monterrey",
+   "MX"
+  ],
+  "I181647926": [
+   "University of Strathclyde",
+   "GB"
+  ],
+  "I3133086891": [
+   "Hochschule für Angewandte Wissenschaften Kiel",
+   "DE"
+  ],
+  "I4210160495": [
+   "Nakornping Hospital",
+   "TH"
+  ],
+  "I75027704": [
+   "University of Tennessee at Knoxville",
+   "US"
+  ],
+  "I60837268": [
+   "King Mongkut's University of Technology Thonburi",
+   "TH"
+  ],
+  "I4210119323": [
+   "Institute for the Promotion of Teaching Science and Technology",
+   "TH"
+  ],
+  "I4405277981": [
+   "Ratchathani University",
+   "TH"
+  ],
+  "I72091625": [
+   "Ubon Ratchathani University",
+   "TH"
+  ],
+  "I39422238": [
+   "University of Illinois Chicago",
+   "US"
+  ],
+  "I3129486149": [
+   "Universitas Jember",
+   "ID"
+  ],
+  "I4405276982": [
+   "Samut Prakan Hospital",
+   "TH"
+  ],
+  "I4210143826": [
+   "Institut National des Sciences Appliquées Centre Val de Loire",
+   "FR"
+  ],
+  "I148099254": [
+   "National Chung Cheng University",
+   "TW"
+  ],
+  "I34002243": [
+   "Mae Fah Luang University",
+   "TH"
+  ],
+  "I885392262": [
+   "GITAM University",
+   "IN"
+  ],
+  "I145808223": [
+   "Hanbat National University",
+   "KR"
+  ],
+  "I1925986": [
+   "Loyola University Chicago",
+   "US"
+  ],
+  "I100445878": [
+   "École Centrale de Nantes",
+   "FR"
+  ],
+  "I185839726": [
+   "Institut Universitaire de France",
+   "FR"
+  ],
+  "I4210117005": [
+   "Laboratoire des Sciences du Numérique de Nantes",
+   "FR"
+  ],
+  "I97188460": [
+   "Nantes Université",
+   "FR"
+  ],
+  "I89226531": [
+   "Rangsit University",
+   "TH"
+  ]
+ }
 }

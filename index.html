@@ -314,6 +314,62 @@ ol.pubs li:last-child { border-bottom: 0; }
   background: var(--chip-bg); border: 1px solid var(--border); border-radius: 8px; padding: 6px 14px;
 }
 
+/* Co-authorship */
+.coauth { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; align-items: start; }
+.panel h3 { margin: 12px 0 4px; font-size: 13px; font-weight: 700; color: var(--text-2); }
+.mstats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 8px; }
+.mstat { border: 1px solid var(--border); border-left: 4px solid var(--accent); background: var(--surface-2); border-radius: 10px; padding: 7px 9px; min-width: 0; }
+.mstat .n { font-size: 20px; font-weight: 800; line-height: 1.15; }
+.mstat .n small { font-size: 12px; font-weight: 600; color: var(--muted); }
+.mstat .l { font-size: 11px; color: var(--muted); line-height: 1.3; }
+.spark { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 8px; align-items: center; font-size: 11px; color: var(--muted); margin: 4px 0 6px; }
+.spark svg { width: 100%; height: 30px; display: block; overflow: visible; }
+.spark .ln { fill: none; stroke: var(--accent); stroke-width: 2; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.spark .ar { fill: var(--accent); opacity: .12; }
+.spark .base { stroke: var(--grid); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.spark b { color: var(--text); }
+.net-box, .sk-box { position: relative; min-height: 120px; }
+.net-box svg, .sk-box svg { display: block; max-width: 100%; height: auto; touch-action: manipulation; }
+.net-bg, .sk-bg { fill: transparent; }
+.net-edge { stroke: var(--accent); stroke-opacity: .32; stroke-linecap: round; }
+.net-n { cursor: pointer; outline: none; }
+.net-n circle { fill: var(--c-cmu); stroke: var(--surface); stroke-width: 1.5; }
+.net-n.on circle { fill: var(--accent); }
+.net-n text, .sk-lbl { font-size: 10.5px; fill: var(--text-2); paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
+.sk-lbl { stroke-width: 4.5px; }
+.net-n.on text { fill: var(--text); font-weight: 600; }
+.net-n:focus-visible circle, .net-n.pin circle { stroke: var(--focus); stroke-width: 3; }
+.dim .net-edge { stroke-opacity: .07; }
+.dim .net-edge.hot { stroke-opacity: .9; }
+.dim .net-n:not(.near) { opacity: .28; }
+.pairs { list-style: none; margin: 0; padding: 0; counter-reset: pr; }
+.pairs li { display: grid; grid-template-columns: 20px minmax(0, 1fr) auto; gap: 6px; align-items: baseline; padding: 4px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+.pairs li:last-child { border-bottom: 0; }
+.pairs li::before { counter-increment: pr; content: counter(pr); color: var(--muted); font-size: 11px; }
+.pairs .v { font-weight: 700; white-space: nowrap; }
+.pairs .v small { color: var(--muted); font-weight: 400; }
+.sk-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
+.sk-link { fill: none; stroke-opacity: .34; cursor: pointer; }
+.sk-link.intl { stroke: var(--c-int); }
+.sk-link.nat { stroke: var(--c-nat); }
+.sk-link:hover, .sk-link.hot { stroke-opacity: .72; }
+.sk-node { cursor: pointer; outline: none; }
+.sk-node rect { fill: var(--text-2); }
+.sk-node.inst.intl rect { fill: var(--c-int); }
+.sk-node.inst.nat rect { fill: var(--c-nat); }
+.sk-node:focus-visible rect { stroke: var(--focus); stroke-width: 3; }
+.sk-node.inst .sk-lbl { font-weight: 600; fill: var(--text); }
+.bar-row.wide { grid-template-columns: 128px minmax(0, 1fr) 64px; }
+.co-tip {
+  position: fixed; z-index: 50; left: 0; top: 0; max-width: min(300px, calc(100vw - 24px));
+  background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 10px;
+  box-shadow: var(--shadow); padding: 8px 10px; font-size: 12px; line-height: 1.4; pointer-events: none;
+}
+.co-tip b { font-size: 13px; }
+.co-tip .m { color: var(--muted); }
+.co-tip ul { margin: 4px 0 0; padding: 0 0 0 16px; }
+.co-tip li { margin: 0; }
+
 footer { color: var(--muted); font-size: 12px; padding: 22px 0 28px; }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: space-between; }
 
@@ -324,7 +380,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   .grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "trend trend" "mix mix" "tier collab"; }
 }
 @media (max-width: 900px) {
-  .lower { grid-template-columns: minmax(0, 1fr); }
+  .lower, .coauth { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 720px) {
   .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -339,6 +395,10 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   .kpi .val { font-size: 26px; }
   .stack-row { grid-template-columns: 38px minmax(0, 1fr) 58px; gap: 6px; }
   .bar-row { grid-template-columns: 92px minmax(0, 1fr) 58px; font-size: 12.5px; }
+  .bar-row.wide { grid-template-columns: 104px minmax(0, 1fr) 58px; }
+  .mstats { gap: 6px; }
+  .mstat { padding: 6px 7px; }
+  .mstat .n { font-size: 18px; }
 }
 </style>
 </head>
@@ -446,6 +506,37 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       <div class="more" id="pub-more"></div>
     </section>
   </div>
+
+  <div class="section-head">
+    <h2 id="h-coauth">Co-authorship, <span id="coauth-year"></span></h2>
+    <p class="hint">How CPE staff write together, and the partners they work with outside CMU. Uses the year range above.</p>
+  </div>
+  <div class="coauth">
+    <section class="panel" aria-labelledby="h-net">
+      <h2 id="h-net">Internal co-authorship</h2>
+      <p class="hint" id="net-hint">Each circle is a staff member, sized by papers in the range. Lines join colleagues who wrote together; thicker lines mean more joint papers. Hover, focus or tap a circle for details; select it to keep it highlighted.</p>
+      <div class="mstats" id="net-stats"></div>
+      <div id="net-spark"></div>
+      <div class="net-box" id="net-box"></div>
+      <h3 id="h-pairs">Strongest pairs</h3>
+      <ol class="pairs" id="net-pairs" aria-labelledby="h-pairs"></ol>
+    </section>
+
+    <section class="panel" aria-labelledby="h-ext">
+      <h2 id="h-ext">External partners</h2>
+      <p class="hint" id="ext-hint"></p>
+      <div class="sk-tools">
+        <div class="seg" role="group" aria-label="Partner institutions shown" id="ext-mode">
+          <button type="button" data-ext="intl" aria-pressed="true">International</button>
+          <button type="button" data-ext="all" aria-pressed="false">All external</button>
+        </div>
+      </div>
+      <div class="sk-box" id="sk-box"></div>
+      <h3 id="h-countries">Top countries</h3>
+      <div id="ext-countries" aria-labelledby="h-countries"></div>
+    </section>
+  </div>
+  <div class="co-tip" id="co-tip" role="tooltip" hidden></div>
 </main>
 
 <footer>
@@ -456,6 +547,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js" integrity="sha512-vc58qvvBdrDR4etbxMdlTt4GBQk1qjvyORR2nrsPsFPyrs+/u5c3+1Ct6upOgdZoIl7eq6k3a1UPDSNAQi/32A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-sankey/0.12.3/d3-sankey.min.js" integrity="sha512-KK15oKpabNDaLpWinMtNfTqy/V7pzlc2FRG174PfASes7RRx6TAsua8HJdRTKo8+BLvPBKNIkL7kXWcz5HoqqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 (function () {
   "use strict";
@@ -954,6 +1047,439 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       ? '<button type="button" class="btn" id="pub-more-btn">Show ' + fmt(Math.min(PAGE, list.length - state.limit)) + ' more</button>' : "";
   }
 
+  // ---------- co-authorship ----------
+  // Internal network (force layout, computed once per range and width) and external partner flow (Sankey).
+  var co = { key: null, rangeKey: null, layout: null, pinned: null, extMode: "intl", data: null };
+  var SHORT_INST = {
+    "Massachusetts Institute of Technology": "MIT",
+    "MIT Media Lab": "MIT Media Lab",
+    "University of Massachusetts Boston": "UMass Boston",
+    "University of North Texas": "Univ. of North Texas",
+    "The University of Texas at Dallas": "UT Dallas",
+    "Florida International University": "Florida Intl. Univ.",
+    "Case Western Reserve University": "Case Western Reserve",
+    "Johns Hopkins University": "Johns Hopkins Univ.",
+    "The University of Queensland": "Univ. of Queensland",
+    "The University of Tokyo": "Univ. of Tokyo",
+    "Tokyo Institute of Technology": "Tokyo Tech",
+    "Institut national de recherche en sciences et technologies du numérique": "Inria",
+    "Institut National des Sciences Appliquées de Lyon": "INSA Lyon",
+    "Centre National de la Recherche Scientifique": "CNRS",
+    "National Electronics and Computer Technology Center": "NECTEC",
+    "National Science and Technology Development Agency": "NSTDA",
+    "National Center for Genetic Engineering and Biotechnology": "BIOTEC",
+    "Asian Institute of Technology": "AIT",
+    "King Mongkut's Institute of Technology Ladkrabang": "KMITL",
+    "King Mongkut's University of Technology Thonburi": "KMUTT",
+    "King Mongkut's University of Technology North Bangkok": "KMUTNB",
+    "Rajamangala University of Technology Lanna": "RMUT Lanna",
+    "Rajamangala University of Technology Rattanakosin": "RMUT Rattanakosin",
+    "Chiang Mai Rajabhat University": "Chiang Mai Rajabhat",
+    "Ministry of Public Health": "Ministry of Public Health",
+    "Electricity Generating Authority of Thailand": "EGAT",
+    "Maharaj Nakorn Chiang Mai Hospital": "Maharaj Nakorn CM Hosp.",
+    "École Polytechnique Fédérale de Lausanne": "EPFL",
+    "National University of Singapore": "NUS",
+    "Nanyang Technological University": "NTU Singapore",
+    "Institute for Infocomm Research": "I2R Singapore",
+    "Instituto Superior Técnico": "IST Lisbon",
+    "University of Arkansas at Fayetteville": "Univ. of Arkansas",
+    "University of Tennessee at Knoxville": "Univ. of Tennessee",
+    "Institut National des Sciences Appliquées Centre Val de Loire": "INSA Centre Val de Loire",
+    "Laboratoire des Sciences du Numérique de Nantes": "LS2N Nantes",
+    "Institut Universitaire de France": "Inst. Universitaire de France",
+    "University of Illinois Chicago": "UI Chicago"
+  };
+  var COUNTRY_NAMES = null;
+  try { COUNTRY_NAMES = new Intl.DisplayNames(["en"], { type: "region" }); } catch (e) { /* old browser */ }
+  function countryName(cc) {
+    if (!cc) return "Unknown";
+    try { return (COUNTRY_NAMES && COUNTRY_NAMES.of(cc)) || cc; } catch (e) { return cc; }
+  }
+  function firstName(n) { return String(n).split(/\s+/)[0]; }
+  function instName(id) { return get(D, ["institutions", id, 0], id); }
+  function instCountry(id) { return get(D, ["institutions", id, 1], ""); }
+  function instShort(id) { var n = instName(id); return SHORT_INST[n] || n.replace(/\s*\([^)]*\)\s*$/, ""); }
+  var measureCtx = null;
+  function textW(s, px, weight) {
+    if (!measureCtx) { try { measureCtx = document.createElement("canvas").getContext("2d"); } catch (e) { /* none */ } }
+    if (!measureCtx) return String(s).length * px * 0.56;
+    measureCtx.font = (weight || 400) + " " + px + "px " + getComputedStyle(document.body).fontFamily;
+    return measureCtx.measureText(String(s)).width;
+  }
+  function clip(s, px, maxW, weight) {
+    s = String(s);
+    if (textW(s, px, weight) <= maxW) return s;
+    while (s.length > 3 && textW(s + "…", px, weight) > maxW) s = s.slice(0, -1);
+    return s.replace(/[\s,.·-]+$/, "") + "…";
+  }
+
+  function coauthData() {
+    var names = (D.per_staff || []).map(function (r) { return r.name; }).sort(function (a, b) { return a.localeCompare(b); });
+    var known = {}; names.forEach(function (n) { known[n] = true; });
+    var c = { names: names, papers: {}, withCol: {}, partners: {}, pairs: {}, total: 0, multi: 0, years: {} };
+    D.publications.forEach(function (p) {
+      if (!inRange(p.year)) return;
+      var st = [];
+      (p.staff || []).forEach(function (n) { if (known[n] && st.indexOf(n) < 0) st.push(n); });
+      c.total++;
+      var yr = c.years[p.year] = c.years[p.year] || { tot: 0, multi: 0 };
+      yr.tot++;
+      st.forEach(function (n) { c.papers[n] = (c.papers[n] || 0) + 1; });
+      if (st.length < 2) return;
+      c.multi++; yr.multi++;
+      st.sort(function (a, b) { return a.localeCompare(b); });
+      st.forEach(function (n) { c.withCol[n] = (c.withCol[n] || 0) + 1; });
+      for (var i = 0; i < st.length; i++) {
+        for (var j = i + 1; j < st.length; j++) {
+          var k = st[i] + "\u0001" + st[j];
+          c.pairs[k] = (c.pairs[k] || 0) + 1;
+          var pa = c.partners[st[i]] = c.partners[st[i]] || {}, pb = c.partners[st[j]] = c.partners[st[j]] || {};
+          pa[st[j]] = (pa[st[j]] || 0) + 1; pb[st[i]] = (pb[st[i]] || 0) + 1;
+        }
+      }
+    });
+    c.pairList = Object.keys(c.pairs).map(function (k) {
+      var ab = k.split("\u0001"); return { a: ab[0], b: ab[1], n: c.pairs[k] };
+    }).sort(function (x, y) { return y.n - x.n || x.a.localeCompare(y.a) || x.b.localeCompare(y.b); });
+    c.linked = names.filter(function (n) { return c.partners[n]; });
+    return c;
+  }
+  function partnerList(c, name) {
+    var p = c.partners[name] || {};
+    return Object.keys(p).map(function (k) { return { name: k, n: p[k] }; })
+      .sort(function (a, b) { return b.n - a.n || a.name.localeCompare(b.name); });
+  }
+
+  // tooltip shared by both charts
+  function tipShow(html, x, y) {
+    var t = $("co-tip");
+    t.innerHTML = html; t.hidden = false;
+    var w = t.offsetWidth, h = t.offsetHeight, vw = document.documentElement.clientWidth, vh = window.innerHeight;
+    var left = x + 14; if (left + w > vw - 8) left = Math.max(8, x - 14 - w);
+    var top = y + 14; if (top + h > vh - 8) top = Math.max(8, y - 14 - h);
+    t.style.left = Math.round(left) + "px"; t.style.top = Math.round(top) + "px";
+  }
+  function tipAt(el, html) { var r = el.getBoundingClientRect(); tipShow(html, r.left + r.width / 2, r.top + r.height / 2); }
+  function tipHide() { $("co-tip").hidden = true; }
+  function evXY(ev, el) {
+    if (ev && ev.clientX != null && (ev.clientX || ev.clientY)) return [ev.clientX, ev.clientY];
+    var r = el.getBoundingClientRect(); return [r.left + r.width / 2, r.top + r.height / 2];
+  }
+
+  function renderCoauth() {
+    $("coauth-year").textContent = rangeLabel();
+    var c = co.data = coauthData();
+    renderNetStats(c);
+    renderNet(c);
+    renderPartners();
+  }
+
+  function renderNetStats(c) {
+    var staff = c.names.length;
+    $("net-stats").innerHTML =
+      '<div class="mstat"><div class="n num">' + fmt(c.multi) + ' <small>' + pct(c.multi, c.total) + '%</small></div><div class="l">of ' + fmt(c.total) + ' papers have 2+ CPE staff</div></div>' +
+      '<div class="mstat"><div class="n num">' + fmt(c.pairList.length) + '</div><div class="l">colleague pairs wrote together</div></div>' +
+      '<div class="mstat"><div class="n num">' + fmt(c.linked.length) + ' <small>of ' + staff + '</small></div><div class="l">staff with a CPE co-author</div></div>';
+    // sparkline: share of papers with 2+ CPE staff, by year (only for ranges of 3+ years with data)
+    var ys = Object.keys(c.years).map(Number).sort(function (a, b) { return a - b; });
+    if (ys.length >= 3) {
+      var vals = ys.map(function (y) { return c.years[y].tot ? c.years[y].multi / c.years[y].tot * 100 : 0; });
+      var mx = Math.max.apply(null, vals.concat([10])), n = ys.length;
+      var pts = vals.map(function (v, i) { return (i / (n - 1) * 200).toFixed(1) + "," + (28 - v / mx * 26).toFixed(1); });
+      var best = vals.indexOf(Math.max.apply(null, vals));
+      var aria = "Share of papers with 2 or more CPE staff by year: " + ys.map(function (y, i) { return y + " " + Math.round(vals[i]) + "%"; }).join(", ");
+      $("net-spark").innerHTML = '<div class="spark"><span>' + ys[0] + '</span><svg viewBox="0 0 200 30" preserveAspectRatio="none" role="img" aria-label="' + esc(aria) + '">' +
+        '<line class="base" x1="0" y1="28" x2="200" y2="28"/><polygon class="ar" points="0,28 ' + pts.join(" ") + ' 200,28"/><polyline class="ln" points="' + pts.join(" ") + '"/></svg>' +
+        '<span>' + ys[n - 1] + ': <b class="num">' + Math.round(vals[n - 1]) + '%</b></span></div>' +
+        '<p class="hint" style="margin:-4px 0 8px">Share of papers with 2+ CPE staff, by year. Peak: ' + ys[best] + ' (' + Math.round(vals[best]) + '%).</p>';
+    } else $("net-spark").innerHTML = "";
+    var top = c.pairList.slice(0, 6);
+    $("net-pairs").innerHTML = top.length ? top.map(function (p) {
+      return '<li><span>' + esc(p.a) + ' &amp; ' + esc(p.b) + '</span><span class="v num">' + p.n + ' <small>paper' + (p.n === 1 ? "" : "s") + '</small></span></li>';
+    }).join("") : '<li class="pub-staff" style="display:block">Joint papers between CPE colleagues will appear here.</li>';
+  }
+
+  function layoutNet(c, W, H) {
+    var n = c.names.length, cx = W / 2, cy = H / 2, R = Math.min(W, H) / 2 - 22, narrow = W < 520;
+    var maxP = Math.max.apply(null, c.names.map(function (k) { return c.papers[k] || 0; }).concat([1]));
+    var rS = d3.scaleSqrt().domain([0, maxP]).range([3.5, narrow ? 11 : 15]);
+    var maxE = c.pairList.length ? c.pairList[0].n : 1;
+    var wS = d3.scaleSqrt().domain([1, Math.max(2, maxE)]).range([1.3, narrow ? 6 : 8]);
+    var deg = {};
+    c.pairList.forEach(function (p) { deg[p.a] = (deg[p.a] || 0) + 1; deg[p.b] = (deg[p.b] || 0) + 1; });
+    var nodes = c.names.map(function (name, i) {
+      var a = -Math.PI / 2 + 2 * Math.PI * i / n;
+      return { id: name, label: firstName(name), r: rS(c.papers[name] || 0), deg: deg[name] || 0, x: cx + R * Math.cos(a), y: cy + R * Math.sin(a) };
+    });
+    nodes.forEach(function (d) { d.lw = textW(d.label, 10.5, d.deg ? 600 : 400); });
+    var links = c.pairList.map(function (p) { return { source: p.a, target: p.b, n: p.n, w: wS(p.n) }; });
+    var sim = d3.forceSimulation(nodes)
+      .force("link", d3.forceLink(links).id(function (d) { return d.id; }).distance(function (l) { return (narrow ? 34 : 50) + l.source.r + l.target.r; }).strength(0.5))
+      .force("charge", d3.forceManyBody().strength(narrow ? -120 : -220))
+      .force("x", d3.forceX(cx).strength(function (d) { return d.deg ? 0.06 : 0; }))
+      .force("y", d3.forceY(cy).strength(function (d) { return d.deg ? 0.06 * W / H : 0; }))
+      .force("ring", d3.forceRadial(R, cx, cy).strength(function (d) { return d.deg ? 0 : 0.6; }))
+      .force("collide", d3.forceCollide(function (d) { return Math.max(d.r + 6, d.lw / 2 + 2); }).iterations(3))
+      .stop();
+    for (var i = 0; i < 360; i++) sim.tick();
+    // fit the drawing (circles and labels) into the box
+    var x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
+    nodes.forEach(function (d) {
+      var hw = Math.max(d.r, d.lw / 2);
+      x0 = Math.min(x0, d.x - hw); x1 = Math.max(x1, d.x + hw);
+      y0 = Math.min(y0, d.y - d.r); y1 = Math.max(y1, d.y + d.r + 14);
+    });
+    var pad = 6, s = Math.min(1.3, (W - 2 * pad) / Math.max(1, x1 - x0), (H - 2 * pad) / Math.max(1, y1 - y0));
+    var mx = (x0 + x1) / 2, my = (y0 + y1) / 2;
+    nodes.forEach(function (d) { d.x = W / 2 + (d.x - mx) * s; d.y = H / 2 + (d.y - my) * s; });
+    // scaling down can make labels overlap again: push overlapping node+label boxes apart, inside the box
+    function clamp(d) {
+      var hw = Math.max(d.r, d.lw / 2) + 2;
+      d.x = Math.max(hw, Math.min(W - hw, d.x));
+      d.y = Math.max(d.r + 2, Math.min(H - d.r - 16, d.y));
+    }
+    nodes.forEach(clamp);
+    for (var it = 0; it < 80; it++) {
+      var moved = false;
+      for (var a = 0; a < nodes.length; a++) {
+        for (var b = a + 1; b < nodes.length; b++) {
+          var p = nodes[a], q = nodes[b];
+          var ox = (Math.max(p.r, p.lw / 2) + Math.max(q.r, q.lw / 2) + 4) - Math.abs(p.x - q.x);
+          var pyc = p.y + 7, qyc = q.y + 7;  // box centre: circle top to label bottom
+          var oy = ((p.r * 2 + 14) / 2 + (q.r * 2 + 14) / 2 + 2) - Math.abs(pyc - qyc);
+          if (ox <= 0 || oy <= 0) continue;
+          moved = true;
+          if (ox < oy) { var sx = (p.x < q.x || (p.x === q.x && a < b)) ? -1 : 1; p.x += sx * ox / 2; q.x -= sx * ox / 2; }
+          else { var sy = (pyc < qyc || (pyc === qyc && a < b)) ? -1 : 1; p.y += sy * oy / 2; q.y -= sy * oy / 2; }
+          clamp(p); clamp(q);
+        }
+      }
+      if (!moved) break;
+    }
+    return { nodes: nodes, links: links, W: W, H: H };
+  }
+
+  function netTip(c, name) {
+    var ps = partnerList(c, name);
+    return '<b>' + esc(name) + '</b><br><span class="num">' + fmt(c.papers[name] || 0) + '</span> paper' + ((c.papers[name] || 0) === 1 ? "" : "s") + ' in ' + esc(rangeLabel()) +
+      (c.withCol[name] ? '<br><span class="num">' + fmt(c.withCol[name]) + '</span> with CPE colleagues' : "") +
+      (ps.length ? '<ul>' + ps.slice(0, 10).map(function (p) { return '<li>' + esc(p.name) + ' <span class="m num">(' + p.n + ')</span></li>'; }).join("") +
+        (ps.length > 10 ? '<li class="m">and ' + (ps.length - 10) + ' more</li>' : "") + '</ul>' : "");
+  }
+  function netAria(c, name) {
+    var ps = partnerList(c, name);
+    return name + ": " + (c.papers[name] || 0) + " papers in range" +
+      (c.withCol[name] ? ", " + c.withCol[name] + " with CPE colleagues: " + ps.map(function (p) { return p.name + " " + p.n; }).join(", ") : "") + ".";
+  }
+
+  function renderNet(c) {
+    var box = $("net-box");
+    if (typeof window.d3 === "undefined" || !d3.forceSimulation) {
+      box.innerHTML = '<p class="chart-fallback">The chart library (D3) did not load, so the network is unavailable. The strongest pairs are listed below.</p>';
+      return;
+    }
+    if (!c.total) {
+      co.key = null;
+      box.innerHTML = '<p class="chart-fallback">No publications in ' + esc(rangeLabel()) + ' yet. Try a wider year range.</p>';
+      return;
+    }
+    var W = Math.max(240, Math.floor(box.clientWidth || 300));
+    var H = W < 520 ? Math.round(W * 1.08) : Math.min(500, Math.round(W * 0.74));
+    var rk = state.from + "|" + state.to, key = rk + "|" + W;
+    if (co.rangeKey !== rk) { co.pinned = null; co.rangeKey = rk; }
+    if (co.key !== key || !co.layout) { co.layout = layoutNet(c, W, H); co.key = key; }
+    var L = co.layout;
+    var top = c.pairList.slice(0, 3).map(function (p) { return firstName(p.a) + " and " + firstName(p.b) + " (" + p.n + ")"; });
+    var summary = "Network of " + c.names.length + " CPE staff for " + rangeLabel() + ": " + c.pairList.length + " pairs of colleagues wrote " +
+      fmt(c.multi) + " joint papers; " + c.linked.length + " staff have a CPE co-author." + (top.length ? " Strongest pairs: " + top.join(", ") + "." : "");
+
+    box.innerHTML = "";
+    var svg = d3.select(box).append("svg")
+      .attr("width", L.W).attr("height", L.H).attr("viewBox", "0 0 " + L.W + " " + L.H)
+      .attr("role", "group").attr("aria-labelledby", "h-net");
+    svg.append("rect").attr("class", "net-bg").attr("width", L.W).attr("height", L.H)
+      .on("click", function () { co.pinned = null; highlight(null); tipHide(); });
+    var gE = svg.append("g").attr("role", "img").attr("aria-label", summary);
+    var edges = gE.selectAll("line").data(L.links).join("line")
+      .attr("class", "net-edge").attr("stroke-width", function (l) { return l.w; })
+      .attr("x1", function (l) { return l.source.x; }).attr("y1", function (l) { return l.source.y; })
+      .attr("x2", function (l) { return l.target.x; }).attr("y2", function (l) { return l.target.y; });
+    var gN = svg.append("g");
+    var nodes = gN.selectAll("g").data(L.nodes).join("g")
+      .attr("class", function (d) { return "net-n" + (d.deg ? " on" : ""); })
+      .attr("transform", function (d) { return "translate(" + d.x.toFixed(1) + "," + d.y.toFixed(1) + ")"; })
+      .attr("tabindex", 0).attr("role", "button")
+      .attr("aria-label", function (d) { return netAria(c, d.id); });
+    nodes.append("circle").attr("r", function (d) { return d.r; });
+    nodes.append("text").attr("text-anchor", "middle").attr("y", function (d) { return d.r + 11; }).text(function (d) { return d.label; });
+
+    function highlight(id) {
+      svg.classed("dim", !!id);
+      if (!id) { edges.classed("hot", false); nodes.classed("near", false); }
+      else {
+        var near = {}; near[id] = true;
+        edges.classed("hot", function (l) {
+          var on = l.source.id === id || l.target.id === id;
+          if (on) { near[l.source.id] = true; near[l.target.id] = true; }
+          return on;
+        });
+        nodes.classed("near", function (d) { return !!near[d.id]; });
+      }
+      nodes.classed("pin", function (d) { return d.id === co.pinned; }).attr("aria-pressed", function (d) { return String(d.id === co.pinned); });
+      edges.filter(".hot").raise();
+    }
+    function restore() {
+      highlight(co.pinned);
+      if (co.pinned) { var el = nodes.filter(function (d) { return d.id === co.pinned; }).node(); if (el) tipAt(el, netTip(c, co.pinned)); }
+      else tipHide();
+    }
+    nodes
+      .on("pointerenter", function (ev, d) { if (ev.pointerType !== "mouse") return; highlight(d.id); var p = evXY(ev, this); tipShow(netTip(c, d.id), p[0], p[1]); })
+      .on("pointermove", function (ev, d) { if (ev.pointerType !== "mouse") return; tipShow(netTip(c, d.id), ev.clientX, ev.clientY); })
+      .on("pointerleave", function (ev) { if (ev.pointerType !== "mouse") return; restore(); })
+      .on("focus", function (ev, d) { highlight(d.id); tipAt(this, netTip(c, d.id)); })
+      .on("blur", function () { restore(); })
+      .on("click", function (ev, d) {
+        ev.stopPropagation();
+        co.pinned = co.pinned === d.id ? null : d.id;
+        highlight(co.pinned || d.id);
+        var p = evXY(ev, this); tipShow(netTip(c, d.id), p[0], p[1]);
+      })
+      .on("keydown", function (ev, d) {
+        if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); co.pinned = co.pinned === d.id ? null : d.id; highlight(co.pinned || d.id); tipAt(this, netTip(c, d.id)); }
+        else if (ev.key === "Escape") { co.pinned = null; highlight(null); tipHide(); }
+      });
+    highlight(co.pinned);
+  }
+
+  function partnerData() {
+    var intl = co.extMode === "intl";
+    var inst = {}, link = {}, country = {}, total = 0, papers = 0;
+    D.publications.forEach(function (p) {
+      if (!inRange(p.year)) return;
+      var ext = (p.ext || []).filter(function (id, i, a) { return a.indexOf(id) === i && (!intl || instCountry(id) !== "TH"); });
+      if (!ext.length) return;
+      papers++;
+      var cs = {};
+      ext.forEach(function (id) { inst[id] = (inst[id] || 0) + 1; cs[instCountry(id) || "?"] = true; });
+      Object.keys(cs).forEach(function (k) { country[k] = (country[k] || 0) + 1; });
+      (p.staff || []).forEach(function (s) {
+        ext.forEach(function (id) { var k = s + "\u0001" + id; link[k] = (link[k] || 0) + 1; total++; });
+      });
+    });
+    var topInst = Object.keys(inst).sort(function (a, b) { return inst[b] - inst[a] || instName(a).localeCompare(instName(b)); }).slice(0, 15);
+    var shown = {}; topInst.forEach(function (id) { shown[id] = true; });
+    var links = [], staff = {};
+    Object.keys(link).forEach(function (k) {
+      var sp = k.split("\u0001");
+      if (!shown[sp[1]]) return;
+      links.push({ s: sp[0], i: sp[1], n: link[k] });
+      staff[sp[0]] = (staff[sp[0]] || 0) + link[k];
+    });
+    return { inst: inst, topInst: topInst, links: links, staff: staff, country: country, papers: papers, instCount: Object.keys(inst).length };
+  }
+
+  function renderPartners() {
+    var pd = partnerData(), intl = co.extMode === "intl";
+    document.querySelectorAll("#ext-mode button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-ext") === co.extMode)); });
+    $("ext-hint").textContent = (intl ? "Institutions outside Thailand" : "Institutions outside CMU, in Thailand and abroad") +
+      ", " + rangeLabel() + ": " + fmt(pd.papers) + " paper" + (pd.papers === 1 ? "" : "s") + " with " + fmt(pd.instCount) + " partner institution" + (pd.instCount === 1 ? "" : "s") +
+      (pd.instCount > 15 ? "; the 15 most frequent are shown" : "") + ". Line width = joint papers per staff member and institution.";
+    // top countries
+    var cs = Object.keys(pd.country).sort(function (a, b) { return pd.country[b] - pd.country[a] || a.localeCompare(b); }).slice(0, 8);
+    var cmax = cs.length ? pd.country[cs[0]] : 1;
+    $("ext-countries").innerHTML = cs.length ? cs.map(function (k) {
+      var n = pd.country[k], nm = countryName(k);
+      return '<div class="bar-row wide"><div class="name" title="' + esc(nm) + '">' + esc(nm) + '</div><div class="track"><div class="fill" style="width:' +
+        (n / cmax * 100).toFixed(1) + '%;background:var(' + (k === "TH" ? "--c-nat" : "--c-int") + ')"></div></div><div class="v num">' + fmt(n) +
+        ' <small>' + pct(n, pd.papers) + '%</small></div></div>';
+    }).join("") + '<p class="hint" style="margin:8px 0 0">Papers with a partner in each country (all partner institutions, not only those in the chart); % of the ' + fmt(pd.papers) + ' papers.</p>'
+      : '<p class="chart-fallback" style="padding:6px 0">No partner countries in this range.</p>';
+
+    var box = $("sk-box");
+    if (!pd.links.length) {
+      box.innerHTML = '<p class="chart-fallback">No ' + (intl ? "international " : "external ") + "partner papers in " + esc(rangeLabel()) + " yet. " +
+        (intl ? "Try All external, or a wider year range." : "Try a wider year range.") + '</p>';
+      return;
+    }
+    if (typeof window.d3 === "undefined" || !d3.sankey) {
+      box.innerHTML = '<p class="chart-fallback">The chart library (D3) did not load, so the partner chart is unavailable. Top countries are below.</p>';
+      return;
+    }
+    var W = Math.max(240, Math.floor(box.clientWidth || 300)), narrow = W < 560;
+    var staffNames = Object.keys(pd.staff);
+    var maxCol = Math.max(staffNames.length, pd.topInst.length);
+    var pad = 14, H = Math.max(240, maxCol * (pad + 8) + 20);
+    var nodes = staffNames.map(function (s) { return { id: "s:" + s, kind: "staff", name: s }; })
+      .concat(pd.topInst.map(function (id) { return { id: "i:" + id, kind: "inst", iid: id, cc: instCountry(id) }; }));
+    var links = pd.links.map(function (l) { return { source: "s:" + l.s, target: "i:" + l.i, value: l.n, s: l.s, i: l.i }; });
+    var graph = d3.sankey().nodeId(function (d) { return d.id; }).nodeWidth(10).nodePadding(pad)
+      .extent([[1, 4], [W - 1, H - 4]])({ nodes: nodes, links: links });
+
+    // labels sit inside the flow: staff to the right of the left column, institutions to the left of the right column
+    var lblMax = (W - 2 * 10) / 2 - 12;
+    graph.nodes.forEach(function (d) {
+      if (d.kind === "staff") d.label = clip(narrow ? firstName(d.name) : d.name, 10.5, lblMax, 400);
+      else {
+        var cc = d.cc ? " · " + d.cc : "";
+        d.label = clip(instShort(d.iid), 10.5, lblMax - textW(cc, 10.5, 600), 600) + cc;
+      }
+    });
+    function instLine(id) { return esc(instName(id)) + (instCountry(id) ? ' <span class="m">· ' + esc(countryName(instCountry(id))) + '</span>' : ""); }
+    function nodeTip(d) {
+      var ls = (d.kind === "staff" ? d.sourceLinks : d.targetLinks).slice().sort(function (a, b) { return b.value - a.value; });
+      if (d.kind === "staff") {
+        return '<b>' + esc(d.name) + '</b><br><span class="num">' + fmt(d.value) + '</span> joint paper links with the institutions shown<ul>' +
+          ls.slice(0, 8).map(function (l) { return '<li>' + esc(instShort(l.i)) + ' <span class="m num">(' + l.value + ')</span></li>'; }).join("") +
+          (ls.length > 8 ? '<li class="m">and ' + (ls.length - 8) + ' more</li>' : "") + '</ul>';
+      }
+      return '<b>' + instLine(d.iid) + '</b><br><span class="num">' + fmt(pd.inst[d.iid]) + '</span> paper' + (pd.inst[d.iid] === 1 ? "" : "s") + ' with CPE staff in range<ul>' +
+        ls.slice(0, 8).map(function (l) { return '<li>' + esc(l.s) + ' <span class="m num">(' + l.value + ')</span></li>'; }).join("") +
+        (ls.length > 8 ? '<li class="m">and ' + (ls.length - 8) + ' more</li>' : "") + '</ul>';
+    }
+    function linkTip(l) {
+      return '<b>' + esc(l.s) + '</b><br>with ' + instLine(l.i) + '<br><span class="num">' + l.value + '</span> joint paper' + (l.value === 1 ? "" : "s");
+    }
+    var topI = pd.topInst.slice(0, 3).map(function (id) { return instShort(id) + " (" + pd.inst[id] + ")"; });
+    var summary = "Flow from " + staffNames.length + " CPE staff to the top " + pd.topInst.length + (intl ? " international" : " external") +
+      " partner institutions, " + rangeLabel() + ". Most frequent partners: " + topI.join(", ") + ".";
+
+    box.innerHTML = "";
+    var svg = d3.select(box).append("svg").attr("width", W).attr("height", H).attr("viewBox", "0 0 " + W + " " + H)
+      .attr("role", "group").attr("aria-labelledby", "h-ext");
+    svg.append("rect").attr("class", "sk-bg").attr("width", W).attr("height", H).on("click", function () { tipHide(); paths.classed("hot", false); });
+    var gL = svg.append("g").attr("role", "img").attr("aria-label", summary);
+    var paths = gL.selectAll("path").data(graph.links).join("path")
+      .attr("class", function (l) { return "sk-link " + (instCountry(l.i) === "TH" ? "nat" : "intl"); })
+      .attr("d", d3.sankeyLinkHorizontal())
+      .attr("stroke-width", function (l) { return Math.max(1, l.width); })
+      .on("pointermove", function (ev, l) { tipShow(linkTip(l), ev.clientX, ev.clientY); })
+      .on("pointerleave", function (ev) { if (ev.pointerType === "mouse") tipHide(); })
+      .on("click", function (ev, l) { ev.stopPropagation(); tipShow(linkTip(l), ev.clientX, ev.clientY); });
+    var gN = svg.append("g").selectAll("g").data(graph.nodes).join("g")
+      .attr("class", function (d) { return "sk-node " + d.kind + (d.kind === "inst" ? (d.cc === "TH" ? " nat" : " intl") : ""); })
+      .attr("tabindex", 0).attr("role", "button")
+      .attr("aria-label", function (d) {
+        return d.kind === "staff" ? d.name + ": " + d.value + " joint paper links with " + d.sourceLinks.length + " of the institutions shown"
+          : instName(d.iid) + ", " + countryName(d.cc) + ": " + pd.inst[d.iid] + " papers with " + d.targetLinks.length + " CPE staff";
+      });
+    gN.append("rect").attr("x", function (d) { return d.x0; }).attr("y", function (d) { return d.y0; })
+      .attr("width", function (d) { return d.x1 - d.x0; }).attr("height", function (d) { return Math.max(1, d.y1 - d.y0); }).attr("rx", 2);
+    gN.append("text").attr("class", "sk-lbl")
+      .attr("x", function (d) { return d.kind === "staff" ? d.x1 + 5 : d.x0 - 5; })
+      .attr("y", function (d) { return (d.y0 + d.y1) / 2; }).attr("dy", "0.35em")
+      .attr("text-anchor", function (d) { return d.kind === "staff" ? "start" : "end"; })
+      .text(function (d) { return d.label; });
+    function hot(d) { paths.classed("hot", function (l) { return l.source === d || l.target === d; }); }
+    gN.on("pointerenter", function (ev, d) { hot(d); var p = evXY(ev, this); tipShow(nodeTip(d), p[0], p[1]); })
+      .on("pointermove", function (ev, d) { if (ev.pointerType === "mouse") tipShow(nodeTip(d), ev.clientX, ev.clientY); })
+      .on("pointerleave", function (ev) { if (ev.pointerType !== "mouse") return; paths.classed("hot", false); tipHide(); })
+      .on("focus", function (ev, d) { hot(d); tipAt(this, nodeTip(d)); })
+      .on("blur", function () { paths.classed("hot", false); tipHide(); })
+      .on("click", function (ev, d) { ev.stopPropagation(); hot(d); var p = evXY(ev, this); tipShow(nodeTip(d), p[0], p[1]); });
+  }
+
   // ---------- orchestration ----------
   function renderAll() {
     document.querySelectorAll(".seg button[data-tier]").forEach(function (b) {
@@ -971,6 +1497,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     renderStaff();
     renderPubTierOptions();
     renderPubs();
+    renderCoauth();
   }
 
   function renderRange() {
@@ -989,7 +1516,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     if (from > to) { var t = from; from = to; to = t; }
     state.from = from; state.to = to; state.rangeSet = true; state.limit = PAGE;
     syncUrl();
-    renderRange(); renderStaff(); renderPubs();
+    renderRange(); renderStaff(); renderPubs(); renderCoauth();
   }
 
   function defaultShown() {
@@ -1103,6 +1630,27 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     $("pub-type").addEventListener("change", function () { state.pubType = this.value; state.limit = PAGE; renderPubs(); });
     $("pub-more").addEventListener("click", function (e) {
       if (e.target.id === "pub-more-btn") { state.limit += PAGE; renderPubs(); }
+    });
+    $("ext-mode").addEventListener("click", function (e) {
+      var b = e.target.closest("button[data-ext]"); if (!b) return;
+      co.extMode = b.getAttribute("data-ext");
+      tipHide();
+      renderPartners();
+      b.focus();
+    });
+    // tap or click outside a chart hides its tooltip (touch has no hover-out)
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest || !e.target.closest("#net-box, #sk-box")) tipHide();
+    });
+    window.addEventListener("scroll", function () { if (!$("co-tip").hidden && !document.activeElement.closest("#net-box, #sk-box")) tipHide(); }, { passive: true });
+    var rt = null, lastW = window.innerWidth;
+    window.addEventListener("resize", function () {
+      clearTimeout(rt);
+      rt = setTimeout(function () {
+        if (window.innerWidth === lastW) return;  // ignore height-only changes (mobile toolbars)
+        lastW = window.innerWidth; tipHide();
+        if (co.data) { renderNet(co.data); renderPartners(); }
+      }, 150);
     });
     var mq = window.matchMedia("(prefers-color-scheme: dark)");
     var onTheme = function () { if (D) { renderChips(); renderTrend(); } };

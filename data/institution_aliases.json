@@ -1,0 +1,9 @@
+{
+  "_about": "OpenAlex institution sub-units counted as their parent in the External partners chart: child id -> parent id. Only clear-cut cases; separate universities under an umbrella (e.g. Lyon, Toulouse) stay separate.",
+  "I4405268810": "I63966007",
+  "I4405287318": "I74801974",
+  "I4210150714": "I145311948",
+  "I2799853436": "I145311948",
+  "I4210100977": "I4210145784",
+  "I4390039247": "I58956616"
+}
