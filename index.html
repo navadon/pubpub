@@ -236,10 +236,6 @@ header.top .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 12p
 .seg button[aria-pressed="true"] { background: var(--cmu-gold); color: #1d1600; }
 .seg button:disabled { color: var(--muted); opacity: .6; cursor: not-allowed; }
 .ctl { display: inline-flex; align-items: center; }
-select.year-sel {
-  font: inherit; font-size: 13px; font-weight: 600; color: var(--text);
-  background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 5px 8px;
-}
 
 .banner { background: var(--banner-bg); color: var(--banner-text); font-size: 13px; }
 .banner .wrap { padding-top: 6px; padding-bottom: 6px; }
@@ -271,15 +267,14 @@ main { padding: 16px 0 8px; }
 /* Panels grid */
 .grid {
   display: grid; gap: 12px; margin-top: 12px;
-  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr) minmax(0, 1fr);
-  grid-template-areas: "trend mix mix" "trend tier collab";
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  grid-template-areas: "trend mix" "trend collab";
 }
 .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px; box-shadow: var(--shadow); min-width: 0; }
 .panel h2 { margin: 0 0 2px; font-size: 15px; font-weight: 700; }
 .panel .hint { margin: 0 0 10px; font-size: 12px; color: var(--muted); }
 .p-trend { grid-area: trend; display: flex; flex-direction: column; }
 .p-mix { grid-area: mix; }
-.p-tier { grid-area: tier; }
 .p-collab { grid-area: collab; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 10px; }
@@ -323,13 +318,6 @@ main { padding: 16px 0 8px; }
 .bar-row .fill { height: 100%; border-radius: 7px; }
 .bar-row .v { text-align: right; white-space: nowrap; }
 .bar-row .v small { color: var(--muted); }
-.summary {
-  margin-top: 12px; border-radius: 10px; padding: 10px 12px; background: var(--cmu-purple-soft);
-  border: 1px solid var(--border); display: flex; align-items: center; gap: 12px;
-}
-.summary .big { font-size: 26px; font-weight: 800; color: var(--accent); line-height: 1; }
-.summary .txt { font-size: 12px; color: var(--text-2); }
-.summary .txt b { color: var(--text); }
 
 .insight {
   margin-top: 12px; padding: 12px 14px; border-radius: 12px; background: var(--surface);
@@ -356,7 +344,36 @@ main { padding: 16px 0 8px; }
   font: inherit; font-size: 13px; color: var(--text); background: var(--surface-2);
   border: 1px solid var(--border); border-radius: 8px; padding: 5px 8px;
 }
-.range select.staff-sel { max-width: 100%; min-width: 12em; }
+.range .seg button { padding: 4px 11px; }
+.range .ft { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+/* staff picker: a button that opens a checkbox list */
+.msel { position: relative; }
+.msel-btn {
+  font: inherit; font-size: 13px; color: var(--text); background: var(--surface-2); cursor: pointer;
+  border: 1px solid var(--border); border-radius: 8px; padding: 5px 10px; min-width: 10em; text-align: left;
+  display: inline-flex; align-items: center; justify-content: space-between; gap: 10px;
+}
+.msel-btn .caret { color: var(--muted); font-size: 11px; }
+.msel-btn[aria-expanded="true"] { border-color: var(--accent); }
+.msel-pop {
+  position: absolute; z-index: 30; top: calc(100% + 4px); left: 0; width: min(300px, calc(100vw - 90px));
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 24px rgba(20, 16, 40, .18); padding: 6px;
+}
+.msel-pop[hidden] { display: none; }
+.msel-q {
+  width: 100%; font: inherit; font-size: 13px; color: var(--text); background: var(--surface-2);
+  border: 1px solid var(--border); border-radius: 7px; padding: 5px 8px; margin-bottom: 4px;
+}
+.msel-list { max-height: 300px; overflow-y: auto; }
+.msel-opt { display: flex; align-items: center; gap: 8px; padding: 5px 6px; border-radius: 6px; cursor: pointer; font-size: 13px; color: var(--text); }
+.msel-opt[hidden] { display: none; }
+.msel-opt:hover { background: var(--surface-2); }
+.msel-opt input { accent-color: var(--accent); margin: 0; }
+.msel-opt .n { margin-left: auto; color: var(--muted); font-size: 12px; }
+.msel-opt.zero span:first-of-type { color: var(--muted); }
+.msel-chips { display: contents; }
+.msel-chips .chip { --sw: var(--accent); border-color: var(--accent); background: var(--surface); color: var(--text); }
+.msel-chips .chip span { color: var(--muted); }
 .range .btn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--chip-on-text); }
 .lower { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 12px; align-items: start; }
 
@@ -498,7 +515,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 
 @media (max-width: 1200px) {
   .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "trend trend" "mix mix" "tier collab"; }
+  .grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "trend trend" "mix collab"; }
 }
 @media (max-width: 900px) {
   .lower, .coauth { grid-template-columns: minmax(0, 1fr); }
@@ -506,7 +523,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 @media (max-width: 720px) {
   .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .kpi:nth-child(5) { grid-column: 1 / -1; }
-  .grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "trend" "mix" "tier" "collab"; }
+  .grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "trend" "mix" "collab"; }
   .brand h1 { font-size: 19px; }
   .brand h1 .expand { display: block; margin: 2px 0 0; }
   .chart-box { height: 280px; }
@@ -543,7 +560,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   <section class="page-sec" id="summary" aria-labelledby="sec-summary">
   <div class="sec-head">
     <h2 id="sec-summary"><span class="sec-no" aria-hidden="true">1</span>Summary</h2>
-    <p class="hint">Key figures for one year. The ranking choice applies to the whole page.</p>
+    <p class="hint">Key figures are for this year so far; the charts below follow the year range. The ranking choice applies to the whole page.</p>
   <div class="controls">
     <div class="ctl">
       <span class="ctl-label" id="tier-lbl">Ranking</span>
@@ -552,9 +569,10 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
         <span id="cs-wrap"><button type="button" data-tier="citescore" aria-pressed="false">CiteScore</button></span>
       </div>
     </div>
-    <div class="ctl">
-      <label class="ctl-label" for="year-sel">Year</label>
-      <select id="year-sel" class="year-sel"></select>
+    <div class="range" role="group" aria-label="Year range for the summary charts">
+      <div class="seg" id="sum-range-pre"><button type="button" data-pre="all" aria-pressed="false">All time</button><button type="button" data-pre="last5" aria-pressed="true">Last 5</button><button type="button" data-pre="this" aria-pressed="false">This year</button></div>
+      <span class="ft"><label for="sum-range-from">From</label><select id="sum-range-from"></select>
+      <label for="sum-range-to">to</label><select id="sum-range-to"></select></span>
     </div>
   </div>
   </div>
@@ -564,7 +582,6 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     <section class="panel p-trend" aria-labelledby="h-trend">
       <h2 id="h-trend">Monthly cumulative publications</h2>
       <p class="hint" id="trend-hint">Cumulative count by publication date, one line per year.</p>
-      <div class="chips" id="year-chips" role="group" aria-label="Years shown in the chart"></div>
       <div class="chart-box"><canvas id="trend" role="img" aria-label="Line chart of cumulative publications by month"></canvas></div>
       <div class="ycards" id="ycards" aria-label="Year totals"></div>
     </section>
@@ -574,13 +591,6 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       <p class="hint" id="mix-hint"></p>
       <div id="mix"></div>
       <div class="legend" id="mix-legend"></div>
-    </section>
-
-    <section class="panel p-tier" aria-labelledby="h-tier">
-      <h2 id="h-tier">Journal quartiles</h2>
-      <p class="hint" id="tier-hint"></p>
-      <div id="tierlist"></div>
-      <div class="summary" id="tier-summary"></div>
     </section>
 
     <section class="panel p-collab" aria-labelledby="h-collab">
@@ -598,14 +608,23 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   <div class="sec-head">
     <h2 id="sec-pubs"><span class="sec-no" aria-hidden="true">2</span>Publications <span class="sec-range" id="lower-year"></span></h2>
     <p class="hint">Papers per staff member and the paper list for a year range. A paper with several staff co-authors appears under each of them.</p>
-    <div class="range" role="group" aria-label="Year range for publications">
-      <button type="button" class="btn" id="range-all" aria-pressed="false">All time</button>
-      <label for="range-from">From</label><select id="range-from"></select>
-      <label for="range-to">To</label><select id="range-to"></select>
+<div class="range" role="group" aria-label="Year range for publications">
+      <div class="seg" id="pub-range-pre"><button type="button" data-pre="all" aria-pressed="false">All time</button><button type="button" data-pre="last5" aria-pressed="true">Last 5</button><button type="button" data-pre="this" aria-pressed="false">This year</button></div>
+      <span class="ft"><label for="pub-range-from">From</label><select id="pub-range-from"></select>
+      <label for="pub-range-to">to</label><select id="pub-range-to"></select></span>
     </div>
-    <div class="range" role="group" aria-label="Staff member for publications">
-      <label for="pub-staff">Staff</label><select id="pub-staff" class="staff-sel"></select>
-      <button type="button" class="btn" id="pub-staff-clear" hidden aria-label="Show all staff">Clear</button>
+    <div class="range" role="group" aria-label="Staff for publications">
+      <span>Staff</span>
+      <div class="msel">
+        <button type="button" class="msel-btn" id="pub-staff" aria-haspopup="true" aria-expanded="false" aria-controls="pub-staff-pop">All staff</button>
+        <div class="msel-pop" id="pub-staff-pop" hidden>
+          <label class="sr-only" for="pub-staff-q">Filter names</label>
+          <input type="search" class="msel-q" id="pub-staff-q" placeholder="Filter names" autocomplete="off">
+          <div class="msel-list" id="pub-staff-list" role="group" aria-label="Staff members"></div>
+        </div>
+      </div>
+      <div class="msel-chips" id="pub-staff-chips"></div>
+      <button type="button" class="btn" id="pub-staff-clear" hidden>Clear all</button>
     </div>
   </div>
   <div class="lower">
@@ -649,14 +668,23 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   <div class="sec-head">
     <h2 id="sec-kw"><span class="sec-no" aria-hidden="true">3</span>Research keywords <span class="sec-range" id="kw-year"></span></h2>
     <p class="hint">Topics staff publish on, from the keywords OpenAlex assigns to each paper.</p>
-    <div class="range" role="group" aria-label="Year range for keywords">
-      <button type="button" class="btn" id="kw-range-all" aria-pressed="false">All time</button>
-      <label for="kw-range-from">From</label><select id="kw-range-from"></select>
-      <label for="kw-range-to">To</label><select id="kw-range-to"></select>
+<div class="range" role="group" aria-label="Year range for keywords">
+      <div class="seg" id="kw-range-pre"><button type="button" data-pre="all" aria-pressed="false">All time</button><button type="button" data-pre="last5" aria-pressed="true">Last 5</button><button type="button" data-pre="this" aria-pressed="false">This year</button></div>
+      <span class="ft"><label for="kw-range-from">From</label><select id="kw-range-from"></select>
+      <label for="kw-range-to">to</label><select id="kw-range-to"></select></span>
     </div>
-    <div class="range" role="group" aria-label="Staff member for keywords">
-      <label for="kw-staff">Staff</label><select id="kw-staff" class="staff-sel"></select>
-      <button type="button" class="btn" id="kw-staff-clear" hidden aria-label="Show all staff">Clear</button>
+    <div class="range" role="group" aria-label="Staff for keywords">
+      <span>Staff</span>
+      <div class="msel">
+        <button type="button" class="msel-btn" id="kw-staff" aria-haspopup="true" aria-expanded="false" aria-controls="kw-staff-pop">All staff</button>
+        <div class="msel-pop" id="kw-staff-pop" hidden>
+          <label class="sr-only" for="kw-staff-q">Filter names</label>
+          <input type="search" class="msel-q" id="kw-staff-q" placeholder="Filter names" autocomplete="off">
+          <div class="msel-list" id="kw-staff-list" role="group" aria-label="Staff members"></div>
+        </div>
+      </div>
+      <div class="msel-chips" id="kw-staff-chips"></div>
+      <button type="button" class="btn" id="kw-staff-clear" hidden>Clear all</button>
     </div>
   </div>
   <div class="kwgrid">
@@ -682,14 +710,23 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   <div class="sec-head">
     <h2 id="sec-collab"><span class="sec-no" aria-hidden="true">4</span>Collaboration <span class="sec-range" id="coauth-year"></span></h2>
     <p class="hint">How CPE staff write together, and the partners they work with outside CMU.</p>
-    <div class="range" role="group" aria-label="Year range for collaboration">
-      <button type="button" class="btn" id="co-range-all" aria-pressed="false">All time</button>
-      <label for="co-range-from">From</label><select id="co-range-from"></select>
-      <label for="co-range-to">To</label><select id="co-range-to"></select>
+<div class="range" role="group" aria-label="Year range for collaboration">
+      <div class="seg" id="co-range-pre"><button type="button" data-pre="all" aria-pressed="false">All time</button><button type="button" data-pre="last5" aria-pressed="true">Last 5</button><button type="button" data-pre="this" aria-pressed="false">This year</button></div>
+      <span class="ft"><label for="co-range-from">From</label><select id="co-range-from"></select>
+      <label for="co-range-to">to</label><select id="co-range-to"></select></span>
     </div>
-    <div class="range" role="group" aria-label="Staff member for collaboration">
-      <label for="co-staff">Staff</label><select id="co-staff" class="staff-sel"></select>
-      <button type="button" class="btn" id="co-staff-clear" hidden aria-label="Show all staff">Clear</button>
+    <div class="range" role="group" aria-label="Staff for collaboration">
+      <span>Staff</span>
+      <div class="msel">
+        <button type="button" class="msel-btn" id="co-staff" aria-haspopup="true" aria-expanded="false" aria-controls="co-staff-pop">All staff</button>
+        <div class="msel-pop" id="co-staff-pop" hidden>
+          <label class="sr-only" for="co-staff-q">Filter names</label>
+          <input type="search" class="msel-q" id="co-staff-q" placeholder="Filter names" autocomplete="off">
+          <div class="msel-list" id="co-staff-list" role="group" aria-label="Staff members"></div>
+        </div>
+      </div>
+      <div class="msel-chips" id="co-staff-chips"></div>
+      <button type="button" class="btn" id="co-staff-clear" hidden>Clear all</button>
     </div>
   </div>
   <div class="coauth">
@@ -746,28 +783,25 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   var COLLAB_KEYS = ["International", "National", "CMU only"];
   var COLLAB_VAR = { "International": "--c-int", "National": "--c-nat", "CMU only": "--c-cmu" };
   var TYPE_NAME = { "article": "Article", "review": "Review", "proceedings-article": "Conference paper", "book-chapter": "Book chapter" };
-  var DEFAULT_YEARS_SHOWN = 4;
   var PAGE = 10;  // publications shown at first, most recent first
 
   var D = null;
   var state = {
     tier: "sjr",
-    year: null,
-    shown: [],
+    year: null,       // current year: key figures and the summary sentence
     sort: { key: "year", dir: -1 },
-    from: null,   // year range for the staff table and publication list
+    sfrom: null,      // year range per section (see RANGE_KEYS); each defaults to the last 5 years
+    sto: null,
+    from: null,
     to: null,
-    rangeSet: false,  // false: range follows the header year
-    cfrom: null,      // Collaboration section range
+    cfrom: null,
     cto: null,
-    cRangeSet: false,
-    q: "",
-    pstaff: null,     // Publications section staff filter
-    kw: null,         // keyword chosen in the word cloud
-    kfrom: null,      // Keywords section range and staff
+    kfrom: null,
     kto: null,
-    kRangeSet: false,
-    kstaff: null,
+    q: "",
+    pstaff: [],       // Publications section staff filter: papers by any of them
+    kw: null,         // keyword chosen in the word cloud
+    kstaff: [],       // Keywords section staff filter
     klimit: PAGE,
     pubTier: "",
     pubType: "",
@@ -891,29 +925,21 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     var t = document.documentElement.getAttribute("data-theme");
     return t === "dark" || (t !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
   }
+  function sumYears() { return D.years.filter(function (y) { return inRange(y, "sum"); }); }
+  function cap(t) { return t.charAt(0).toUpperCase() + t.slice(1); }
+  function curNote(years) { return years.indexOf(D.current_year) >= 0 ? D.current_year + " runs to " + lastMonthName() : ""; }
   function yearColors() {
-    // 10-step categorical set, current/selected year gets CMU purple
+    // 10-step categorical set, the last year in the range gets the accent
     var dark = isDark();
     var pal = dark
       ? ["#e6bb7c", "#8cc6e4", "#8fd0ad", "#eea596", "#d3a8d9", "#d3c784", "#a3b4ec", "#86cdc3", "#e7a9bf", "#aab1c6"]
       : ["#d9a050", "#62aed6", "#62b98c", "#e2836f", "#b986c4", "#bba955", "#7f97e0", "#59b5a9", "#d8829f", "#9aa1b8"];
     var map = {}, i = 0;
     D.years.slice().sort().forEach(function (y) {
-      if (y === state.year) { map[y] = cssVar("--accent"); return; }
+      if (y === state.sto) { map[y] = cssVar("--accent"); return; }
       map[y] = pal[i++ % pal.length];
     });
     return map;
-  }
-
-  function renderChips() {
-    var cols = yearColors();
-    var html = D.years.map(function (y) {
-      var on = state.shown.indexOf(y) >= 0;
-      return '<button type="button" class="chip" data-year="' + y + '" aria-pressed="' + on + '" style="--sw:' + cols[y] + '"><span class="dot"></span>' + y + '</button>';
-    }).join("");
-    html += '<button type="button" class="chip ghost" data-act="last4">Last ' + DEFAULT_YEARS_SHOWN + '</button>' +
-            '<button type="button" class="chip ghost" data-act="all">All</button>';
-    $("year-chips").innerHTML = html;
   }
 
   var endLabelPlugin = {
@@ -922,7 +948,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       var ctx = c.ctx, items = [];
       c.data.datasets.forEach(function (ds, i) {
         var meta = c.getDatasetMeta(i);
-        if (meta.hidden) return;
+        if (meta.hidden || ds._nolabel) return;
         var last = -1;
         for (var k = ds.data.length - 1; k >= 0; k--) { if (ds.data[k] != null) { last = k; break; } }
         if (last < 0) return;
@@ -974,9 +1000,10 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       return;
     }
     var cols = yearColors();
-    var years = state.shown.slice().sort();
+    var years = sumYears(), note = curNote(years);
+    $("trend-hint").textContent = "Cumulative count by publication date, one line per year, " + rangeLabel("sum") + "." + (note ? " " + note + "." : "");
     var datasets = years.map(function (y) {
-      var hl = y === state.year;
+      var hl = y === state.sto;
       return {
         label: String(y),
         data: (D.monthly_cumulative[String(y)] || []).slice(0, 12),
@@ -992,7 +1019,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
         tension: 0.25,
         spanGaps: false,
         order: hl ? 0 : 1,
-        _highlight: hl
+        _highlight: hl,
+        _nolabel: !hl && years.length > 8  // long ranges: only the last year gets an end label
       };
     });
     var text = cssVar("--text-2"), grid = cssVar("--grid");
@@ -1027,7 +1055,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 
   function renderYearCards() {
     var cols = yearColors();
-    var years = state.shown.slice().sort();
+    var years = sumYears();
     $("ycards").innerHTML = years.map(function (y) {
       var n = yearTotal(y), prev = D.years.indexOf(y - 1) >= 0 ? yearTotal(y - 1) : null, d = "";
       if (y === D.current_year) {
@@ -1038,24 +1066,26 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
         var c2 = Math.round((n - prev) / prev * 100);
         d = '<span class="' + (c2 >= 0 ? "up" : "down") + '">' + (c2 >= 0 ? "+" : "") + c2 + "%</span> vs " + (y - 1);
       } else d = "full year";
-      return '<div class="ycard' + (y === state.year ? " cur" : "") + '" style="--sw:' + cols[y] + '"><div class="y">' + y +
+      return '<div class="ycard' + (y === state.sto ? " cur" : "") + '" style="--sw:' + cols[y] + '"><div class="y">' + y +
         '</div><div class="n num">' + fmt(n) + '</div><div class="d">' + d + '</div></div>';
     }).join("");
   }
 
   function renderMix() {
     var keys = TIER_KEYS[state.tier];
-    var years = [state.year - 2, state.year - 1, state.year].filter(function (y) { return D.years.indexOf(y) >= 0; });
-    $("mix-hint").textContent = TIER_NAME[state.tier] + " journal quartiles, papers per year (bar length = total), " + years[0] + "–" + years[years.length - 1] +
-      (years.indexOf(D.current_year) >= 0 ? " (" + D.current_year + " to " + lastMonthName() + ")" : "");
+    var years = sumYears(), note = curNote(years);
+    $("mix-hint").textContent = TIER_NAME[state.tier] + " journal quartiles per year, " + rangeLabel("sum") + ". Each segment shows papers (share of the year); bar length = the year's total." +
+      (note ? " " + note + "." : "");
     // bar length is proportional to the year's total, so years compare at a glance
     var maxTot = Math.max.apply(null, years.map(function (y) { return sum(tiersFor(y)) || 0; }).concat([1]));
+    var trackW = Math.max(120, ($("mix").clientWidth || 400) - 140);  // minus the year and total columns
     $("mix").innerHTML = years.map(function (y) {
       var t = tiersFor(y), tot = sum(t) || 0, scale = tot / maxTot;
       var segs = keys.map(function (k) {
         var n = t[k] || 0; if (!n) return "";
-        var w = tot ? n / tot * 100 : 0, vis = w * scale;  // share of the full row, for label room
-        var label = vis >= 13 ? (k === "No Ranking" ? "NR" : k) + " " + n : (vis >= 6 ? String(n) : "");
+        var w = tot ? n / tot * 100 : 0, px = w * scale / 100 * trackW;  // room for the label
+        var full = n + " (" + Math.round(w) + "%)";
+        var label = px >= textW(full, 11, 700) + 10 ? full : (px >= textW(String(n), 11, 700) + 8 ? String(n) : "");
         return '<div class="seg-b" style="width:' + w.toFixed(2) + '%;background:var(' + tierVar(k) + ')" title="' + esc(k) + ": " + n + " (" + Math.round(w) + '%)">' + label + '</div>';
       }).join("");
       var aria = keys.map(function (k) { return k + " " + (t[k] || 0); }).join(", ");
@@ -1067,27 +1097,14 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     }).join("");
   }
 
-  function renderTierList() {
-    var keys = TIER_KEYS[state.tier], t = tiersFor(state.year), tot = sum(t);
-    var max = Math.max.apply(null, keys.map(function (k) { return t[k] || 0; }).concat([1]));
-    $("h-tier").textContent = state.year === D.current_year ? "Journal quartiles (YTD)" : "Journal quartiles, " + state.year;
-    $("tier-hint").textContent = TIER_NAME[state.tier] + ", " + periodLabel(state.year) + ", " + fmt(tot) + " works";
-    $("tierlist").innerHTML = keys.map(function (k) {
-      var n = t[k] || 0;
-      return '<div class="bar-row"><div class="name">' + esc(k) + '</div><div class="track"><div class="fill" style="width:' +
-        (n / max * 100).toFixed(1) + '%;background:var(' + tierVar(k) + ')"></div></div><div class="v num">' + fmt(n) +
-        ' <small>' + pct(n, tot) + '%</small></div></div>';
-    }).join("");
-    var top = topCount(state.year);
-    var prevTop = D.years.indexOf(state.year - 1) >= 0 ? topCount(state.year - 1) : null;
-    $("tier-summary").innerHTML = '<div class="big num">' + fmt(top) + '</div><div class="txt"><b>' + TIER_NAME[state.tier] + " " + TOP_LABEL[state.tier] +
-      '</b> · ' + pct(top, tot) + '% of ' + fmt(tot) + ' works' +
-      (prevTop != null ? '<br>' + (state.year - 1) + ' full year: ' + fmt(prevTop) + ' (' + pct(prevTop, sum(tiersFor(state.year - 1))) + '%)' : "") + '</div>';
-  }
-
   function renderCollab() {
-    var c = get(D, ["collaboration", String(state.year)], {}), tot = sum(c);
-    $("collab-hint").textContent = periodLabel(state.year) + ", " + fmt(tot) + " works";
+    var c = {};
+    sumYears().forEach(function (y) {
+      var cy = get(D, ["collaboration", String(y)], {});
+      COLLAB_KEYS.forEach(function (k) { c[k] = (c[k] || 0) + (cy[k] || 0); });
+    });
+    var tot = sum(c);
+    $("collab-hint").textContent = cap(rangeLabel("sum")) + ", " + fmt(tot) + " works";
     $("collab").innerHTML = COLLAB_KEYS.map(function (k) {
       var n = c[k] || 0;
       return '<div class="bar-row"><div class="name" title="' + k + '">' + k + '</div><div class="track"><div class="fill" style="width:' +
@@ -1124,18 +1141,25 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   }
 
   // ---------- staff table ----------
-  // two independent year ranges: "pubs" (Publications section) and "co" (Collaboration section)
-  function rangeOf(sc) {
-    if (sc === "co") return { from: state.cfrom, to: state.cto };
-    if (sc === "kw") return { from: state.kfrom, to: state.kto };
-    return { from: state.from, to: state.to };
-  }
+  // independent year ranges: "sum" (Summary charts), "pub" (Publications), "kw" (Keywords), "co" (Collaboration);
+  // the state keys double as URL parameters
+  var RANGE_KEYS = { sum: ["sfrom", "sto"], pub: ["from", "to"], kw: ["kfrom", "kto"], co: ["cfrom", "cto"] };
+  function rangeOf(sc) { var k = RANGE_KEYS[sc || "pub"]; return { from: state[k[0]], to: state[k[1]] }; }
   function inRange(y, sc) { var r = rangeOf(sc); return y >= r.from && y <= r.to; }
-  function rangeLabel(sc) {
+  function presetRange(pre) {
+    var first = D.years[0], last = D.years[D.years.length - 1];
+    if (pre === "all") return { from: first, to: last };
+    if (pre === "this") return { from: D.current_year, to: D.current_year };
+    return { from: Math.max(first, D.current_year - 4), to: D.current_year };
+  }
+  function presetOf(sc) {
     var r = rangeOf(sc);
-    var all = r.from === D.years[0] && r.to === D.years[D.years.length - 1];
+    return ["last5", "all", "this"].filter(function (pre) { var q = presetRange(pre); return q.from === r.from && q.to === r.to; })[0] || null;
+  }
+  function rangeLabel(sc) {
+    var r = rangeOf(sc), pre = presetOf(sc);
     var span = r.from === r.to ? String(r.from) : r.from + "–" + r.to;
-    return all ? "all time (" + span + ")" : span;
+    return pre === "all" ? "all time (" + span + ")" : pre === "last5" ? "last 5 years (" + span + ")" : span;
   }
   function rankKeys() { return TIER_KEYS[state.tier].filter(function (k) { return k !== "No Ranking"; }); }
   function staffKeys() { return rankKeys().concat("No Ranking"); }
@@ -1178,15 +1202,16 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       return r * dir;
     });
     $("staff-body").innerHTML = rows.map(function (r, i) {
-      return '<tr' + (r.name === state.pstaff ? ' class="sel"' : "") + '><td><span class="rank">' + (i + 1) + '</span><button type="button" class="name-btn" data-staff="' + esc(r.name) +
-        '" aria-pressed="' + (r.name === state.pstaff) + '">' + esc(r.name) + '</button></td>' + cols.slice(1).map(function (c) {
+      var on = state.pstaff.indexOf(r.name) >= 0;
+      return '<tr' + (on ? ' class="sel"' : "") + '><td><span class="rank">' + (i + 1) + '</span><button type="button" class="name-btn" data-staff="' + esc(r.name) +
+        '" aria-pressed="' + on + '">' + esc(r.name) + '</button></td>' + cols.slice(1).map(function (c) {
         return '<td class="num' + (r[c.key] ? "" : " zero") + '">' + r[c.key] + '</td>';
       }).join("") + '</tr>';
     }).join("");
     var active = rows.filter(function (r) { return r.year > 0; }).length;
     $("staff-hint").textContent = fmt(rows.length) + " staff, " + active + " with works in " + rangeLabel() +
       ". " + rankKeys().join(", ") + " = " + TIER_NAME[state.tier] + " journal ranking and NR = not ranked (conferences, books, unranked journals), counted in the range. Career = since " +
-      D.years[0] + ". Select a column to sort, or a name to show only their papers.";
+      D.years[0] + ". Select a column to sort, or names to show only their papers.";
   }
 
   // ---------- publications ----------
@@ -1209,42 +1234,69 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     if (state.pubTier && (state.pubTier === "__top" || TIER_KEYS[state.tier].indexOf(state.pubTier) >= 0)) $("pub-tier").value = state.pubTier;
     else { state.pubTier = ""; $("pub-tier").value = ""; }
   }
-  function pubLabel() { return rangeLabel() + (state.pstaff ? " · " + state.pstaff : ""); }
-  function renderPubStaffSel() {
-    var n = {};
-    D.publications.forEach(function (p) { if (inRange(p.year)) (p.staff || []).forEach(function (s) { n[s] = (n[s] || 0) + 1; }); });
-    var names = (D.per_staff || []).map(function (r) { return r.name; }).sort(function (a, b) { return a.localeCompare(b); });
-    $("pub-staff").innerHTML = '<option value="">All staff</option>' + names.map(function (nm) {
-      return '<option value="' + esc(nm) + '">' + esc(nm) + ' (' + (n[nm] || 0) + ')</option>';
-    }).join("");
-    $("pub-staff").value = state.pstaff || "";
-    $("pub-staff-clear").hidden = !state.pstaff;
-    $("lower-year").textContent = pubLabel();
+  function pubLabel() { return rangeLabel() + selSuffix(state.pstaff); }
+
+  // ---------- staff pickers (sections 2-4): any number of staff, a paper counts if any of them wrote it ----------
+  function selOf(sc) { return sc === "co" ? co.sel : sc === "kw" ? state.kstaff : state.pstaff; }
+  function staffNames() { return (D.per_staff || []).map(function (r) { return r.name; }).sort(function (a, b) { return a.localeCompare(b); }); }
+  function hasStaff(p, sel) {
+    if (!sel.length) return true;
+    var st = p.staff || [];
+    return sel.some(function (n) { return st.indexOf(n) >= 0; });
   }
-  function setPubStaff(name) {
-    state.pstaff = name || null; state.limit = PAGE;
-    syncUrl(); renderPubStaffSel(); renderStaff(); renderPubs();
+  function selText(sel) { return sel.length === 1 ? sel[0] : sel.length + " staff"; }
+  function selSuffix(sel) { return sel.length ? " · " + selText(sel) : ""; }
+  function renderPicker(sc) {
+    var sel = selOf(sc);
+    $(sc + "-staff").innerHTML = '<span>' + (sel.length ? sel.length + " selected" : "All staff") + '</span><span class="caret" aria-hidden="true">▾</span>';
+    $(sc + "-staff-chips").innerHTML = sel.map(function (n) {
+      return '<button type="button" class="chip" data-rm="' + esc(n) + '" aria-label="Remove ' + esc(n) + '">' + esc(n) + ' <span aria-hidden="true">✕</span></button>';
+    }).join("");
+    $(sc + "-staff-clear").hidden = sel.length < 2;
+    if (!$(sc + "-staff-pop").hidden) $(sc + "-staff-list").querySelectorAll("input").forEach(function (i) { i.checked = sel.indexOf(i.value) >= 0; });
+    if (sc === "pub") $("lower-year").textContent = pubLabel();
+    else if (sc === "kw") $("kw-year").textContent = kwLabel();
+    else $("coauth-year").textContent = coLabel();
+  }
+  function openPicker(sc) {
+    closePickers();
+    var n = {}, sel = selOf(sc);
+    D.publications.forEach(function (p) { if (inRange(p.year, sc)) (p.staff || []).forEach(function (s) { n[s] = (n[s] || 0) + 1; }); });
+    $(sc + "-staff-list").innerHTML = staffNames().map(function (nm) {
+      return '<label class="msel-opt' + (n[nm] ? "" : " zero") + '"><input type="checkbox" value="' + esc(nm) + '"' + (sel.indexOf(nm) >= 0 ? " checked" : "") +
+        '><span>' + esc(nm) + '</span><span class="n num" aria-label="' + (n[nm] || 0) + ' papers in range">' + (n[nm] || 0) + '</span></label>';
+    }).join("");
+    $(sc + "-staff-q").value = "";
+    $(sc + "-staff-pop").hidden = false;
+    $(sc + "-staff").setAttribute("aria-expanded", "true");
+    $(sc + "-staff-q").focus();
+  }
+  function closePickers() {
+    ["pub", "kw", "co"].forEach(function (sc) {
+      if ($(sc + "-staff-pop").hidden) return;
+      $(sc + "-staff-pop").hidden = true;
+      $(sc + "-staff").setAttribute("aria-expanded", "false");
+    });
+  }
+  function setSel(sc, arr) {
+    if (sc === "co") { co.sel = arr; co.pinned = null; tipHide(); }
+    else if (sc === "kw") { state.kstaff = arr; state.klimit = PAGE; }
+    else { state.pstaff = arr; state.limit = PAGE; }
+    syncUrl(); renderPicker(sc);
+    if (sc === "co") renderCoauth();
+    else if (sc === "kw") renderCloud();
+    else { renderStaff(); renderPubs(); }
+  }
+  function toggleSel(sc, name) {
+    var s = selOf(sc).slice(), i = s.indexOf(name);
+    if (i >= 0) s.splice(i, 1); else s.push(name);
+    setSel(sc, s);
   }
 
   // ---------- research keywords ----------
-  function kwLabel() { return rangeLabel("kw") + (state.kstaff ? " · " + state.kstaff : ""); }
+  function kwLabel() { return rangeLabel("kw") + selSuffix(state.kstaff); }
   function kwPapers() {
-    return D.publications.filter(function (p) { return inRange(p.year, "kw") && (!state.kstaff || (p.staff || []).indexOf(state.kstaff) >= 0); });
-  }
-  function renderKwStaffSel() {
-    var n = {};
-    D.publications.forEach(function (p) { if (inRange(p.year, "kw")) (p.staff || []).forEach(function (s) { n[s] = (n[s] || 0) + 1; }); });
-    var names = (D.per_staff || []).map(function (r) { return r.name; }).sort(function (a, b) { return a.localeCompare(b); });
-    $("kw-staff").innerHTML = '<option value="">All staff</option>' + names.map(function (nm) {
-      return '<option value="' + esc(nm) + '">' + esc(nm) + ' (' + (n[nm] || 0) + ')</option>';
-    }).join("");
-    $("kw-staff").value = state.kstaff || "";
-    $("kw-staff-clear").hidden = !state.kstaff;
-    $("kw-year").textContent = kwLabel();
-  }
-  function setKwStaff(name) {
-    state.kstaff = name || null; state.klimit = PAGE;
-    syncUrl(); renderKwStaffSel(); renderCloud();
+    return D.publications.filter(function (p) { return inRange(p.year, "kw") && hasStaff(p, state.kstaff); });
   }
   var CLOUD_MAX = 60;
   function hashStr(t) { var h = 0; for (var i = 0; i < t.length; i++) h = (h * 31 + t.charCodeAt(i)) | 0; return Math.abs(h); }
@@ -1318,7 +1370,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   function renderPubs() {
     var q = state.q.trim().toLowerCase();
     var terms = q ? q.split(/\s+/) : [];
-    var all = D.publications.filter(function (p) { return inRange(p.year) && (!state.pstaff || (p.staff || []).indexOf(state.pstaff) >= 0); });
+    var all = D.publications.filter(function (p) { return inRange(p.year) && hasStaff(p, state.pstaff); });
     var list = all.filter(function (p) {
       var tv = p[state.tier] || "No Ranking";
       if (state.pubTier === "__top" && !isTop(p)) return false;
@@ -1337,7 +1389,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 
   // ---------- co-authorship ----------
   // Internal network (force layout, computed once per range and width) and external partner flow (Sankey).
-  var co = { key: null, rangeKey: null, layout: null, pinned: null, focus: null, extMode: "all", data: null };
+  var co = { key: null, rangeKey: null, layout: null, pinned: null, sel: [], extMode: "all", data: null };
   var SHORT_INST = {
     "Massachusetts Institute of Technology": "MIT",
     "MIT Media Lab": "MIT Media Lab",
@@ -1459,42 +1511,56 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     var r = el.getBoundingClientRect(); return [r.left + r.width / 2, r.top + r.height / 2];
   }
 
-  function coLabel() { return rangeLabel("co") + (co.focus ? " · " + co.focus : ""); }
-  function renderStaffSel(c) {
-    var sel = $("co-staff");
-    sel.innerHTML = '<option value="">All staff</option>' + c.names.map(function (n) {
-      return '<option value="' + esc(n) + '">' + esc(n) + ' (' + (c.papers[n] || 0) + ')</option>';
-    }).join("");
-    sel.value = co.focus || "";
-    $("co-staff-clear").hidden = !co.focus;
-  }
-  function setFocus(name) {
-    co.focus = name || null; co.pinned = null;
-    tipHide(); syncUrl(); renderCoauth();
-  }
+  function coLabel() { return rangeLabel("co") + selSuffix(co.sel); }
   function renderCoauth() {
     $("coauth-year").textContent = coLabel();
     var c = co.data = coauthData();
-    renderStaffSel(c);
+    renderPicker("co");
     renderNetStats(c);
     renderNet(c);
     renderPartners();
   }
 
+  // papers in range by any of the selected staff
+  function groupStats(c, S) {
+    var inS = {}, known = {}, g = { total: 0, multi: 0, inner: 0, years: {}, others: {} };
+    S.forEach(function (n) { inS[n] = true; });
+    c.names.forEach(function (n) { known[n] = true; });
+    D.publications.forEach(function (p) {
+      if (!inRange(p.year, "co")) return;
+      var st = (p.staff || []).filter(function (n, i, a) { return known[n] && a.indexOf(n) === i; });
+      var mine = st.filter(function (n) { return inS[n]; }).length;
+      if (!mine) return;
+      g.total++;
+      var yr = g.years[p.year] = g.years[p.year] || { tot: 0, multi: 0 };
+      yr.tot++;
+      if (st.length > 1) { g.multi++; yr.multi++; }
+      if (mine > 1) g.inner++;
+      st.forEach(function (n) { if (!inS[n]) g.others[n] = true; });
+    });
+    g.others = Object.keys(g.others).length;
+    return g;
+  }
+  function mstat(n, l) { return '<div class="mstat"><div class="n num">' + n + '</div><div class="l">' + l + '</div></div>'; }
   function renderNetStats(c) {
-    var staff = c.names.length, f = co.focus;
+    var staff = c.names.length, S = co.sel, f = S.length === 1 ? S[0] : null, g = S.length > 1 ? groupStats(c, S) : null;
     if (f) {
       var ps = partnerList(c, f), np = c.papers[f] || 0, nw = c.withCol[f] || 0;
       $("net-stats").innerHTML =
-        '<div class="mstat"><div class="n num">' + fmt(nw) + ' <small>' + pct(nw, np) + '%</small></div><div class="l">of ' + fmt(np) + ' papers have another CPE staff member</div></div>' +
-        '<div class="mstat"><div class="n num">' + fmt(ps.length) + ' <small>of ' + (staff - 1) + '</small></div><div class="l">CPE colleagues co-authored with</div></div>' +
+        mstat(fmt(nw) + ' <small>' + pct(nw, np) + '%</small>', 'of ' + fmt(np) + ' papers have another CPE staff member') +
+        mstat(fmt(ps.length) + ' <small>of ' + (staff - 1) + '</small>', 'CPE colleagues co-authored with') +
         '<div class="mstat"><div class="n">' + (ps.length ? esc(firstName(ps[0].name)) + ' <small class="num">' + ps[0].n + '</small>' : "–") + '</div><div class="l">most frequent CPE co-author</div></div>';
+    } else if (g) {
+      $("net-stats").innerHTML =
+        mstat(fmt(g.multi) + ' <small>' + pct(g.multi, g.total) + '%</small>', 'of ' + fmt(g.total) + ' papers by the selected staff have 2+ CPE staff') +
+        mstat(fmt(g.inner), 'papers written together by 2+ of the ' + S.length + ' selected') +
+        mstat(fmt(g.others) + ' <small>of ' + (staff - S.length) + '</small>', 'other CPE colleagues co-authored with');
     } else $("net-stats").innerHTML =
-      '<div class="mstat"><div class="n num">' + fmt(c.multi) + ' <small>' + pct(c.multi, c.total) + '%</small></div><div class="l">of ' + fmt(c.total) + ' papers have 2+ CPE staff</div></div>' +
-      '<div class="mstat"><div class="n num">' + fmt(c.pairList.length) + '</div><div class="l">colleague pairs wrote together</div></div>' +
-      '<div class="mstat"><div class="n num">' + fmt(c.linked.length) + ' <small>of ' + staff + '</small></div><div class="l">staff with a CPE co-author</div></div>';
+      mstat(fmt(c.multi) + ' <small>' + pct(c.multi, c.total) + '%</small>', 'of ' + fmt(c.total) + ' papers have 2+ CPE staff') +
+      mstat(fmt(c.pairList.length), 'colleague pairs wrote together') +
+      mstat(fmt(c.linked.length) + ' <small>of ' + staff + '</small>', 'staff with a CPE co-author');
     // sparkline: share of papers with 2+ CPE staff, by year (only for ranges of 3+ years with data)
-    var yd = f ? (c.pyears[f] || {}) : c.years, who = f ? firstName(f) + "'s papers" : "papers";
+    var yd = f ? (c.pyears[f] || {}) : g ? g.years : c.years, who = f ? firstName(f) + "'s papers" : g ? "the selected staff's papers" : "papers";
     var ys = Object.keys(yd).map(Number).sort(function (a, b) { return a - b; });
     if (ys.length >= 3) {
       var vals = ys.map(function (y) { return yd[y].tot ? yd[y].multi / yd[y].tot * 100 : 0; });
@@ -1515,11 +1581,12 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       }).join("") : '<li class="pub-staff empty" style="display:block">No joint papers with CPE colleagues in ' + esc(rangeLabel("co")) + '.</li>';
       return;
     }
-    $("h-pairs").textContent = "Strongest pairs";
-    var top = c.pairList.slice(0, 6);
+    var pairs = g ? c.pairList.filter(function (p) { return S.indexOf(p.a) >= 0 || S.indexOf(p.b) >= 0; }) : c.pairList;
+    $("h-pairs").textContent = g ? "Strongest pairs with the selected staff" : "Strongest pairs";
+    var top = pairs.slice(0, g ? 8 : 6);
     $("net-pairs").innerHTML = top.length ? top.map(function (p) {
       return '<li><span>' + esc(p.a) + ' &amp; ' + esc(p.b) + '</span><span class="v num">' + p.n + ' <small>paper' + (p.n === 1 ? "" : "s") + '</small></span></li>';
-    }).join("") : '<li class="pub-staff empty" style="display:block">Joint papers between CPE colleagues will appear here.</li>';
+    }).join("") : '<li class="pub-staff empty" style="display:block">' + (g ? "No joint papers with CPE colleagues in " + esc(rangeLabel("co")) + "." : "Joint papers between CPE colleagues will appear here.") + '</li>';
   }
 
   function layoutNet(c, W, H) {
@@ -1610,7 +1677,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     var H = W < 520 ? Math.round(W * 1.08) : Math.min(500, Math.round(W * 0.74));
     var rk = state.cfrom + "|" + state.cto, key = rk + "|" + W;
     if (co.rangeKey !== rk) { co.pinned = null; co.rangeKey = rk; }
-    function base() { return co.pinned || co.focus; }
+    function base() { return co.pinned ? [co.pinned] : co.sel; }
     if (co.key !== key || !co.layout) { co.layout = layoutNet(c, W, H); co.key = key; }
     var L = co.layout;
     var top = c.pairList.slice(0, 3).map(function (p) { return firstName(p.a) + " and " + firstName(p.b) + " (" + p.n + ")"; });
@@ -1637,19 +1704,23 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     nodes.append("circle").attr("r", function (d) { return d.r; });
     nodes.append("text").attr("text-anchor", "middle").attr("y", function (d) { return d.r + 11; }).text(function (d) { return d.label; });
 
+    // id: one name or a list of names
     function highlight(id) {
-      svg.classed("dim", !!id);
-      if (!id) { edges.classed("hot", false); nodes.classed("near", false); }
+      var ids = id == null ? [] : [].concat(id), on = {}, pin = {};
+      ids.forEach(function (i) { on[i] = true; });
+      base().forEach(function (i) { pin[i] = true; });
+      svg.classed("dim", ids.length > 0);
+      if (!ids.length) { edges.classed("hot", false); nodes.classed("near", false); }
       else {
-        var near = {}; near[id] = true;
+        var near = {}; ids.forEach(function (i) { near[i] = true; });
         edges.classed("hot", function (l) {
-          var on = l.source.id === id || l.target.id === id;
-          if (on) { near[l.source.id] = true; near[l.target.id] = true; }
-          return on;
+          var hot = on[l.source.id] || on[l.target.id];
+          if (hot) { near[l.source.id] = true; near[l.target.id] = true; }
+          return hot;
         });
         nodes.classed("near", function (d) { return !!near[d.id]; });
       }
-      nodes.classed("pin", function (d) { return d.id === base(); }).attr("aria-pressed", function (d) { return String(d.id === co.pinned); });
+      nodes.classed("pin", function (d) { return !!pin[d.id]; }).attr("aria-pressed", function (d) { return String(d.id === co.pinned); });
       edges.filter(".hot").raise();
     }
     function restore() {
@@ -1666,11 +1737,11 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       .on("click", function (ev, d) {
         ev.stopPropagation();
         co.pinned = co.pinned === d.id ? null : d.id;
-        highlight(base() || d.id);
+        highlight(base().length ? base() : d.id);
         var p = evXY(ev, this); tipShow(netTip(c, d.id), p[0], p[1]);
       })
       .on("keydown", function (ev, d) {
-        if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); co.pinned = co.pinned === d.id ? null : d.id; highlight(base() || d.id); tipAt(this, netTip(c, d.id)); }
+        if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); co.pinned = co.pinned === d.id ? null : d.id; highlight(base().length ? base() : d.id); tipAt(this, netTip(c, d.id)); }
         else if (ev.key === "Escape") { co.pinned = null; highlight(base()); tipHide(); }
       });
     highlight(base());
@@ -1681,7 +1752,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     var inst = {}, link = {}, country = {}, total = 0, papers = 0;
     D.publications.forEach(function (p) {
       if (!inRange(p.year, "co")) return;
-      if (co.focus && (p.staff || []).indexOf(co.focus) < 0) return;
+      if (!hasStaff(p, co.sel)) return;
       var ext = (p.ext || []).filter(function (id, i, a) { return a.indexOf(id) === i && (!intl || instCountry(id) !== "TH"); });
       if (!ext.length) return;
       papers++;
@@ -1689,7 +1760,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       ext.forEach(function (id) { inst[id] = (inst[id] || 0) + 1; cs[instCountry(id) || "?"] = true; });
       Object.keys(cs).forEach(function (k) { country[k] = (country[k] || 0) + 1; });
       (p.staff || []).forEach(function (s) {
-        if (co.focus && s !== co.focus) return;
+        if (co.sel.length && co.sel.indexOf(s) < 0) return;
         ext.forEach(function (id) { var k = s + "\u0001" + id; link[k] = (link[k] || 0) + 1; total++; });
       });
     });
@@ -1716,7 +1787,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     $("ext-hint").textContent = (intl ? "Institutions outside Thailand" : "Institutions outside CMU, in Thailand and abroad") +
       ", " + rangeLabel("co") + ": " + fmt(pd.papers) + " paper" + (pd.papers === 1 ? "" : "s") + " with " + fmt(pd.instCount) + " partner institution" + (pd.instCount === 1 ? "" : "s") +
       (pd.instCount > 15 ? "; the 15 most frequent are shown, the rest are grouped as Other" : "") +
-      (co.focus ? ". Showing " + co.focus + "'s papers only" : ". Staff with external co-authors in this range are listed") + ". Line width = joint papers per staff member and institution.";
+      (co.sel.length ? ". Showing papers by " + (co.sel.length === 1 ? co.sel[0] : "the " + co.sel.length + " selected staff") + " only" : ". Staff with external co-authors in this range are listed") + ". Line width = joint papers per staff member and institution.";
     // top countries
     var cs = Object.keys(pd.country).sort(function (a, b) { return pd.country[b] - pd.country[a] || a.localeCompare(b); }).slice(0, 8);
     var cmax = cs.length ? pd.country[cs[0]] : 1;
@@ -1730,7 +1801,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 
     var box = $("sk-box");
     if (!pd.links.length) {
-      box.innerHTML = '<p class="chart-fallback">No ' + (intl ? "international " : "external ") + "partner papers" + (co.focus ? " for " + esc(co.focus) : "") + " in " + esc(rangeLabel("co")) + " yet. " +
+      box.innerHTML = '<p class="chart-fallback">No ' + (intl ? "international " : "external ") + "partner papers" + (co.sel.length ? " for " + esc(selText(co.sel)) : "") + " in " + esc(rangeLabel("co")) + " yet. " +
         (intl ? "Try All external, or a wider year range." : "Try a wider year range.") + '</p>';
       return;
     }
@@ -1843,63 +1914,46 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     document.querySelectorAll(".seg button[data-tier]").forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.getAttribute("data-tier") === state.tier));
     });
-    if (!state.rangeSet) { state.from = state.to = state.year; }
-    if (!state.cRangeSet) { state.cfrom = state.cto = state.year; }
-    if (!state.kRangeSet) { state.kfrom = state.kto = state.year; }
-    renderRange();
-    renderRange("co");
-    renderRange("kw");
+    Object.keys(RANGE_KEYS).forEach(renderRange);
     renderKpis();
-    renderChips();
     renderTrend();
     renderMix();
-    renderTierList();
     renderCollab();
     renderInsight();
     renderStaff();
     renderPubTierOptions();
-    renderPubStaffSel();
+    renderPicker("pub");
     renderPubs();
-    renderKwStaffSel();
+    renderPicker("kw");
     renderCloud();
     renderCoauth();
   }
 
   function renderRange(sc) {
-    var r = rangeOf(sc), pre = sc ? sc + "-" : "";
+    sc = sc || "pub";
+    var r = rangeOf(sc), pre = presetOf(sc);
     var opts = function (sel) {
       return D.years.slice().reverse().map(function (y) {
         return '<option value="' + y + '"' + (y === sel ? " selected" : "") + '>' + y + '</option>';
       }).join("");
     };
-    $(pre + "range-from").innerHTML = opts(r.from);
-    $(pre + "range-to").innerHTML = opts(r.to);
-    var all = r.from === D.years[0] && r.to === D.years[D.years.length - 1];
-    $(pre + "range-all").setAttribute("aria-pressed", String(all));
+    $(sc + "-range-from").innerHTML = opts(r.from);
+    $(sc + "-range-to").innerHTML = opts(r.to);
+    $(sc + "-range-pre").querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-pre") === pre)); });
     if (sc === "co") $("coauth-year").textContent = coLabel();
     else if (sc === "kw") $("kw-year").textContent = kwLabel();
-    else $("lower-year").textContent = pubLabel();
+    else if (sc === "pub") $("lower-year").textContent = pubLabel();
   }
   function setRange(from, to, sc) {
+    sc = sc || "pub";
     if (from > to) { var t = from; from = to; to = t; }
-    if (sc === "kw") {
-      state.kfrom = from; state.kto = to; state.kRangeSet = true;
-      syncUrl(); renderRange("kw"); renderKwStaffSel(); renderCloud();
-      return;
-    }
-    if (sc === "co") {
-      state.cfrom = from; state.cto = to; state.cRangeSet = true;
-      syncUrl(); renderRange("co"); renderCoauth();
-      return;
-    }
-    state.from = from; state.to = to; state.rangeSet = true; state.limit = PAGE;
-    syncUrl();
-    renderRange(); renderPubStaffSel(); renderStaff(); renderPubs();
-  }
-
-  function defaultShown() {
-    var ys = D.years.filter(function (y) { return y <= D.current_year; });
-    return ys.slice(-DEFAULT_YEARS_SHOWN);
+    var k = RANGE_KEYS[sc];
+    state[k[0]] = from; state[k[1]] = to;
+    syncUrl(); renderRange(sc);
+    if (sc === "sum") { renderTrend(); renderMix(); renderCollab(); }
+    else if (sc === "kw") { state.klimit = PAGE; renderCloud(); }
+    else if (sc === "co") renderCoauth();
+    else { state.limit = PAGE; renderStaff(); renderPubs(); }
   }
 
   function init(data) {
@@ -1917,34 +1971,21 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       $("cs-wrap").insertAdjacentHTML("beforeend", '<span id="cs-why" class="sr-only">CiteScore data not available</span>');
     }
     var params = new URLSearchParams(location.search);
-    var qy = Number(params.get("year")), qt = params.get("tier");
-    state.year = D.years.indexOf(qy) >= 0 ? qy : D.current_year;
+    var qt = params.get("tier");
+    state.year = D.current_year;
     if (qt === "citescore" && D.has_citescore) state.tier = "citescore";
-    state.shown = defaultShown();
-    if (state.shown.indexOf(state.year) < 0) state.shown.push(state.year);
-    var qf = Number(params.get("from")), qto = Number(params.get("to"));
-    if (D.years.indexOf(qf) >= 0 && D.years.indexOf(qto) >= 0) {
-      state.from = Math.min(qf, qto); state.to = Math.max(qf, qto); state.rangeSet = true;
-    }
-    var cf = Number(params.get("cfrom")), ct = Number(params.get("cto"));
-    if (D.years.indexOf(cf) >= 0 && D.years.indexOf(ct) >= 0) {
-      state.cfrom = Math.min(cf, ct); state.cto = Math.max(cf, ct); state.cRangeSet = true;
-    }
-    var qs = params.get("staff");
-    if (qs && (D.per_staff || []).some(function (r) { return r.name === qs; })) co.focus = qs;
-    var qp = params.get("pstaff");
-    if (qp && (D.per_staff || []).some(function (r) { return r.name === qp; })) state.pstaff = qp;
-    var kf = Number(params.get("kfrom")), kt = Number(params.get("kto"));
-    if (D.years.indexOf(kf) >= 0 && D.years.indexOf(kt) >= 0) {
-      state.kfrom = Math.min(kf, kt); state.kto = Math.max(kf, kt); state.kRangeSet = true;
-    }
-    var qk = params.get("kstaff");
-    if (qk && (D.per_staff || []).some(function (r) { return r.name === qk; })) state.kstaff = qk;
-
-    $("year-sel").innerHTML = D.years.slice().reverse().map(function (y) {
-      return '<option value="' + y + '">' + y + (y === D.current_year ? " (YTD)" : "") + '</option>';
-    }).join("");
-    $("year-sel").value = String(state.year);
+    Object.keys(RANGE_KEYS).forEach(function (sc) {
+      var k = RANGE_KEYS[sc], f = Number(params.get(k[0])), t = Number(params.get(k[1])), d = presetRange("last5");
+      var ok = D.years.indexOf(f) >= 0 && D.years.indexOf(t) >= 0;
+      state[k[0]] = ok ? Math.min(f, t) : d.from;
+      state[k[1]] = ok ? Math.max(f, t) : d.to;
+    });
+    var known = {};
+    (D.per_staff || []).forEach(function (r) { known[r.name] = true; });
+    var names = function (v) { return (v || "").split(",").filter(function (n, i, a) { return known[n] && a.indexOf(n) === i; }); };
+    co.sel = names(params.get("staff"));
+    state.pstaff = names(params.get("pstaff"));
+    state.kstaff = names(params.get("kstaff"));
 
     var gen = D.generated_at || "";
     $("foot-src").textContent = "Source: " + (D.source || "OpenAlex") + " | Generated: " + gen +
@@ -1955,8 +1996,6 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
         ? "Showing mock data (?mock=1). Numbers are synthetic."
         : "data/dashboard.json was not found, so this page is showing synthetic mock data.";
     }
-    $("trend-hint").textContent = "Cumulative count by publication date, one line per year. " +
-      D.current_year + " runs to " + lastMonthName() + ".";
     bind();
     renderAll();
   }
@@ -1964,14 +2003,15 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   function syncUrl() {
     try {
       var p = new URLSearchParams(location.search);
-      if (state.year !== D.current_year) p.set("year", state.year); else p.delete("year");
+      p.delete("year");
       if (state.tier !== "sjr") p.set("tier", state.tier); else p.delete("tier");
-      if (state.rangeSet) { p.set("from", state.from); p.set("to", state.to); } else { p.delete("from"); p.delete("to"); }
-      if (state.cRangeSet) { p.set("cfrom", state.cfrom); p.set("cto", state.cto); } else { p.delete("cfrom"); p.delete("cto"); }
-      if (co.focus) p.set("staff", co.focus); else p.delete("staff");
-      if (state.pstaff) p.set("pstaff", state.pstaff); else p.delete("pstaff");
-      if (state.kRangeSet) { p.set("kfrom", state.kfrom); p.set("kto", state.kto); } else { p.delete("kfrom"); p.delete("kto"); }
-      if (state.kstaff) p.set("kstaff", state.kstaff); else p.delete("kstaff");
+      Object.keys(RANGE_KEYS).forEach(function (sc) {
+        var k = RANGE_KEYS[sc];
+        if (presetOf(sc) !== "last5") { p.set(k[0], state[k[0]]); p.set(k[1], state[k[1]]); } else { p.delete(k[0]); p.delete(k[1]); }
+      });
+      [["staff", co.sel], ["pstaff", state.pstaff], ["kstaff", state.kstaff]].forEach(function (e) {
+        if (e[1].length) p.set(e[0], e[1].join(",")); else p.delete(e[0]);
+      });
       var s = p.toString();
       history.replaceState(null, "", location.pathname + (s ? "?" + s : "") + location.hash);
     } catch (e) { /* ignore */ }
@@ -1986,40 +2026,35 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
         renderAll();
       });
     });
-    $("year-sel").addEventListener("change", function () {
-      state.year = Number(this.value);
-      if (state.shown.indexOf(state.year) < 0) state.shown.push(state.year);
-      state.limit = PAGE;
-      syncUrl();
-      renderAll();
+    Object.keys(RANGE_KEYS).forEach(function (sc) {
+      var k = RANGE_KEYS[sc];
+      $(sc + "-range-pre").addEventListener("click", function (e) {
+        var b = e.target.closest("button[data-pre]"); if (!b) return;
+        var r = presetRange(b.getAttribute("data-pre"));
+        setRange(r.from, r.to, sc);
+      });
+      $(sc + "-range-from").addEventListener("change", function () { setRange(Number(this.value), state[k[1]], sc); });
+      $(sc + "-range-to").addEventListener("change", function () { setRange(state[k[0]], Number(this.value), sc); });
     });
-    $("year-chips").addEventListener("click", function (e) {
-      var b = e.target.closest("button"); if (!b) return;
-      var act = b.getAttribute("data-act");
-      if (act === "all") state.shown = D.years.slice();
-      else if (act === "last4") state.shown = defaultShown();
-      else {
-        var y = Number(b.getAttribute("data-year")), i = state.shown.indexOf(y);
-        if (i >= 0) { if (state.shown.length > 1) state.shown.splice(i, 1); } else state.shown.push(y);
-      }
-      renderChips();
-      renderTrend();
-      var again = $("year-chips").querySelector(act ? '[data-act="' + act + '"]' : '[data-year="' + b.getAttribute("data-year") + '"]');
-      if (again) again.focus();
+    ["pub", "kw", "co"].forEach(function (sc) {
+      $(sc + "-staff").addEventListener("click", function () { if ($(sc + "-staff-pop").hidden) openPicker(sc); else closePickers(); });
+      $(sc + "-staff-list").addEventListener("change", function (e) { if (e.target.type === "checkbox") toggleSel(sc, e.target.value); });
+      $(sc + "-staff-q").addEventListener("input", function () {
+        var q = this.value.trim().toLowerCase();
+        $(sc + "-staff-list").querySelectorAll("label").forEach(function (l) { l.hidden = !!q && l.textContent.toLowerCase().indexOf(q) < 0; });
+      });
+      $(sc + "-staff-pop").addEventListener("keydown", function (e) { if (e.key === "Escape") { closePickers(); $(sc + "-staff").focus(); } });
+      $(sc + "-staff-chips").addEventListener("click", function (e) {
+        var b = e.target.closest("button[data-rm]"); if (!b) return;
+        toggleSel(sc, b.getAttribute("data-rm"));
+        var next = $(sc + "-staff-chips").querySelector("button"); (next || $(sc + "-staff")).focus();
+      });
+      $(sc + "-staff-clear").addEventListener("click", function () { setSel(sc, []); $(sc + "-staff").focus(); });
     });
-    $("range-all").addEventListener("click", function () { setRange(D.years[0], D.years[D.years.length - 1]); });
-    $("range-from").addEventListener("change", function () { setRange(Number(this.value), state.to); });
-    $("range-to").addEventListener("change", function () { setRange(state.from, Number(this.value)); });
-    $("co-range-all").addEventListener("click", function () { setRange(D.years[0], D.years[D.years.length - 1], "co"); });
-    $("co-range-from").addEventListener("change", function () { setRange(Number(this.value), state.cto, "co"); });
-    $("co-range-to").addEventListener("change", function () { setRange(state.cfrom, Number(this.value), "co"); });
-    $("co-staff").addEventListener("change", function () { setFocus(this.value); });
-    $("pub-staff").addEventListener("change", function () { setPubStaff(this.value); });
-    $("pub-staff-clear").addEventListener("click", function () { setPubStaff(null); $("pub-staff").focus(); });
     $("staff-body").addEventListener("click", function (e) {
       var b = e.target.closest("button[data-staff]"); if (!b) return;
       var nm = b.getAttribute("data-staff");
-      setPubStaff(state.pstaff === nm ? null : nm);
+      toggleSel("pub", nm);
       var again = $("staff-body").querySelector('button[data-staff="' + CSS.escape(nm) + '"]'); if (again) again.focus();
     });
     ["cloud", "kw-top"].forEach(function (id) {
@@ -2032,13 +2067,6 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     });
     $("h-kwpapers").addEventListener("click", function (e) { if (e.target.closest("#kw-clear")) { setKw(null); $("cloud").querySelector("button") && $("cloud").querySelector("button").focus(); } });
     $("kw-more").addEventListener("click", function (e) { if (e.target.id === "kw-more-btn") { state.klimit += PAGE; renderCloud(); } });
-    $("kw-range-all").addEventListener("click", function () { setRange(D.years[0], D.years[D.years.length - 1], "kw"); });
-    $("kw-range-from").addEventListener("change", function () { setRange(Number(this.value), state.kto, "kw"); });
-    $("kw-range-to").addEventListener("change", function () { setRange(state.kfrom, Number(this.value), "kw"); });
-    $("kw-staff").addEventListener("change", function () { setKwStaff(this.value); });
-    $("kw-staff-clear").addEventListener("click", function () { setKwStaff(null); $("kw-staff").focus(); });
-
-    $("co-staff-clear").addEventListener("click", function () { setFocus(null); $("co-staff").focus(); });
     $("staff-head").addEventListener("click", function (e) {
       var b = e.target.closest("button[data-sort]"); if (!b) return;
       var k = b.getAttribute("data-sort");
@@ -2067,6 +2095,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     // tap or click outside a chart hides its tooltip (touch has no hover-out)
     document.addEventListener("click", function (e) {
       if (!e.target.closest || !e.target.closest("#net-box, #sk-box")) tipHide();
+      if (!e.target.closest || !e.target.closest(".msel")) closePickers();
     });
     window.addEventListener("scroll", function () { if (!$("co-tip").hidden && !document.activeElement.closest("#net-box, #sk-box")) tipHide(); }, { passive: true });
     var rt = null, lastW = window.innerWidth;
@@ -2074,12 +2103,12 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       clearTimeout(rt);
       rt = setTimeout(function () {
         if (window.innerWidth === lastW) return;  // ignore height-only changes (mobile toolbars)
-        lastW = window.innerWidth; tipHide();
+        lastW = window.innerWidth; tipHide(); renderMix();
         if (co.data) { renderNet(co.data); renderPartners(); }
       }, 150);
     });
     var mq = window.matchMedia("(prefers-color-scheme: dark)");
-    var onTheme = function () { if (D) { renderChips(); renderTrend(); } };
+    var onTheme = function () { if (D) renderTrend(); };
     if (mq.addEventListener) mq.addEventListener("change", onTheme); else if (mq.addListener) mq.addListener(onTheme);
   }
 
