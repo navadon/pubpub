@@ -1,4 +1,4 @@
-# CPE CMU Publication Dashboard
+# PubPub: Publication Dashboard, Public Access
 
 A static dashboard of publications by staff of the Department of Computer Engineering,
 Faculty of Engineering, Chiang Mai University. It shows yearly and cumulative counts,
