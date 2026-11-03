@@ -550,7 +550,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       <p class="note">Data: <a href="https://openalex.org" rel="noopener">OpenAlex</a> career publications of current staff; tiers by journal (latest SCImago SJR; Scopus CiteScore when supplied). Refreshed monthly.</p>
     </div>
     <nav class="sec-nav" aria-label="Sections">
-      <a href="#summary">Summary</a><a href="#publications">Publications</a><a href="#keywords">Keywords</a><a href="#collaboration">Collaboration</a>
+      <a href="#summary">Overview</a><a href="#publications">Staff</a><a href="#keywords">Keywords</a><a href="#collaboration">Collaboration</a>
     </nav>
   </div>
 </header>
@@ -559,7 +559,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 <main class="wrap" id="app" aria-live="polite">
   <section class="page-sec" id="summary" aria-labelledby="sec-summary">
   <div class="sec-head">
-    <h2 id="sec-summary"><span class="sec-no" aria-hidden="true">1</span>Summary</h2>
+    <h2 id="sec-summary"><span class="sec-no" aria-hidden="true">1</span>Overview</h2>
     <p class="hint">Key figures are for this year so far; the charts below follow the year range. The ranking choice applies to the whole page.</p>
   <div class="controls">
     <div class="ctl">
@@ -569,7 +569,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
         <span id="cs-wrap"><button type="button" data-tier="citescore" aria-pressed="false">CiteScore</button></span>
       </div>
     </div>
-    <div class="range" role="group" aria-label="Year range for the summary charts">
+    <div class="range" role="group" aria-label="Year range for the overview charts">
       <div class="seg" id="sum-range-pre"><button type="button" data-pre="all" aria-pressed="false">All time</button><button type="button" data-pre="last5" aria-pressed="true">Last 5</button><button type="button" data-pre="this" aria-pressed="false">This year</button></div>
       <span class="ft"><label for="sum-range-from">From</label><select id="sum-range-from"></select>
       <label for="sum-range-to">to</label><select id="sum-range-to"></select></span>
@@ -606,14 +606,14 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
 
   <section class="page-sec" id="publications" aria-labelledby="sec-pubs">
   <div class="sec-head">
-    <h2 id="sec-pubs"><span class="sec-no" aria-hidden="true">2</span>Publications and keywords <span class="sec-range" id="lower-year"></span></h2>
+    <h2 id="sec-pubs"><span class="sec-no" aria-hidden="true">2</span>Staff and keywords <span class="sec-range" id="lower-year"></span></h2>
     <p class="hint">Papers per staff member, the paper list and research keywords for a year range. A paper with several staff co-authors appears under each of them. Keywords are the ones OpenAlex assigns to each paper.</p>
-<div class="range" role="group" aria-label="Year range for publications">
+<div class="range" role="group" aria-label="Year range for staff and keywords">
       <div class="seg" id="pub-range-pre"><button type="button" data-pre="all" aria-pressed="false">All time</button><button type="button" data-pre="last5" aria-pressed="true">Last 5</button><button type="button" data-pre="this" aria-pressed="false">This year</button></div>
       <span class="ft"><label for="pub-range-from">From</label><select id="pub-range-from"></select>
       <label for="pub-range-to">to</label><select id="pub-range-to"></select></span>
     </div>
-    <div class="range" role="group" aria-label="Staff for publications">
+    <div class="range" role="group" aria-label="Staff shown in section 2">
       <span>Staff</span>
       <div class="msel">
         <button type="button" class="msel-btn" id="pub-staff" aria-haspopup="true" aria-expanded="false" aria-controls="pub-staff-pop">All staff</button>
@@ -706,7 +706,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   </div>
   <div class="coauth">
     <section class="panel" aria-labelledby="h-net">
-      <h2 id="h-net">Internal co-authorship</h2>
+      <h2 id="h-net">Internal</h2>
       <p class="hint" id="net-hint">Each circle is a staff member, sized by papers in the range. Lines join colleagues who wrote together; thicker lines mean more joint papers. Hover, focus or tap a circle for details; select it to keep it highlighted.</p>
       <div class="mstats" id="net-stats"></div>
       <div id="net-spark"></div>
@@ -716,7 +716,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     </section>
 
     <section class="panel" aria-labelledby="h-ext">
-      <h2 id="h-ext">External co-authorship</h2>
+      <h2 id="h-ext">External</h2>
       <p class="hint" id="ext-hint"></p>
       <div class="sk-tools">
         <div class="seg" role="group" aria-label="Partner institutions shown" id="ext-mode">
@@ -1113,7 +1113,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   }
 
   // ---------- staff table ----------
-  // independent year ranges: "sum" (Summary charts), "pub" (Publications and keywords), "co" (Collaboration);
+  // independent year ranges: "sum" (Overview charts), "pub" (Staff and keywords), "co" (Collaboration);
   // the state keys double as URL parameters
   var RANGE_KEYS = { sum: ["sfrom", "sto"], pub: ["from", "to"], co: ["cfrom", "cto"] };
   function rangeOf(sc) { var k = RANGE_KEYS[sc || "pub"]; return { from: state[k[0]], to: state[k[1]] }; }
