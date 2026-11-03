@@ -62,7 +62,7 @@ scripts/build_data.py      # OpenAlex + tiers -> dashboard.json
     "sjr":       { "2024": {"Q1":..,"Q2":..,"Q3":..,"Q4":..,"No Ranking":..}, ... },
     "citescore": { "2024": {"T1":..,"Q1":..,"Q2":..,"Q3":..,"Q4":..,"No Ranking":..}, ... }
   },
-  "collaboration": { "2026": {"International":..,"National":..,"CMU only":..}, ... },
+  "collaboration": { "2026": {"International":..,"National":..,"Other CMU":..,"CPE only":..}, ... },
   "per_staff": [ { "name": "...", "openalex_ids": ["A..."], "total": 12, "by_year": {"2026": 5, ...}, "top_tier_by_year": {"sjr": {...}, "citescore": {...}} } ],
   "publications": [ { "id": "W...", "title": "...", "year": 2026, "date": "2026-03-14",
                       "venue": "...", "issn": ["..."], "doi": "https://doi.org/10....", "type": "article",
@@ -78,7 +78,7 @@ scripts/build_data.py      # OpenAlex + tiers -> dashboard.json
 - Types included: article, review, conference paper (`proceedings-article`), book-chapter. Paratext, errata, retractions and preprints from repositories are excluded.
 - Date = `publication_date`. The monthly trend is cumulative by that date.
 - External partners (`ext`): institutions of co-authors who are not CPE staff, excluding CMU and its sub-units. A staff member's own past employers are not counted as partners. Empty in Scopus CSV mode.
-- Collaboration: **International** if any author institution's country is not TH. **National** if every country is TH but some institution is not CMU. Otherwise **CMU only**.
+- Collaboration: **International** if any author institution's country is not TH. **National** if every country is TH but some institution is not CMU. **Other CMU** if every institution is CMU but a non-staff co-author is in another CMU unit: a CMU sub-institution in OpenAlex, or CMU affiliation text that names a unit other than Computer Engineering (e.g. "Biomedical Engineering Institute", "Department of Civil Engineering", "Faculty of Science"). Text naming no unit ("Chiang Mai University", "Faculty of Engineering, Chiang Mai University") counts as CPE, as do staff themselves. Otherwise **CPE only**. External collaboration = International + National + Other CMU.
 - Tier lookup is by ISSN/eISSN of the primary source. Where a journal has several subject categories, the best one is used. No match gives "No Ranking". Conference papers usually get "No Ranking" under SJR unless the proceedings series is indexed.
 - "Top tier" = Q1 under SJR, or T1+Q1 under CiteScore. The KPI "per professor" = top tier / staff_count.
 - "Since last month" KPI = change in top-tier count compared with the previous monthly snapshot (`data/history.json`, appended by the pipeline).
@@ -96,4 +96,4 @@ scripts/build_data.py      # OpenAlex + tiers -> dashboard.json
 - `id` = EID. `doi` = `https://doi.org/` + DOI (falls back to a doi.org `Link`). Dedupe by EID, then DOI. ISSN: 8 digits, hyphen optional, a lost leading zero (7 digits) is restored; several ISSNs may be separated by `;`.
 - Date: parsed from the date column if present (`YYYY-MM-DD`, `YYYY-MM`, `May 2023`, ...). Otherwise `YYYY-01-01` from `Year`; any such work sets `monthly_is_approximate: true` and adds a note. Months are then approximate. The current-year row is still cut at `last_month`.
 - Staff: a work belongs to the staff whose `scopus_ids` appear in `Author(s) ID`. Staff with no `scopus_ids` fall back to normalized surname + first initial against `Author full names`, only when `Authors with affiliations` ties that same author to Chiang Mai University. Every fallback match is logged to stderr.
-- Collaboration from `Affiliations` (`;`-separated): **International** if any affiliation does not end with "Thailand"; **National** if all are Thai but some are not Chiang Mai University; otherwise **CMU only**. Empty Affiliations count as CMU only and add a note.
+- Collaboration from `Affiliations` (`;`-separated): **International** if any affiliation does not end with "Thailand"; **National** if all are Thai but some are not Chiang Mai University; **Other CMU** if a Chiang Mai University affiliation names a unit other than Computer Engineering; otherwise **CPE only**. Empty Affiliations count as CPE only and add a note.

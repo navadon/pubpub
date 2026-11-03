@@ -444,23 +444,60 @@ def external_institutions(w: Dict[str, Any], cmu_id: str, staff_ids: Set[str],
     return out
 
 
-def collab_class(w: Dict[str, Any], cmu_id: str) -> str:
+# CMU affiliation text: CPE if it names computer engineering; another CMU unit if, once the
+# university, the Faculty of Engineering and the address are removed, it still names a unit.
+# Text naming no unit ("Chiang Mai University", "Faculty of Engineering, ...") stays CPE.
+CPE_RE = re.compile(r"comput\w*\s+eng|computational\s+intelligence\s+research\s+lab", re.I)  # CIRL is a CPE lab
+CMU_GENERIC_RE = re.compile(r"chiang\s+mai\s+univ\w*\.?|faculty\s+of\s+engineering|chiang\s+mai|thailand|\bcmu\b|\d{5}", re.I)
+UNIT_RE = re.compile(r"depart|\bdept\b|faculty|college|school|institut|cent(er|re)|hospital|lab|unit|program|"
+                     r"consortium|office|division|science|medicine|engineering|research|museum|library", re.I)
+
+
+def other_cmu_unit(text: str) -> bool:
+    """True if CMU affiliation text names a unit other than the Department of Computer Engineering."""
+    if not text or CPE_RE.search(text):
+        return False
+    return bool(UNIT_RE.search(CMU_GENERIC_RE.sub(" ", text)))
+
+
+def collab_class(w: Dict[str, Any], cmu_id: str, staff_ids: Set[str]) -> str:
+    """International > National (another Thai institution) > Other CMU (a co-author in another
+    CMU unit) > CPE only. Staff count as CPE wherever their CMU affiliation text points."""
     countries: Set[str] = set()
     non_cmu_inst = False
+    other_unit = False
     for a in w.get("authorships") or []:
+        is_staff = short_id((a.get("author") or {}).get("id")) in staff_ids
+        cmu_insts: Set[str] = set()
         for inst in a.get("institutions") or []:
             iid = short_id(inst.get("id"))
             lineage = [short_id(x) for x in inst.get("lineage") or []]
             cc = inst.get("country_code")
             if cc:
                 countries.add(cc)
-            if iid != cmu_id and cmu_id not in lineage:
+            if iid == cmu_id or cmu_id in lineage:
+                cmu_insts.add(iid)
+            else:
                 non_cmu_inst = True
+        if not cmu_insts or is_staff:
+            continue
+        if any(i != cmu_id for i in cmu_insts):  # a CMU sub-institution, e.g. the hospital
+            other_unit = True
+            continue
+        affs = a.get("affiliations") or []
+        raws = [f.get("raw_affiliation_string") or "" for f in affs
+                if cmu_insts & {short_id(x) for x in f.get("institution_ids") or []}]
+        if not affs:
+            raws = list(a.get("raw_affiliation_strings") or [])
+        if other_cmu_unit(" | ".join(raws)):
+            other_unit = True
     if any(c != "TH" for c in countries):
         return "International"
     if non_cmu_inst:
         return "National"
-    return "CMU only"
+    if other_unit:
+        return "Other CMU"
+    return "CPE only"
 
 
 # --------------------------------------------------------------------------- Scopus CSV
@@ -512,7 +549,9 @@ def scopus_collab(affiliations: str) -> Optional[str]:
         return "International"
     if any(not re.search(r"chiang\s+mai\s+univ", a, re.I) for a in affs):
         return "National"
-    return "CMU only"
+    if any(other_cmu_unit(a) for a in affs):
+        return "Other CMU"
+    return "CPE only"
 
 
 def split_name_initials(name: str):
@@ -636,7 +675,7 @@ def scopus_pubs(path: Path, staff: List[Dict[str, Any]], start: str, today: dt.d
         collab = scopus_collab(r.get("affiliations", ""))
         if collab is None:
             no_aff += 1
-            collab = "CMU only"
+            collab = "CPE only"
         p = {
             "id": eid, "title": r.get("title", ""), "year": d.year, "date": date,
             "venue": r.get("source title", ""), "issn": issn,
@@ -655,7 +694,7 @@ def scopus_pubs(path: Path, staff: List[Dict[str, Any]], start: str, today: dt.d
         note("Scopus export has no exact publication date for %d works; they are placed in "
              "January of their year, so the monthly trend is approximate." % approx)
     if no_aff:
-        note("%d Scopus works have no Affiliations value and were classed 'CMU only'." % no_aff)
+        note("%d Scopus works have no Affiliations value and were classed 'CPE only'." % no_aff)
     pubs.sort(key=lambda p: (p["date"], p["id"]), reverse=True)
     # approximate = any work lacked a real date
     scopus_pubs.approx = approx > 0  # type: ignore[attr-defined]
@@ -778,7 +817,7 @@ def main() -> int:
             "doi": ("https://doi.org/" + doi) if doi else "", "type": kind, "staff": names,
             "sjr": sjr.tier(issn, year),
             "citescore": cs.tier(issn, year) if cs.available else None,
-            "collab": collab_class(w, cmu_id),
+            "collab": collab_class(w, cmu_id, set(id_to_name)),
             "ext": external_institutions(w, cmu_id, set(id_to_name), institutions),
             "kw": work_keywords(w),
         }
@@ -813,7 +852,7 @@ def main() -> int:
         "sjr": {y: {k: 0 for k in sjr_keys} for y in ys},
         "citescore": ({y: {k: 0 for k in cs_keys} for y in ys} if cs.available else {}),
     }
-    collab = {y: {"International": 0, "National": 0, "CMU only": 0} for y in ys}
+    collab = {y: {"International": 0, "National": 0, "Other CMU": 0, "CPE only": 0} for y in ys}
     per_staff = {s["name"]: {"name": s["name"], "openalex_ids": s["ids"], "scopus_ids": s["scopus_ids"], "total": 0, "by_year": {}, "top_tier_by_year": {"sjr": {}, "citescore": {}}}
                  for s in staff}
     for p in pubs:

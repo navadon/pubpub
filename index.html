@@ -44,6 +44,7 @@
   /* collaboration */
   --c-int: #b49ae4;
   --c-nat: #8ab8e6;
+  --c-oth: #9fd8c8;
   --c-cmu: #b9bdcc;
   /* KPI cards */
   --k1: linear-gradient(135deg, #e2e8fc, #ccd7f6);
@@ -106,7 +107,7 @@
     --t-text: #1b1d2b;
     --c-int: #b39fe2;
     --c-nat: #8fb4df;
-    --c-cmu: #7d8299;
+    --c-oth: #7cc4b2; --c-cmu: #7d8299;
     --k1: linear-gradient(135deg, #343e66, #434f80);
     --k2: linear-gradient(135deg, #3d3465, #52447d);
     --k3: linear-gradient(135deg, #25494a, #305d5a);
@@ -167,7 +168,7 @@
   --t-text: #1b1d2b;
   --c-int: #b39fe2;
   --c-nat: #8fb4df;
-  --c-cmu: #7d8299;
+  --c-oth: #7cc4b2; --c-cmu: #7d8299;
   --k1: linear-gradient(135deg, #343e66, #434f80);
   --k2: linear-gradient(135deg, #3d3465, #52447d);
   --k3: linear-gradient(135deg, #25494a, #305d5a);
@@ -605,7 +606,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       <h2 id="h-collab">Collaboration type</h2>
       <p class="hint" id="collab-hint"></p>
       <div id="collab"></div>
-      <p class="hint" style="margin-top:10px">International: any co-author institution outside Thailand. National: all in Thailand, some outside CMU.</p>
+      <p class="hint" style="margin-top:10px">International: a co-author institution outside Thailand. National: another Thai institution. Other CMU: a co-author in another CMU faculty, department or institute. CPE only: no co-authors outside the Department of Computer Engineering. The first three count as external collaboration.</p>
     </section>
   </div>
   </section>
@@ -761,8 +762,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
   var TOP = { sjr: ["Q1"], citescore: ["T1", "Q1"] };
   var TIER_NAME = { sjr: "SJR", citescore: "CiteScore" };
   var TOP_LABEL = { sjr: "Q1", citescore: "T1 + Q1" };
-  var COLLAB_KEYS = ["International", "National", "CMU only"];
-  var COLLAB_VAR = { "International": "--c-int", "National": "--c-nat", "CMU only": "--c-cmu" };
+  var COLLAB_KEYS = ["International", "National", "Other CMU", "CPE only"];
+  var COLLAB_VAR = { "International": "--c-int", "National": "--c-nat", "Other CMU": "--c-oth", "CPE only": "--c-cmu" };
   var TYPE_NAME = { "article": "Article", "review": "Review", "proceedings-article": "Conference paper", "book-chapter": "Book chapter" };
   var PAGE = 10;  // publications shown at first, most recent first
 
@@ -881,7 +882,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       var ch = Math.round((tot - prevSame) / prevSame * 100);
       delta = ' · <span>' + (ch >= 0 ? "+" : "") + ch + '% vs ' + (y === D.current_year ? "same period " : "") + (y - 1) + '</span>';
     }
-    var col = get(D, ["collaboration", String(y)], {}), colTot = sum(col), intl = col.International || 0, nat = col.National || 0, ext = intl + nat;
+    var col = get(D, ["collaboration", String(y)], {}), colTot = sum(col), intl = col.International || 0, nat = col.National || 0, oth = col["Other CMU"] || 0, ext = intl + nat + oth;
     var staff = D.staff_count || (D.per_staff || []).length || 1;
     var mv = monthAll(y), tl = TIER_NAME[state.tier] + " " + TOP_LABEL[state.tier];
     $("ytd-range").textContent = periodLabel(y);
@@ -890,7 +891,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       kpi("user", "Publications per professor", (tot / staff).toFixed(2), "All ranks · " + fmt(tot) + " works ÷ " + fmt(staff) + " staff") +
       kpi("bars", TOP_LABEL[state.tier] + " per professor", (top / staff).toFixed(2), fmt(top) + " " + tl + " works ÷ " + fmt(staff) + " staff") +
       kpi("globe", "External collaboration", fmt(ext) + ' <small>' + pct(ext, colTot) + '%</small>',
-        fmt(intl) + " international · " + fmt(nat) + " national (outside CMU)", ring(pct(ext, colTot))) +
+        fmt(intl) + " international · " + fmt(nat) + " national · " + fmt(oth) + " other CMU", ring(pct(ext, colTot))) +
       kpi("trend", y === D.current_year ? "Since last month" : "In " + MONTHS[mv.m - 1], "+" + fmt(mv.n),
         "All ranks · works dated " + MONTHS[mv.m - 1] + " " + y);
   }
@@ -1105,8 +1106,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     parts.push(s + ".");
     var tr = tiersFor(y), ranked = sum(tr) - (tr["No Ranking"] || 0);
     if (tot) parts.push(fmt(ranked) + " (" + pct(ranked, tot) + "%) appeared in " + TIER_NAME[state.tier] + "-ranked journals.");
-    var c = get(D, ["collaboration", String(y)], {}), ext = (c.International || 0) + (c.National || 0);
-    if (sum(c)) parts.push(pct(ext, sum(c)) + "% have co-authors outside CMU, " + pct(c.International || 0, sum(c)) + "% abroad.");
+    var c = get(D, ["collaboration", String(y)], {}), ext = (c.International || 0) + (c.National || 0) + (c["Other CMU"] || 0);
+    if (sum(c)) parts.push(pct(ext, sum(c)) + "% have co-authors outside CPE, " + pct(c.International || 0, sum(c)) + "% abroad.");
     var active = (D.per_staff || []).filter(function (r) { return get(r, ["by_year", String(y)], 0) > 0; }).length;
     if (active) parts.push(active + " of " + ((D.per_staff || []).length) + " staff published.");
     var kc = {};
