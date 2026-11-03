@@ -1138,6 +1138,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     return all ? "all time (" + span + ")" : span;
   }
   function rankKeys() { return TIER_KEYS[state.tier].filter(function (k) { return k !== "No Ranking"; }); }
+  function staffKeys() { return rankKeys().concat("No Ranking"); }
   function staffRows() {
     var q = {};  // name -> {Q1: n, ...} in range
     D.publications.forEach(function (p) {
@@ -1152,7 +1153,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
         if (inRange(Number(k))) n += r.by_year[k] || 0;
       }
       var row = { name: r.name, year: n, total: total };
-      rankKeys().forEach(function (k) { row["q:" + k] = get(q, [r.name, k], 0); });
+      staffKeys().forEach(function (k) { row["q:" + k] = get(q, [r.name, k], 0); });
       return row;
     });
   }
@@ -1162,7 +1163,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
       { key: "year", label: state.from === state.to ? String(state.from) : state.from + "–" + String(state.to).slice(2) },
       { key: "total", label: "Career" }
     ];
-    cols.splice.apply(cols, [2, 0].concat(rankKeys().map(function (k) { return { key: "q:" + k, label: k }; })));
+    cols.splice.apply(cols, [2, 0].concat(staffKeys().map(function (k) { return { key: "q:" + k, label: k === "No Ranking" ? "NR" : k }; })));
     if (!cols.some(function (c) { return c.key === state.sort.key; })) state.sort = { key: "year", dir: -1 };
     $("staff-head").innerHTML = cols.map(function (c) {
       var on = state.sort.key === c.key;
@@ -1184,7 +1185,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     }).join("");
     var active = rows.filter(function (r) { return r.year > 0; }).length;
     $("staff-hint").textContent = fmt(rows.length) + " staff, " + active + " with works in " + rangeLabel() +
-      ". " + rankKeys().join(", ") + " = " + TIER_NAME[state.tier] + " journal ranking, counted in the range; unranked venues are not shown. Career = since " +
+      ". " + rankKeys().join(", ") + " = " + TIER_NAME[state.tier] + " journal ranking and NR = not ranked (conferences, books, unranked journals), counted in the range. Career = since " +
       D.years[0] + ". Select a column to sort, or a name to show only their papers.";
   }
 
