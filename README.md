@@ -15,6 +15,11 @@ collects no visitor data: no accounts, cookies, analytics, or forms. GitHub Page
 basic technical data such as IP addresses. Staff names and publication records come from public
 sources; to correct or remove a record, open an issue.
 
+## Acknowledgement
+
+The idea for PubPub came from a post by Prof. Manop Kaewmoracharoen, shared on the Facebook page of
+Civil Engineering, Chulalongkorn University.
+
 ## Data sources and caveats
 
 - **Publications: OpenAlex** (free). OpenAlex coverage differs from Scopus and SciVal,
