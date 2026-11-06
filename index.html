@@ -261,9 +261,9 @@ main { padding: 16px 0 8px; }
 .kpi .lbl { font-size: 12px; font-weight: 600; opacity: .92; text-transform: uppercase; letter-spacing: .05em; }
 .kpi .val { font-size: 30px; font-weight: 800; line-height: 1.1; margin-top: 2px; }
 .kpi .val small { font-size: 15px; font-weight: 600; opacity: .9; }
-.kpi .qcols { display: flex; flex-wrap: wrap; gap: 2px 10px; }
-.kpi .qcols > span { display: flex; flex-direction: column; }
-.kpi .qcols b { font-size: 21px; font-weight: 800; }
+.kpi .qcols { display: grid; margin-top: 2px; }
+.kpi .qcols > span { display: flex; align-items: baseline; gap: 6px; line-height: 1.15; }
+.kpi .qcols b { font-size: 21px; font-weight: 800; font-variant-numeric: tabular-nums; }
 .kpi .qcols small { font-size: 12px; font-weight: 600; opacity: .9; }
 .kpi .meta { font-size: 12px; opacity: .92; margin-top: 3px; }
 .kpi .ring { flex: 0 0 auto; margin-left: auto; position: relative; z-index: 1; }
