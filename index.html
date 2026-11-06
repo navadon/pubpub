@@ -261,6 +261,10 @@ main { padding: 16px 0 8px; }
 .kpi .lbl { font-size: 12px; font-weight: 600; opacity: .92; text-transform: uppercase; letter-spacing: .05em; }
 .kpi .val { font-size: 30px; font-weight: 800; line-height: 1.1; margin-top: 2px; }
 .kpi .val small { font-size: 15px; font-weight: 600; opacity: .9; }
+.kpi .qcols { display: flex; flex-wrap: wrap; gap: 2px 10px; }
+.kpi .qcols > span { display: flex; flex-direction: column; }
+.kpi .qcols b { font-size: 21px; font-weight: 800; }
+.kpi .qcols small { font-size: 12px; font-weight: 600; opacity: .9; }
 .kpi .meta { font-size: 12px; opacity: .92; margin-top: 3px; }
 .kpi .ring { flex: 0 0 auto; margin-left: auto; position: relative; z-index: 1; }
 .kpi .ring text { fill: currentColor; font-size: 12px; font-weight: 700; }
@@ -897,6 +901,11 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     return '<article class="kpi"><div class="ico">' + ICONS[icon] + '</div><div class="body"><div class="lbl">' + label +
       '</div><div class="val num">' + value + '</div><div class="meta">' + meta + '</div></div>' + (extra || "") + '</article>';
   }
+  function qcols(rows, staff) {
+    return '<span class="qcols">' + rows.map(function (r) {
+      return '<span><b>' + (r[0] / staff).toFixed(2) + '</b><small>' + r[1] + '</small></span>';
+    }).join("") + '</span>';
+  }
   function periodLabel(y) {
     var m = lastMonthOf(y);
     return y === D.current_year ? "Jan–" + MONTHS[m - 1] + " " + y : "Full year " + y;
@@ -914,14 +923,14 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: s
     var staff = D.staff_count || (D.per_staff || []).length || 1;
     var mv = monthAll(y), tr = tiersFor(y);
     // CiteScore T1 is the top slice of Q1, so it counts in both groups
-    var q12 = ["T1", "Q1", "Q2"].reduce(function (s, k) { return s + (tr[k] || 0); }, 0);
+    var q1 = (tr.T1 || 0) + (tr.Q1 || 0), q12 = q1 + (tr.Q2 || 0);
     var q14 = q12 + (tr.Q3 || 0) + (tr.Q4 || 0);
     $("ytd-range").textContent = periodLabel(y);
     $("kpis").innerHTML =
       kpi("doc", y === D.current_year ? "Publications YTD" : "Publications", fmt(tot), "All ranks · " + periodLabel(y) + delta) +
       kpi("user", "Publications per staff", (tot / staff).toFixed(2), "All ranks · " + fmt(tot) + " works ÷ " + fmt(staff) + " staff") +
-      kpi("bars", "Per staff by quartile", (q12 / staff).toFixed(2) + ' <small>Q1–Q2</small>&ensp;' + (q14 / staff).toFixed(2) + ' <small>Q1–Q4</small>',
-        TIER_NAME[state.tier] + " · " + fmt(q12) + " and " + fmt(q14) + " works ÷ " + fmt(staff) + " staff") +
+      kpi("bars", "Per staff by quartile", qcols([[q1, "Q1"], [q12, "Q1–Q2"], [q14, "Q1–Q4"]], staff),
+        TIER_NAME[state.tier] + " · " + fmt(q1) + ", " + fmt(q12) + " and " + fmt(q14) + " works ÷ " + fmt(staff) + " staff") +
       kpi("globe", "External collaboration", fmt(ext) + ' <small>' + pct(ext, colTot) + '%</small>',
         fmt(intl) + " international · " + fmt(nat) + " national · " + fmt(oth) + " other CMU", ring(pct(ext, colTot))) +
       kpi("trend", y === D.current_year ? "Since last month" : "In " + MONTHS[mv.m - 1], "+" + fmt(mv.n),
