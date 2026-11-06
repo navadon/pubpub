@@ -938,7 +938,7 @@ footer .legal a { color: inherit; text-decoration: underline; }
       kpi("doc", y === D.current_year ? "Publications YTD" : "Publications", fmt(tot), "All ranks · " + periodLabel(y) + delta) +
       kpi("user", "Publications per staff", (tot / staff).toFixed(2), "All ranks · " + fmt(tot) + " works ÷ " + fmt(staff) + " staff") +
       kpi("bars", "Per staff by quartile", qcols([[q1, "Q1"], [q12, "Q1–Q2"], [q14, "Q1–Q4"]], staff),
-        TIER_NAME[state.tier] + " · " + fmt(q1) + ", " + fmt(q12) + " and " + fmt(q14) + " works ÷ " + fmt(staff) + " staff") +
+        fmt(q1) + ", " + fmt(q12) + " and " + fmt(q14) + " works ÷ " + fmt(staff) + " staff") +
       kpi("globe", "External collaboration", fmt(ext) + ' <small>' + pct(ext, colTot) + '%</small>',
         fmt(intl) + " international · " + fmt(nat) + " national · " + fmt(oth) + " other CMU", ring(pct(ext, colTot))) +
       kpi("trend", y === D.current_year ? "Since last month" : "In " + MONTHS[mv.m - 1], "+" + fmt(mv.n),
