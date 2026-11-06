@@ -17,7 +17,7 @@ sources; to correct or remove a record, open an issue.
 
 ## Acknowledgement
 
-The idea for PubPub came from a post by Prof. Manop Kaewmoracharoen, shared on the Facebook page of
+The idea for PubPub came from [a post](https://www.facebook.com/CivilCU/posts/pfbid0KWJvXpQCVXG2yDXvJNRknFYPZ3aAA2uSg7CJzj939VQTHBMiiLbUk1d6aAoBFz9dl) by Prof. Manop Kaewmoracharoen, shared on the Facebook page of
 Civil Engineering, Chulalongkorn University.
 
 ## Data sources and caveats
