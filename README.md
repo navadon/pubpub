@@ -6,6 +6,15 @@ journal quartiles (SJR and CiteScore), collaboration type, and per-staff totals.
 It is a single `index.html` page that reads `data/dashboard.json`, hosted on GitHub Pages
 and refreshed on the 1st of each month by a GitHub Action.
 
+## Disclaimer and privacy
+
+PubPub is an unofficial, independent dashboard, not an official service of the Department of
+Computer Engineering, the Faculty of Engineering, or Chiang Mai University. Its figures are for
+general information only and are not a basis for evaluation, promotion, or KPI reporting. The page
+collects no visitor data: no accounts, cookies, analytics, or forms. GitHub Pages and cdnjs may log
+basic technical data such as IP addresses. Staff names and publication records come from public
+sources; to correct or remove a record, open an issue.
+
 ## Data sources and caveats
 
 - **Publications: OpenAlex** (free). OpenAlex coverage differs from Scopus and SciVal,
