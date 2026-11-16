@@ -8,6 +8,7 @@
 <meta name="color-scheme" content="light dark">
 <style>
 :root {
+  color-scheme: light;
   --bg: #f6f5fb;
   --surface: #ffffff;
   --surface-2: #faf9fd;
@@ -75,7 +76,8 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #14172a;
+    color-scheme: dark;
+  --bg: #14172a;
     --surface: #1c2036;
     --surface-2: #22273f;
     --border: #323955;
@@ -136,6 +138,7 @@
   }
 }
 :root[data-theme="dark"] {
+  color-scheme: dark;
   --bg: #14172a;
   --surface: #1c2036;
   --surface-2: #22273f;
@@ -405,6 +408,7 @@ table.staff td.zero { color: var(--muted); }
   border: 1px solid var(--border); border-radius: 8px; padding: 7px 10px;
 }
 .pub-tools input[type=search] { flex: 1 1 220px; min-width: 0; }
+select option { background: var(--surface); color: var(--text); }
 .pub-count { font-size: 12px; color: var(--muted); margin: 0 0 6px; }
 ol.pubs { list-style: none; margin: 0; padding: 0; }
 ol.pubs li { padding: 10px 0; border-bottom: 1px solid var(--border); }
