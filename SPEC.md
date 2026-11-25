@@ -68,7 +68,8 @@ scripts/build_data.py      # OpenAlex + tiers -> dashboard.json
                       "venue": "...", "issn": ["..."], "doi": "https://doi.org/10....", "type": "article",
                       "staff": ["..."], "sjr": "Q1", "citescore": "T1", "collab": "International",
                       "ext": ["I63966007", ...],         // external co-author institutions (OpenAlex mode only)
-                      "kw": ["wireless sensor networks", ...] } ],  // OpenAlex keywords, best first (OpenAlex mode only)
+                      "kw": ["wireless sensor networks", ...],   // OpenAlex keywords, best first (OpenAlex mode only)
+                      "first": ["..."], "corr": ["..."] } ],     // staff who are first author / OpenAlex-flagged corresponding author; omitted when empty (OpenAlex mode only; corr is recorded for about a third of papers)
   "institutions": { "I63966007": ["Massachusetts Institute of Technology", "US"], ... }
 }
 ```

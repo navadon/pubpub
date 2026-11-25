@@ -380,6 +380,20 @@ def fetch_works(author_ids: List[str], start: str, end: str) -> List[Dict[str, A
     return list(works.values())
 
 
+def author_roles(w, id_to_name):
+    """Staff names who are first author, and who OpenAlex marks as corresponding author."""
+    first, corr = set(), set()
+    for a in w.get("authorships") or []:
+        name = id_to_name.get(short_id((a.get("author") or {}).get("id")))
+        if not name:
+            continue
+        if a.get("author_position") == "first":
+            first.add(name)
+        if a.get("is_corresponding"):
+            corr.add(name)
+    return sorted(first), sorted(corr)
+
+
 def work_keywords(w: Dict[str, Any]) -> List[str]:
     """OpenAlex keywords for a work (lower-case display names, best first)."""
     kws = sorted(w.get("keywords") or [], key=lambda k: -(k.get("score") or 0))
@@ -799,10 +813,15 @@ def main() -> int:
                         if a.get("author") and short_id(a["author"].get("id")) in id_to_name})
         if not names:
             continue
+        first, corr = author_roles(w, id_to_name)
         doi = norm_doi(w.get("doi"))
         if doi and doi in by_doi:
             prev = by_doi[doi]
             prev["staff"] = sorted(set(prev["staff"]) | set(names))
+            for key, val in (("first", first), ("corr", corr)):
+                merged = sorted(set(prev.get(key, [])) | set(val))
+                if merged:
+                    prev[key] = merged
             prev["ext"] = prev["ext"] + [i for i in external_institutions(w, cmu_id, set(id_to_name), institutions)
                                          if i not in prev["ext"]]
             continue
@@ -821,6 +840,11 @@ def main() -> int:
             "ext": external_institutions(w, cmu_id, set(id_to_name), institutions),
             "kw": work_keywords(w),
         }
+        # staff who are first author / flagged corresponding (OpenAlex flags only some papers)
+        if first:
+            p["first"] = first
+        if corr:
+            p["corr"] = corr
         pubs.append(p)
         if doi:
             by_doi[doi] = p

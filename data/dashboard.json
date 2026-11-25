@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03",
+ "generated_at": "2026-11-25",
  "source": "OpenAlex",
  "staff_count": 28,
  "staff_with_openalex_ids": 28,
@@ -1829,6 +1829,9 @@
     "tear film break-up time",
     "patient-reported outcomes",
     "visual function"
+   ],
+   "corr": [
+    "Karn Patanukhom"
    ]
   },
   {
@@ -1952,6 +1955,9 @@
     "epistemic harm",
     "cross-jurisdictional regulation",
     "micro-expressions"
+   ],
+   "first": [
+    "Jenjira Jaimunk"
    ]
   },
   {
@@ -2070,6 +2076,9 @@
     "conp-hardness",
     "approximation algorithms",
     "network security"
+   ],
+   "corr": [
+    "Sanpawat Kantabutra"
    ]
   },
   {
@@ -2379,6 +2388,9 @@
     "bayesian optimization",
     "digital connectivity",
     "campus mobility"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -2438,6 +2450,12 @@
     "airfoil self-noise",
     "knowledge-based engineering",
     "weight optimization"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -2461,6 +2479,12 @@
     "fuzzy numbers",
     "ranking of fuzzy numbers",
     "fuzzy classifier"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -2486,6 +2510,12 @@
     "data representation",
     "data analysis",
     "fuzzy sets"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -2508,6 +2538,12 @@
     "fuzzy learning vector quantization",
     "supervised learning",
     "pattern recognition"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -2534,6 +2570,12 @@
     "fuzzy numbers",
     "data fusion",
     "language input"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -2558,6 +2600,12 @@
     "decision fusion",
     "evidence combination",
     "mass function"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -2580,6 +2628,12 @@
     "relational clustering",
     "fuzzy vectors",
     "fuzzy clustering"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -2646,6 +2700,9 @@
     "synthetic data augmentation",
     "data scarcity",
     "perceptual validation"
+   ],
+   "corr": [
+    "Patiwet Wuttisarnwattana"
    ]
   },
   {
@@ -2775,6 +2832,9 @@
     "telerehabilitation",
     "user acceptance",
     "mqtt"
+   ],
+   "first": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -2871,6 +2931,9 @@
     "cloud storage",
     "data placement",
     "storage systems"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -3018,6 +3081,9 @@
     "smart agriculture",
     "data preprocessing",
     "environmental monitoring"
+   ],
+   "corr": [
+    "Narissara Eiamkanitchat"
    ]
   },
   {
@@ -3136,6 +3202,9 @@
     "elective course selection",
     "global competence",
     "curriculum development"
+   ],
+   "corr": [
+    "Trasapong Thaiupathump"
    ]
   },
   {
@@ -3166,6 +3235,9 @@
     "wavelet features",
     "anomaly detection",
     "process monitoring"
+   ],
+   "corr": [
+    "Trasapong Thaiupathump"
    ]
   },
   {
@@ -3196,6 +3268,9 @@
     "kidney disease classification",
     "data mapping",
     "data quality"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -3257,6 +3332,9 @@
     "thai politics",
     "political speeches",
     "voting records"
+   ],
+   "corr": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -3289,6 +3367,10 @@
     "fleet rebalancing",
     "short-term demand forecasting",
     "urban mobility"
+   ],
+   "corr": [
+    "Karn Patanukhom",
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -3583,6 +3665,9 @@
     "first- and last-mile connectivity",
     "travel time",
     "urban accessibility"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -3649,6 +3734,12 @@
     "co2 transport",
     "travel distance minimization",
     "thailand"
+   ],
+   "first": [
+    "Natthanan Promsuk"
+   ],
+   "corr": [
+    "Nopparuj Suetrong"
    ]
   },
   {
@@ -3748,6 +3839,12 @@
     "wireless network design",
     "temperature and humidity effects",
     "coverage planning"
+   ],
+   "first": [
+    "Anya Apavatjrut"
+   ],
+   "corr": [
+    "Anya Apavatjrut"
    ]
   },
   {
@@ -3832,6 +3929,9 @@
     "high-performance computing",
     "climate change mitigation",
     "carbon capture and storage"
+   ],
+   "first": [
+    "Nopparuj Suetrong"
    ]
   },
   {
@@ -3860,6 +3960,9 @@
     "d-wave quantum annealer",
     "hybrid quantum-classical computation",
     "system vulnerabilities"
+   ],
+   "corr": [
+    "Sanpawat Kantabutra"
    ]
   },
   {
@@ -3894,6 +3997,9 @@
     "gdpr compliance",
     "iot data",
     "privacy control"
+   ],
+   "corr": [
+    "Jenjira Jaimunk"
    ]
   },
   {
@@ -3924,6 +4030,9 @@
     "k-nearest neighbors",
     "watershed segmentation",
     "thyroid cancer diagnosis"
+   ],
+   "first": [
+    "Patiwet Wuttisarnwattana"
    ]
   },
   {
@@ -3979,6 +4088,9 @@
     "wireless resource allocation",
     "soil properties",
     "network optimization"
+   ],
+   "first": [
+    "Anya Apavatjrut"
    ]
   },
   {
@@ -4199,6 +4311,12 @@
     "environmental data",
     "sensor fusion",
     "distance measurement"
+   ],
+   "first": [
+    "Anya Apavatjrut"
+   ],
+   "corr": [
+    "Anya Apavatjrut"
    ]
   },
   {
@@ -4351,6 +4469,9 @@
     "oral mucosa histopathology",
     "neural network architecture",
     "early cancer detection"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -4381,6 +4502,9 @@
     "magnetic field distortion",
     "spatial computing",
     "hand pose estimation"
+   ],
+   "first": [
+    "Pontakorn Sonchan"
    ]
   },
   {
@@ -4407,6 +4531,9 @@
     "sample selection",
     "plant disease diagnosis",
     "data augmentation"
+   ],
+   "first": [
+    "Sasin Janpuangtong"
    ]
   },
   {
@@ -4432,6 +4559,12 @@
     "ieee computational intelligence society",
     "society leadership",
     "professional society membership"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -4734,6 +4867,12 @@
     "combinatorial optimization",
     "randomized algorithms",
     "set selection"
+   ],
+   "first": [
+    "Sanpawat Kantabutra"
+   ],
+   "corr": [
+    "Sanpawat Kantabutra"
    ]
   },
   {
@@ -4939,6 +5078,9 @@
     "circular hough transform",
     "eye diseases",
     "automated diagnosis"
+   ],
+   "corr": [
+    "Karn Patanukhom"
    ]
   },
   {
@@ -5000,6 +5142,12 @@
     "smartphone images",
     "lesion type classification",
     "early cancer detection"
+   ],
+   "first": [
+    "Patiwet Wuttisarnwattana"
+   ],
+   "corr": [
+    "Patiwet Wuttisarnwattana"
    ]
   },
   {
@@ -5065,6 +5213,9 @@
     "artificial intelligence",
     "health surveillance",
     "patient participation"
+   ],
+   "corr": [
+    "Patiwet Wuttisarnwattana"
    ]
   },
   {
@@ -5261,6 +5412,9 @@
     "spatio-temporal features",
     "player recruitment",
     "game statistics"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -5388,6 +5542,9 @@
     "food categories",
     "food image dataset",
     "consumer behavior"
+   ],
+   "corr": [
+    "Karn Patanukhom"
    ]
   },
   {
@@ -5417,6 +5574,9 @@
     "genetic algorithm",
     "humanitarian aid distribution",
     "flood risk"
+   ],
+   "corr": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -5446,6 +5606,9 @@
     "chiang mai province",
     "disaster risk reduction",
     "lstm"
+   ],
+   "corr": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -5478,6 +5641,9 @@
     "data-driven decision making",
     "web application",
     "transit operations"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -5509,6 +5675,9 @@
     "gyroscope",
     "magnetic disturbances",
     "magnetometer"
+   ],
+   "first": [
+    "Pontakorn Sonchan"
    ]
   },
   {
@@ -5562,6 +5731,9 @@
     "iterative closest point",
     "particle swarm optimization comparison",
     "hierarchical registration"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -5623,6 +5795,12 @@
     "subsurface flow",
     "capillary flow",
     "machine learning prediction"
+   ],
+   "first": [
+    "Nopparuj Suetrong"
+   ],
+   "corr": [
+    "Natthanan Promsuk"
    ]
   },
   {
@@ -5766,6 +5944,9 @@
     "feature selection",
     "classification accuracy",
     "clustering"
+   ],
+   "corr": [
+    "Narissara Eiamkanitchat"
    ]
   },
   {
@@ -5888,6 +6069,12 @@
     "signal processing algorithms",
     "marg sensors",
     "hand model"
+   ],
+   "first": [
+    "Pontakorn Sonchan"
+   ],
+   "corr": [
+    "Pontakorn Sonchan"
    ]
   },
   {
@@ -5919,6 +6106,9 @@
     "graph convolutional networks",
     "wireless communication signals",
     "hybrid deep learning model"
+   ],
+   "first": [
+    "Nopparuj Suetrong"
    ]
   },
   {
@@ -6101,6 +6291,9 @@
     "min-max normalization",
     "wireless communication signals",
     "internet of things"
+   ],
+   "first": [
+    "Nopparuj Suetrong"
    ]
   },
   {
@@ -6136,6 +6329,9 @@
     "student development",
     "industry alignment",
     "teamwork"
+   ],
+   "first": [
+    "Thanatip Chankong"
    ]
   },
   {
@@ -6258,6 +6454,12 @@
     "fluorescent microspheres",
     "detection sensitivity",
     "stem cell tracking"
+   ],
+   "first": [
+    "Patiwet Wuttisarnwattana"
+   ],
+   "corr": [
+    "Patiwet Wuttisarnwattana"
    ]
   },
   {
@@ -6373,6 +6575,9 @@
     "machine learning",
     "climate change projections",
     "interpolation"
+   ],
+   "corr": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -6430,6 +6635,9 @@
     "benchmark dataset",
     "low-cost sensors",
     "magnetometer"
+   ],
+   "first": [
+    "Pontakorn Sonchan"
    ]
   },
   {
@@ -6511,6 +6719,9 @@
     "cuckoo search algorithm",
     "enamel discoloration",
     "drinking water fluoride"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -6577,6 +6788,12 @@
     "t cell proliferation",
     "marginal zone",
     "cell therapy"
+   ],
+   "first": [
+    "Patiwet Wuttisarnwattana"
+   ],
+   "corr": [
+    "Patiwet Wuttisarnwattana"
    ]
   },
   {
@@ -6724,6 +6941,9 @@
     "execution time",
     "data partitioning",
     "distributed computing"
+   ],
+   "corr": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -6846,6 +7066,12 @@
     "data sharing",
     "data collection policy",
     "health data"
+   ],
+   "first": [
+    "Jenjira Jaimunk"
+   ],
+   "corr": [
+    "Jenjira Jaimunk"
    ]
   },
   {
@@ -6876,6 +7102,12 @@
     "ferromagnetic interference",
     "finger phalanges",
     "inertial sensors"
+   ],
+   "first": [
+    "Pontakorn Sonchan"
+   ],
+   "corr": [
+    "Pontakorn Sonchan"
    ]
   },
   {
@@ -6961,6 +7193,12 @@
     "feature selection",
     "model generalization",
     "prior knowledge"
+   ],
+   "first": [
+    "Sasin Janpuangtong"
+   ],
+   "corr": [
+    "Sasin Janpuangtong"
    ]
   },
   {
@@ -7103,6 +7341,12 @@
     "prior knowledge",
     "feature relevance",
     "linear regression"
+   ],
+   "first": [
+    "Sasin Janpuangtong"
+   ],
+   "corr": [
+    "Sasin Janpuangtong"
    ]
   },
   {
@@ -7132,6 +7376,12 @@
     "trajectory clustering",
     "data privacy",
     "data uncertainty"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -7155,6 +7405,12 @@
     "travel cost estimation",
     "distance decay",
     "travel distance"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -7180,6 +7436,12 @@
     "mobile phone data",
     "mobile network data",
     "alternative data"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -7205,6 +7467,12 @@
     "log-linear models",
     "origin-destination matrix",
     "travel cost"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -7234,6 +7502,12 @@
     "visit duration",
     "temperature",
     "retail shopping"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -7257,6 +7531,12 @@
     "sub-saharan africa",
     "urban mobility",
     "developing countries"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -7284,6 +7564,12 @@
     "social networks",
     "driving",
     "commuting"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -7308,6 +7594,12 @@
     "voronoi cells",
     "crowdsourcing",
     "travel behavior"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -7332,6 +7624,12 @@
     "personal mobility",
     "tourism management",
     "tourist flows"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -7365,6 +7663,13 @@
     "feature extraction",
     "fuzzy c-means clustering",
     "explainable segmentation"
+   ],
+   "first": [
+    "Patiwet Wuttisarnwattana"
+   ],
+   "corr": [
+    "Patiwet Wuttisarnwattana",
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -7393,6 +7698,9 @@
     "image dissimilarity",
     "image quality assessment",
     "feature transfer"
+   ],
+   "corr": [
+    "Karn Patanukhom"
    ]
   },
   {
@@ -7429,6 +7737,9 @@
     "learning",
     "social media",
     "research topics"
+   ],
+   "first": [
+    "Kenneth Cosh"
    ]
   },
   {
@@ -7493,6 +7804,9 @@
     "security (computing)",
     "earthquake information",
     "usability engineering"
+   ],
+   "corr": [
+    "Lachana Ramingwong"
    ]
   },
   {
@@ -8077,6 +8391,12 @@
     "small-scale fading",
     "wireless sensor networks",
     "path loss exponent"
+   ],
+   "first": [
+    "Natthanan Promsuk"
+   ],
+   "corr": [
+    "Natthanan Promsuk"
    ]
   },
   {
@@ -8105,6 +8425,9 @@
     "flash flood early warning",
     "decentralized communication",
     "remote area monitoring"
+   ],
+   "corr": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -8138,6 +8461,9 @@
     "multi-user networks",
     "energy harvesting",
     "fairness"
+   ],
+   "corr": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -8255,6 +8581,9 @@
     "stakeholder communication",
     "software project management",
     "project failure"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -8281,6 +8610,12 @@
     "adiabatic quantum computation",
     "cyber defense strategy",
     "optimization problems"
+   ],
+   "first": [
+    "Sanpawat Kantabutra"
+   ],
+   "corr": [
+    "Sanpawat Kantabutra"
    ]
   },
   {
@@ -8407,6 +8742,9 @@
     "euler angles",
     "marg sensors",
     "computer interaction"
+   ],
+   "corr": [
+    "Pontakorn Sonchan"
    ]
   },
   {
@@ -8472,6 +8810,12 @@
     "ping river",
     "cuckoo search algorithm",
     "neural network weight optimization"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -8505,6 +8849,9 @@
     "google places",
     "portugal",
     "tourism"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -8618,6 +8965,12 @@
     "battery replacement",
     "k-means clustering",
     "vehicle routing"
+   ],
+   "first": [
+    "Natthanan Promsuk"
+   ],
+   "corr": [
+    "Natthanan Promsuk"
    ]
   },
   {
@@ -8646,6 +8999,12 @@
     "feature selection",
     "supply-demand balancing",
     "shared micromobility"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Karn Patanukhom"
    ]
   },
   {
@@ -8736,6 +9095,9 @@
     "air pollution",
     "smartphone camera",
     "feature extraction"
+   ],
+   "corr": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -8760,6 +9122,9 @@
     "ct angiography",
     "computer-aided diagnosis",
     "ship detection"
+   ],
+   "first": [
+    "Patiwet Wuttisarnwattana"
    ]
   },
   {
@@ -8787,6 +9152,12 @@
     "integrated gradients",
     "corneal blindness",
     "explainable ai"
+   ],
+   "first": [
+    "Kasemsit Teeyapan"
+   ],
+   "corr": [
+    "Kasemsit Teeyapan"
    ]
   },
   {
@@ -8817,6 +9188,9 @@
     "stakeholder collaboration",
     "sustainable development",
     "community poverty"
+   ],
+   "first": [
+    "Thanatip Chankong"
    ]
   },
   {
@@ -8843,6 +9217,9 @@
     "channel assignment",
     "transmission power control",
     "network troubleshooting"
+   ],
+   "first": [
+    "Anya Apavatjrut"
    ]
   },
   {
@@ -8899,6 +9276,9 @@
     "implementation costs",
     "wireless transmission",
     "header overhead"
+   ],
+   "corr": [
+    "Anya Apavatjrut"
    ]
   },
   {
@@ -9040,6 +9420,12 @@
     "urban social geography",
     "power-law decay",
     "social sensing"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -9069,6 +9455,9 @@
     "relational data analysis",
     "thailand provinces",
     "prevention policy"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -9099,6 +9488,9 @@
     "data anonymization",
     "privacy constraints",
     "search efficiency"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -9174,6 +9566,9 @@
     "air pollution",
     "feature extraction",
     "short-term forecasting"
+   ],
+   "corr": [
+    "Narissara Eiamkanitchat"
    ]
   },
   {
@@ -9206,6 +9601,9 @@
     "air quality forecasting",
     "data mining techniques",
     "data preparation"
+   ],
+   "corr": [
+    "Narissara Eiamkanitchat"
    ]
   },
   {
@@ -9268,6 +9666,9 @@
     "spectrum reallocation",
     "spectrum occupancy",
     "dynamic spectrum sharing"
+   ],
+   "corr": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -9331,6 +9732,12 @@
     "artificial neural networks",
     "2.4 ghz",
     "network topology"
+   ],
+   "first": [
+    "Natthanan Promsuk"
+   ],
+   "corr": [
+    "Natthanan Promsuk"
    ]
   },
   {
@@ -9434,6 +9841,9 @@
     "software development standards",
     "agile software development",
     "software quality management"
+   ],
+   "corr": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -9487,6 +9897,9 @@
     "dental casts",
     "image registration",
     "3d scanning"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -9569,6 +9982,12 @@
     "self-assessment",
     "readiness model",
     "logistics automation"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
+   ],
+   "corr": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -9603,6 +10022,9 @@
     "image processing",
     "rotation correction",
     "human error reduction"
+   ],
+   "first": [
+    "Natthanan Promsuk"
    ]
   },
   {
@@ -9629,6 +10051,9 @@
     "part recognition",
     "automotive education",
     "lighting conditions"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -9827,6 +10252,12 @@
     "ensemble learning",
     "radiology automation",
     "model efficiency"
+   ],
+   "first": [
+    "Kasemsit Teeyapan"
+   ],
+   "corr": [
+    "Kasemsit Teeyapan"
    ]
   },
   {
@@ -9849,6 +10280,12 @@
     "constructionism",
     "real-world learning",
     "reality"
+   ],
+   "first": [
+    "Arnan Sipitakiat"
+   ],
+   "corr": [
+    "Arnan Sipitakiat"
    ]
   },
   {
@@ -9942,6 +10379,9 @@
     "demand-supply gap",
     "transit ridership",
     "public transport"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -10011,6 +10451,9 @@
     "distance education",
     "engineering education",
     "flash mx"
+   ],
+   "corr": [
+    "Trasapong Thaiupathump"
    ]
   },
   {
@@ -10063,6 +10506,9 @@
     "cloud object storage",
     "job shop scheduling",
     "storage cost optimization"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -10122,6 +10568,9 @@
     "approximation methods",
     "security systems",
     "computational complexity"
+   ],
+   "corr": [
+    "Sanpawat Kantabutra"
    ]
   },
   {
@@ -10323,6 +10772,9 @@
     "call detail records",
     "voronoi cells",
     "travel behavior"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -10380,6 +10832,9 @@
     "user experience",
     "public transport planning",
     "transit speed"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -10411,6 +10866,9 @@
     "award system",
     "water supply",
     "water requirements"
+   ],
+   "corr": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -10439,6 +10897,9 @@
     "quasi-identifiers",
     "data anonymization",
     "np-hardness"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -10477,6 +10938,12 @@
     "stem cell therapy",
     "cell tracking",
     "cell homing"
+   ],
+   "first": [
+    "Patiwet Wuttisarnwattana"
+   ],
+   "corr": [
+    "Patiwet Wuttisarnwattana"
    ]
   },
   {
@@ -10500,6 +10967,9 @@
     "wireless network coding",
     "indoor positioning",
     "spectrum sharing"
+   ],
+   "first": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -10557,6 +11027,9 @@
     "long short-term memory networks",
     "industrial internet of things",
     "fast fourier transform"
+   ],
+   "first": [
+    "Natthanan Promsuk"
    ]
   },
   {
@@ -10581,6 +11054,9 @@
    "kw": [
     "real-time detection",
     "image degradation"
+   ],
+   "corr": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -10766,6 +11242,12 @@
     "relay selection",
     "ergodic capacity",
     "cooperative communication"
+   ],
+   "first": [
+    "Kampol Woradit"
+   ],
+   "corr": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -10821,6 +11303,9 @@
     "debt ratio",
     "trading suspension",
     "financial distress"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -10854,6 +11339,9 @@
     "keyword search",
     "automotive dealers",
     "facebook page"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -11026,6 +11514,12 @@
     "received signal strength indicator",
     "rfid",
     "rfid reader"
+   ],
+   "first": [
+    "Kampol Woradit"
+   ],
+   "corr": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -11051,6 +11545,9 @@
     "smart cities",
     "ubiquitous computing",
     "urban applications"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -11268,6 +11765,9 @@
     "cooperative base stations",
     "wireless powered communication",
     "uplink"
+   ],
+   "first": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -11354,6 +11854,9 @@
     "eavesdropping",
     "ofdma",
     "5g"
+   ],
+   "first": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -11381,6 +11884,12 @@
     "data sharing policy",
     "data collection policy",
     "data ownership"
+   ],
+   "first": [
+    "Jenjira Jaimunk"
+   ],
+   "corr": [
+    "Jenjira Jaimunk"
    ]
   },
   {
@@ -11407,6 +11916,12 @@
     "multi-layer architecture",
     "databases",
     "data transmission control"
+   ],
+   "first": [
+    "Jenjira Jaimunk"
+   ],
+   "corr": [
+    "Jenjira Jaimunk"
    ]
   },
   {
@@ -11443,6 +11958,9 @@
     "cfse labeling",
     "immunosuppression",
     "lymphadenopathy"
+   ],
+   "first": [
+    "Patiwet Wuttisarnwattana"
    ]
   },
   {
@@ -11561,6 +12079,12 @@
     "sleep mode",
     "cloud computing energy efficiency",
     "server consolidation"
+   ],
+   "first": [
+    "Yuthapong Somchit"
+   ],
+   "corr": [
+    "Yuthapong Somchit"
    ]
   },
   {
@@ -11590,6 +12114,10 @@
     "pagerank",
     "integer programming formulation",
     "ranking accuracy"
+   ],
+   "corr": [
+    "Juggapong Natwichai",
+    "Pruet Boonma"
    ]
   },
   {
@@ -11672,6 +12200,9 @@
     "graft-versus-host disease",
     "cryopreservation",
     "stem cell transplantation"
+   ],
+   "first": [
+    "Patiwet Wuttisarnwattana"
    ]
   },
   {
@@ -11776,6 +12307,9 @@
     "linguistic data",
     "fuzzy numbers",
     "fuzzy clustering"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -11808,6 +12342,9 @@
     "commuting patterns",
     "cellular network data",
     "data quality"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -11958,6 +12495,12 @@
     "curriculum management",
     "test scheduling",
     "school dropout"
+   ],
+   "first": [
+    "Kampol Woradit"
+   ],
+   "corr": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -12092,6 +12635,12 @@
     "abnormal cell detection",
     "cervical cancer screening",
     "feature extraction"
+   ],
+   "first": [
+    "Thanatip Chankong"
+   ],
+   "corr": [
+    "Thanatip Chankong"
    ]
   },
   {
@@ -12121,6 +12670,9 @@
     "recommender systems",
     "np-hardness",
     "query result accuracy"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -12161,6 +12713,9 @@
     "hardness prediction",
     "rubber",
     "spectral preprocessing"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -12191,6 +12746,12 @@
     "scalability",
     "hospital data",
     "distributed data services"
+   ],
+   "first": [
+    "Pruet Boonma"
+   ],
+   "corr": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -12298,6 +12859,9 @@
     "urban applications",
     "ubiquitous computing",
     "smart cities"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -12396,6 +12960,12 @@
     "privacy preservation",
     "social environment",
     "privacy levels"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -12629,6 +13199,9 @@
     "neyman-pearson criterion",
     "adaptive thresholding",
     "rf noise"
+   ],
+   "first": [
+    "Natthanan Promsuk"
    ]
   },
   {
@@ -12684,6 +13257,9 @@
     "mini-mias",
     "breast cancer",
     "prototype-based classification"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -12712,6 +13288,9 @@
     "hyperellipsoids",
     "binary classification",
     "feature space"
+   ],
+   "first": [
+    "Kasemsit Teeyapan"
    ]
   },
   {
@@ -12767,6 +13346,9 @@
    "kw": [
     "syntactic pattern recognition",
     "fuzzy clustering"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -12851,6 +13433,12 @@
     "lego bricks",
     "software engineering education",
     "computer simulation"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
+   ],
+   "corr": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -12879,6 +13467,9 @@
     "support vector machine",
     "mass function",
     "sar image classification"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -12912,6 +13503,12 @@
     "lay rescuers",
     "usability evaluation",
     "training quality assessment"
+   ],
+   "first": [
+    "Navadon Khunlertgit"
+   ],
+   "corr": [
+    "Navadon Khunlertgit"
    ]
   },
   {
@@ -12941,6 +13538,9 @@
     "fuzzy k-nearest neighbor",
     "gait classification",
     "symbolic aggregate approximation"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -13082,6 +13682,9 @@
     "usability evaluation",
     "mobile application",
     "hospital queue management"
+   ],
+   "first": [
+    "Nasi Tantitharanukul"
    ]
   },
   {
@@ -13110,6 +13713,9 @@
     "group discussion",
     "community-based learning",
     "antenna performance improvement"
+   ],
+   "first": [
+    "Thanatip Chankong"
    ]
   },
   {
@@ -13195,6 +13801,9 @@
     "sex ratio",
     "mobile phone data",
     "urban informatics"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -13311,6 +13920,9 @@
     "natural language processing",
     "research topics",
     "software engineering research"
+   ],
+   "first": [
+    "Kenneth Cosh"
    ]
   },
   {
@@ -13368,6 +13980,9 @@
     "location privacy",
     "brute force optimization",
     "location-based services"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -13397,6 +14012,9 @@
     "hand gesture recognition",
     "signer-independent recognition",
     "unsupervised clustering"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -13472,6 +14090,9 @@
     "software engineering education",
     "software risk",
     "hands-on learning"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -13499,6 +14120,9 @@
     "treatment planning",
     "pediatric surgery",
     "treatment age"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -13530,6 +14154,9 @@
     "conceptual framework",
     "patient data integration",
     "search suggestions"
+   ],
+   "corr": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -13750,6 +14377,9 @@
     "localization algorithms",
     "dense wireless networks",
     "coexistence"
+   ],
+   "first": [
+    "Natthanan Promsuk"
    ]
   },
   {
@@ -13775,6 +14405,9 @@
     "urban applications",
     "ubiquitous computing",
     "smart cities"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -13878,6 +14511,12 @@
     "technology acceptance",
     "road safety",
     "urban driving conditions"
+   ],
+   "first": [
+    "Kenneth Cosh"
+   ],
+   "corr": [
+    "Kenneth Cosh"
    ]
   },
   {
@@ -13908,6 +14547,12 @@
     "hands-on workshop",
     "software engineering education",
     "project-based learning"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
+   ],
+   "corr": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -13938,6 +14583,12 @@
     "agile methods",
     "software development",
     "organizational structure"
+   ],
+   "first": [
+    "Lachana Ramingwong"
+   ],
+   "corr": [
+    "Lachana Ramingwong"
    ]
   },
   {
@@ -13968,6 +14619,9 @@
     "location-aware devices",
     "k-anonymity",
     "prior knowledge"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -14074,6 +14728,12 @@
     "raspberry pi",
     "speech recognition",
     "microcontroller interfacing"
+   ],
+   "first": [
+    "Narissara Eiamkanitchat"
+   ],
+   "corr": [
+    "Narissara Eiamkanitchat"
    ]
   },
   {
@@ -14103,6 +14763,12 @@
     "non-technical stakeholders",
     "project management education",
     "simulation-based training"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
+   ],
+   "corr": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -14132,6 +14798,12 @@
     "ethical violations",
     "privacy",
     "thailand"
+   ],
+   "first": [
+    "Lachana Ramingwong"
+   ],
+   "corr": [
+    "Lachana Ramingwong"
    ]
   },
   {
@@ -14196,6 +14868,12 @@
     "access distance",
     "social networks",
     "public transport"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -14323,6 +15001,9 @@
     "fuzzy c-means clustering",
     "handwritten digits",
     "fuzzy clustering"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -14351,6 +15032,12 @@
     "cpu vs gpu performance comparison",
     "gpu computing",
     "defect detection"
+   ],
+   "first": [
+    "Navadon Khunlertgit"
+   ],
+   "corr": [
+    "Navadon Khunlertgit"
    ]
   },
   {
@@ -14377,6 +15064,9 @@
     "erew pram",
     "combinatorial optimization",
     "time complexity"
+   ],
+   "corr": [
+    "Sanpawat Kantabutra"
    ]
   },
   {
@@ -14508,6 +15198,9 @@
     "open data sharing",
     "publish/subscribe",
     "usability evaluation"
+   ],
+   "first": [
+    "Nasi Tantitharanukul"
    ]
   },
   {
@@ -14589,6 +15282,9 @@
     "pattern recognition",
     "weight updating",
     "classification"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -14718,6 +15414,9 @@
     "naming criteria",
     "data sharing",
     "topic search"
+   ],
+   "first": [
+    "Nasi Tantitharanukul"
    ]
   },
   {
@@ -14855,6 +15554,12 @@
     "financial statement analysis",
     "thailand stock exchange",
     "portfolio simulation"
+   ],
+   "first": [
+    "Narissara Eiamkanitchat"
+   ],
+   "corr": [
+    "Narissara Eiamkanitchat"
    ]
   },
   {
@@ -14952,6 +15657,9 @@
     "breast cancer",
     "biomarker discovery",
     "cancer prognosis"
+   ],
+   "first": [
+    "Navadon Khunlertgit"
    ]
   },
   {
@@ -14978,6 +15686,9 @@
     "smart cities",
     "ubiquitous computing",
     "urban computing"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -15138,6 +15849,12 @@
     "degrees",
     "cellular networks",
     "behavioral similarity"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -15195,6 +15912,12 @@
     "noise robustness",
     "automatic segmentation",
     "single-cell imaging"
+   ],
+   "first": [
+    "Patiwet Wuttisarnwattana"
+   ],
+   "corr": [
+    "Patiwet Wuttisarnwattana"
    ]
   },
   {
@@ -15278,6 +16001,9 @@
     "domain knowledge",
     "ontology-based learning",
     "prediction error"
+   ],
+   "first": [
+    "Sasin Janpuangtong"
    ]
   },
   {
@@ -15306,6 +16032,9 @@
     "hyperellipsoids",
     "kernel methods",
     "anomaly detection"
+   ],
+   "first": [
+    "Kasemsit Teeyapan"
    ]
   },
   {
@@ -15390,6 +16119,12 @@
     "software engineering education",
     "text mining",
     "software requirements"
+   ],
+   "first": [
+    "Kenneth Cosh"
+   ],
+   "corr": [
+    "Kenneth Cosh"
    ]
   },
   {
@@ -15583,6 +16318,9 @@
     "naming practices",
     "open data",
     "data interoperability"
+   ],
+   "first": [
+    "Nasi Tantitharanukul"
    ]
   },
   {
@@ -15745,6 +16483,9 @@
     "yale university",
     "facial video",
     "facs"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -15777,6 +16518,12 @@
     "financial statements",
     "thailand stock exchange",
     "simulated trading"
+   ],
+   "first": [
+    "Narissara Eiamkanitchat"
+   ],
+   "corr": [
+    "Narissara Eiamkanitchat"
    ]
   },
   {
@@ -15809,6 +16556,9 @@
     "enterprise performance evaluation",
     "financial ratio analysis",
     "classification rules"
+   ],
+   "corr": [
+    "Narissara Eiamkanitchat"
    ]
   },
   {
@@ -15860,6 +16610,9 @@
     "shuffled frog leaping algorithm",
     "metaheuristic optimization",
     "convergence performance"
+   ],
+   "corr": [
+    "Trasapong Thaiupathump"
    ]
   },
   {
@@ -15889,6 +16642,12 @@
     "online risks",
     "stakeholder risk",
     "social media security"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
+   ],
+   "corr": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -15955,6 +16714,9 @@
     "mechanical properties of rubber",
     "partial least squares calibration",
     "hardness"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -16015,6 +16777,12 @@
     "multi-class support vector machine",
     "synthetic aperture radar",
     "ensemble fusion"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -16089,6 +16857,9 @@
     "software development projects",
     "ranking algorithms",
     "requirements selection"
+   ],
+   "first": [
+    "Jenjira Jaimunk"
    ]
   },
   {
@@ -16176,6 +16947,9 @@
     "tail vein injection",
     "automated cell segmentation",
     "synthetic image generation"
+   ],
+   "first": [
+    "Patiwet Wuttisarnwattana"
    ]
   },
   {
@@ -16227,6 +17001,9 @@
     "pap smear",
     "cancer screening",
     "automated cell classification"
+   ],
+   "first": [
+    "Kasemsit Teeyapan"
    ]
   },
   {
@@ -16385,6 +17162,9 @@
     "probabilistic networks",
     "dynamic connectivity",
     "network reliability"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -16598,6 +17378,9 @@
     "counterexample generation",
     "parser generators",
     "conflict diagnosis"
+   ],
+   "first": [
+    "Chinawat Isradisaikul"
    ]
   },
   {
@@ -16625,6 +17408,9 @@
     "counterexample generation",
     "parser generators",
     "conflict diagnosis"
+   ],
+   "first": [
+    "Chinawat Isradisaikul"
    ]
   },
   {
@@ -16754,6 +17540,9 @@
     "simulation games",
     "software project management",
     "risk management process"
+   ],
+   "first": [
+    "Pontakorn Sonchan"
    ]
   },
   {
@@ -16864,6 +17653,9 @@
     "supply chain performance",
     "quality management",
     "pattern recognition"
+   ],
+   "first": [
+    "Trasapong Thaiupathump"
    ]
   },
   {
@@ -16971,6 +17763,9 @@
     "tesseract ocr",
     "shot segmentation",
     "region clustering"
+   ],
+   "corr": [
+    "Karn Patanukhom"
    ]
   },
   {
@@ -16995,6 +17790,9 @@
     "text localization",
     "mser",
     "natural images"
+   ],
+   "corr": [
+    "Karn Patanukhom"
    ]
   },
   {
@@ -17028,6 +17826,9 @@
     "domain knowledge",
     "interactive modeling",
     "knowledge-based learning"
+   ],
+   "first": [
+    "Sasin Janpuangtong"
    ]
   },
   {
@@ -17057,6 +17858,12 @@
     "information theory",
     "high-dimensional data",
     "prediction model"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -17082,6 +17889,9 @@
     "multilayer perceptron",
     "k-nearest neighbors",
     "fuzzy neural network"
+   ],
+   "corr": [
+    "Narissara Eiamkanitchat"
    ]
   },
   {
@@ -17111,6 +17921,9 @@
     "team performance",
     "personal performance",
     "software process improvement"
+   ],
+   "corr": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -17141,6 +17954,12 @@
     "wikipedia",
     "knowledge discovery",
     "web intelligence"
+   ],
+   "first": [
+    "Kenneth Cosh"
+   ],
+   "corr": [
+    "Kenneth Cosh"
    ]
   },
   {
@@ -17171,6 +17990,12 @@
     "online trust",
     "website analysis",
     "logistics providers"
+   ],
+   "first": [
+    "Lachana Ramingwong"
+   ],
+   "corr": [
+    "Lachana Ramingwong"
    ]
   },
   {
@@ -17200,6 +18025,12 @@
     "low-cost simulation",
     "lego bricks",
     "agile software development"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
+   ],
+   "corr": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -17290,6 +18121,12 @@
     "software requirements",
     "accuracy comparison",
     "reference model"
+   ],
+   "first": [
+    "Jenjira Jaimunk"
+   ],
+   "corr": [
+    "Jenjira Jaimunk"
    ]
   },
   {
@@ -17318,6 +18155,12 @@
     "simulation workshops",
     "simulation-based training",
     "stakeholder awareness"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
+   ],
+   "corr": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -17412,6 +18255,12 @@
     "statistical propagation models",
     "testbed",
     "tracking"
+   ],
+   "first": [
+    "Anya Apavatjrut"
+   ],
+   "corr": [
+    "Anya Apavatjrut"
    ]
   },
   {
@@ -17441,6 +18290,9 @@
     "membership function selection",
     "neural network weights",
     "binary transformation"
+   ],
+   "corr": [
+    "Narissara Eiamkanitchat"
    ]
   },
   {
@@ -17474,6 +18326,9 @@
     "linguistic features",
     "neurofuzzy networks",
     "embedded feature selection"
+   ],
+   "first": [
+    "Narissara Eiamkanitchat"
    ]
   },
   {
@@ -17523,6 +18378,9 @@
     "ubiquitous computing",
     "urban applications",
     "workshop proposal"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -17655,6 +18513,12 @@
     "complete bipartite graphs",
     "sequential algorithms",
     "time complexity"
+   ],
+   "first": [
+    "Sanpawat Kantabutra"
+   ],
+   "corr": [
+    "Sanpawat Kantabutra"
    ]
   },
   {
@@ -17686,6 +18550,9 @@
     "cyberattacks",
     "pseudo-polynomial time",
     "dynamic programming"
+   ],
+   "corr": [
+    "Sanpawat Kantabutra"
    ]
   },
   {
@@ -17717,6 +18584,9 @@
     "urban connectivity",
     "human activity sensing",
     "urban computing"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -17866,6 +18736,9 @@
     "message passing algorithm",
     "cancer classification",
     "gene expression"
+   ],
+   "first": [
+    "Navadon Khunlertgit"
    ]
   },
   {
@@ -18044,6 +18917,12 @@
     "grid computing",
     "task dependencies",
     "execution time"
+   ],
+   "first": [
+    "Nasi Tantitharanukul"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -18154,6 +19033,9 @@
     "distributed systems",
     "task dependencies",
     "heuristic scheduling"
+   ],
+   "first": [
+    "Nasi Tantitharanukul"
    ]
   },
   {
@@ -18191,6 +19073,12 @@
     "gps location data",
     "urban planning",
     "mobile application"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -18354,6 +19242,12 @@
     "natural language processing",
     "wikipedia",
     "web content organization"
+   ],
+   "first": [
+    "Kenneth Cosh"
+   ],
+   "corr": [
+    "Kenneth Cosh"
    ]
   },
   {
@@ -18561,6 +19455,9 @@
     "software project management",
     "risk identification",
     "delphi method"
+   ],
+   "first": [
+    "Pontakorn Sonchan"
    ]
   },
   {
@@ -18614,6 +19511,9 @@
     "risk management cycle",
     "simulation games",
     "project success"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -18795,6 +19695,9 @@
     "speaker-independent recognition",
     "non-native speakers",
     "vowel recognition"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -18829,6 +19732,9 @@
     "graft-versus-host disease",
     "allogeneic t cells",
     "t cell homing"
+   ],
+   "first": [
+    "Patiwet Wuttisarnwattana"
    ]
   },
   {
@@ -18951,6 +19857,12 @@
     "smart grid communication",
     "frequency reuse",
     "closed-form performance analysis"
+   ],
+   "first": [
+    "Kampol Woradit"
+   ],
+   "corr": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -19031,6 +19943,9 @@
     "data transformation",
     "heuristic algorithms",
     "data mining"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -19065,6 +19980,9 @@
     "cervical cancer screening",
     "nuclei segmentation",
     "cervical cancer diagnosis"
+   ],
+   "first": [
+    "Thanatip Chankong"
    ]
   },
   {
@@ -19208,6 +20126,9 @@
     "software engineering education",
     "software risk",
     "hands-on learning"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -19413,6 +20334,9 @@
     "breast cancer prognosis",
     "cancer classification",
     "biomarker discovery"
+   ],
+   "first": [
+    "Navadon Khunlertgit"
    ]
   },
   {
@@ -19545,6 +20469,9 @@
     "nuclei segmentation",
     "abnormal cell detection",
     "cervical cell segmentation"
+   ],
+   "first": [
+    "Thanatip Chankong"
    ]
   },
   {
@@ -19629,6 +20556,9 @@
     "code generation",
     "constraint validation",
     "graphical specification"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -19792,6 +20722,12 @@
     "error rate performance",
     "broadband wireless access",
     "space-time coding"
+   ],
+   "first": [
+    "Kampol Woradit"
+   ],
+   "corr": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -19823,6 +20759,9 @@
     "task dependencies",
     "cloud computing",
     "grid computing"
+   ],
+   "first": [
+    "Nasi Tantitharanukul"
    ]
   },
   {
@@ -20010,6 +20949,9 @@
     "interaction design",
     "raspberry pi",
     "touch input"
+   ],
+   "first": [
+    "Arnan Sipitakiat"
    ]
   },
   {
@@ -20039,6 +20981,9 @@
     "object-oriented programming",
     "static verification",
     "pattern matching"
+   ],
+   "first": [
+    "Chinawat Isradisaikul"
    ]
   },
   {
@@ -20068,6 +21013,9 @@
     "static verification",
     "modular reasoning",
     "functional programming"
+   ],
+   "first": [
+    "Chinawat Isradisaikul"
    ]
   },
   {
@@ -20093,6 +21041,9 @@
     "multi-objective optimization",
     "evolutionary algorithms",
     "coverage optimization"
+   ],
+   "first": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -20228,6 +21179,12 @@
     "natural language processing",
     "metadata extraction",
     "text mining"
+   ],
+   "first": [
+    "Kenneth Cosh"
+   ],
+   "corr": [
+    "Kenneth Cosh"
    ]
   },
   {
@@ -20259,6 +21216,12 @@
     "hidden markov models",
     "signer-independent recognition",
     "gesture recognition"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -20287,6 +21250,9 @@
     "waste management",
     "object tracking",
     "environmental monitoring"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -20352,6 +21318,9 @@
     "probabilistic inference",
     "small sample size",
     "gene expression"
+   ],
+   "first": [
+    "Navadon Khunlertgit"
    ]
   },
   {
@@ -20409,6 +21378,9 @@
     "academic support",
     "prototype system",
     "educational technology"
+   ],
+   "first": [
+    "Jenjira Jaimunk"
    ]
   },
   {
@@ -20440,6 +21412,9 @@
     "linear-time algorithms",
     "incremental processing",
     "data indexing"
+   ],
+   "first": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -20526,6 +21501,12 @@
     "withholding information",
     "communication gap",
     "distributed software development"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
+   ],
+   "corr": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -20555,6 +21536,9 @@
     "multi-class support vector machine",
     "brodatz texture dataset",
     "texture classification"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -20585,6 +21569,9 @@
     "translational genomics",
     "small sample size",
     "gene expression"
+   ],
+   "first": [
+    "Navadon Khunlertgit"
    ]
   },
   {
@@ -20704,6 +21691,12 @@
     "lisbon",
     "call duration",
     "social network ties"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -20740,6 +21733,9 @@
     "fountain codes",
     "wireless relay networks",
     "transmission reduction"
+   ],
+   "first": [
+    "Anya Apavatjrut"
    ]
   },
   {
@@ -20798,6 +21794,12 @@
     "population density",
     "urban-rural differences",
     "travel distance"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -20825,6 +21827,9 @@
     "social skills",
     "logical thinking",
     "programming education"
+   ],
+   "first": [
+    "Arnan Sipitakiat"
    ]
   },
   {
@@ -20931,6 +21936,12 @@
     "large-scale sensor networks",
     "link failure",
     "system reliability"
+   ],
+   "first": [
+    "Anya Apavatjrut"
+   ],
+   "corr": [
+    "Anya Apavatjrut"
    ]
   },
   {
@@ -20966,6 +21977,9 @@
     "packet redundancy",
     "reliable transmission",
     "delay"
+   ],
+   "first": [
+    "Anya Apavatjrut"
    ]
   },
   {
@@ -21036,6 +22050,9 @@
     "decentralization (distributed systems)",
     "service migration",
     "equilibrium"
+   ],
+   "first": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -21068,6 +22085,9 @@
     "barriers",
     "p versus np",
     "grid graphs"
+   ],
+   "corr": [
+    "Sanpawat Kantabutra"
    ]
   },
   {
@@ -21202,6 +22222,9 @@
     "course implementation",
     "self-inspection",
     "mathematical background"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -21235,6 +22258,9 @@
     "swarming",
     "data collection",
     "network dynamics"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -21363,6 +22389,9 @@
     "data integration",
     "microarray data",
     "anatomical atlas"
+   ],
+   "first": [
+    "Dome Potikanond"
    ]
   },
   {
@@ -21416,6 +22445,9 @@
     "daily mobility",
     "commuting routes",
     "commercial districts"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -21503,6 +22535,9 @@
     "access networks",
     "resource-constrained devices",
     "interoperability"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -21532,6 +22567,9 @@
     "family ties",
     "sociality",
     "network reorganization"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -21610,6 +22648,9 @@
     "network performance",
     "self-organizing networks",
     "overflow"
+   ],
+   "first": [
+    "Anya Apavatjrut"
    ]
   },
   {
@@ -21642,6 +22683,9 @@
     "ambient intelligence",
     "adaptive prediction",
     "user behavior modeling"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -21703,6 +22747,9 @@
     "authentication",
     "energy efficiency",
     "throughput"
+   ],
+   "first": [
+    "Anya Apavatjrut"
    ]
   },
   {
@@ -21763,6 +22810,9 @@
     "power estimation",
     "performance estimation",
     "sensor node lifetime"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -21900,6 +22950,9 @@
     "resource-constrained sensor nodes",
     "power efficiency",
     "latency"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -21932,6 +22985,9 @@
     "genetic algorithm",
     "high-dimensional parameter spaces",
     "network parameter tuning"
+   ],
+   "first": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -22014,6 +23070,9 @@
     "mobile devices",
     "contact prediction",
     "call logs"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -22164,6 +23223,12 @@
     "automated interpretation",
     "drug resistance",
     "hiv"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -22195,6 +23260,9 @@
     "resource-constrained devices",
     "access networks",
     "interoperability"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -22220,6 +23288,9 @@
     "longan",
     "fruit growing",
     "agricultural information technology"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -22306,6 +23377,9 @@
     "greedy algorithm",
     "data quality",
     "data reduction"
+   ],
+   "first": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -22340,6 +23414,9 @@
     "power efficiency",
     "resource-constrained sensor nodes",
     "latency"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -22370,6 +23447,12 @@
     "privacy-utility trade-off",
     "association rule mining",
     "np-hard problems"
+   ],
+   "first": [
+    "Juggapong Natwichai"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -22474,6 +23557,9 @@
     "relaying",
     "linear network coding",
     "random linear codes"
+   ],
+   "first": [
+    "Anya Apavatjrut"
    ]
   },
   {
@@ -22614,6 +23700,12 @@
     "wireless relay networks",
     "relay nodes",
     "capacity saturation"
+   ],
+   "first": [
+    "Kampol Woradit"
+   ],
+   "corr": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -22641,6 +23733,9 @@
     "dimensionality reduction",
     "time series forecasting",
     "temporal bias"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -22703,6 +23798,9 @@
     "gps",
     "embedded sensors",
     "adaptive learning"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -22735,6 +23833,9 @@
     "message authentication codes",
     "xor network coding",
     "pollution attacks"
+   ],
+   "first": [
+    "Anya Apavatjrut"
    ]
   },
   {
@@ -22849,6 +23950,12 @@
     "institutional change",
     "student laptops",
     "developmental processes"
+   ],
+   "first": [
+    "Arnan Sipitakiat"
+   ],
+   "corr": [
+    "Arnan Sipitakiat"
    ]
   },
   {
@@ -22878,6 +23985,9 @@
     "educational robotics",
     "low-cost materials",
     "fieldwork"
+   ],
+   "first": [
+    "Arnan Sipitakiat"
    ]
   },
   {
@@ -22904,6 +24014,9 @@
     "packet error rate",
     "cooperative arq",
     "base station cooperation"
+   ],
+   "first": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -22928,6 +24041,12 @@
     "diversity",
     "error resilience",
     "network coding"
+   ],
+   "first": [
+    "Anya Apavatjrut"
+   ],
+   "corr": [
+    "Anya Apavatjrut"
    ]
   },
   {
@@ -22962,6 +24081,9 @@
     "access networks",
     "interoperability",
     "resource-constrained devices"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -22985,6 +24107,12 @@
     "network time protocol",
     "performance evaluation",
     "clock drift"
+   ],
+   "first": [
+    "Yuthapong Somchit"
+   ],
+   "corr": [
+    "Yuthapong Somchit"
    ]
   },
   {
@@ -23010,6 +24138,12 @@
     "image denoising",
     "iterative deconvolution",
     "stopping rules"
+   ],
+   "first": [
+    "Karn Patanukhom"
+   ],
+   "corr": [
+    "Karn Patanukhom"
    ]
   },
   {
@@ -23037,6 +24171,12 @@
     "privacy-utility trade-off",
     "association rule mining",
     "utility maximization"
+   ],
+   "first": [
+    "Juggapong Natwichai"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -23088,6 +24228,9 @@
     "mission planning",
     "controller gain tuning",
     "legged robot locomotion"
+   ],
+   "first": [
+    "Kasemsit Teeyapan"
    ]
   },
   {
@@ -23121,6 +24264,9 @@
     "backhaul links",
     "cell-edge throughput",
     "network topology"
+   ],
+   "first": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -23154,6 +24300,12 @@
     "energy consumption",
     "transmission latency",
     "network lifetime"
+   ],
+   "first": [
+    "Pruet Boonma"
+   ],
+   "corr": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -23181,6 +24333,9 @@
     "feature selection",
     "interpretable classifiers",
     "pattern recognition"
+   ],
+   "first": [
+    "Narissara Eiamkanitchat"
    ]
   },
   {
@@ -23239,6 +24394,9 @@
     "environmental sensing",
     "learning activities",
     "fieldwork"
+   ],
+   "first": [
+    "Arnan Sipitakiat"
    ]
   },
   {
@@ -23283,6 +24441,12 @@
     "motion blur",
     "image deblurring",
     "noisy images"
+   ],
+   "first": [
+    "Karn Patanukhom"
+   ],
+   "corr": [
+    "Karn Patanukhom"
    ]
   },
   {
@@ -23307,6 +24471,12 @@
     "approximation algorithms",
     "association rule mining",
     "data mining privacy"
+   ],
+   "first": [
+    "Juggapong Natwichai"
+   ],
+   "corr": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -23401,6 +24571,9 @@
     "mutual information",
     "time series forecasting",
     "urban transport"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -23485,6 +24658,9 @@
     "social grouping",
     "mobile phone users",
     "social similarity"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -23511,6 +24687,9 @@
     "software project success",
     "cultural risk",
     "intercultural communication"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -23563,6 +24742,9 @@
     "model verification",
     "process semantics",
     "model transformation"
+   ],
+   "first": [
+    "Nasi Tantitharanukul"
    ]
   },
   {
@@ -23590,6 +24772,9 @@
     "livelock",
     "process chain",
     "structural problems"
+   ],
+   "first": [
+    "Nasi Tantitharanukul"
    ]
   },
   {
@@ -23677,6 +24862,9 @@
     "mobile phone data",
     "human mobility",
     "urban planning"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -23707,6 +24895,9 @@
     "gene expression microarrays",
     "feature selection",
     "cancer diagnosis"
+   ],
+   "first": [
+    "Narissara Eiamkanitchat"
    ]
   },
   {
@@ -23791,6 +24982,9 @@
     "evolutionary algorithms",
     "pareto dominance",
     "confidence-based selection"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -23821,6 +25015,9 @@
     "genetic algorithm",
     "electric utilities",
     "constraint satisfaction"
+   ],
+   "first": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -23852,6 +25049,12 @@
     "social data mining",
     "social group size",
     "mobile devices"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -23885,6 +25088,9 @@
     "wireless relay networks",
     "cooperative diversity",
     "best relay selection"
+   ],
+   "first": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -23910,6 +25116,9 @@
     "line coding",
     "wave function collapse",
     "digital modulation"
+   ],
+   "first": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -23939,6 +25148,9 @@
     "risk-benefit assessment",
     "outsourcing benefits",
     "risk perception"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -24104,6 +25316,9 @@
     "dynamic network conditions",
     "resource-constrained nodes",
     "dds"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -24134,6 +25349,9 @@
     "dds",
     "resource-constrained nodes",
     "self-configuring systems"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -24158,6 +25376,12 @@
     "camera movement",
     "object motion",
     "image deblurring"
+   ],
+   "first": [
+    "Karn Patanukhom"
+   ],
+   "corr": [
+    "Karn Patanukhom"
    ]
   },
   {
@@ -24189,6 +25413,9 @@
     "performance evaluation",
     "sql",
     "string data"
+   ],
+   "first": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -24224,6 +25451,9 @@
     "middleware",
     "data representation",
     "data types"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -24256,6 +25486,9 @@
     "software outsourcing",
     "information technology students",
     "project failure"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -24317,6 +25550,9 @@
     "support vector machine",
     "frequency-domain features",
     "abnormal cell detection"
+   ],
+   "first": [
+    "Thanatip Chankong"
    ]
   },
   {
@@ -24349,6 +25585,9 @@
     "network survivability",
     "optical mesh networks",
     "shared protection"
+   ],
+   "first": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -24382,6 +25621,9 @@
     "image restoration",
     "high-pass filtering",
     "orientation maps"
+   ],
+   "first": [
+    "Karn Patanukhom"
    ]
   },
   {
@@ -24470,6 +25712,12 @@
     "multi-objective optimization",
     "agent-based systems",
     "adaptive behavior"
+   ],
+   "first": [
+    "Pruet Boonma"
+   ],
+   "corr": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -24503,6 +25751,9 @@
     "word clouds",
     "information visualization",
     "text summarization"
+   ],
+   "first": [
+    "Kenneth Cosh"
    ]
   },
   {
@@ -24590,6 +25841,9 @@
     "key frame extraction",
     "deaf and mute communication",
     "visual communication"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -24706,6 +25960,9 @@
     "iterative feedback",
     "noise reduction",
     "image decomposition"
+   ],
+   "first": [
+    "Karn Patanukhom"
    ]
   },
   {
@@ -24735,6 +25992,12 @@
     "media transport",
     "enterprise telephony",
     "attack countermeasures"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
+   ],
+   "corr": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -24793,6 +26056,9 @@
     "concurrency",
     "data routing",
     "memory usage"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -24822,6 +26088,9 @@
     "junior high school students",
     "embodied learning",
     "graphical programming environment"
+   ],
+   "first": [
+    "Arnan Sipitakiat"
    ]
   },
   {
@@ -24854,6 +26123,9 @@
     "bio-inspired algorithms",
     "genetic algorithm",
     "data collection"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -24882,6 +26154,9 @@
     "cultural differences",
     "perceived probability",
     "project risk"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -24942,6 +26217,9 @@
     "radon transform",
     "autocorrelation function",
     "image restoration"
+   ],
+   "first": [
+    "Karn Patanukhom"
    ]
   },
   {
@@ -25097,6 +26375,9 @@
     "calling patterns",
     "call logs",
     "mobile phone use"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -25130,6 +26411,9 @@
     "agent-based systems",
     "scalability",
     "autonomy"
+   ],
+   "first": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -25157,6 +26441,9 @@
     "pstn",
     "packet-switched networks",
     "telecommunications security"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -25185,6 +26472,9 @@
     "call logs",
     "mobile users",
     "data sufficiency"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -25216,6 +26506,9 @@
     "node and link failures",
     "software agents",
     "data collection"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -25241,6 +26534,9 @@
     "polynomial-time algorithms",
     "decision problems",
     "np-hardness"
+   ],
+   "first": [
+    "Sanpawat Kantabutra"
    ]
   },
   {
@@ -25354,6 +26650,9 @@
     "normalized mutual information",
     "social network inference",
     "mobile phone data"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -25442,6 +26741,9 @@
     "relay selection",
     "protocol overhead",
     "wireless networks"
+   ],
+   "first": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -25588,6 +26890,9 @@
     "mobile phone features",
     "call logs",
     "contact prediction"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -25615,6 +26920,9 @@
     "data quality",
     "data perturbation",
     "privacy-preserving data mining"
+   ],
+   "first": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -25675,6 +26983,9 @@
     "data quality",
     "minimum support",
     "privacy preservation"
+   ],
+   "first": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -25705,6 +27016,9 @@
     "node and link failures",
     "conflicting objectives",
     "decentralized data collection"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -25760,6 +27074,9 @@
     "energy exchange",
     "decentralized architecture",
     "service migration"
+   ],
+   "first": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -25786,6 +27103,9 @@
     "radon transform",
     "single image restoration",
     "image derivatives"
+   ],
+   "first": [
+    "Karn Patanukhom"
    ]
   },
   {
@@ -25813,6 +27133,9 @@
     "semantic relations",
     "join operations",
     "string data"
+   ],
+   "first": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -25868,6 +27191,9 @@
     "offshore outsourcing",
     "code of silence",
     "software outsourcing"
+   ],
+   "first": [
+    "Sakgasit Ramingwong"
    ]
   },
   {
@@ -25897,6 +27223,12 @@
     "hypercube networks",
     "network scaling",
     "parallel computing architecture"
+   ],
+   "first": [
+    "Sanpawat Kantabutra"
+   ],
+   "corr": [
+    "Sanpawat Kantabutra"
    ]
   },
   {
@@ -25930,6 +27262,12 @@
     "self-healing",
     "false positive detection",
     "autonomy"
+   ],
+   "first": [
+    "Pruet Boonma"
+   ],
+   "corr": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -25991,6 +27329,9 @@
     "ict adoption",
     "travel companies",
     "digital marketing channels"
+   ],
+   "first": [
+    "Kenneth Cosh"
    ]
   },
   {
@@ -26020,6 +27361,9 @@
     "energy exchange",
     "autonomous adaptation",
     "agent interaction"
+   ],
+   "first": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -26051,6 +27395,9 @@
     "space-frequency block coding",
     "multidimensional constellations",
     "coding gain"
+   ],
+   "first": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -26105,6 +27452,9 @@
     "service migration",
     "resource availability",
     "decentralized systems"
+   ],
+   "first": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -26163,6 +27513,12 @@
     "power consumption",
     "latency",
     "bio-inspired algorithms"
+   ],
+   "first": [
+    "Pruet Boonma"
+   ],
+   "corr": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -26220,6 +27576,9 @@
     "redundancy elimination",
     "data mismatch",
     "data fusion"
+   ],
+   "first": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -26269,6 +27628,9 @@
     "frequency-selective channels",
     "high-rate codes",
     "delay spread"
+   ],
+   "first": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -26297,6 +27659,9 @@
     "event detection",
     "energy efficiency",
     "reliability"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -26359,6 +27724,9 @@
     "geometric model",
     "record deletion",
     "impact evaluation"
+   ],
+   "first": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -26387,6 +27755,9 @@
     "mobile phone services",
     "call logs",
     "probability estimation"
+   ],
+   "first": [
+    "Santi Phithakkitnukoon"
    ]
   },
   {
@@ -26415,6 +27786,9 @@
     "diversity-multiplexing tradeoff",
     "mimo",
     "code design"
+   ],
+   "first": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -26445,6 +27819,9 @@
     "false positive detection",
     "migration",
     "autonomy"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -26527,6 +27904,9 @@
     "space-frequency block coding",
     "frequency-selective channels",
     "high-rate codes"
+   ],
+   "first": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -26557,6 +27937,9 @@
     "decentralized architecture",
     "natural selection",
     "autonomy"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -26589,6 +27972,9 @@
     "green computing",
     "decentralized systems",
     "adaptive architecture"
+   ],
+   "first": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -26623,6 +28009,9 @@
     "swarm intelligence",
     "emergence",
     "autonomy"
+   ],
+   "first": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -26671,6 +28060,12 @@
     "packet loss probability",
     "multicast tree",
     "loss recovery"
+   ],
+   "first": [
+    "Yuthapong Somchit"
+   ],
+   "corr": [
+    "Yuthapong Somchit"
    ]
   },
   {
@@ -26693,6 +28088,9 @@
     "image deconvolution",
     "iterative methods",
     "image restoration"
+   ],
+   "first": [
+    "Karn Patanukhom"
    ]
   },
   {
@@ -26723,6 +28121,9 @@
     "equalizer convergence",
     "qam signals",
     "dispersion minimization"
+   ],
+   "first": [
+    "Trasapong Thaiupathump"
    ]
   },
   {
@@ -26749,6 +28150,9 @@
     "semiotics",
     "natural language processing tools",
     "human communication"
+   ],
+   "first": [
+    "Kenneth Cosh"
    ]
   },
   {
@@ -26774,6 +28178,9 @@
     "vliw architecture",
     "temperature evolution",
     "register placement"
+   ],
+   "first": [
+    "Anya Apavatjrut"
    ]
   },
   {
@@ -26796,6 +28203,9 @@
     "sensor network architecture",
     "ecological monitoring",
     "bio-inspired computing"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -26832,6 +28242,9 @@
     "system survivability",
     "autonomic computing",
     "service migration"
+   ],
+   "first": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -26870,6 +28283,9 @@
     "swarm intelligence",
     "decentralization (distributed systems)",
     "fault tolerance"
+   ],
+   "first": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -26899,6 +28315,9 @@
     "self-healing networks",
     "natural selection",
     "autonomy"
+   ],
+   "first": [
+    "Pruet Boonma"
    ]
   },
   {
@@ -26927,6 +28346,9 @@
     "nonlinear decision boundaries",
     "pattern recognition",
     "fuzzy logic"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -26954,6 +28376,9 @@
     "privacy preservation",
     "categorical data",
     "data anonymization"
+   ],
+   "first": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -27014,6 +28439,9 @@
     "coding gain",
     "full diversity",
     "transmission rate"
+   ],
+   "first": [
+    "Kampol Woradit"
    ]
   },
   {
@@ -27038,6 +28466,9 @@
     "image deconvolution",
     "image restoration",
     "iterative parameter estimation"
+   ],
+   "first": [
+    "Karn Patanukhom"
    ]
   },
   {
@@ -27073,6 +28504,9 @@
     "service migration",
     "energy exchange",
     "decentralized systems"
+   ],
+   "first": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -27102,6 +28536,9 @@
     "fuzzy classification",
     "mammography",
     "intensity features"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -27158,6 +28595,12 @@
     "multicast protocols",
     "data recovery",
     "multicast tree"
+   ],
+   "first": [
+    "Yuthapong Somchit"
+   ],
+   "corr": [
+    "Yuthapong Somchit"
    ]
   },
   {
@@ -27183,6 +28626,9 @@
     "privacy preservation",
     "categorical data",
     "data anonymization"
+   ],
+   "first": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -27211,6 +28657,9 @@
     "categorical data",
     "data anonymization",
     "data sharing"
+   ],
+   "first": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -27235,6 +28684,9 @@
    "kw": [
     "parallel sorting",
     "parallel architecture"
+   ],
+   "first": [
+    "Sanpawat Kantabutra"
    ]
   },
   {
@@ -27265,6 +28717,9 @@
     "dynamic network environments",
     "scalability",
     "energy exchange"
+   ],
+   "first": [
+    "Paskorn Champrasert"
    ]
   },
   {
@@ -27290,6 +28745,9 @@
     "hard c-means clustering",
     "linguistic labels",
     "classification accuracy comparison"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -27374,6 +28832,9 @@
     "carrier phase recovery",
     "multi-modulus algorithm",
     "intersymbol interference cancellation"
+   ],
+   "first": [
+    "Trasapong Thaiupathump"
    ]
   },
   {
@@ -27423,6 +28884,9 @@
    "ext": [],
    "kw": [
     "performance evaluation"
+   ],
+   "first": [
+    "Yuthapong Somchit"
    ]
   },
   {
@@ -27450,6 +28914,12 @@
     "extension principle",
     "management survey",
     "classification"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
+   ],
+   "corr": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -27474,6 +28944,9 @@
     "search trees",
     "similarity-based clustering",
     "data structures"
+   ],
+   "first": [
+    "Sanpawat Kantabutra"
    ]
   },
   {
@@ -27505,6 +28978,9 @@
     "statistical indicators",
     "ensemble classifiers",
     "anytime learning"
+   ],
+   "first": [
+    "Juggapong Natwichai"
    ]
   },
   {
@@ -27565,6 +29041,9 @@
     "diy construction",
     "maker education",
     "brazil"
+   ],
+   "first": [
+    "Arnan Sipitakiat"
    ]
   },
   {
@@ -27618,6 +29097,9 @@
     "type-2 fuzzy sets",
     "fuzzy membership functions",
     "management survey"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -27646,6 +29128,9 @@
     "multicast protocols",
     "data recovery",
     "relay nodes"
+   ],
+   "first": [
+    "Yuthapong Somchit"
    ]
   },
   {
@@ -27672,6 +29157,9 @@
     "scalability",
     "memory constraints",
     "now"
+   ],
+   "first": [
+    "Sanpawat Kantabutra"
    ]
   },
   {
@@ -27700,6 +29188,9 @@
     "video browsing",
     "video summarization",
     "query refinement"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -27788,6 +29279,9 @@
     "extension principle",
     "synthetic data",
     "linguistic data"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -27814,6 +29308,9 @@
     "phase estimation",
     "differential encoding",
     "phase ambiguity"
+   ],
+   "first": [
+    "Trasapong Thaiupathump"
    ]
   },
   {
@@ -27872,6 +29369,9 @@
     "employee attitudes",
     "fuzzy clustering",
     "survey responses"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -27903,6 +29403,9 @@
     "fuzzy numbers",
     "fuzzy c-means clustering",
     "iris dataset"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -27936,6 +29439,9 @@
     "false alarm reduction",
     "uncertainty representation",
     "confidence estimation"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -27961,6 +29467,9 @@
     "developing countries",
     "decentralized management",
     "school technological infrastructure"
+   ],
+   "first": [
+    "Arnan Sipitakiat"
    ]
   },
   {
@@ -28016,6 +29525,9 @@
     "choquet integral",
     "sugeno integral",
     "fuzzy integral"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
    ]
   },
   {
@@ -28125,6 +29637,9 @@
     "agricultural robotics",
     "harvesting robots",
     "fruit picking automation"
+   ],
+   "first": [
+    "Narissara Eiamkanitchat"
    ]
   },
   {
@@ -28148,6 +29663,9 @@
     "fruit detection",
     "agricultural robotics",
     "leaves"
+   ],
+   "first": [
+    "Narissara Eiamkanitchat"
    ]
   },
   {
@@ -28196,6 +29714,9 @@
     "fuzzy arithmetic",
     "landmine detection",
     "fuzzy measures"
+   ],
+   "first": [
+    "Sansanee Auephanwiriyakul"
    ]
   }
  ],

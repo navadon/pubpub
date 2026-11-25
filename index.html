@@ -305,6 +305,9 @@ ol.pubs li:last-child { border-bottom: 0; }
 .pub-meta .venue { font-style: italic; overflow-wrap: anywhere; }
 .pub-staff { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
 .badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: 999px; color: var(--t-text); white-space: nowrap; }
+.pub-staff .who { white-space: nowrap; }
+.role { display: inline-block; font-size: 10px; font-weight: 700; line-height: 1.5; padding: 0 5px; border-radius: 999px;
+  color: var(--brand); background: color-mix(in srgb, var(--brand) 12%, transparent); vertical-align: 1px; }
 .tag { display: inline-block; font-size: 11px; padding: 0 7px; border-radius: 999px; border: 1px solid var(--border); color: var(--text-2); white-space: nowrap; }
 .more { margin-top: 10px; }
 table.staff tbody tr.sel { background: var(--cmu-purple-soft); }
@@ -645,6 +648,7 @@ footer .legal a { color: inherit; text-decoration: underline; }
 
     <section class="panel" aria-labelledby="h-pubs">
       <h2 id="h-pubs">Publications</h2>
+      <p class="hint">1st = first author. Corr. = corresponding author, where OpenAlex records one (it does for about a third of papers, so a missing tag is not proof).</p>
       <div class="pub-tools">
         <label class="sr-only" for="pub-q">Search publications</label>
         <input type="search" id="pub-q" placeholder="Search title, venue or staff" autocomplete="off">
@@ -1308,7 +1312,14 @@ footer .legal a { color: inherit; text-decoration: underline; }
         '<span>' + esc(p.date || p.year) + '</span>' +
         (p.type ? '<span class="tag">' + esc(TYPE_NAME[p.type] || p.type) + '</span>' : "") +
         (p.collab ? '<span class="tag">' + esc(p.collab) + '</span>' : "") + '</div>' +
-        ((p.staff || []).length ? '<div class="pub-staff">' + p.staff.map(esc).join(", ") + '</div>' : "") + '</li>';
+        ((p.staff || []).length ? '<div class="pub-staff">' + p.staff.map(function (n) { return staffWithRoles(p, n); }).join(", ") + '</div>' : "") + '</li>';
+  }
+  // staff name plus "1st" / "Corr." pills; OpenAlex marks a corresponding author on only some papers
+  function staffWithRoles(p, n) {
+    var r = "";
+    if ((p.first || []).indexOf(n) >= 0) r += ' <span class="role" title="First author">1st</span>';
+    if ((p.corr || []).indexOf(n) >= 0) r += ' <span class="role" title="Corresponding author, as recorded in OpenAlex">Corr.</span>';
+    return '<span class="who">' + esc(n) + r + '</span>';
   }
   function renderPubs() {
     var q = state.q.trim().toLowerCase();
