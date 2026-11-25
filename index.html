@@ -105,7 +105,13 @@ header.top .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 12p
 .brand h1 .cmu { color: var(--brand); }
 .brand h1 .expand { font-size: 15px; font-weight: 500; color: var(--header-muted); margin-left: 6px; white-space: nowrap; }
 .brand h1 .expand b { color: var(--header-text); font-weight: 700; }
-.brand .sub { margin: 3px 0 0; color: var(--header-muted); font-size: 13px; }
+.brand { container-type: inline-size; }
+.brand .sub { margin: 3px 0 0; color: var(--header-muted); font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.brand .sub .s { display: none; }
+/* narrow header: keep one line by dropping wording in two steps */
+@container (max-width: 640px) { .brand .sub .l1 { display: none; } }
+@container (max-width: 500px) { .brand .sub .l2 { display: none; } .brand .sub .s { display: inline; } }
+@container (max-width: 340px) { .brand .sub { font-size: 12px; } }
 .brand .sub a { color: var(--link); }
 .controls { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
 .controls { margin-bottom: 0; }
@@ -437,7 +443,7 @@ footer .legal a { color: inherit; text-decoration: underline; }
   <div class="wrap">
     <div class="brand">
       <h1><span class="cmu">PubPub</span> <span class="expand"><b>Pub</b>lication Dashboard, <b>Pub</b>lic Square</span></h1>
-      <p class="sub">CPECMU · Unofficial · <a href="https://openalex.org" rel="noopener">OpenAlex</a> publications of current staff · Journal tiers: SJR, CiteScore · Updated monthly</p>
+      <p class="sub">CPECMU · Unofficial · <a href="https://openalex.org" rel="noopener">OpenAlex</a><span class="l1"> publications of current staff</span> · <span class="l2">Journal tiers: </span>SJR, CiteScore · <span class="l2">Updated monthly</span><span class="s">Monthly</span></p>
     </div>
     <nav class="sec-nav" aria-label="Sections">
       <a href="#ytd">Year to date</a><a href="#summary">Overview</a><a href="#keywords">Keywords</a><a href="#collaboration">Collaboration</a><a href="#publications">Staff</a>
