@@ -434,6 +434,15 @@ footer .legal a { color: inherit; text-decoration: underline; }
   .bar-row.wide { grid-template-columns: 104px minmax(0, 1fr) 58px; }
   .mstats { gap: 6px; }
   .mstat { padding: 6px 7px; }
+  /* Per staff: fit all columns, rank beside the name */
+  table.staff { font-size: 12px; }
+  table.staff th { font-size: 11px; }
+  table.staff th:not(:first-child), table.staff td:not(:first-child) { padding-left: 2px; padding-right: 2px; }
+  table.staff td:first-child { min-width: 0; padding-right: 4px; }
+  table.staff td .rank { float: left; min-width: 16px; font-size: 10px; line-height: 1.6; }
+  table.staff td .name-btn { display: block; margin-left: 16px; }
+  table.staff th:not(:first-child) { white-space: normal; }
+  table.staff th button { display: inline; }
   .mstat .n { font-size: 18px; }
 }
 </style>
@@ -871,24 +880,41 @@ footer .legal a { color: inherit; text-decoration: underline; }
         if (!pt) return;
         items.push({ ds: ds, pt: pt, last: last, y: pt.y });
       });
-      // de-overlap labels that end in the same month: push apart vertically
-      var groups = {};
-      items.forEach(function (it) { (groups[it.last] = groups[it.last] || []).push(it); });
-      Object.keys(groups).forEach(function (g) {
-        var arr = groups[g].sort(function (a, b) { return a.y - b.y; });
-        for (var j = 1; j < arr.length; j++) {
-          var gap = (arr[j].ds._highlight || arr[j - 1].ds._highlight) ? 20 : 13;
-          if (arr[j].y - arr[j - 1].y < gap) arr[j].y = arr[j - 1].y + gap;
-        }
-      });
+      // place each label, then push apart any whose boxes overlap (lines can end in different months)
+      var fam = getComputedStyle(document.body).fontFamily;
       items.forEach(function (it) {
-        var ds = it.ds, pt = it.pt, last = it.last;
-        var txt = (ds._highlight ? ds.label + ": " : "") + ds.data[last];
+        var ds = it.ds;
+        it.txt = (ds._highlight ? ds.label + ": " : "") + ds.data[it.last];
         ctx.save();
-        ctx.font = (ds._highlight ? "700 12px " : "600 11px ") + getComputedStyle(document.body).fontFamily;
-        var w = ctx.measureText(txt).width;
-        var x = pt.x + 8, yy = it.y;
-        if (x + w + 10 > c.chartArea.right + 70) x = pt.x - w - 16;
+        ctx.font = (ds._highlight ? "700 12px " : "600 11px ") + fam;
+        it.w = ctx.measureText(it.txt).width;
+        ctx.restore();
+        it.x = it.pt.x + 8;
+        if (it.x + it.w + 10 > c.chartArea.right + 70) it.x = it.pt.x - it.w - 16;
+        it.x0 = ds._highlight ? it.x - 4 : it.x; it.x1 = ds._highlight ? it.x + it.w + 8 : it.x + it.w;
+        it.h = ds._highlight ? 20 : 13;
+      });
+      // the highlighted pill moves left of its point if it would cover another line's end
+      items.forEach(function (it) {
+        if (!it.ds._highlight) return;
+        var hit = items.some(function (o) {
+          return o !== it && o.pt.x + 4 >= it.x0 && o.pt.x - 4 <= it.x1 && Math.abs(o.pt.y - it.y) < (it.h + o.h) / 2 + 2;
+        });
+        if (hit && it.x > it.pt.x) { it.x = it.pt.x - it.w - 16; it.x0 = it.x - 4; it.x1 = it.x + it.w + 8; }
+      });
+      items.sort(function (a, b) { return a.y - b.y; });
+      for (var j = 1; j < items.length; j++) {
+        for (var k2 = 0; k2 < j; k2++) {
+          var A = items[k2], B = items[j];
+          if (B.x0 > A.x1 + 2 || A.x0 > B.x1 + 2) continue;
+          var need = (A.h + B.h) / 2 + 1;
+          if (B.y - A.y < need) B.y = A.y + need;
+        }
+      }
+      items.forEach(function (it) {
+        var ds = it.ds, txt = it.txt, x = it.x, yy = it.y, w = it.w;
+        ctx.save();
+        ctx.font = (ds._highlight ? "700 12px " : "600 11px ") + fam;
         if (ds._highlight) {
           ctx.fillStyle = ds.borderColor;
           var h = 20;
@@ -1109,7 +1135,7 @@ footer .legal a { color: inherit; text-decoration: underline; }
       var on = state.sort.key === c.key;
       var arr = on ? (state.sort.dir > 0 ? "▲" : "▼") : "";
       return '<th scope="col"' + (on ? ' aria-sort="' + (state.sort.dir > 0 ? "ascending" : "descending") + '"' : "") +
-        '><button type="button" data-sort="' + c.key + '">' + esc(c.label) + '<span class="arr" aria-hidden="true">' + arr + '</span></button></th>';
+        '><button type="button" data-sort="' + c.key + '">' + esc(c.label).replace("–", "–<wbr>") + '<span class="arr" aria-hidden="true">' + arr + '</span></button></th>';
     }).join("");
     var rows = staffRows(), k = state.sort.key, dir = state.sort.dir;
     rows.sort(function (a, b) {
